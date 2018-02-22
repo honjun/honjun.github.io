@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img src="http://upload-images.jianshu.io/upload_images/2597553-d44d71ea6b1672b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>github地址<a href="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a><br>前几天在公众号上看到github上一些受欢迎的项目，其中就有lozad.js,据说碾压jquery.lazyload.js。而自己也一直想给自己博客添加惰性加载以提高页面打开速度（没办法，git略卡，aplayer音乐播放器和cnzz统计都被舍弃了）</p>
+            <p><img class="lozad" data-src="http://upload-images.jianshu.io/upload_images/2597553-d44d71ea6b1672b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>github地址<a href="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a><br>前几天在公众号上看到github上一些受欢迎的项目，其中就有lozad.js,据说碾压jquery.lazyload.js。而自己也一直想给自己博客添加惰性加载以提高页面打开速度（没办法，git略卡，aplayer音乐播放器和cnzz统计都被舍弃了）</p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h2><p>使用请参照github上的README.md中的Usage，英文实在看不懂可以参照sf的这篇文章<a href="https://segmentfault.com/a/1190000011527281">《lozad.js：懒加载神器》</a>，以及<a href="http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html?utm_source=tuicool&amp;utm_medium=referral">阮老师的文章</a></p>
 <h2 id="实战-给主题添加"><a href="#实战-给主题添加" class="headerlink" title="实战-给主题添加"></a><strong>实战-给主题添加</strong></h2><p>首先给列表页面（category-items.ejs）加上了对应的class和data-src，然后在layout.ejs里面加上了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> observer = lozad();</span><br><span class="line">    observer.observe();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>测试通过。</p>
@@ -285,8 +285,8 @@
 </tr>
 </tbody>
 </table>
-<p>其中page.content就是文章的内容了，接下来就是找到hexo是在哪里把markdown解释成html了。推荐一篇<a href="http://coderunthings.com/2017/08/20/howhexoworks/">《hexo是怎么工作的》</a>，可惜没有讲到对应的源代码，不过受他启发，去找对应的源代码。一开始觉得大概率是在生成的时候解析的，于是在<img src="http://upload-images.jianshu.io/upload_images/2597553-cde21adbc3b1c570.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个generator的文件夹中找？怎么找，sublime中右键[图片上传失败…(image-67a3c5-1510805619540)]选择Find in Folder就行，我选择查找的关键字是<code>&lt;img src=</code>,可惜没有找到对应的源码。<br>接着在渲染的<img src="http://upload-images.jianshu.io/upload_images/2597553-35f409a9739b7c9a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个renderer文件夹中找,其实看文件夹名就能看出端倪，hexo-renderer-ejs对应ejs,hexo-renderer-stylus对应syl,hexo-renderer-marked对应markdown咯。<br>打开对应的README.md就看见你这么一句<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add support for [Markdown]. This plugin uses [marked] as render engine.</span><br></pre></td></tr></table></figure></p>
-<p>看来是找到了。查找发现真正的位置在<img src="http://upload-images.jianshu.io/upload_images/2597553-b1894432716e7557.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这里，<code>\node_modules\_marked@0.3.6@marked\lib\marked.js</code>在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<p>其中page.content就是文章的内容了，接下来就是找到hexo是在哪里把markdown解释成html了。推荐一篇<a href="http://coderunthings.com/2017/08/20/howhexoworks/">《hexo是怎么工作的》</a>，可惜没有讲到对应的源代码，不过受他启发，去找对应的源代码。一开始觉得大概率是在生成的时候解析的，于是在<img class="lozad" data-src="http://upload-images.jianshu.io/upload_images/2597553-cde21adbc3b1c570.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个generator的文件夹中找？怎么找，sublime中右键[图片上传失败…(image-67a3c5-1510805619540)]选择Find in Folder就行，我选择查找的关键字是<code>&lt;img src=</code>,可惜没有找到对应的源码。<br>接着在渲染的<img class="lozad" data-src="http://upload-images.jianshu.io/upload_images/2597553-35f409a9739b7c9a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个renderer文件夹中找,其实看文件夹名就能看出端倪，hexo-renderer-ejs对应ejs,hexo-renderer-stylus对应syl,hexo-renderer-marked对应markdown咯。<br>打开对应的README.md就看见你这么一句<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add support for [Markdown]. This plugin uses [marked] as render engine.</span><br></pre></td></tr></table></figure></p>
+<p>看来是找到了。查找发现真正的位置在<img class="lozad" data-src="http://upload-images.jianshu.io/upload_images/2597553-b1894432716e7557.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这里，<code>\node_modules\_marked@0.3.6@marked\lib\marked.js</code>在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
 <p>清空重新生成一下。<br>ok,文章图片也实现了惰性加载</p>
 
         </div>
@@ -299,9 +299,9 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/js/">js</a>
-            
             <a href="/tags/hexo/">hexo</a>
+            
+            <a href="/tags/js/">js</a>
             
         </div>
         
