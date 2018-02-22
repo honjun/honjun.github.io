@@ -13,7 +13,6 @@
 <meta name="author" content="hojun">
 <link rel="stylesheet" href="/css/SimpleStyle.css">
 <!-- <link rel="stylesheet" href="/css/loading.css"> -->
-<link rel="stylesheet" href="/css/sakura.css">
 <link rel="stylesheet" href="/css/xiaomai.css">
 <link rel="stylesheet" href="/css/share.min.css">
 
@@ -63,7 +62,7 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img class="avatar" width="72" src="/images/favicon.png" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
@@ -77,7 +76,7 @@
                 <a href="https://weibo.com/honjun" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
             </div>
             <div class="btn btn-facebook">
-                <a href="https://fackbook.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
+                <a href="null"  target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
             </div>
             <div class="btn btn-github">
                 <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
@@ -287,7 +286,6 @@ var _hmt = _hmt || [];
 })();
 </script>
 <script src="/js/jquery.min.js"></script>
-<script src="/js/snowfall.jquery.js"></script>
 <script src="/js/lozad.js"></script>
 <script src="/js/jquery.share.min.js"></script>
 <script src="/js/CodeLineHeight.js"></script>
@@ -322,28 +320,6 @@ var _hmt = _hmt || [];
         const observer = lozad();
         observer.observe();
 
-        
-        //飘雪效果
-        if($("title").html() == '圣诞快乐！ - hojunBlog'){
-            $(document).snowfall('clear');
-            $(document).snowfall({round:true, minSize:1, maxSize:5, flakeCount:100});
-        }
-        
-        //樱花效果
-        if($("title").html() == 'snowfall.jquery.js实现樱花飘落效果 - hojunBlog'){
-            $(document).snowfall('clear');
-            if (document.body.clientWidth>600) {
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-            } else {
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-            }
-        }
         
         //打字特效
         POWERMODE.colorful = true; // make power mode colorful
