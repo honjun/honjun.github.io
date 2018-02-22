@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <%- partial('_partial/head') %>
+</head>
+<body>
+<%- partial('_partial/leftMenu', null, {cache: !config.relative_link}) %>
+<%- partial('_widget/user-entry', null, {cache: !config.relative_link}) %>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <%- partial('_partial/middleCover', {cache: !config.relative_link}) %>
+            <%- body %>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '<%= theme.siteBuildingTime %>',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //飘雪效果
+        if($("title").html() == '圣诞快乐！ - hojunBlog'){
+            $(document).snowfall('clear');
+            $(document).snowfall({round:true, minSize:1, maxSize:5, flakeCount:100});
+        }
+        
+        //樱花效果
+        if($("title").html() == 'snowfall.jquery.js实现樱花飘落效果 - hojunBlog'){
+            $(document).snowfall('clear');
+            if (document.body.clientWidth>600) {
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            } else {
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            }
+        }
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+    });
+</script>
+</body>
+</html>

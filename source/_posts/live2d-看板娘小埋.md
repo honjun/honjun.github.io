@@ -1,0 +1,66 @@
+title: live2d-看板娘小埋
+author: hojun
+avatar: /images/favicon.png
+authorDesc: 一个好奇的人
+categories: 技术
+date: 2018-02-19 21:10:03
+authorLink:
+authorAbout:
+tags:
+ - live2d
+keywords: live2d
+description: 最近群里有人在耍live2d看板娘，于是默默地跑去get到了一个小埋~
+photos:
+ - https://wx1.sinaimg.cn/large/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg
+---
+最近群里有人在耍live2d看板娘，于是默默地跑去get到了一个小埋~
+![](https://wx1.sinaimg.cn/large/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg)
+## **第一步 准备代码和工具**
+(注意：代码要在服务器环境下跑)
+[代码](https://github.com/journey-ad/Live2D?_blank)
+[AdobeAIRInstaller百度云](https://pan.baidu.com/s/1gfTTjTh?_blank)
+[live2dViewer百度云](https://pan.baidu.com/s/1ggqTLU7?_blank)你也可以去官网下载[官网](http://sites.cybernoids.jp/cubism2/tools/live2d-viewer?_blank)
+## **第二步 get资源**
+(注意:apk和lpk都可以用压缩工具打开)
+寻找资源，安利贴吧大佬的提供的资源[乖离性ma吧](https://tieba.baidu.com/p/4941885290?_blank)
+或者嘿嘿嘿，使用某电或某神模拟器去得到live2d萌宠里面的资源(root过的手机也行)。这里用某电模拟器示范：
+安装live2d萌宠->商店->下载稀饭的萌宠->打开文件管理器->找到对应的model(在Android/data下面)->移动到模拟器和电脑的共享文件夹中
+![](https://wx3.sinaimg.cn/large/006bYVyvgy1fon2xpswjaj30bi0jo455.jpg)
+接着把json文件拖动到Live2dViewer中,得到如下图：
+![](https://wx3.sinaimg.cn/large/006bYVyvgy1fon2xm1ceij30zz0kjn2y.jpg)
+## **第三步 修改代码**
+这一步假设你已经跑的起来第一步那份代码了...
+把得到的model资源放到model文件夹下
+打开demo.html修改上你自己的路径
+![](https://wx1.sinaimg.cn/large/006bYVyvgy1fon2xthv0bj30os0cwt9z.jpg)
+接下来就是放入博客页面，调调大小，挪挪位置。duangduangduang~
+[效果预览](https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/)
+
+----------
+在这里感谢：
+[乖离性ma吧](https://tieba.baidu.com/p/4941885290?_blank) dalao提供的资源
+[live2d萌宠](http://www.52pk.com/pet?_blank)
+[后宫学长](https://haremu.com/p/205?_blank)提供的代码[代码](https://github.com/journey-ad/Live2D?_blank)
+[EYHN](https://github.com/EYHN/hexo-helper-live2d?_blank)
+[如何给自己的博客添加一个萌萌的看板娘！live2d](https://www.ohyhello.com/530?_blank)
+[给博客添加能动的看板娘(Live2D)-将其添加到网页上吧](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02?_blank)
+{% raw %}
+<link rel="stylesheet" href="/live2d/css/live2d.css" />
+<div id="landlord">
+    <div class="message"></div>
+    <canvas id="live2d" width="280" height="375" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = 'https://www.hojun.com/'
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+<script type="text/javascript">
+  $(function(){
+    loadlive2d("live2d", "/live2d/model/xiaomai/xiaomai.json");
+  })
+</script>
+{% endraw %}

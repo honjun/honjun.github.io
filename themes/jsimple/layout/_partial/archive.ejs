@@ -1,0 +1,34 @@
+<div class="page-title">
+    <ul>
+        <li class="<%= pagination == 2 ? 'active' : '' %>">
+            <a href="/" data-name="最近文章">最近</a>
+        </li>
+        <% for (var i in theme.menu){ %>
+        <li class="<%= (page.category == i) ? 'active' : '' %>">
+            <a href="/categories/<%= theme.menu[i] %>" data-name="<%= i %>"><%= i %></a>
+        </li>
+        <% } %>
+        <%- partial('_widget/search-bar', null, {cache: !config.relative_link}) %>
+    </ul>
+</div>
+<div class="main-inner">
+    <% if (pagination == 2){ %>
+    <!-- 首页默认取最最新文章集 -->
+    <% page.posts.sort('date', theme.homePageSortType).limit(theme.homeArticleShown).each(function(post){ %>
+    <%- partial('_widget/category-items', {post: post}) %>
+    <% }) %>
+    <% } else { %>
+    <% page.posts.each(function(post){ %>
+    <%- partial('_widget/category-items', {post: post}) %>
+    <% })} %>
+</div>
+<!-- 分页开始 -->
+<% if (page.total > 1){ %>
+<div id="btn-pager">
+    <% var prev_text = __('prev');var next_text = __('next') %>
+    <%- paginator({
+        prev_text: prev_text,
+        next_text: next_text
+    }) %>
+</div>
+<% } %>
