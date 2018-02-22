@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/sakura.css">
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>浏览器的同源策略 - hojunBlog</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="Just A NoteBook">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a>
+        <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a>
+        <a href="/help" title="帮助中心"><i class="fa fa-question-circle"></i><span>帮助中心</span></a>
+        <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div>
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img class="avatar" width="72" src="/images/favicon.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/honjun" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-facebook">
+                <a href="https://fackbook.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/tech" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/live" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/resource" data-name="资源">资源</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2017-08-14">2017-08-14</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">浏览器的同源策略</h2>
+            <div class="post-meta">
+                本文总共4063个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>转自<a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy">MDN</a><br>同源策略限制从一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的关键的安全机制。</p>
+<h2 id="一个源的定义"><a href="#一个源的定义" class="headerlink" title="一个源的定义"></a><strong>一个源的定义</strong></h2><p>如果协议，端口（如果指定了一个）和域名对于两个页面是相同的，则两个页面具有相同的源。</p>
+<p>下表给出了相对<a href="http://store.company.com/dir/page.html同源检测的示例">http://store.company.com/dir/page.html同源检测的示例</a>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">URL</th>
+<th style="text-align:center">结果</th>
+<th style="text-align:center">原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="http://store.company.com/dir2/other.html">http://store.company.com/dir2/other.html</a></td>
+<td style="text-align:center">成功</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://store.company.com/dir/inner/another.html">http://store.company.com/dir/inner/another.html</a></td>
+<td style="text-align:center">成功</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://store.company.com/secure.html">https://store.company.com/secure.html</a></td>
+<td style="text-align:center">失败</td>
+<td style="text-align:center">不同协议 ( https和http )</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://store.company.com:81/dir/etc.html">http://store.company.com:81/dir/etc.html</a></td>
+<td style="text-align:center">失败</td>
+<td style="text-align:center">不同端口 ( 81和80)</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="http://news.company.com/dir/other.html">http://news.company.com/dir/other.html</a></td>
+<td style="text-align:center">失败</td>
+<td style="text-align:center">不同域名 ( news和store )</td>
+</tr>
+</tbody>
+</table>
+<p>另请参见<a href="https://developer.mozilla.org/en-US/docs/Same-origin_policy_for_file:_URIs">文件的源定义: URLs.</a></p>
+<p>源的继承<br>来自about：blank和javascript：URL的内容从加载URL的文档继承原始文档，因为URL本身不提供任何有关原点的信息。 data：URLs获得一个新的，空的安全上下文。</p>
+<blockquote>
+<p>注意：在Gecko 6.0之前，如果用户在位置栏中输入data URLs，data URLs 将继承当前浏览器窗口中网页的安全上下文。</p>
+</blockquote>
+<h2 id="IE-例外"><a href="#IE-例外" class="headerlink" title="IE 例外"></a><strong>IE 例外</strong></h2><p>当涉及到同源策略时，Internet Explorer有两个主要的例外</p>
+<ul>
+<li>授信范围（Trust Zones）：两个相互之间高度互信的域名，如公司域名（corporate domains），不遵守同源策略的限制。</li>
+<li>端口：IE未将端口号加入到同源策略的组成部分之中，因此 <a href="http://company.com:81/index.html">http://company.com:81/index.html</a><br>和<a href="http://company.com/index.html">http://company.com/index.html</a>  属于同源并且不受任何限制。<br>这些例外是非标准的，其它浏览器也未做出支持，但会助于开发基于window RT IE的应用程序。</li>
+</ul>
+<h2 id="源的更改"><a href="#源的更改" class="headerlink" title="源的更改"></a><strong>源的更改</strong></h2><p>页面可能会更改其自己的来源，但有一些限制。脚本可以将 document.domain 的值设置为其当前域或其当前域的超级域。如果将其设置为其当前域的超级域，则较短的域将用于后续原始检查。例如，假设文档中的一个脚本在 <a href="http://store.company.com/dir/other.html">http://store.company.com/dir/other.html</a> 执行以下语句：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.domain = <span class="string">"company.com"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>这条语句执行之后，页面将会成功地通过对 <a href="http://company.com/dir/page.html">http://company.com/dir/page.html</a> 的同源检测。而同理，company.com 不能设置 document.domain 为 othercompany.com.</p>
+<p>浏览器单独保存端口号。任何的赋值操作，包括document.domain = document.domain都会以null值覆盖掉原来的端口号。因此company.com:8080页面的脚本不能仅通过设置document.domain = “company.com”就能与company.com通信。赋值时必须带上端口号，以确保端口号不会为null。</p>
+<blockquote>
+<p>注意：使用document.domain允许子域安全访问其父域时，您需要设置document.domain在父域和子域中具有相同的值。这是必要的，即使这样做只是将父域设置回其原始值。否则可能会导致权限错误。</p>
+</blockquote>
+<h2 id="跨源网络访问"><a href="#跨源网络访问" class="headerlink" title="跨源网络访问"></a><strong>跨源网络访问</strong></h2><p>同源策略控制了不同源之间的交互，例如在使用XMLHttpRequest 或 <img> 标签时则会受到同源策略的约束。交互通常分为三类：</p>
+<ul>
+<li>通常允许进行跨域写操作（Cross-origin<br>writes）。例如链接（links），重定向以及表单提交。特定少数的HTTP请求需要添加 preflight。</li>
+<li>通常允许跨域资源嵌入（Cross-origin embedding）。之后下面会举例说明。</li>
+<li>通常不允许跨域读操作（Cross-origin<br>reads）。但常可以通过内嵌资源来巧妙的进行读取访问。例如可以读取嵌入图片的高度和宽度，调用内嵌脚本的方法，或availability<br>of an embedded resource.</li>
+</ul>
+<p>以下是可能嵌入跨源的资源的一些示例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"..."</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>标签嵌入跨域脚本。语法错误信息只能在同源脚本中捕捉到。</span><br><span class="line"> <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"..."</span>&gt;</span>标签嵌入CSS。由于CSS的松散的语法规则，CSS的跨域需要一个设置正确的Content-Type消息头。不同浏览器有不同的限制： IE, Firefox, Chrome, Safari (跳至CVE-2010-0051)部分 和 Opera。</span><br><span class="line"> <span class="tag">&lt;<span class="name">img</span>&gt;</span>嵌入图片。支持的图片格式包括PNG,JPEG,GIF,BMP,SVG,...</span><br><span class="line"> <span class="tag">&lt;<span class="name">video</span>&gt;</span> 和 <span class="tag">&lt;<span class="name">audio</span>&gt;</span>嵌入多媒体资源。</span><br><span class="line"> <span class="tag">&lt;<span class="name">object</span>&gt;</span>, <span class="tag">&lt;<span class="name">embed</span>&gt;</span> 和 <span class="tag">&lt;<span class="name">applet</span>&gt;</span>的插件。</span><br><span class="line">@font-face引入的字体。一些浏览器允许跨域字体（ cross-origin fonts），一些需要同源字体（same-origin fonts）。</span><br><span class="line"> <span class="tag">&lt;<span class="name">frame</span>&gt;</span> 和 <span class="tag">&lt;<span class="name">iframe</span>&gt;</span>载入的任何资源。站点可以使用X-Frame-Options消息头来阻止这种形式的跨域交互。</span><br><span class="line">如何允许跨源访问</span><br><span class="line">使用 CORS 允许跨源访问。</span><br></pre></td></tr></table></figure></p>
+<h2 id="如何阻止跨源访问"><a href="#如何阻止跨源访问" class="headerlink" title="如何阻止跨源访问"></a><strong>如何阻止跨源访问</strong></h2><ul>
+<li>阻止跨域写操作，只要检测请求中的一个不可测的标记(CSRF token)即可，这个标记被称为Cross-Site Request<br>Forgery (CSRF) 标记。必须使用这个标记来阻止页面的跨站读操作。</li>
+<li>阻止资源的跨站读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</li>
+<li>阻止跨站嵌入，确保你得资源不能是以上列出的可嵌入资源格式。多数情况下浏览器都不会遵守Conten-Type消息头。例如，如果你在<code>&lt;script&gt;</code>标签中嵌入HTML文档，浏览器仍将HTML解析为Javascript。When<br>your resource is not an entry point to your site, you can also use a<br>CSRF token to prevent embedding.</li>
+</ul>
+<h2 id="跨源脚本API访问"><a href="#跨源脚本API访问" class="headerlink" title="跨源脚本API访问"></a><strong>跨源脚本API访问</strong></h2><p>Javascript的APIs中，如 iframe.contentWindow, window.parent, window.open 和 window.opener 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对 Window 和 Location对象的访问添加限制。可以使用window.postMessage 作为替代方案，提供跨域文档间的通讯。</p>
+<h2 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h2><p>规范:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window</a>.</p>
+<p> 允许以下对窗口属性的跨源访问：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">window.blur</td>
+</tr>
+<tr>
+<td style="text-align:left">window.close</td>
+</tr>
+<tr>
+<td style="text-align:left">window.focus</td>
+</tr>
+<tr>
+<td style="text-align:left">window.postMessage</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">window.closed</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.frames</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.length</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.location</td>
+<td style="text-align:left">读/写.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.opener</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.parent</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.self</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.top</td>
+<td style="text-align:left">只读.</td>
+</tr>
+<tr>
+<td style="text-align:left">window.window</td>
+<td style="text-align:left">只读.</td>
+</tr>
+</tbody>
+</table>
+<p>某些浏览器允许访问比规范允许的更多属性。</p>
+<h2 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h2><p>Specification:  <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location">http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-location</a>.</p>
+<p>允许以下对位置属性的跨源访问：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">location.replace</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Attributes</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">URLUtils.href</td>
+<td style="text-align:left">只写.</td>
+</tr>
+</tbody>
+</table>
+<p>某些浏览器允许访问比规范允许的更多属性</p>
+<h2 id="跨源数据存储访问"><a href="#跨源数据存储访问" class="headerlink" title="跨源数据存储访问"></a><strong>跨源数据存储访问</strong></h2><p>存储在浏览器中的数据，如localStorage和IndexedDB，以源进行分割。每个源都拥有自己单独的存储空间，一个源中的Javascript脚本不能对属于其它源的数据进行读写操作。</p>
+<p>window.name属性可以用来临时存储数据，可以跨域访问。</p>
+<p>Cookies使用不同的源定义方式。一个页面可以为本域和任何父域设置cookie，只要是父域不是公共后缀（public suffix）即可。Firefox和Chrome使用Public Suffix List决定一个域是否是一个公共后缀（public suffix）。不管使用哪个协议（HTTP/HTTPS）或端口号，浏览器都允许给定的域以及其任何子域名(sub-domains)来访问cookie。设置cookie时，你可以使用Domain，Path，Secure，和Http-Only标记来限定其访问性。读取cookie时，不会知晓它的出处。尽管使用安全的https连接，任何可见的cookie都是使用不安全的连接设置的。</p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一个源的定义"><span class="toc-text">一个源的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IE-例外"><span class="toc-text">IE 例外</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源的更改"><span class="toc-text">源的更改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨源网络访问"><span class="toc-text">跨源网络访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何阻止跨源访问"><span class="toc-text">如何阻止跨源访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨源脚本API访问"><span class="toc-text">跨源脚本API访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#窗口"><span class="toc-text">窗口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#位置"><span class="toc-text">位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨源数据存储访问"><span class="toc-text">跨源数据存储访问</span></a></li></ol>
+    </div>
+</aside>
+    
+
+
+
+
+<div id="gitment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'honjun',
+  repo: 'honjun.github.io',
+  oauth: {
+    client_id: '387efef7cc982e65330a',
+    client_secret: '326d79b4c7aedb781ef5813a5faf9eeafd63b3b8',
+  },
+})
+gitment.render('gitment-container')
+</script>
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <p>
+            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="帮助中心" >帮助中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/video" title="视频资源">视频资源</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/snowfall.jquery.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //飘雪效果
+        if($("title").html() == '圣诞快乐！ - hojunBlog'){
+            $(document).snowfall('clear');
+            $(document).snowfall({round:true, minSize:1, maxSize:5, flakeCount:100});
+        }
+        
+        //樱花效果
+        if($("title").html() == 'snowfall.jquery.js实现樱花飘落效果 - hojunBlog'){
+            $(document).snowfall('clear');
+            if (document.body.clientWidth>600) {
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            } else {
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            }
+        }
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+    });
+</script>
+</body>
+</html>

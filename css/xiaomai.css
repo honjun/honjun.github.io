@@ -1,0 +1,64 @@
+.fixed-xm {
+	position:fixed;
+	right:10px;
+	bottom:45%;
+	width:10px;
+	border:0px;
+	font-size:24px;
+	z-index:1040;
+	cursor: pointer;
+	transition: all .5s;
+}
+.fixed-xm:hover {
+	position:fixed;
+	right:10px;
+	bottom:45%;
+	width:40px;
+	border:0px;
+	font-size:24px;
+	z-index:1040;
+	cursor: pointer;
+	transition: all .5s;
+}
+.spig 
+{
+	display:none;
+	width:150px;
+	height:190px;
+	position:absolute;
+	top: 20px;
+	right:0px;
+	z-index:9999;
+}
+#message
+{
+	color :#191919;
+	border: 1px solid #c4c4c4;
+	background:#ddd;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	min-height:1em;
+	padding:5px;
+	top:-30px;
+	position:absolute;
+	text-align:center;
+	width:auto !important;
+	z-index:10000;
+	-moz-box-shadow:0 0 15px #eeeeee;
+	-webkit-box-shadow:0 0 15px #eeeeee;
+	border-color:#eeeeee;
+	box-shadow:0 0 15px #eeeeee;
+	outline:none;
+	font-size: 12px;
+}
+#message a{
+	color: #39c;
+} 
+#xiaomai
+{
+	width:150px;
+	height:190px;
+	cursor: move;
+	background:url(/images/xiaomai/xm_happy.png) no-repeat;
+}

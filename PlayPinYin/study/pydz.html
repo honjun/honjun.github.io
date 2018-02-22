@@ -1,0 +1,147 @@
+<html>
+  <head></head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Microsoft YaHei';
+    }
+    .root{
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }    
+    .header {
+      width: 100%;
+      flex: 1;
+      background-color: #39c;
+    }
+    .container {
+      width: 100%;
+      flex: 60;
+      box-sizing: border-box;
+    }
+    .char {
+      flex: 1;
+      text-align: center;
+      font-size: 500px;
+      letter-spacing:100px;
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: .3s;
+      -webkit-animation-delay: 0s;
+    }
+    .footer {
+      width: 100%;
+      flex: 1;
+      bottom: 0;
+      background-color: #f00;
+    }
+    .button_paly {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      background-image: url('./play.jpg');
+      background-size: 100%;
+    }
+    .button_pause {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      width: 100px;
+      height: 100px;
+      background-image: url('./pause.jpg');
+      background-size: 100%;
+    }
+    .button_sound {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 100px;
+      height: 100px;
+      background-image: url('./button_sound.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0; /*初始状态 透明度为0*/
+      }
+      50% {
+        opacity: 0.5; /*中间状态 透明度为0*/
+      }
+      100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+      }
+    }
+  </style>
+  <body>
+    <div class="root">
+      <div class="header"></div>
+      <div class="container"></div>
+      <div class="footer">
+        <div class="button_sound"></div>
+        <div id="player" class="button_pause"></div>
+      </div>
+    </div>
+    <div class="sounds"></div>
+  </body>
+  <script src="./jquery.min.js"></script>
+  <script>
+    function init(){
+      let sounds = $('.sounds');
+      let char = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+      let length = char.length;
+      for (let i = 0; i < length; i++) {
+        sounds.append('<audio src="./sounds/' + char[i] + '.mp3" id="' + char[i] + '" preload="auto" style="display:none;"></audio>')
+      }
+    }
+    init();
+  </script>
+  <script>
+    $(function() {
+      let lastNum = 0;
+      let random = 0;
+      let timer = null;
+      let audio = null;
+      let container = $('.container');
+      let char = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+      create()
+      function getRandom(n) {
+        return Math.floor(Math.random()*n)
+      }
+      $('#player').click(function() {
+        $(this).toggleClass('button_paly')
+        $(this).toggleClass('button_pause')
+        if ($(this).hasClass('button_paly')) {
+          timer = window.setInterval(create, 2000);
+          timer;
+        } else {
+          window.clearInterval(timer);
+        }
+      });
+      $('.button_sound').click(function() {
+        audio.play();
+      })
+      function create() {
+        random = getRandom(26);
+        while (random === lastNum) {
+          random = getRandom(26);
+        }
+        // random = lastNum++;
+        container.html('<div class="char">' + char[random] + '' + char[random].toUpperCase() + '</div>');
+        audio = document.getElementById(char[random]);
+        audio.play();
+        lastNum = random;
+      }
+      $(document).keyup(function(event) {
+        if (event.keyCode === random + 65) {
+          create();
+        }
+      });  
+    })
+  </script>
+</html>
