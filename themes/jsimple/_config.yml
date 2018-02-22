@@ -8,7 +8,7 @@ fullHttps: false
 
 # favicon and site master avatar
 favicon: /images/favicon.png
-avatar: /images/favicon.png
+avatar: /images/avatar.png
 
 # Home page sort type: -1: newer first，1: older first.
 homePageSortType: -1
@@ -34,7 +34,7 @@ menu:
 coverTitle: hello ，stranger
 coverDescription: 一个好奇的博客
 sinaWb: https://weibo.com/honjun
-facebook: https://fackbook.com/honjun
+facebook: 
 github: https://github.com/honjun
 
 

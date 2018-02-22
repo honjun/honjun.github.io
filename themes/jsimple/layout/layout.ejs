@@ -38,28 +38,6 @@
         observer.observe();
 
         
-        //飘雪效果
-        if($("title").html() == '圣诞快乐！ - hojunBlog'){
-            $(document).snowfall('clear');
-            $(document).snowfall({round:true, minSize:1, maxSize:5, flakeCount:100});
-        }
-        
-        //樱花效果
-        if($("title").html() == 'snowfall.jquery.js实现樱花飘落效果 - hojunBlog'){
-            $(document).snowfall('clear');
-            if (document.body.clientWidth>600) {
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-            } else {
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-                $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-            }
-        }
-        
         //打字特效
         POWERMODE.colorful = true; // make power mode colorful
         POWERMODE.shake = false; // turn off shake
