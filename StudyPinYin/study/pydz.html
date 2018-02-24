@@ -86,14 +86,22 @@
         background-image: url('./pause.jpg');
         background-size: 100%;
       }
-      .button_sound {
+      .sound {
         display: inline-block;
         float: right;
         margin-right: 10px;
         width: 100px;
         height: 100px;
-        background-image: url('./button_sound.jpg');
+        background-image: url('./on_sound.jpg');
         background-size: 100% 100%;
+      }
+      .off {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray;
       }
       @-webkit-keyframes fadeIn {
         0% {
@@ -123,7 +131,7 @@
         <div class="menu multiple">多</div>
         <div class="menu sequen active">顺</div>
         <div class="menu random">乱</div>
-        <div class="button_sound"></div>
+        <div class="sound"></div>
       </div>
     </div>
     <div class="sounds"></div>
@@ -143,11 +151,14 @@
         StorageSetter:StorageSetter
       }
     })();
+    const ON = 1;
+    const OFF = 0;
     let lastNum = 0;
     let random = 0;
     let sequen = 0;
     let index = 0; //打字进度
     let mode = 1; //0随机 1顺序
+    let sound = ON; //OFF关闭 ON开启 
     let timer = null;
     let audio = null;
     let $all = $('.all');
@@ -155,6 +166,7 @@
     let $multiple = $('.multiple');
     let $sequen = $('.sequen');
     let $random = $('.random');
+    let $sound = $('.sound');
     let single = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; //26
     let multiple = ['ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi']  //35
     let pinyin = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi'];
@@ -182,6 +194,10 @@
         $single.removeClass('active');
         $multiple.addClass('active');
       }
+      if (Util.StorageGetter('sound') === 'off') {
+        sound = OFF;
+        $sound.addClass('off');
+      }
     }
     init();
   </script>
@@ -202,8 +218,17 @@
           window.clearInterval(timer);
         }
       });
-      $('.button_sound').click(function() {
-        audio.play();
+      $sound.click(function() {
+        $(this).toggleClass('off');
+        if ($(this).hasClass('off')) {
+          sound = OFF;
+          Util.StorageSetter('sound', 'off');
+        } else {
+          sound = ON;
+          Util.StorageSetter('sound', 'on');
+          audio = document.getElementById(useArr[random]);
+          audio.play();
+        }
       })
       function create() {
         let useArrLength = useArr.length;
@@ -227,12 +252,13 @@
         }
         let str = lowerChar + upperChar;
         $pinyin.append(str);
-        audio = document.getElementById(useArr[random]);
-        audio.play();
+        if (sound === ON) {
+          audio = document.getElementById(useArr[random]);
+          audio.play();
+        }
       }
       $(document).keyup(function(event) {
         let code = single[event.keyCode - 65];
-        console.log(random);
         let useLength = useArr[random].length;
         if (useLength > 1) {
           if (code === useArr[random].charAt(index)) {
