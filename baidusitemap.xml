@@ -3,6 +3,42 @@
 
 
     
+  <url>
+    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
+    <lastmod>2018-02-24T05:25:38.019Z</lastmod>
+    <data>
+        <display>
+        <title>每日签到</title>
+        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2018/02/22/%E6%8B%BC%E9%9F%B3%E5%AD%A6%E4%B9%A0StudyPinYin/</loc>
+    <lastmod>2018-02-22T15:00:38.355Z</lastmod>
+    <data>
+        <display>
+        <title>拼音学习StudyPinYin</title>
+        <pubTime>2018-02-22T15:00:38.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://honjun.github.io/2017/07/03/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E6%98%93%E4%BA%91%E8%B7%9F%E5%B8%96%E8%AF%84%E8%AE%BA/</loc>
@@ -18,24 +54,6 @@
            
              
               <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
-    <lastmod>2018-02-21T16:08:30.367Z</lastmod>
-    <data>
-        <display>
-        <title>每日签到</title>
-        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
           
         </display>
     </data>
@@ -569,11 +587,11 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>jquery</tag>
          
         <tag>jcrop</tag>
-         
-        <tag>前端</tag>
          
          
            

@@ -2741,7 +2741,7 @@ table
 }
 body
 {
-    font:14px/1.7 "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STXihei,"华文细黑","WenQuanYi Micro Hei",sans-serif;color:#1a1a1a
+    font:14px/1.7 "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STXihei,"华文细黑","WenQuanYi Micro Hei",sans-serif;color:#1a1a1a;transition: all .8s ease-in-out;
 }
 a
 {
@@ -2998,7 +2998,7 @@ body
 }
 .page-title
 {
-    height:45px;position:fixed;z-index:100;border-width:2px;box-sizing:border-box;border-bottom:2px solid #d9d9d9;background-color:#fff
+    height:45px;position:fixed;z-index:100;border-width:2px;box-sizing:border-box;border-bottom:2px solid #d9d9d9;
 }
 .page-title ul
 {
@@ -3385,37 +3385,36 @@ img.alignright
 {
     .nav-user a
     {
-    display:none
-}
-.nav-user a.btn-search,.nav-user a.btn-read-mode
-{
-    display:inline-block
-}
-.comment-avatar
-{
-    display:none
-}
-.comment-content
-{
-    padding-left:0
-}
-.comment-children .comment-list>li
-{
-    border-left:2px solid #ccc;padding-left:10px
-}
-#comment-form .comment-fields button
-{
-    position:static
-}
-
+        display:none
+    }
+    .nav-user a.btn-search,.nav-user a.btn-read-mode
+    {
+        display:inline-block
+    }
+    .comment-avatar
+    {
+        display:none
+    }
+    .comment-content
+    {
+        padding-left:0
+    }
+    .comment-children .comment-list>li
+    {
+        border-left:2px solid #ccc;padding-left:10px
+    }
+    #comment-form .comment-fields button
+    {
+        position:static
+    }
 }
 body,#wrapper,#nav,.nav-menu,#search,#cover,#body,.page-title,.nav-user
 {
-    -webkit-transition:width,top .5s;-moz-transition:width,top .5s;-ms-transition:width,top .5s;-o-transition:width,top .5s;transition:width,top .5s
+    -webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s
 }
 body.night-mode,.night-mode #body,.night-mode .page-title,.night-mode .fixed-btn
 {
-    background-color:#3f3f3f!important
+    background-color:#3f3f3f!important;transition:all .5s ease-in-out;
 }
 .night-mode .page-title li a:hover
 {
