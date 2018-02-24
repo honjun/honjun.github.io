@@ -59,8 +59,9 @@
         font-size: 60px;
         font-weight: 700;
         color: #bcc2c6;
-        line-height: 80px;
+        line-height: 90px;
         text-align: center;
+        vertical-align: middle;
         border: 5px solid #bcc2c6;
         border-radius: 50px;
       }
@@ -131,6 +132,7 @@
         <div class="menu multiple">多</div>
         <div class="menu sequen active">顺</div>
         <div class="menu random">乱</div>
+        <div class="menu freedom">自</div>
         <div class="sound"></div>
       </div>
     </div>
@@ -158,14 +160,17 @@
     let sequen = 0;
     let index = 0; //打字进度
     let mode = 1; //0随机 1顺序
-    let sound = ON; //OFF关闭 ON开启 
+    let sound = ON; //OFF关闭 ON开启
+    let freedom = OFF;
     let timer = null;
     let audio = null;
+    let $player = $('#player');
     let $all = $('.all');
     let $single = $('.single');
     let $multiple = $('.multiple');
     let $sequen = $('.sequen');
     let $random = $('.random');
+    let $freedom = $('.freedom');
     let $sound = $('.sound');
     let single = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; //26
     let multiple = ['ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi']  //35
@@ -193,6 +198,10 @@
         $all.removeClass('active');
         $single.removeClass('active');
         $multiple.addClass('active');
+      }
+      if (Util.StorageGetter('freedon') === 'on') {
+        freedon = ON;
+        $freedon.addClass('active');
       }
       if (Util.StorageGetter('sound') === 'off') {
         sound = OFF;
@@ -258,22 +267,37 @@
         }
       }
       $(document).keyup(function(event) {
+        if (event.keyCode < 65 || event.keyCode > 91) return;
         let code = single[event.keyCode - 65];
-        let useLength = useArr[random].length;
-        if (useLength > 1) {
-          if (code === useArr[random].charAt(index)) {
-            $('#lowerChar' + index).css('color','#69a621');
-            $('#upperChar' + index).css('color','#69a621');
-            if (++index === useLength) {
-              index = 0;
-              create();
-            }
-          } else {
-            $('#lowerChar' + index).css('color','#ff0000');
-            $('#upperChar' + index).css('color','#ff0000');
+        if (freedom === ON) {
+          $pinyin.html('');
+          let lowerChar = '';
+          let upperChar = '';
+          lowerChar += '<div class="lowerChar" id="lowerChar0">' + code + '</div>';
+          upperChar += '<div class="UpperChar" id="upperChar0">' + code.toUpperCase() + '</div>';
+          let str = lowerChar + upperChar;
+          $pinyin.append(str);
+          if (sound === ON) {
+            audio = document.getElementById(code);
+            audio.play();
           }
-        }else if (code === useArr[random]) {
-          create();
+        } else {
+          let useLength = useArr[random].length;
+          if (useLength > 1) {
+            if (code === useArr[random].charAt(index)) {
+              $('#lowerChar' + index).css('color','#69a621');
+              $('#upperChar' + index).css('color','#69a621');
+              if (++index === useLength) {
+                index = 0;
+                create();
+              }
+            } else {
+              $('#lowerChar' + index).css('color','#ff0000');
+              $('#upperChar' + index).css('color','#ff0000');
+            }
+          }else if (code === useArr[random]) {
+            create();
+          }
         }
       });
       function restart() {
@@ -281,45 +305,73 @@
         random = 0;
         sequen = 0;
         index = 0;
+        if (Util.StorageGetter('useArr') === 'pinyin') {
+          $all.addClass('active');
+          $single.removeClass('active');
+          $multiple.removeClass('active');
+        }
+        if (Util.StorageGetter('useArr') === 'single') {
+          $all.removeClass('active');
+          $single.addClass('active');
+          $multiple.removeClass('active');
+        }
+        if (Util.StorageGetter('useArr') === 'multiple') {
+          $all.removeClass('active');
+          $single.removeClass('active');
+          $multiple.addClass('active');
+        }
+        if (mode === 1) {
+          $sequen.addClass('active');
+          $random.removeClass('active');
+        } else {
+          $sequen.removeClass('active');
+          $random.addClass('active');
+        }
+        freedom = OFF;
+        $freedom.removeClass('active');
+        Util.StorageSetter('freedom','off');
+        $player.addClass('button_pause');
+        $player.removeClass('button_play');
+        window.clearInterval(timer);
         create()
       }
       $all.click(function() {
         useArr = pinyin;
         Util.StorageSetter('useArr','pinyin');
-        $all.addClass('active');
-        $single.removeClass('active');
-        $multiple.removeClass('active');
         restart();
-      })
+      });
       $single.click(function() {
         useArr = single;
         Util.StorageSetter('useArr','single');
-        $all.removeClass('active');
-        $single.addClass('active');
-        $multiple.removeClass('active');
         restart();
-      })
+      });
       $multiple.click(function() {
         useArr = multiple;
         Util.StorageSetter('useArr','multiple');
-        $all.removeClass('active');
-        $single.removeClass('active');
-        $multiple.addClass('active');
         restart();
-      })
+      });
       $sequen.click(function() {
         mode = 1;
         Util.StorageSetter('mode','1');
-        $sequen.addClass('active');
-        $random.removeClass('active');
         restart();
-      })
+      });
       $random.click(function() {
         mode = 0;
         Util.StorageSetter('mode','0');
-        $sequen.removeClass('active');
-        $random.addClass('active');
         restart();
+      });
+      $freedom.click(function() {
+        freedom = ON;
+        Util.StorageSetter('freedom','on');
+        $all.removeClass('active');
+        $single.removeClass('active');
+        $multiple.removeClass('active');
+        $sequen.removeClass('active');
+        $random.removeClass('active');
+        $freedom.addClass('active');
+        $player.addClass('button_pause');
+        $player.removeClass('button_play');
+        window.clearInterval(timer);
       })
     })
   </script>
