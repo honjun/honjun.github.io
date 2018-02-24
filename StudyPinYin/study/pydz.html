@@ -199,9 +199,14 @@
         $single.removeClass('active');
         $multiple.addClass('active');
       }
-      if (Util.StorageGetter('freedon') === 'on') {
-        freedon = ON;
-        $freedon.addClass('active');
+      if (Util.StorageGetter('freedom') === 'on') {
+        freedom = ON;
+        $freedom.addClass('active');
+        $all.removeClass('active');
+        $single.removeClass('active');
+        $multiple.removeClass('active');
+        $sequen.removeClass('active');
+        $random.removeClass('active');
       }
       if (Util.StorageGetter('sound') === 'off') {
         sound = OFF;
