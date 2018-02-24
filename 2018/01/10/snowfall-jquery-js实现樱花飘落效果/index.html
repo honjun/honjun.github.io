@@ -155,30 +155,11 @@
             </div>
             <h2 class="post-title">snowfall.jquery.js实现樱花飘落效果</h2>
             <div class="post-meta">
-                本文总共2322个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2440个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id=""><a href="#" class="headerlink" title=""></a><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fne9cxz06lj30ez0rsq3q.jpg" alt="png"></h2>
-<link rel="stylesheet" href="/css/sakura.css" />
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
-<script type="text/javascript">
-    $(document).snowfall('clear');
-    if (document.body.clientWidth>600) {
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-    } else {
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-    }
-</script>
-
-<p>前几天圣诞节玩了把雪花飘落的jquery插件<br>结果一不小心又想搞个樱花飘落效果。。。不幸晚睡————猝<br>献上jquery雪花插件<a href="https://github.com/loktar00/JQuery-Snowfall">snowfall.jquery.js</a><br>该插件的参数有：</p>
+            <h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://wx3.sinaimg.cn/large/006bYVyvgy1fne9cxz06lj30ez0rsq3q.jpg"></h2><p>前几天圣诞节玩了把雪花飘落的jquery插件<br>结果一不小心又想搞个樱花飘落效果。。。不幸晚睡————猝<br>献上jquery雪花插件<a href="https://github.com/loktar00/JQuery-Snowfall">snowfall.jquery.js</a><br>该插件的参数有：</p>
 <ul>
 <li>flakeCount|number  雪花数量</li>
 <li>flakeColor|#RGB    雪花颜色</li>
@@ -195,7 +176,29 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.snowfall-flakes&#123;animation:sakura 1s linear 0s infinite;&#125;</span></span><br><span class="line"><span class="undefined">@keyframes sakura&#123;</span></span><br><span class="line"><span class="undefined">0% &#123;transform:rotate3d(0, 0, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">25%&#123;transform:rotate3d(1, 1, 0, 60deg);&#125;</span></span><br><span class="line"><span class="undefined">50%&#123;transform:rotate3d(1, 1, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">75%&#123;transform:rotate3d(1, 0, 0, 60deg);&#125;</span></span><br><span class="line"><span class="undefined">100% &#123;transform:rotate3d(1, 0, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>//js部分</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(<span class="string">'clear'</span>);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"1.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"2.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"3.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"4.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
-<p>飘落的时候添加了css的3D翻转效果，使之更加逼真<br>图片是用ps一个一个扣下来的。扣好发现jpg格式不能带透明度，然后又心酸的重新扣png格式的。。。<br><a href="https://github.com/honjun/demo/tree/master/sakura">代码demo</a></p>
+<p>飘落的时候添加了css的3D翻转效果，使之更加逼真<br>图片是用ps一个一个扣下来的。扣好发现jpg格式不能带透明度，然后又心酸的重新扣png格式的。。。<br><a href="https://github.com/honjun/demo/tree/master/sakura">代码demo</a><br>
+<link rel="stylesheet" href="/css/sakura.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
+<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
+<script>
+    function sakuraInit() {
+        $(document).snowfall('clear');
+        if (document.body.clientWidth > 600) {
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+        } else {
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+        }
+    }
+    window.onload = sakuraInit();
+</script>
+</p>
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
