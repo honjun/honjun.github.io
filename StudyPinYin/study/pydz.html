@@ -1,0 +1,300 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Microsoft YaHei';
+      }
+      .root{
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }    
+      .header {
+        width: 100%;
+        flex: 1;
+        /*background-color: #39c;*/
+      }
+      .container {
+        width: 100%;
+        flex: 60;
+        box-sizing: border-box;
+      }
+      .pinyin {
+        position: relative;
+        top: 18%;
+        margin: 0 auto;
+        width: 1000px;
+        height: 300px;
+        text-align: center;
+        font-size: 200px;
+        letter-spacing:100px;
+        -webkit-animation-name: fadeIn;
+        -webkit-animation-duration: .3s;
+        -webkit-animation-delay: 0s;
+      }
+      .footer {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        bottom: 0;
+        /*background-color: #f00;*/
+      }
+      .lowerChar, .upperChar{
+        display: inline-block;
+        letter-spacing:5px;
+      }
+      .lowerChar + .upperChar{
+        margin-left: 50px;
+      }
+      .menu {
+        display: inline-block;
+        float: left;
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+        font-size: 50px;
+        font-weight: 700;
+        color: #bcc2c6;
+        line-height: 80px;
+        text-align: center;
+        border: 5px solid #bcc2c6;
+        border-radius: 50px;
+      }
+      .active {
+        color: #03A9F4;
+        border: 5px solid #03A9F4;
+      }
+      .button_play {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+        background-image: url('./play.jpg');
+        background-size: 100%;
+      }
+      .button_pause {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+        background-image: url('./pause.jpg');
+        background-size: 100%;
+      }
+      .button_sound {
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+        width: 100px;
+        height: 100px;
+        background-image: url('./button_sound.jpg');
+        background-size: 100% 100%;
+      }
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0; /*初始状态 透明度为0*/
+        }
+        50% {
+          opacity: 0.5; /*中间状态 透明度为0*/
+        }
+        100% {
+          opacity: 1; /*结尾状态 透明度为1*/
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="header"></div>
+      <div class="container">
+        <div class="pinyin">
+          
+        </div>
+      </div>
+      <div class="footer">
+        <div id="player" class="button_pause"></div>
+        <div class="menu all active">全</div>
+        <div class="menu single">单</div>
+        <div class="menu multiple">多</div>
+        <div class="menu sequen active">顺</div>
+        <div class="menu random">乱</div>
+        <div class="button_sound"></div>
+      </div>
+    </div>
+    <div class="sounds"></div>
+  </body>
+  <script src="./jquery.min.js"></script>
+  <script>
+    var Util = (function() {
+      var prefix = 'study_config_';
+      var StorageGetter = function(key){
+        return localStorage.getItem(prefix + key);
+      }
+      var StorageSetter = function(key, value){
+        return localStorage.setItem(prefix + key, value)
+      }
+      return {
+        StorageGetter:StorageGetter,
+        StorageSetter:StorageSetter
+      }
+    })();
+    let lastNum = 0;
+    let random = 0;
+    let sequen = 0;
+    let index = 0; //打字进度
+    let mode = 1; //0随机 1顺序
+    let timer = null;
+    let audio = null;
+    let $all = $('.all');
+    let $single = $('.single');
+    let $multiple = $('.multiple');
+    let $sequen = $('.sequen');
+    let $random = $('.random');
+    let single = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; //26
+    let multiple = ['ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi']  //35
+    let pinyin = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi'];
+    let useArr = pinyin;
+    function init() {
+      let sounds = $('.sounds');
+      let length = pinyin.length;
+      for (let i = 0; i < length; i++) {
+        sounds.append('<audio src="./sounds/' + pinyin[i] + '.mp3" id="' + pinyin[i] + '" preload="auto" style="display:none;"></audio>')
+      }
+      if (Util.StorageGetter('mode') === '0') {
+        mode = 0;
+        $sequen.removeClass('active');
+        $random.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'single') {
+        useArr = single;
+        $all.removeClass('active');
+        $single.addClass('active');
+        $multiple.removeClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'multiple') {
+        useArr = multiple;
+        $all.removeClass('active');
+        $single.removeClass('active');
+        $multiple.addClass('active');
+      }
+    }
+    init();
+  </script>
+  <script>
+    $(function() {
+      let $pinyin = $('.pinyin');
+      create();
+      function getRandom(n) {
+        return Math.floor(Math.random()*n)
+      }
+      $('#player').click(function() {
+        $(this).toggleClass('button_play')
+        $(this).toggleClass('button_pause')
+        if ($(this).hasClass('button_play')) {
+          timer = window.setInterval(create, 2000);
+          timer;
+        } else {
+          window.clearInterval(timer);
+        }
+      });
+      $('.button_sound').click(function() {
+        audio.play();
+      })
+      function create() {
+        let useArrLength = useArr.length;
+        $pinyin.html('');
+        let lowerChar = '';
+        let upperChar = '';
+        if (mode === 0) {
+          random = getRandom(useArrLength);
+          while (random === lastNum) {
+            random = getRandom(useArrLength);
+          }
+          lastNum = random;
+        } else {
+          sequen = sequen % useArrLength + 1;
+          random = sequen - 1;
+        }
+        let useLength = useArr[random].length;
+        for (let i = 0; i < useLength; i++) {
+          lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + useArr[random].charAt(i) + '</div>';
+          upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + useArr[random].charAt(i).toUpperCase() + '</div>';
+        }
+        let str = lowerChar + upperChar;
+        $pinyin.append(str);
+        audio = document.getElementById(useArr[random]);
+        audio.play();
+      }
+      $(document).keyup(function(event) {
+        let code = single[event.keyCode - 65];
+        console.log(random);
+        let useLength = useArr[random].length;
+        if (useLength > 1) {
+          if (code === useArr[random].charAt(index)) {
+            $('#lowerChar' + index).css('color','#69a621');
+            $('#upperChar' + index).css('color','#69a621');
+            if (++index === useLength) {
+              index = 0;
+              create();
+            }
+          } else {
+            $('#lowerChar' + index).css('color','#ff0000');
+            $('#upperChar' + index).css('color','#ff0000');
+          }
+        }else if (code === useArr[random]) {
+          create();
+        }
+      });
+      function restart() {
+        lastNum = 0;
+        random = 0;
+        sequen = 0;
+        index = 0;
+        create()
+      }
+      $all.click(function() {
+        useArr = pinyin;
+        Util.StorageSetter('useArr','pinyin');
+        $all.addClass('active');
+        $single.removeClass('active');
+        $multiple.removeClass('active');
+        restart();
+      })
+      $single.click(function() {
+        useArr = single;
+        Util.StorageSetter('useArr','single');
+        $all.removeClass('active');
+        $single.addClass('active');
+        $multiple.removeClass('active');
+        restart();
+      })
+      $multiple.click(function() {
+        useArr = multiple;
+        Util.StorageSetter('useArr','multiple');
+        $all.removeClass('active');
+        $single.removeClass('active');
+        $multiple.addClass('active');
+        restart();
+      })
+      $sequen.click(function() {
+        mode = 1;
+        Util.StorageSetter('mode','1');
+        $sequen.addClass('active');
+        $random.removeClass('active');
+        restart();
+      })
+      $random.click(function() {
+        mode = 0;
+        Util.StorageSetter('mode','0');
+        $sequen.removeClass('active');
+        $random.addClass('active');
+        restart();
+      })
+    })
+  </script>
+</html>
