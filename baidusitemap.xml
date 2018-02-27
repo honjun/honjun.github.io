@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
+    <lastmod>2018-02-27T15:16:49.102Z</lastmod>
+    <data>
+        <display>
+        <title>每日签到</title>
+        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://honjun.github.io/2018/01/10/snowfall-jquery-js%E5%AE%9E%E7%8E%B0%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD%E6%95%88%E6%9E%9C/</loc>
     <lastmod>2018-02-24T14:14:42.565Z</lastmod>
     <data>
@@ -17,24 +35,6 @@
            
              
               <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
-    <lastmod>2018-02-24T05:25:38.019Z</lastmod>
-    <data>
-        <display>
-        <title>每日签到</title>
-        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
           
         </display>
     </data>
@@ -587,11 +587,11 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>jquery</tag>
          
         <tag>jcrop</tag>
-         
-        <tag>前端</tag>
          
          
            
@@ -947,9 +947,9 @@
         <title>虚拟机安装ubuntu16.04.2</title>
         <pubTime>2017-06-04T12:07:31.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
         <tag>php</tag>
+         
+        <tag>mysql</tag>
          
         <tag>sublime</tag>
          
