@@ -300,8 +300,11 @@
               $('#lowerChar' + index).css('color','#ff0000');
               $('#upperChar' + index).css('color','#ff0000');
             }
-          }else if (code === useArr[random]) {
+          } else if (code === useArr[random]) {
             create();
+          } else {
+            $('#lowerChar' + index).css('color','#ff0000');
+            $('#upperChar' + index).css('color','#ff0000');
           }
         }
       });
