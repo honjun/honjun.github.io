@@ -52,7 +52,7 @@ var SimpleCore = {
             SimpleCore.goTop();
         });
         //圣诞节默认夜晚
-        SimpleCore.setLocalData('read-mode', 'day');
+        // SimpleCore.setLocalData('read-mode', 'night');
         SimpleCore.changeReadModel();
         SimpleCore.setPageCurrent();
         SimpleCore.setBuildingTime();

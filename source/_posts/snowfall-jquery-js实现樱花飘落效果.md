@@ -14,29 +14,8 @@ description:
 photos:
  - https://wx2.sinaimg.cn/large/006bYVyvgy1fnbxdi3kr7g30dw07o7ou.gif
 ---
-![png](https://wx3.sinaimg.cn/large/006bYVyvgy1fne9cxz06lj30ez0rsq3q.jpg)
+<img src="https://wx3.sinaimg.cn/large/006bYVyvgy1fne9cxz06lj30ez0rsq3q.jpg">
 ----------
-
-{% raw %}
-<link rel="stylesheet" href="/css/sakura.css" />
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
-<script type="text/javascript">
-    $(document).snowfall('clear');
-    if (document.body.clientWidth>600) {
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
-    } else {
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-        $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
-    }
-</script>
-{% endraw %}
-
 前几天圣诞节玩了把雪花飘落的jquery插件
 结果一不小心又想搞个樱花飘落效果。。。不幸晚睡————猝
 献上jquery雪花插件[snowfall.jquery.js](https://github.com/loktar00/JQuery-Snowfall)
@@ -84,3 +63,26 @@ $(document).snowfall({image:"4.png", flakeCount:10, minSpeed:1, minSize:8, maxSi
 飘落的时候添加了css的3D翻转效果，使之更加逼真
 图片是用ps一个一个扣下来的。扣好发现jpg格式不能带透明度，然后又心酸的重新扣png格式的。。。
 [代码demo](https://github.com/honjun/demo/tree/master/sakura)
+{% raw %}
+<link rel="stylesheet" href="/css/sakura.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
+<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
+<script>
+    function sakuraInit() {
+        $(document).snowfall('clear');
+        if (document.body.clientWidth > 600) {
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/2.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/4.png", flakeCount:20, minSpeed:1, minSize:8, maxSize:15,});
+        } else {
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/1.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/2.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+            $(document).snowfall({image:"/images/sakura/4.png", flakeCount:10, minSpeed:1, minSize:8, maxSize:15,});
+        }
+    }
+    window.onload = sakuraInit();
+</script>
+{% endraw %}
