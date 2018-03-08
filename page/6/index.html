@@ -317,13 +317,13 @@
             <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
             
                 <em>·</em>
-                <a href="/tags/前端/" target="_self">前端</a>
-            
-                <em>·</em>
                 <a href="/tags/jquery/" target="_self">jquery</a>
             
                 <em>·</em>
                 <a href="/tags/jcrop/" target="_self">jcrop</a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
             
         </div>
     </div>
@@ -455,6 +455,11 @@ var _hmt = _hmt || [];
         POWERMODE.colorful = true; // make power mode colorful
         POWERMODE.shake = false; // turn off shake
         document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });  
     });
 </script>
 </body>

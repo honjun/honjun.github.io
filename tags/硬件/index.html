@@ -260,6 +260,11 @@ var _hmt = _hmt || [];
         POWERMODE.colorful = true; // make power mode colorful
         POWERMODE.shake = false; // turn off shake
         document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });  
     });
 </script>
 </body>
