@@ -4,13 +4,35 @@
 
     
   <url>
+    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
+    <lastmod>2018-03-08T16:11:37.012Z</lastmod>
+    <data>
+        <display>
+        <title>每日签到</title>
+        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
+        
+        <tag>搞事</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://honjun.github.io/2018/03/07/%E4%BD%BF%E7%94%A8disqus%E8%AF%84%E8%AE%BA/</loc>
-    <lastmod>2018-03-07T15:38:03.271Z</lastmod>
+    <lastmod>2018-03-08T16:11:22.628Z</lastmod>
     <data>
         <display>
         <title>使用disqus评论</title>
         <pubTime>2018-03-07T15:07:28.000Z</pubTime>
         
+        <tag>hexo</tag>
+         
          
            
              
@@ -23,30 +45,14 @@
     
   <url>
     <loc>https://honjun.github.io/2018/02/22/%E6%8B%BC%E9%9F%B3%E5%AD%A6%E4%B9%A0StudyPinYin/</loc>
-    <lastmod>2018-03-07T15:32:38.073Z</lastmod>
+    <lastmod>2018-03-08T14:03:33.021Z</lastmod>
     <data>
         <display>
         <title>拼音学习StudyPinYin</title>
         <pubTime>2018-02-22T15:00:38.000Z</pubTime>
         
+        <tag>搞事</tag>
          
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
-    <lastmod>2018-03-07T15:30:50.209Z</lastmod>
-    <data>
-        <display>
-        <title>每日签到</title>
-        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
-        
          
            
              
@@ -965,9 +971,9 @@
         <title>虚拟机安装ubuntu16.04.2</title>
         <pubTime>2017-06-04T12:07:31.000Z</pubTime>
         
-        <tag>php</tag>
-         
         <tag>mysql</tag>
+         
+        <tag>php</tag>
          
         <tag>sublime</tag>
          
@@ -997,11 +1003,11 @@
         <title>canvas两张图片合成一张</title>
         <pubTime>2017-06-07T02:48:51.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>html5</tag>
          
         <tag>canvas</tag>
-         
-        <tag>前端</tag>
          
          
            

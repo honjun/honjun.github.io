@@ -155,11 +155,28 @@
             </div>
             <h2 class="post-title">使用disqus评论</h2>
             <div class="post-meta">
-                本文总共9个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1194个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>使用disqus</p>
+            <p>Disqus网址：<a href="https://disqus.com/">https://disqus.com/</a></p>
+<h2 id="Disqus配置使用"><a href="#Disqus配置使用" class="headerlink" title="Disqus配置使用"></a><strong>Disqus配置使用</strong></h2><p>注册步骤省略(注意要科学上网)<br><img class="lozad" data-src="http://wx4.sinaimg.cn/large/006bYVyvgy1fp5ueed0g7j30w40fc3zl.jpg" alt=""></p>
+<hr>
+<p><img class="lozad" data-src="http://wx3.sinaimg.cn/large/006bYVyvgy1fp5ueoj1o6j30ok0fedik.jpg" alt=""></p>
+<hr>
+<p><img class="lozad" data-src="http://wx2.sinaimg.cn/large/006bYVyvgy1fp5uejc7soj30hk0h6jrs.jpg" alt=""></p>
+<p>WebsiteName 是 hojun，所以主题配置文件(_config.yml)的disqus_shortname就填 hojun (就填你自己的)</p>
+<hr>
+<p><img class="lozad" data-src="http://wx3.sinaimg.cn/large/006bYVyvgy1fp5u1517d6j30ps0gzta2.jpg" alt=""></p>
+<hr>
+<p><img class="lozad" data-src="http://wx1.sinaimg.cn/large/006bYVyvgy1fp5u0zx5ctj30qv0f1wf0.jpg" alt=""></p>
+<hr>
+<p><img class="lozad" data-src="http://wx2.sinaimg.cn/large/006bYVyvgy1fp5u0uxtidj30mq0h8gmt.jpg" alt=""></p>
+<hr>
+<p><img class="lozad" data-src="http://wx1.sinaimg.cn/large/006bYVyvgy1fp5u1a42d6j30ia0ho74y.jpg" alt=""></p>
+<p>以下是我的配置和comment部分代码：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus_shortname:</span> <span class="string">hojun</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">config.disqus_shortname</span> &amp;&amp; <span class="attr">page.comments</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    /**</span></span><br><span class="line"><span class="undefined">     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.</span></span><br><span class="line"><span class="undefined">     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables</span></span><br><span class="line"><span class="undefined">     */</span></span><br><span class="line"><span class="undefined">     var disqus_config = function () &#123;</span></span><br><span class="line"><span class="xml">     this.page.url = '<span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.permalink</span> %&gt;</span>';</span></span><br><span class="line"><span class="xml">     this.page.identifier = '<span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.path</span> %&gt;</span>';</span></span><br><span class="line"><span class="undefined">     &#125;;</span></span><br><span class="line"><span class="undefined">    (function() &#123; // DON'T EDIT BELOW THIS LINE</span></span><br><span class="line"><span class="xml">        var d = document, disqus_shortname = '<span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.disqus_shortname</span> %&gt;</span>',s = d.createElement('script');</span></span><br><span class="line"><span class="undefined">        s.src = 'https://'+disqus_shortname+'.disqus.com/embed.js';</span></span><br><span class="line"><span class="undefined">        s.setAttribute('data-timestamp', +new Date());</span></span><br><span class="line"><span class="undefined">        (d.head || d.body).appendChild(s);</span></span><br><span class="line"><span class="undefined">    &#125;)();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>参考<a href="https://www.jianshu.com/p/d68de067ea74?open_source=weibo_search">https://www.jianshu.com/p/d68de067ea74?open_source=weibo_search</a></p>
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -171,6 +188,8 @@
         
         <div class="post-tags">标签：
             
+            <a href="/tags/hexo/">hexo</a>
+            
         </div>
         
     </article>
@@ -178,7 +197,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Disqus配置使用"><span class="toc-text">Disqus配置使用</span></a></li></ol>
     </div>
 </aside>
     
