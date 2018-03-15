@@ -4287,3 +4287,6 @@ pre .xml .cdata {
     text-overflow:ellipsis;
     white-space:nowrap;
 }
+#article-toc-inner ol {
+    margin-left: -16px;
+}

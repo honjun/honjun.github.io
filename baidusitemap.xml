@@ -4,17 +4,13 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2018-03-14T16:37:58.390Z</lastmod>
+    <loc>https://honjun.github.io/2018/03/15/SVG%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/</loc>
+    <lastmod>2018-03-15T12:52:46.194Z</lastmod>
     <data>
         <display>
-        <title>anime.js实现logo动画</title>
-        <pubTime>2018-03-14T12:34:51.000Z</pubTime>
+        <title>SVG深入浅出</title>
+        <pubTime>2018-03-14T16:36:54.000Z</pubTime>
         
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
          
            
              
@@ -26,13 +22,17 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2018/03/15/SVG%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/</loc>
-    <lastmod>2018-03-14T16:36:54.716Z</lastmod>
+    <loc>https://honjun.github.io/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2018-03-14T16:37:58.390Z</lastmod>
     <data>
         <display>
-        <title>SVG深入浅出</title>
-        <pubTime>2018-03-14T16:36:54.000Z</pubTime>
+        <title>anime.js实现logo动画</title>
+        <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
+        <tag>js</tag>
+         
+        <tag>前端</tag>
+         
          
            
              
@@ -651,11 +651,11 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>jquery</tag>
          
         <tag>jcrop</tag>
-         
-        <tag>前端</tag>
          
          
            
