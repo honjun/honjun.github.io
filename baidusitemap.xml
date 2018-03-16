@@ -5,12 +5,14 @@
     
   <url>
     <loc>https://honjun.github.io/2018/03/15/SVG%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/</loc>
-    <lastmod>2018-03-15T12:52:46.194Z</lastmod>
+    <lastmod>2018-03-15T13:25:33.364Z</lastmod>
     <data>
         <display>
         <title>SVG深入浅出</title>
         <pubTime>2018-03-14T16:36:54.000Z</pubTime>
         
+        <tag>svg</tag>
+         
          
            
              
@@ -651,11 +653,11 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>jquery</tag>
          
         <tag>jcrop</tag>
+         
+        <tag>前端</tag>
          
          
            
