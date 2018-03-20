@@ -226,7 +226,7 @@
         $(this).toggleClass('button_play')
         $(this).toggleClass('button_pause')
         if ($(this).hasClass('button_play')) {
-          timer = window.setInterval(create, 2000);
+          timer = window.setInterval(create, 5000);
           timer;
         } else {
           window.clearInterval(timer);
