@@ -105,7 +105,7 @@ path: baidusitemap.xml
 
 # ------------- Third part private config in theme ----------------------
 # comment ShortName, you can choose only ONE to display.
-disqus_shortname: hojun
+# disqus_shortname: hojun
 
 # 网易云跟帖
 # netease: 2fcf6a1d97e84100b37f6b747f76617f

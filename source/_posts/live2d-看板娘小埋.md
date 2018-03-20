@@ -34,7 +34,7 @@ photos:
 打开demo.html修改上你自己的路径
 ![](https://wx1.sinaimg.cn/large/006bYVyvgy1fon2xthv0bj30os0cwt9z.jpg)
 接下来就是放入博客页面，调调大小，挪挪位置。duangduangduang~
-[效果预览](https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/)
+[效果预览](https://www.hojun.cn//2018/02/19/live2d-看板娘小埋/)
 
 ----------
 在这里感谢：

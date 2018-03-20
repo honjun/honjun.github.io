@@ -87,7 +87,7 @@ Page 1
 打开软件后点击Box Editor->Open->选择对应的tif文件打开
 ![](https://wx4.sinaimg.cn/large/006bYVyvly1fns0mmqis3j30kt0e33z5.jpg)
 得到如下效果
-![](leanote://file/getImage?fileId=5a6889e6f16bc60ff8000007)
+![](https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg)
 如果右边字体没有框框，左边没有内容是因为java8没安装好，或者安装了两个java版本，使用的是其他java版本
 可以在控制台输入
 ```cmd
