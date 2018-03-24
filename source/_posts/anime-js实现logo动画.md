@@ -88,7 +88,8 @@ xmlns="http://www.w3.org/2000/svg">
 第二个o,没有现成的o，只能在a上面动手脚，可是`<path>`的C命令就是三次贝塞尔曲线。表示不太会画，肿么办(*/ω＼*)?
 上网找资料呗~ 找到张鑫旭大牛的一片文章[深度掌握SVG路径path的贝塞尔曲线指令](http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/)还有dayu提供的[任意二次、三次贝塞尔曲线呈现工具](http://dayu.pw/svgcontrol/)
 ![](https://wx1.sinaimg.cn/large/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg)
-已知a的三条弧线![](https://wx4.sinaimg.cn/large/006bYVyvgy1fpct26viiaj305r05udft.jpg)即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章[使用贝塞尔曲线拟合圆](http://www.cnblogs.com/ArthurQQ/articles/1730214.html)
+已知a的三条弧线
+![](https://wx4.sinaimg.cn/large/006bYVyvgy1fpct26viiaj305r05udft.jpg)即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章[使用贝塞尔曲线拟合圆](http://www.cnblogs.com/ArthurQQ/articles/1730214.html)
 不需要的童鞋可以发挥一下自带的我看看看看看出来，上图已经很明显了，o即圆形是上下左右对称的，通过对称的特性就可以得到那两个点的坐标。
 第三个j,自由发挥了o(*￣︶￣*)o
 第四个u,参考n把它给倒过来(⌒▽⌒)

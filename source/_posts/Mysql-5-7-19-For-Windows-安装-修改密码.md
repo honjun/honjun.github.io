@@ -65,7 +65,7 @@ mysql> exit
 Bye
 ```
 <font color="red">注：如果服务起不来，检查下有开启其他的mysql服务，导致端口被占用，比如mysql5.6</font>
-![](leanote://file/getImage?fileId=598b2efd4071197751000001)
+![](http://wx4.sinaimg.cn/large/006bYVyvgy1fpkrw2fwptj30ox0e9dik.jpg)
 ## **第四步 》重启服务，配置和修改生效**
 修改my.ini文件
 ```ini

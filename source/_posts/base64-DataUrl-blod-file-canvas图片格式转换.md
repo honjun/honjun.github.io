@@ -13,7 +13,7 @@ description: 图片格式转换
 photos:
 ---
 
-## **//img元素转base64 元素应为 ```<img src="xxx.jpg">```这种格式**
+## **//img元素转base64 元素应为 `<img src="xxx.jpg">`这种格式**
 
 ```
 function getBase64Image(img) {
