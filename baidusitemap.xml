@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://honjun.github.io/2018/03/24/Win10%E5%B0%8F%E6%8A%80%E5%B7%A7%E4%B9%8B%E5%88%9B%E5%BB%BA%E4%B8%8D%E5%8F%AF%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E8%BF%98%E8%83%BD%E4%BF%9D%E6%8A%A4%E9%9A%90%E7%A7%81%E5%93%A6/</loc>
+    <lastmod>2018-03-24T12:08:40.182Z</lastmod>
+    <data>
+        <display>
+        <title>Win10小技巧之创建不可删除文件夹，还能保护隐私哦~</title>
+        <pubTime>2018-03-24T11:50:37.000Z</pubTime>
+        
+        <tag>win10</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
-    <lastmod>2018-03-20T23:45:25.085Z</lastmod>
+    <lastmod>2018-03-24T03:47:41.881Z</lastmod>
     <data>
         <display>
         <title>每日签到</title>
@@ -17,6 +37,110 @@
            
              
               <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2017/06/07/base64-DataUrl-blod-file-canvas%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2018-03-23T16:42:15.575Z</lastmod>
+    <data>
+        <display>
+        <title>base64 DataUrl blod file canvas图片格式转换</title>
+        <pubTime>2017-06-07T03:15:47.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2017/06/18/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2018-03-21T14:18:41.320Z</lastmod>
+    <data>
+        <display>
+        <title>关于此博客搭建</title>
+        <pubTime>2017-06-18T15:39:18.000Z</pubTime>
+        
+        <tag>blog</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2017/06/16/%E4%BF%AE%E5%A4%8D%E4%BA%BA%E7%89%A9idle%E5%92%8Crun%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E4%B9%8B%E9%97%B4%E7%9A%84%E5%BB%B6%E8%BF%9F%E7%9A%84Bug/</loc>
+    <lastmod>2018-03-21T14:13:49.924Z</lastmod>
+    <data>
+        <display>
+        <title>修复人物idle和run动画切换之间的延迟的Bug</title>
+        <pubTime>2017-06-16T15:47:38.000Z</pubTime>
+        
+        <tag>Unity</tag>
+         
+        <tag>debug</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2017/08/09/Mysql-5-7-19-For-Windows-%E5%AE%89%E8%A3%85-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
+    <lastmod>2018-03-21T13:56:41.184Z</lastmod>
+    <data>
+        <display>
+        <title>Mysql 5.7.19 For Windows 安装+修改密码</title>
+        <pubTime>2017-08-09T15:50:45.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2018-03-21T13:22:00.208Z</lastmod>
+    <data>
+        <display>
+        <title>anime.js实现logo动画</title>
+        <pubTime>2018-03-14T12:34:51.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
           
         </display>
     </data>
@@ -70,28 +194,6 @@
         <pubTime>2018-03-14T16:36:54.000Z</pubTime>
         
         <tag>svg</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2018-03-14T16:37:58.390Z</lastmod>
-    <data>
-        <display>
-        <title>anime.js实现logo动画</title>
-        <pubTime>2018-03-14T12:34:51.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>前端</tag>
          
          
            
@@ -564,26 +666,6 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2017/06/18/%E5%85%B3%E4%BA%8E%E6%AD%A4%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2017-11-16T04:44:43.137Z</lastmod>
-    <data>
-        <display>
-        <title>关于此博客搭建</title>
-        <pubTime>2017-06-18T15:39:18.000Z</pubTime>
-        
-        <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://honjun.github.io/2017/06/17/%E5%88%86%E4%BA%AB%E4%B8%80%E4%BA%9B%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2017-11-16T04:43:24.843Z</lastmod>
     <data>
@@ -739,26 +821,6 @@
         <title>PHP根据url批量下载图片</title>
         <pubTime>2017-07-20T16:08:46.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2017/08/09/Mysql-5-7-19-For-Windows-%E5%AE%89%E8%A3%85-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
-    <lastmod>2017-09-10T15:16:47.466Z</lastmod>
-    <data>
-        <display>
-        <title>Mysql 5.7.19 For Windows 安装+修改密码</title>
-        <pubTime>2017-08-09T15:50:45.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
          
            
              
@@ -944,28 +1006,6 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2017/06/16/%E4%BF%AE%E5%A4%8D%E4%BA%BA%E7%89%A9idle%E5%92%8Crun%E5%8A%A8%E7%94%BB%E5%88%87%E6%8D%A2%E4%B9%8B%E9%97%B4%E7%9A%84%E5%BB%B6%E8%BF%9F%E7%9A%84Bug/</loc>
-    <lastmod>2017-07-06T14:08:15.108Z</lastmod>
-    <data>
-        <display>
-        <title>修复人物idle和run动画切换之间的延迟的Bug</title>
-        <pubTime>2017-06-16T15:47:38.000Z</pubTime>
-        
-        <tag>Unity</tag>
-         
-        <tag>debug</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://honjun.github.io/2017/06/30/php%E4%B8%AD%E5%8A%9F%E8%83%BD%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2017-07-06T14:07:09.197Z</lastmod>
     <data>
@@ -974,26 +1014,6 @@
         <pubTime>2017-06-30T12:50:44.000Z</pubTime>
         
         <tag>php</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2017/06/07/base64-DataUrl-blod-file-canvas%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2017-07-06T14:05:54.042Z</lastmod>
-    <data>
-        <display>
-        <title>base64 DataUrl blod file canvas图片格式转换</title>
-        <pubTime>2017-06-07T03:15:47.000Z</pubTime>
-        
-        <tag>前端</tag>
          
          
            
