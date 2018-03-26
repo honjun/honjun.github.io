@@ -3571,6 +3571,8 @@ body.night-mode,.night-mode .btn,body.night-mode a,.night-mode .nav-user a,#sear
 }
 .markdown-body img
 {
+    display: block;
+    margin: 8px auto;
     max-width:100%
 }
 .markdown-body hr
@@ -3866,6 +3868,7 @@ body.night-mode,.night-mode .btn,body.night-mode a,.night-mode .nav-user a,#sear
 }
 .markdown-body .highlight .line {
   /*height: 22.400000000000002px;*/
+  display: inline-block;
 }
 .markdown-body .highlight .line.marked {
   background: #d6d6d6;
