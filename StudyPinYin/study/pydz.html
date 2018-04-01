@@ -63,6 +63,7 @@
         vertical-align: middle;
         border: 5px solid #bcc2c6;
         border-radius: 50px;
+        cursor: pointer;
       }
       .active {
         color: #03A9F4;
@@ -74,6 +75,7 @@
         margin-left: 10px;
         width: 100px;
         height: 100px;
+        cursor: pointer;
         background-image: url('./play.jpg');
         background-size: 100%;
       }
@@ -83,6 +85,7 @@
         margin-left: 10px;
         width: 100px;
         height: 100px;
+        cursor: pointer;
         background-image: url('./pause.jpg');
         background-size: 100%;
       }
@@ -92,7 +95,17 @@
         margin-right: 10px;
         width: 100px;
         height: 100px;
+        cursor: pointer;
         background-image: url('./on_sound.jpg');
+        background-size: 100% 100%;
+      }
+      .fayin {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-image: url('./speaker.jpg');
         background-size: 100% 100%;
       }
       .off {
@@ -269,13 +282,25 @@
             let temp = useArr[random].split("|");
             let src = 'https://appcdn.fanyi.baidu.com/zhdict/mp3/' + temp[1] + temp[2] + '.mp3';
             let id = 'typing' + random;
-            sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            if (!document.getElementById(id)) {
+              sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            }
             audio = document.getElementById(id);
             audio.play();
           } else {
             audio = document.getElementById(useArr[random]);
             audio.play();
           }
+        }
+      })
+      $('body').on('click', '.fayin', function(){
+        if (Util.StorageGetter('useArr') === 'typing') {
+          let id = 'typing' + random;
+          audio = document.getElementById(id);
+          audio.play();
+        } else {
+          audio = document.getElementById(useArr[random]);
+          audio.play();
         }
       })
       function create() {
@@ -306,7 +331,7 @@
             lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + tempTyping[1].charAt(i) + '</div>';
             upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + tempTyping[1].charAt(i).toUpperCase() + '</div>';
           }
-          upperChar += '<br>' + tempTyping[0];
+          upperChar += '<br>' + tempTyping[0] + '<div class="fayin"><div>';
           $pinyin.css('font-size', '150px');
         } else {
           useLength = useArr[random].length;
@@ -325,7 +350,9 @@
           if (useArrName === 'typing') {
             let src = 'https://appcdn.fanyi.baidu.com/zhdict/mp3/' + tempTyping[1] + tempTyping[2] + '.mp3';
             let id = 'typing' + random;
-            sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            if (!document.getElementById(id)) {
+              sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            }
             audio = document.getElementById(id);
             audio.play();
           } else {
