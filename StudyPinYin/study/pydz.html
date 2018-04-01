@@ -126,12 +126,13 @@
       </div>
       <div class="footer">
         <div id="player" class="button_pause"></div>
-        <div class="menu all active">全</div>
-        <div class="menu single">单</div>
-        <div class="menu multiple">多</div>
-        <div class="menu sequen active">顺</div>
-        <div class="menu random">乱</div>
-        <div class="menu freedom">自</div>
+        <div class="menu con all">全</div>
+        <div class="menu con single">单</div>
+        <div class="menu con multiple">多</div>
+        <div class="menu con typing">字</div>
+        <div class="menu mode sequen">顺</div>
+        <div class="menu mode random">乱</div>
+        <div class="menu mode freedom">自</div>
         <div class="sound"></div>
       </div>
     </div>
@@ -168,45 +169,69 @@
     let $single = $('.single');
     let $multiple = $('.multiple');
     let $sequen = $('.sequen');
+    let $typing = $('.typing');
     let $random = $('.random');
     let $freedom = $('.freedom');
     let $sound = $('.sound');
+    let sounds = $('.sounds');
+    let $con = $('.con');
+    let $mode = $('.mode');
     let single = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; //26
     let multiple = ["ai", "an", "ang", "ao", "ci", "chi", "ei", "en", "eng", "er", "ian", "ie", "in", "ing", "iu", "ong", "ou", "si", "shi", "ue", "ui", "un", "vn", "wu", "yan", "ye", "yi", "yin", "ying", "yu", "yuan", "yue", "yun", "zi", "zhi"]  //35
     let assist = ["艾", "安", "肮", "奥", "次", "吃", "诶", "恩", "恩", "二", "淹", "叶", "因", "英", "优", "ong", "欧", "四", "事", "约", "微", "温", "晕", "屋", "烟", "叶", "衣", "因", "英", "雨", "渊", "", "晕", "自", "只"]
-    let pinyin = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi'];
-    let useArr = pinyin;
+    let all = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi'];
+    let useArr = all;
+    let typing = [];
     function init() {
-      let sounds = $('.sounds');
-      let length = pinyin.length;
+      $.ajax({
+        type: "GET",
+        url: "commonPinyin.json",
+        dataType: "json",
+        async: false,
+　　　　success: function(data){
+            typing = data.data;
+        }
+      });
+      sounds = $('.sounds');
+      let length = all.length;
       for (let i = 0; i < length; i++) {
-        sounds.append('<audio src="./sounds/' + pinyin[i] + '.mp3" id="' + pinyin[i] + '" preload="auto" style="display:none;"></audio>')
+        sounds.append('<audio src="./sounds/' + all[i] + '.mp3" id="' + all[i] + '" preload="auto" style="display:none;"></audio>')
       }
       if (Util.StorageGetter('mode') === '0') {
         mode = 0;
-        $sequen.removeClass('active');
+        $mode.removeClass('active');
         $random.addClass('active');
+      }
+      if (Util.StorageGetter('mode') === '1') {
+        mode = 1;
+        $mode.removeClass('active');
+        $sequen.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'all') {
+        useArr = all;
+        $con.removeClass('active');
+        $all.addClass('active');
       }
       if (Util.StorageGetter('useArr') === 'single') {
         useArr = single;
-        $all.removeClass('active');
+        $con.removeClass('active');
         $single.addClass('active');
-        $multiple.removeClass('active');
       }
       if (Util.StorageGetter('useArr') === 'multiple') {
         useArr = multiple;
-        $all.removeClass('active');
-        $single.removeClass('active');
+        $con.removeClass('active');
         $multiple.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'typing') {
+        useArr = typing;
+        $con.removeClass('active');
+        $typing.addClass('active');
       }
       if (Util.StorageGetter('freedom') === 'on') {
         freedom = ON;
         $freedom.addClass('active');
-        $all.removeClass('active');
-        $single.removeClass('active');
-        $multiple.removeClass('active');
-        $sequen.removeClass('active');
-        $random.removeClass('active');
+        $con.removeClass('active');
+        $mode.removeClass('active');
       }
       if (Util.StorageGetter('sound') === 'off') {
         sound = OFF;
@@ -249,6 +274,10 @@
         $pinyin.html('');
         let lowerChar = '';
         let upperChar = '';
+        let useArrName = Util.StorageGetter('useArr');
+        let tone = 0;
+        let useLength = 0
+        let tempTyping = [];
         if (mode === 0) {
           random = getRandom(useArrLength);
           while (random === lastNum) {
@@ -259,19 +288,41 @@
           sequen = sequen % useArrLength + 1;
           random = sequen - 1;
         }
-        let useLength = useArr[random].length;
-        for (let i = 0; i < useLength; i++) {
-          lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + useArr[random].charAt(i) + '</div>';
-          upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + useArr[random].charAt(i).toUpperCase() + '</div>';
+
+        if (useArrName === 'typing') {
+          tempTyping = useArr[random].split("|");
+          useLength = tempTyping[1].length;
+          tone = tempTyping[2];
+          for (let i = 0; i < useLength; i++) {
+            lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + tempTyping[1].charAt(i) + '</div>';
+            upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + tempTyping[1].charAt(i).toUpperCase() + '</div>';
+          }
+          upperChar += '<br>' + tempTyping[0];
+          $pinyin.css('font-size', '150px');
+        } else {
+          useLength = useArr[random].length;
+          for (let i = 0; i < useLength; i++) {
+            lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + useArr[random].charAt(i) + '</div>';
+            upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + useArr[random].charAt(i).toUpperCase() + '</div>';
+          }
+          $pinyin.css('font-size', '200px');
         }
         let str = lowerChar + upperChar;
-        if (Util.StorageGetter('useArr') === 'multiple') {
+        if (useArrName === 'multiple') {
           str += '<br>' + assist[random];
         }
         $pinyin.append(str);
         if (sound === ON) {
-          audio = document.getElementById(useArr[random]);
-          audio.play();
+          if (useArrName === 'typing') {
+            let src = 'https://appcdn.fanyi.baidu.com/zhdict/mp3/' + tempTyping[1] + tempTyping[2] + '.mp3';
+            let id = 'typing' + random;
+            sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            audio = document.getElementById(id);
+            audio.play();
+          } else {
+            audio = document.getElementById(useArr[random]);
+            audio.play();
+          }
         }
       }
       $(document).keyup(function(event) {
@@ -290,9 +341,17 @@
             audio.play();
           }
         } else {
-          let useLength = useArr[random].length;
+          let useLength = 0;
+          let pinyin = useArr[random];
+          if (Util.StorageGetter('useArr') === 'typing') {
+            let temp = useArr[random].split("|");
+            pinyin = temp[1];
+            useLength = pinyin.length;
+          } else {
+            useLength = pinyin.length;
+          }
           if (useLength > 1) {
-            if (code === useArr[random].charAt(index)) {
+            if (code === pinyin.charAt(index)) {
               $('#lowerChar' + index).css('color','#69a621');
               $('#upperChar' + index).css('color','#69a621');
               if (++index === useLength) {
@@ -303,7 +362,7 @@
               $('#lowerChar' + index).css('color','#ff0000');
               $('#upperChar' + index).css('color','#ff0000');
             }
-          } else if (code === useArr[random]) {
+          } else if (code === pinyin) {
             create();
           } else {
             $('#lowerChar' + index).css('color','#ff0000');
@@ -316,26 +375,27 @@
         random = 0;
         sequen = 0;
         index = 0;
-        if (Util.StorageGetter('useArr') === 'pinyin') {
+        if (Util.StorageGetter('useArr') === 'all') {
+          $con.removeClass('active');
           $all.addClass('active');
-          $single.removeClass('active');
-          $multiple.removeClass('active');
         }
         if (Util.StorageGetter('useArr') === 'single') {
-          $all.removeClass('active');
+          $con.removeClass('active');
           $single.addClass('active');
-          $multiple.removeClass('active');
         }
         if (Util.StorageGetter('useArr') === 'multiple') {
-          $all.removeClass('active');
-          $single.removeClass('active');
+          $con.removeClass('active');
           $multiple.addClass('active');
         }
+        if (Util.StorageGetter('useArr') === 'typing') {
+          $con.removeClass('active');
+          $typing.addClass('active');
+        }
         if (mode === 1) {
+          $mode.removeClass('active');
           $sequen.addClass('active');
-          $random.removeClass('active');
         } else {
-          $sequen.removeClass('active');
+          $mode.removeClass('active');
           $random.addClass('active');
         }
         freedom = OFF;
@@ -347,8 +407,8 @@
         create()
       }
       $all.click(function() {
-        useArr = pinyin;
-        Util.StorageSetter('useArr','pinyin');
+        useArr = all;
+        Util.StorageSetter('useArr','all');
         restart();
       });
       $single.click(function() {
@@ -359,6 +419,11 @@
       $multiple.click(function() {
         useArr = multiple;
         Util.StorageSetter('useArr','multiple');
+        restart();
+      });
+      $typing.click(function() {
+        useArr = typing;
+        Util.StorageSetter('useArr','typing');
         restart();
       });
       $sequen.click(function() {
@@ -374,11 +439,8 @@
       $freedom.click(function() {
         freedom = ON;
         Util.StorageSetter('freedom','on');
-        $all.removeClass('active');
-        $single.removeClass('active');
-        $multiple.removeClass('active');
-        $sequen.removeClass('active');
-        $random.removeClass('active');
+        $con.removeClass('active');
+        $mode.removeClass('active');
         $freedom.addClass('active');
         $player.addClass('button_pause');
         $player.removeClass('button_play');
