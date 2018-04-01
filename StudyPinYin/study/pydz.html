@@ -265,8 +265,17 @@
         } else {
           sound = ON;
           Util.StorageSetter('sound', 'on');
-          audio = document.getElementById(useArr[random]);
-          audio.play();
+          if (Util.StorageGetter('useArr') === 'typing') {
+            let temp = useArr[random].split("|");
+            let src = 'https://appcdn.fanyi.baidu.com/zhdict/mp3/' + temp[1] + temp[2] + '.mp3';
+            let id = 'typing' + random;
+            sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            audio = document.getElementById(id);
+            audio.play();
+          } else {
+            audio = document.getElementById(useArr[random]);
+            audio.play();
+          }
         }
       })
       function create() {
