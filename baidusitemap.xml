@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2018/04/05/%E3%80%8A%E8%B6%85%E7%BA%A7%E6%95%B4%E7%90%86%E6%9C%AF%E3%80%8B%E8%AE%B0/</loc>
-    <lastmod>2018-04-05T07:36:53.672Z</lastmod>
+    <loc>https://honjun.github.io/2018/04/09/%E6%95%B4%E7%90%86%E5%A5%BD%E8%BF%87%E5%8E%BB%EF%BC%8C%E9%87%8D%E6%96%B0%E5%87%BA%E5%8F%91%EF%BC%81%E3%80%8A%E6%80%A6%E7%84%B6%E5%BF%83%E5%8A%A8%E7%9A%84%E4%BA%BA%E7%94%9F%E6%95%B4%E7%90%86%E9%AD%94%E6%B3%95%E3%80%8B%E8%AE%B0/</loc>
+    <lastmod>2018-04-08T16:53:33.277Z</lastmod>
     <data>
         <display>
-        <title>《超级整理术》记</title>
-        <pubTime>2018-04-05T06:59:06.000Z</pubTime>
+        <title>《怦然心动的人生整理魔法》记</title>
+        <pubTime>2018-04-08T16:52:23.000Z</pubTime>
         
         <tag>悦读</tag>
          
@@ -24,14 +24,96 @@
 
     
   <url>
+    <loc>https://honjun.github.io/2017/08/09/Mysql-5-7-19-For-Windows-%E5%AE%89%E8%A3%85-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
+    <lastmod>2018-04-06T16:45:27.154Z</lastmod>
+    <data>
+        <display>
+        <title>Mysql 5.7.19 For Windows 安装+修改密码</title>
+        <pubTime>2017-08-09T15:50:45.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2017/07/07/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-04-05T14:31:23.424Z</lastmod>
+    <data>
+        <display>
+        <title>按键精灵入门</title>
+        <pubTime>2017-07-07T15:16:37.000Z</pubTime>
+        
+        <tag>搞事</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
-    <lastmod>2018-04-05T06:15:34.237Z</lastmod>
+    <lastmod>2018-04-05T13:44:28.542Z</lastmod>
     <data>
         <display>
         <title>每日签到</title>
         <pubTime>2017-12-30T04:08:23.000Z</pubTime>
         
         <tag>搞事</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2018-04-05T13:44:09.238Z</lastmod>
+    <data>
+        <display>
+        <title>anime.js实现logo动画</title>
+        <pubTime>2018-03-14T12:34:51.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2018/04/05/%E3%80%8A%E8%B6%85%E7%BA%A7%E6%95%B4%E7%90%86%E6%9C%AF%E3%80%8B%E8%AE%B0/</loc>
+    <lastmod>2018-04-05T07:36:53.672Z</lastmod>
+    <data>
+        <display>
+        <title>《超级整理术》记</title>
+        <pubTime>2018-04-05T06:59:06.000Z</pubTime>
+        
+        <tag>悦读</tag>
          
          
            
@@ -258,48 +340,6 @@
         <tag>Unity</tag>
          
         <tag>debug</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2017/08/09/Mysql-5-7-19-For-Windows-%E5%AE%89%E8%A3%85-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81/</loc>
-    <lastmod>2018-03-21T13:56:41.184Z</lastmod>
-    <data>
-        <display>
-        <title>Mysql 5.7.19 For Windows 安装+修改密码</title>
-        <pubTime>2017-08-09T15:50:45.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://honjun.github.io/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2018-03-21T13:22:00.208Z</lastmod>
-    <data>
-        <display>
-        <title>anime.js实现logo动画</title>
-        <pubTime>2018-03-14T12:34:51.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
          
          
            
@@ -772,26 +812,6 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2017/07/07/%E6%8C%89%E9%94%AE%E7%B2%BE%E7%81%B5%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2017-11-16T04:51:25.556Z</lastmod>
-    <data>
-        <display>
-        <title>按键精灵入门</title>
-        <pubTime>2017-07-07T15:16:37.000Z</pubTime>
-        
-        <tag>搞事</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://honjun.github.io/2017/10/23/hexo-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2017-11-16T04:50:14.364Z</lastmod>
     <data>
@@ -923,9 +943,9 @@
         <title>Lozad.js学习使用</title>
         <pubTime>2017-11-15T10:39:54.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>js</tag>
+         
+        <tag>hexo</tag>
          
          
            

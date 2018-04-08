@@ -185,7 +185,7 @@
 <h2 id="第一个难点-SVG"><a href="#第一个难点-SVG" class="headerlink" title="第一个难点 SVG"></a><strong>第一个难点 SVG</strong></h2><p>之前接触到的SVG一直都是“不失真的矢量图”这么一个概念，但是这次的特效需要用到svg的<code>&lt;path&gt;</code>标签</p>
 <p>w3c介绍：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;path&gt; 标签用来定义路径。</span><br><span class="line">下面的命令可用于路径数据：</span><br><span class="line">    M = moveto</span><br><span class="line">    L = lineto</span><br><span class="line">    H = horizontal lineto</span><br><span class="line">    V = vertical lineto</span><br><span class="line">    C = curveto</span><br><span class="line">    S = smooth curveto</span><br><span class="line">    Q = quadratic Belzier curve</span><br><span class="line">    T = smooth quadratic Belzier curveto</span><br><span class="line">    A = elliptical Arc</span><br><span class="line">    Z = closepath</span><br><span class="line">注释：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。</span><br><span class="line"></span><br><span class="line">请把下面的代码拷贝到记事本，然后把文件保存为 &quot;path1.svg&quot;。把此文件放入您的 web 目录：</span><br><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; </span><br><span class="line">&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;</span><br><span class="line">xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;path d=&quot;M250 150 L150 350 L350 350 Z&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/svg&gt;</span><br><span class="line">上面的例子定义了一条路径，它开始于位置 250 150，到达位置 150 350，然后从那里开始到 350 350，最后在 250 150 关闭路径。</span><br></pre></td></tr></table></figure></p>
 <p>通过以上介绍能够稍微理解path作用，了解更多请浏览作者的另一篇文章<a href="http://www.hojun.cn/2018/03/15/SVG深入浅出">SVG深入浅出</a></p>
-<h2 id="第二个难点-赛贝尔曲线"><a href="#第二个难点-赛贝尔曲线" class="headerlink" title="第二个难点 赛贝尔曲线"></a><strong>第二个难点 赛贝尔曲线</strong></h2><p>在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg" alt=""><br>接着把png转svg格式图片，<a href="http://www.pngtosvg.com/">在线转换工具</a><br>最后把SVG的path数据插入代码。Σ(っ °Д °;)っ发现并不是自己想要的效果。<br>通过阅读官方文档和特效代码发现anime.js的动画是根据路径来呈现的，所以我应该提供的SVG的<code>&lt;path&gt;</code>只是一条线段就够了。</p>
+<h2 id="第二个难点-贝赛尔曲线"><a href="#第二个难点-贝赛尔曲线" class="headerlink" title="第二个难点 贝赛尔曲线"></a><strong>第二个难点 贝赛尔曲线</strong></h2><p>在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg" alt=""><br>接着把png转svg格式图片，<a href="http://www.pngtosvg.com/">在线转换工具</a><br>最后把SVG的path数据插入代码。Σ(っ °Д °;)っ发现并不是自己想要的效果。<br>通过阅读官方文档和特效代码发现anime.js的动画是根据路径来呈现的，所以我应该提供的SVG的<code>&lt;path&gt;</code>只是一条线段就够了。</p>
 <hr>
 <p>又回到起点，从新开始使用<code>&lt;path&gt;</code>提供的命令画logo。<br>第一个h，好办的，只要把n的左边那条直线的Y坐标改长点就行。<br>第二个o,没有现成的o，只能在a上面动手脚，可是<code>&lt;path&gt;</code>的C命令就是三次贝塞尔曲线。表示不太会画，肿么办(<em>/ω＼</em>)?<br>上网找资料呗~ 找到张鑫旭大牛的一片文章<a href="http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/">深度掌握SVG路径path的贝塞尔曲线指令</a>还有dayu提供的<a href="http://dayu.pw/svgcontrol/">任意二次、三次贝塞尔曲线呈现工具</a><br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg" alt=""><br>已知a的三条弧线<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct26viiaj305r05udft.jpg" alt="">即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章<a href="http://www.cnblogs.com/ArthurQQ/articles/1730214.html">使用贝塞尔曲线拟合圆</a><br>不需要的童鞋可以发挥一下自带的我看看看看看出来，上图已经很明显了，o即圆形是上下左右对称的，通过对称的特性就可以得到那两个点的坐标。<br>第三个j,自由发挥了o(<em>￣︶￣</em>)o<br>第四个u,参考n把它给倒过来(⌒▽⌒)<br>第五个n,现成的有，大功告成ヾ(^▽^*)))</p>
 <p><a href="http://www.hojun.cn/2018/03/14/anime-js实现logo动画/">效果预览</a><br>感谢<a href="http://animejs.com">anime.js</a>以及<a href="http://www.5iweb.com.cn/resource/5iweb2017070301/index.html">51web</a>提供的特效代码</p>
@@ -200,9 +200,9 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/前端/">前端</a>
-            
             <a href="/tags/js/">js</a>
+            
+            <a href="/tags/前端/">前端</a>
             
         </div>
         
@@ -211,7 +211,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个难点-SVG"><span class="toc-text">第一个难点 SVG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个难点-赛贝尔曲线"><span class="toc-text">第二个难点 赛贝尔曲线</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个难点-SVG"><span class="toc-text">第一个难点 SVG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个难点-贝赛尔曲线"><span class="toc-text">第二个难点 贝赛尔曲线</span></a></li></ol>
     </div>
 </aside>
     
