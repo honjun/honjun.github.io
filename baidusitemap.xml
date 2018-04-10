@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>https://honjun.github.io/2018/04/11/%E5%9B%BE%E7%89%87%E7%A7%8D%E5%AD%90%E5%88%B6%E4%BD%9C%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%E2%80%94%E8%80%81%E5%8F%B8%E6%9C%BA%E5%BF%AB%E4%B8%8A%E8%BD%A6/</loc>
+    <lastmod>2018-04-10T16:34:35.522Z</lastmod>
+    <data>
+        <display>
+        <title>图片种子制作原来这么简单—老司机快上车</title>
+        <pubTime>2018-04-10T16:32:37.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://honjun.github.io/2018/04/09/%E6%95%B4%E7%90%86%E5%A5%BD%E8%BF%87%E5%8E%BB%EF%BC%8C%E9%87%8D%E6%96%B0%E5%87%BA%E5%8F%91%EF%BC%81%E3%80%8A%E6%80%A6%E7%84%B6%E5%BF%83%E5%8A%A8%E7%9A%84%E4%BA%BA%E7%94%9F%E6%95%B4%E7%90%86%E9%AD%94%E6%B3%95%E3%80%8B%E8%AE%B0/</loc>
     <lastmod>2018-04-08T17:05:00.573Z</lastmod>
     <data>
@@ -91,9 +109,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>js</tag>
+         
+        <tag>前端</tag>
          
          
            
@@ -919,11 +937,11 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>jquery</tag>
          
         <tag>jcrop</tag>
-         
-        <tag>前端</tag>
          
          
            
@@ -943,9 +961,9 @@
         <title>Lozad.js学习使用</title>
         <pubTime>2017-11-15T10:39:54.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>js</tag>
+         
+        <tag>hexo</tag>
          
          
            
@@ -1217,9 +1235,9 @@
         <title>虚拟机安装ubuntu16.04.2</title>
         <pubTime>2017-06-04T12:07:31.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
         <tag>php</tag>
+         
+        <tag>mysql</tag>
          
         <tag>sublime</tag>
          
@@ -1249,11 +1267,11 @@
         <title>canvas两张图片合成一张</title>
         <pubTime>2017-06-07T02:48:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>html5</tag>
          
         <tag>canvas</tag>
+         
+        <tag>前端</tag>
          
          
            
