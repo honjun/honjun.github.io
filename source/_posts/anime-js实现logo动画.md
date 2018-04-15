@@ -74,7 +74,7 @@ xmlns="http://www.w3.org/2000/svg">
 ```
 通过以上介绍能够稍微理解path作用，了解更多请浏览作者的另一篇文章[SVG深入浅出](http://www.hojun.cn/2018/03/15/SVG深入浅出)
 
-## **第二个难点 赛贝尔曲线**
+## **第二个难点 贝赛尔曲线**
 在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片
 ![](https://wx4.sinaimg.cn/large/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg)
 接着把png转svg格式图片，[在线转换工具](http://www.pngtosvg.com/)
