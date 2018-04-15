@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>自动上传博客图片至新浪微博相册之headless版 - hojunBlog</title>
+
+<meta name="keywords" content="headless">
+
+<meta name="description " content="之前实现了一波Python+selenium自动上传博客图片至新浪微博相册，每次都会自动打开浏览器，再巴拉巴拉一波操作。后来在爬取网页动态页面的时候发现可以使用浏览器自带的headless(无头)">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a>
+        <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a>
+        <a href="/help" title="帮助中心"><i class="fa fa-question-circle"></i><span>帮助中心</span></a>
+        <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div>
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/honjun" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-facebook">
+                <a href="null"  target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/tech" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/live" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/resource" data-name="资源">资源</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-04-14">2018-04-14</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">自动上传博客图片至新浪微博相册之Headless版</h2>
+            <div class="post-meta">
+                本文总共3218个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fqcg6c6d2bj30dw0b4t8z.jpg" alt=""><br>之前实现了一波Python+selenium自动上传博客图片至新浪微博相册，每次都会自动打开浏览器，再巴拉巴拉一波操作。<br>后来在爬取网页动态页面的时候发现可以使用浏览器自带的headless(无头)模式，可以实现浏览器在后台巴拉巴拉一波操作，桌面上不显示。使用起来更加方便。<br>直接使用chrome自带的headless的时候，一样的代码却老出问题，估计是chrome的bug，于是弃坑使用的Firefox浏览器。<br>首先需要安装Firefox的webdriver<a href="https://github.com/mozilla/geckodriver/releases">下载地址</a>。<br>接下来直接改代码就OK~<br>注意executable_path就是你的geckodriver的安装路径<br>代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.firefox.options <span class="keyword">import</span> Options</span><br><span class="line"><span class="comment"># from selenium.webdriver.chrome.options import Options</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Connect</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.UserName = <span class="string">'你的账号'</span></span><br><span class="line">        self.PassWord = <span class="string">'你的密码'</span></span><br><span class="line">        self.URL = <span class="string">'https://weibo.com/login.php?url=http://photo.weibo.com/5673857615/albums'</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">upload</span><span class="params">(self)</span>:</span></span><br><span class="line">        firefox_options = Options()</span><br><span class="line">        firefox_options.add_argument(<span class="string">'--headless'</span>)</span><br><span class="line">        self.driver = webdriver.Firefox(firefox_options=firefox_options, executable_path=<span class="string">'E:\python\webdriver\geckodriver.exe'</span>)</span><br><span class="line">        <span class="comment"># self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe')</span></span><br><span class="line">        self.driver.get(self.URL)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="loginname"]'</span>).send_keys(self.UserName)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="pl_login_form"]/div/div[3]/div[2]/div/input'</span>).send_keys(self.PassWord)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="pl_login_form"]/div/div[3]/div[6]/a'</span>).click()</span><br><span class="line">        time.sleep(<span class="number">6</span>)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="user_info"]/div/a'</span>).click()</span><br><span class="line">        time.sleep(<span class="number">4</span>)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="flash_upload"]/p/a'</span>).click()</span><br><span class="line"></span><br><span class="line">        fr = open(<span class="string">"E:\python\pySinaAutoUpload\imgsPath.txt"</span>, <span class="string">"r"</span>)</span><br><span class="line">        content = fr.readlines() </span><br><span class="line">        <span class="keyword">for</span> index,val <span class="keyword">in</span> enumerate(content):</span><br><span class="line">            imgPath = val.strip()  <span class="comment">#去掉每行头尾空白  </span></span><br><span class="line">            time.sleep(<span class="number">4</span>)</span><br><span class="line">            i = index + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> i == <span class="number">1</span>:</span><br><span class="line">              self.driver.find_element_by_xpath(<span class="string">'//*[@id="common_upload"]/ul/li/form/input'</span>).send_keys(imgPath)</span><br><span class="line">              time.sleep(<span class="number">4</span>)</span><br><span class="line">              self.driver.find_element_by_xpath(<span class="string">'//*[@id="common_upload"]/ul/li/form/a'</span>).click()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">              self.driver.find_element_by_xpath(<span class="string">'//*[@id="common_upload"]/ul/li['</span> + str(i) + <span class="string">']/form/input'</span>).send_keys(imgPath)</span><br><span class="line">              time.sleep(<span class="number">4</span>)</span><br><span class="line">              self.driver.find_element_by_xpath(<span class="string">'//*[@id="common_upload"]/ul/li['</span> + str(i) + <span class="string">']/form/a'</span>).click()</span><br><span class="line">        <span class="comment"># 关闭文件</span></span><br><span class="line">        fr.close()  </span><br><span class="line">        time.sleep(<span class="number">6</span>)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="common_upload"]/div/a'</span>).click()</span><br><span class="line">        time.sleep(<span class="number">4</span>)</span><br><span class="line">        self.driver.find_element_by_xpath(<span class="string">'//*[@id="uploadPanel"]/div[2]/div[4]/a'</span>).click()</span><br><span class="line">        time.sleep(<span class="number">4</span>)</span><br><span class="line">        count = len(content);</span><br><span class="line">        fw = open(<span class="string">"E:\python\pySinaAutoUpload\imgsUrl.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(count):</span><br><span class="line">          imgsUrl = self.driver.execute_script(<span class="string">'return document.getElementsByClassName("m_photoItem m_photoItem_a")['</span> + str(j) + <span class="string">'].getElementsByTagName("img")[0].src'</span>)</span><br><span class="line">          time.sleep(<span class="number">4</span>)</span><br><span class="line">          imgsUrl = imgsUrl.replace(<span class="string">"small"</span>, <span class="string">"large"</span>)</span><br><span class="line">          imgsUrl = <span class="string">'![]('</span> + imgsUrl + <span class="string">')'</span></span><br><span class="line">          fw.write(imgsUrl + <span class="string">'\n'</span>)</span><br><span class="line">          fw.flush()</span><br><span class="line">        fw.close()</span><br><span class="line">Connect().upload()</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/python/">python</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        
+    </div>
+</aside>
+    
+
+
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a>
+        <p>
+            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="帮助中心" >帮助中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/video" title="视频资源">视频资源</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+    });
+</script>
+</body>
+</html>
