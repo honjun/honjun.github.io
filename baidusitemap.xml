@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
+    <lastmod>2018-04-17T16:02:54.885Z</lastmod>
+    <data>
+        <display>
+        <title>每日签到</title>
+        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
+        
+        <tag>搞事</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://honjun.github.io/2018/04/17/%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3%E6%B5%B7%E6%98%8E%E6%A0%A1%E9%AA%8C%E7%A0%81/</loc>
+    <lastmod>2018-04-17T14:59:19.962Z</lastmod>
+    <data>
+        <display>
+        <title>简单理解海明校验码</title>
+        <pubTime>2018-04-16T16:26:32.000Z</pubTime>
+        
+        <tag>软考</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://honjun.github.io/2018/04/16/Thinkphp3-2-3%E5%8F%91%E7%8E%B0SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%81/</loc>
     <lastmod>2018-04-16T13:04:34.235Z</lastmod>
     <data>
@@ -128,26 +168,6 @@
 
     
   <url>
-    <loc>https://honjun.github.io/2017/12/30/%E6%AF%8F%E6%97%A5%E7%AD%BE%E5%88%B0/</loc>
-    <lastmod>2018-04-13T14:29:58.811Z</lastmod>
-    <data>
-        <display>
-        <title>每日签到</title>
-        <pubTime>2017-12-30T04:08:23.000Z</pubTime>
-        
-        <tag>搞事</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://honjun.github.io/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://honjun.github.io/2018/04/11/%E5%9B%BE%E7%89%87%E7%A7%8D%E5%AD%90%E5%88%B6%E4%BD%9C%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95%E2%80%94%E8%80%81%E5%8F%B8%E6%9C%BA%E5%BF%AB%E4%B8%8A%E8%BD%A6/</loc>
     <lastmod>2018-04-10T16:42:55.364Z</lastmod>
     <data>
@@ -235,9 +255,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>js</tag>
+         
+        <tag>前端</tag>
          
          
            
