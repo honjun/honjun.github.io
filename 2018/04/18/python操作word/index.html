@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>python操作word - hojunBlog</title>
+
+<meta name="keywords" content="python操作word">
+
+<meta name="description " content="python操作word">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a>
+        <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a>
+        <a href="/help" title="帮助中心"><i class="fa fa-question-circle"></i><span>帮助中心</span></a>
+        <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div>
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/honjun" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-facebook">
+                <a href="null"  target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/tech" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/live" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/resource" data-name="资源">资源</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-04-18">2018-04-18</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">python操作word</h2>
+            <div class="post-meta">
+                本文总共1961个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>python操作word我们需要用到python-docx这个库。</p>
+<p><strong>安装命令：</strong><br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-docx</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://python-docx.readthedocs.io/en/latest/">官方文档地址</a><a href="http://python-docx.readthedocs.io/en/latest/">http://python-docx.readthedocs.io/en/latest/</a><br><strong>官方demo:</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.shared <span class="keyword">import</span> Inches</span><br><span class="line"></span><br><span class="line">document = Document()</span><br><span class="line"><span class="comment"># 添加标题</span></span><br><span class="line">document.add_heading(<span class="string">'Document Title'</span>, <span class="number">0</span>)</span><br><span class="line"><span class="comment">#添加文本</span></span><br><span class="line">p = document.add_paragraph(<span class="string">'A plain paragraph having some '</span>)</span><br><span class="line"><span class="comment"># 设置粗体</span></span><br><span class="line">p.add_run(<span class="string">'bold'</span>).bold = <span class="keyword">True</span></span><br><span class="line">p.add_run(<span class="string">' and some '</span>)</span><br><span class="line"><span class="comment"># 设置斜体</span></span><br><span class="line">p.add_run(<span class="string">'italic.'</span>).italic = <span class="keyword">True</span></span><br><span class="line"><span class="comment"># 添加一级标题</span></span><br><span class="line">document.add_heading(<span class="string">'Heading, level 1'</span>, level=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 添加样式</span></span><br><span class="line">document.add_paragraph(<span class="string">'Intense quote'</span>, style=<span class="string">'IntenseQuote'</span>)</span><br><span class="line"></span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">'first item in unordered list'</span>, style=<span class="string">'ListBullet'</span></span><br><span class="line">)</span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">'first item in ordered list'</span>, style=<span class="string">'ListNumber'</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># 添加图片</span></span><br><span class="line">document.add_picture(<span class="string">'monty-truth.png'</span>, width=Inches(<span class="number">1.25</span>))</span><br><span class="line"><span class="comment"># 添加表格</span></span><br><span class="line">table = document.add_table(rows=<span class="number">1</span>, cols=<span class="number">3</span>)</span><br><span class="line">hdr_cells = table.rows[<span class="number">0</span>].cells</span><br><span class="line">hdr_cells[<span class="number">0</span>].text = <span class="string">'Qty'</span></span><br><span class="line">hdr_cells[<span class="number">1</span>].text = <span class="string">'Id'</span></span><br><span class="line">hdr_cells[<span class="number">2</span>].text = <span class="string">'Desc'</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> recordset:</span><br><span class="line">    row_cells = table.add_row().cells</span><br><span class="line">    row_cells[<span class="number">0</span>].text = str(item.qty)</span><br><span class="line">    row_cells[<span class="number">1</span>].text = str(item.id)</span><br><span class="line">    row_cells[<span class="number">2</span>].text = item.desc</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加分页符</span></span><br><span class="line">document.add_page_break()</span><br><span class="line"><span class="comment">#保存文档</span></span><br><span class="line">document.save(<span class="string">'demo.docx'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：<br><img class="lozad" data-src="http://wx4.sinaimg.cn/large/006bYVyvgy1fqh8nol6fmj30af0fnmyz.jpg" alt=""></p>
+<p>看了上面的官方demo就能直接上手使用了。<br>不过我建议自己可以按需封装一下方法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.shared <span class="keyword">import</span> Inches</span><br><span class="line"><span class="keyword">from</span> docx.enum.text <span class="keyword">import</span> WD_ALIGN_PARAGRAPH</span><br><span class="line"><span class="keyword">from</span> docx.shared <span class="keyword">import</span> Pt</span><br><span class="line"><span class="keyword">from</span> docx.oxml.ns <span class="keyword">import</span> qn </span><br><span class="line"></span><br><span class="line">document = Document()</span><br><span class="line"><span class="comment">#设置文档默认字体</span></span><br><span class="line">document.styles[<span class="string">'Normal'</span>].font.name = <span class="string">u'微软雅黑'</span> </span><br><span class="line">document.styles[<span class="string">'Normal'</span>]._element.rPr.rFonts.set(qn(<span class="string">'w:eastAsia'</span>), <span class="string">u'微软雅黑'</span>)</span><br><span class="line">title = document.add_paragraph()</span><br><span class="line"><span class="comment">#大标题居中</span></span><br><span class="line">title.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数</span></span><br><span class="line"><span class="comment">#文档对象，文字内容，文字大小，文字样式（目前就只判断了粗体）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">writeP</span><span class="params">(document, content, size, style = None)</span>:</span></span><br><span class="line">    p = document.add_paragraph()</span><br><span class="line">    run = p.add_run(content)</span><br><span class="line">    font = run.font</span><br><span class="line">    font.size = Pt(size)</span><br><span class="line">    <span class="keyword">if</span> style == <span class="string">'bold'</span>:</span><br><span class="line">        font.bold = <span class="keyword">True</span></span><br></pre></td></tr></table></figure></p>
+<p>好了，python操作word就介绍到这里，大家可以去尝试一下。</p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/python/">python</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        
+    </div>
+</aside>
+    
+
+
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a>
+        <p>
+            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="帮助中心" >帮助中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/video" title="视频资源">视频资源</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+    });
+</script>
+</body>
+</html>
