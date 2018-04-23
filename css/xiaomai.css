@@ -62,3 +62,12 @@
 	cursor: move;
 	background:url(/images/xiaomai/xm_happy.png) no-repeat;
 }
+
+/*OwO emoji*/
+.owoemoji {
+	display: inline-block !important;
+	position: relative;
+	top: 10px;
+	margin: 0 !important;
+	padding: 0;
+}

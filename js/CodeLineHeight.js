@@ -7,3 +7,8 @@ $(function(){
 		gutter.get(i).style.height = codeline.get(i).offsetHeight + 'px';
 	}
 });
+
+var match = text.match(/@\((\S*?)\)/g)[0];
+  var emoji = match.substring(2);
+  emoji = emoji.substring(0, emoji.length-1);
+  text = text.replace(/@\((\S*?)\)/g, emoji)
