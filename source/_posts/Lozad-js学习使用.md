@@ -69,7 +69,7 @@ page.link|文章的外部链接（用于链接文章）
 ```md
 Add support for [Markdown]. This plugin uses [marked] as render engine.
 ```
-看来是找到了。查找发现真正的位置在![image](http://upload-images.jianshu.io/upload_images/2597553-b1894432716e7557.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)这里，`\node_modules\_marked@0.3.6@marked\lib\marked.js`在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得
+看来是找到了。查找发现真正的位置在![image](https://wx2.sinaimg.cn/large/006bYVyvgy1fljpj5cg8ej308f00p741.jpg)这里，`\node_modules\_marked@0.3.6@marked\lib\marked.js`在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得
 ```cmd
 hexo clean
 hexo g
