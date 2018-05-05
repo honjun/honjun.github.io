@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>《数据重现》之三文件系统 - hojunBlog</title>
+
+<meta name="keywords" content="文件系统">
+
+<meta name="description " content="到底什么是文件系统？文件系统就是对数据进行存储于管理的方式。">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a>
+        <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a>
+        <a href="/help" title="帮助中心"><i class="fa fa-question-circle"></i><span>帮助中心</span></a>
+        <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div>
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/honjun" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-facebook">
+                <a href="null"  target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最新</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/tech" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/live" data-name="生活">生活</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/resource" data-name="资源">资源</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-04-25">2018-04-25</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">《数据重现》之三文件系统</h2>
+            <div class="post-meta">
+                本文总共2116个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>到底什么是文件系统？文件系统就是对数据进行存储于管理的方式。</p>
+<h2 id="文件系统的基本概念"><a href="#文件系统的基本概念" class="headerlink" title="文件系统的基本概念"></a><strong>文件系统的基本概念</strong></h2><p>文件系统中的一些基本概念和特性</p>
+<h3 id="1-数据单元"><a href="#1-数据单元" class="headerlink" title="1.数据单元"></a><strong>1.数据单元</strong></h3><p>数据在写入磁盘或从磁盘读取时每次操作的数据量称为数据单元，它的大小在建立文件系统时确定。数据单元在不同的文件系统中有不同的称呼，例如FAT和NTFS文件系统中的“簇”，ExtX中的“块（Block）”等，一个数据单元由若干个连续的扇区组成，大小总是2的整数次幂个扇区。存储数据时，系统以数据单元为单位为其分配存储空间，也就是说，总是为其分配整数个数据单元大小的空间。</p>
+<h3 id="2-坏数据单元"><a href="#2-坏数据单元" class="headerlink" title="2.坏数据单元"></a><strong>2.坏数据单元</strong></h3><p>坏数据单元也就是包含缺陷扇区的数据单元。许多文件系统可以将一个数据单元标记为坏单元，这对那些没有能力处理错误的老硬盘比较有用。当一个数据单元中出现缺陷扇区时，即使缺陷扇区的数量只有一个，操作系统也会将整个数据单元标记为已损坏，不再分配给文件使用。现在的硬盘可以自己检测到坏扇区的存在并用备用扇区对其进行替换，所以文件系统的这一功能已很少使用。<br>利用文件系统的坏单元标记功能可以很容易的隐藏数据。</p>
+<h3 id="3-逻辑文件系统地址"><a href="#3-逻辑文件系统地址" class="headerlink" title="3.逻辑文件系统地址"></a><strong>3.逻辑文件系统地址</strong></h3><p>磁盘上的一个扇区在不同情况下会有不同的地址表达形式。例如：</p>
+<ul>
+<li>每个扇区都会有一个LBA地址，也就是物理地址。</li>
+<li>每个物理卷内的扇区又有一个物理卷地址。</li>
+<li>在逻辑卷内部的扇区会有一个逻辑卷地址。</li>
+</ul>
+<p>建立了文件系统后文件系统既使用逻辑卷地址，也使用一种“逻辑文件系统地址”。文件系统存储数据时是以数据单元为存储单位，每个单位被分配一个逻辑文件系统地址。</p>
+<h3 id="4-逻辑文件地址"><a href="#4-逻辑文件地址" class="headerlink" title="4.逻辑文件地址"></a><strong>4.逻辑文件地址</strong></h3><p>对于每个文件来讲，将它所在的文件系统中数据单元的大小为单位进行分割，分割后的每个部分由0开始进行编号，这个编号就是其对应的数据单元的逻辑文件地址。一个文件前后相邻的两个数据单元在物理上的存储地址可能是不连续的，但它的逻辑文件地址却一定是连续的。</p>
+<h3 id="5-分配策略"><a href="#5-分配策略" class="headerlink" title="5.分配策略"></a><strong>5.分配策略</strong></h3><p>不同的操作系统在为文件分配存储单元时可能会使用不同的分配方法。通常操作系统会为其分配连续的存储空间，但并不总是能够实现。<br>为文件分配存储单元是的方法或算法，我们称之为“分配策略”，分配策略通常可以分为三种：第一可用分配策略、下一可用分配策略和最佳分配策略。<br><strong>第一可用分配策略</strong>，即当为一个文件分配了一个存储单元后还需要继续为其分配时，操作系统会重新从文件系统的起始处搜索可以使用的空间。这种分配方式很容易使文件片段化，因为文件并不是被作为整体一次性分配连续存储空间的。<br>例子：假如一个文件需要4个存储单元，文件系统内的1、2、3、5、10号存储单元已有数据，4,、6、7、8、9号存储单元空闲。</p>
+<ul>
+<li>1.存储第一部分，从起始处开始找空位，一直找到4号存储单元，存储进去</li>
+<li>2.存储第二部分，从起始处开始找空位，一直找到6号存储单元，存储进去</li>
+<li>3.存储第三部分，从起始处开始找空位，恰好这时2号存储单元的文件内容被删除了，找到2号位置就找到了空位，存储进去。</li>
+<li>4.存储第四部分，从起始处开始找空位，一直找到7号存储单元，存储进去。<br>所以这个文件的4个部分存储位置就是4-6-2-7。如图所示：<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fqpchyrvfaj30h403b742.jpg" alt=""><br><strong>下一可用分配策略</strong>，即为文件分配了一个存储单元后并不再回到卷起始处重新寻找可用空间，而是直接向后进行搜索。对于前面的例子，使用下一可用策略进行分配的结果会是4-6-7-8。如图所示：<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqpci3x3w3j30hl03xa9u.jpg" alt=""><br><strong>最佳分配策略</strong>，即在为文件分配空间时，会尽可能找到足够的连续空间以避免其片段化。但这种分配策略需要事先知道文件所需要空间的大小，而且如果以后文件增大需要增加分配单元时，新分配的单元有可能处于其他位置而使改文件片段化。对于前面的例子，使用最佳匹配策略分配时，结果则是6-7-8-9</li>
+</ul>
+<h3 id="6-文件更新策略"><a href="#6-文件更新策略" class="headerlink" title="6.文件更新策略"></a><strong>6.文件更新策略</strong></h3><p>对数据可恢复性进行分析时，除需要考虑它的分配策略外，还需要考虑到文件更新方式的问题：<br>有的程序对文件更新时，直接打开原文件，更新后，直接用新文件覆盖原文件进行保存。（这种方式原数据无法恢复）<br>有的程序则是先产生一个原文件的副本，对副本进行更新，然后将副本以原文件名保存在新的位置同时删除原文件。（这种方式可以试图找到旧文件）</p>
+<h3 id="7-松弛空间"><a href="#7-松弛空间" class="headerlink" title="7.松弛空间"></a><strong>7.松弛空间</strong></h3><p>松弛空间分为两种，一种是数据的结尾与为其分配的空间结束处的未被使用的部分，还有一种是位于分区结尾的卷松弛空间。</p>
+<h3 id="8-压缩和稀疏文件"><a href="#8-压缩和稀疏文件" class="headerlink" title="8.压缩和稀疏文件"></a><strong>8.压缩和稀疏文件</strong></h3><p>很多文件系统允许对文件进行压缩存储以减少它所占用的数据单元。对于文件，可以存在三种级别的压缩：</p>
+<ul>
+<li>最高级别的压缩是在文件内部发生的，例如JPEG格式的文件，它将图像信息进行压缩后保存进文件中，不过文件头是不被压缩的。</li>
+<li>次级别的压缩是使用外部程序对整个文件进行压缩后保存成一个新的文件，当需要使用这个文件时，就必须先对其进行解压缩。</li>
+<li>最后一种，也是最低级别的压缩，是由操作系统进行的压缩处理。操作系统是在存储文件时，不为连续为0的部分分配存储空间，以这种方式处理过的文件称为“稀疏文件”</li>
+</ul>
+<h3 id="9-加密文件"><a href="#9-加密文件" class="headerlink" title="9.加密文件"></a><strong>9.加密文件</strong></h3><p>为了数据内容的安全与隐私性，文件可以被加密以阻止未被授权的访问。</p>
+<p>10.元数据<br>任何文件或目录，都会有一个名字，我们将其统称为“文件名”。除文件名外，文件或目录还会有其他一些描述信息，如大小、时间信息、是否加密或压缩、存储位置等，我们将这些描述信息统称为文件或目录的元数据 。</p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/悦读/">悦读</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#文件系统的基本概念"><span class="toc-text">文件系统的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数据单元"><span class="toc-text">1.数据单元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-坏数据单元"><span class="toc-text">2.坏数据单元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-逻辑文件系统地址"><span class="toc-text">3.逻辑文件系统地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-逻辑文件地址"><span class="toc-text">4.逻辑文件地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-分配策略"><span class="toc-text">5.分配策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-文件更新策略"><span class="toc-text">6.文件更新策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-松弛空间"><span class="toc-text">7.松弛空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-压缩和稀疏文件"><span class="toc-text">8.压缩和稀疏文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-加密文件"><span class="toc-text">9.加密文件</span></a></li></ol></li></ol>
+    </div>
+</aside>
+    
+
+
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a>
+        <p>
+            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="帮助中心" >帮助中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/video" title="视频资源">视频资源</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+    });
+</script>
+</body>
+</html>
