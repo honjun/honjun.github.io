@@ -1,7 +1,14 @@
 <div class="page-title">
     <ul>
-        <li><a href="/" data-name="<%= __('home') %>" title="Back Home"><%= __('home') %></a></li>
-        <li><a href="/tags" data-name="<%= __('tagcloud')  %>" title="<%= __('tagcloud')  %>"><%= __('tags')  %></a></li>
+        <li><a href="/">首页</a></li>
+        <% for (var i in theme.menu){ %>
+        <li class="<%= (page.category == i) ? 'active' : '' %>">
+            <a href="/categories/<%= theme.menu[i] %>" data-name="<%= i %>"><%= i %></a>
+        </li>
+        <% } %>
+        <li class="<%= page.title == '友链' ? 'active' : '' %>">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
         <%- partial('_widget/search-bar', null, {cache: !config.relative_link}) %>
     </ul>
 </div>

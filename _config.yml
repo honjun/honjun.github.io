@@ -50,7 +50,7 @@ default_category: 技术
 category_map:
   技术: tech
   生活: live
-  资源: resource
+  # 资源: resource
 tag_map:
   # iOS: iOS
   # hexo: hexo

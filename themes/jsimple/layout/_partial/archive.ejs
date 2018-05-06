@@ -1,13 +1,16 @@
 <div class="page-title">
     <ul>
         <li class="<%= pagination == 2 ? 'active' : '' %>">
-            <a href="/" data-name="最近文章">最近</a>
+            <a href="/" data-name="Home">首页</a>
         </li>
         <% for (var i in theme.menu){ %>
         <li class="<%= (page.category == i) ? 'active' : '' %>">
             <a href="/categories/<%= theme.menu[i] %>" data-name="<%= i %>"><%= i %></a>
         </li>
         <% } %>
+        <li class="<%= page.title == '友链 - hojunBlog' ? 'active' : '' %>">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
         <%- partial('_widget/search-bar', null, {cache: !config.relative_link}) %>
     </ul>
 </div>
