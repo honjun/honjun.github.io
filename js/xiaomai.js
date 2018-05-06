@@ -80,7 +80,7 @@ jQuery(document).ready(function ($) {
     //$("#xiaomai").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $("#xiaomai").mouseover(function () {
         $("#xiaomai").fadeTo("300", 0.3);
-        msgs = ["手拿开，我就跟你玩~", "本小助理可远观不可亵玩！","无聊了吗？听几首歌放松一下吧~<br /><br /><a href=\"http://music.163.com\" target=\"_bank\" title=\"\">Music</a>", "我会隐身哦！嘿嘿！", "别动手动脚的，把手拿开！！", "再不把手拿开小心我横竖竖你！！", "hojun，他摸我，呜呜呜呜~~~", "你把手拿开我就出来！","无聊了吗？听几首歌放松一下吧~<br /><br /><a href=\"http://music.163.com\" target=\"_bank\" title=\"\">Music</a> "];
+        msgs = ["手拿开，我就跟你玩~", "本小助理可远观不可亵玩！","无聊了吗？听几首歌放松一下吧~<br /><br /><a href=\"http://www.hojun.cn/2018/02/18/喜欢的音乐/\" target=\"_bank\" title=\"\">Music</a>", "我会隐身哦！嘿嘿！", "别动手动脚的，把手拿开！！", "再不把手拿开小心我横竖竖你！！", "hojun，他摸我，呜呜呜呜~~~", "你把手拿开我就出来！","无聊了吗？听几首歌放松一下吧~<br /><br /><a href=\"http://music.163.com\" target=\"_bank\" title=\"\">Music</a> "];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
