@@ -19,11 +19,11 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>anime.js实现logo动画 - hojunBlog</title>
+<title>软考备考之uml十种建模图 - hojunBlog</title>
 
-<meta name="keywords" content="anime.js">
+<meta name="keywords" content="UML">
 
-<meta name="description " content="实现自己的logo动画~">
+<meta name="description " content="UML九种建模图：用例图、类图、对象图、顺序图、协作图、状态图、活动图、组件图、配置图。又可以静动分为静态视图和动态视图。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -151,46 +151,41 @@
                 </a>
                 <p><span class="label">作者</span>
                     <a href="null" target="_blank">hojun</a>
-                    <span title="最后编辑于2018-03-14">2018-03-14</span>
+                    <span title="最后编辑于2018-05-07">2018-05-07</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">anime.js实现logo动画</h2>
+            <h2 class="post-title">软考备考之UML十种建模图</h2>
             <div class="post-meta">
-                本文总共1765个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1770个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            
-<link rel="stylesheet" href="/css/hojunlogo.css" />
-<div id="logoAmine">
-  <canvas class="fireworks"></canvas>
-  <section id="lineDrawing">
-    <svg class="logo" width="25rem" height="25rem" viewBox="0 0 800 384">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="dot-js" fill="#000000" x="80" y="352" width="32" height="32" rx="16"></rect>
-        <g id="lines" transform="translate(128.000000, 256.000000)">
-          <path d="M16,-70 L16,128 L16,64 C16,37.490332 37.490332,16 68,16 C90.509668,16 112,37.490332 112,64 L112,128" stroke="#e72a0f" stroke-width="32"></path>
-          <path d="M192,112 C165.490332,112 144,90.509668 144,64 C144,37.490332 165.490332,16 192,16 C218.509668,16 240,37.490332 240,64 C240,90.509668 218.509668,112 192,112"  stroke="#feee00" stroke-width="32"></path>
-          <path d="M272,0 L272,228 C252,248 232,228 230,218" stroke="#0097dc" stroke-width="32"></path>
-          <path d="M304,0 L304,64 C304,90.509668 325.490332,112 352,112 C378.509668,112 400,90.509668 400,64 L400,0" stroke="#4cd137" stroke-width="32"></path>
-          <path d="M433,128 L433,64 C433,37.490332 454.490332,16 481,16 C507.509668,16 529,37.490332 529,64 L529,128" stroke="#9f559d" stroke-width="32" stroke-dasharray="150"d></path>
-        </g>
-      </g>
-    </svg>
-  </section>
-</div>
-<script type="text/javascript" src="/js/anime.min.js"></script>
-<script type="text/javascript" src="/js/hojunlogo.js"></script>
-
-<p>之前无聊浏览特效的时候，发现了anime.js的logo动画特效，于是也想整个自己的logo动画。<br>着手coding的时候，发现没那么简单(｡•ˇ‸ˇ•｡)</p>
-<h2 id="第一个难点-SVG"><a href="#第一个难点-SVG" class="headerlink" title="第一个难点 SVG"></a><strong>第一个难点 SVG</strong></h2><p>之前接触到的SVG一直都是“不失真的矢量图”这么一个概念，但是这次的特效需要用到svg的<code>&lt;path&gt;</code>标签</p>
-<p>w3c介绍：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;path&gt; 标签用来定义路径。</span><br><span class="line">下面的命令可用于路径数据：</span><br><span class="line">    M = moveto</span><br><span class="line">    L = lineto</span><br><span class="line">    H = horizontal lineto</span><br><span class="line">    V = vertical lineto</span><br><span class="line">    C = curveto</span><br><span class="line">    S = smooth curveto</span><br><span class="line">    Q = quadratic Belzier curve</span><br><span class="line">    T = smooth quadratic Belzier curveto</span><br><span class="line">    A = elliptical Arc</span><br><span class="line">    Z = closepath</span><br><span class="line">注释：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。</span><br><span class="line"></span><br><span class="line">请把下面的代码拷贝到记事本，然后把文件保存为 &quot;path1.svg&quot;。把此文件放入您的 web 目录：</span><br><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; </span><br><span class="line">&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;</span><br><span class="line">xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;path d=&quot;M250 150 L150 350 L350 350 Z&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/svg&gt;</span><br><span class="line">上面的例子定义了一条路径，它开始于位置 250 150，到达位置 150 350，然后从那里开始到 350 350，最后在 250 150 关闭路径。</span><br></pre></td></tr></table></figure></p>
-<p>通过以上介绍能够稍微理解path作用，了解更多请浏览作者的另一篇文章<a href="http://www.hojun.cn/2018/03/15/SVG深入浅出">SVG深入浅出</a></p>
-<h2 id="第二个难点-贝赛尔曲线"><a href="#第二个难点-贝赛尔曲线" class="headerlink" title="第二个难点 贝赛尔曲线"></a><strong>第二个难点 贝赛尔曲线</strong></h2><p>在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg" alt=""><br>接着把png转svg格式图片，<a href="http://www.pngtosvg.com/">在线转换工具</a><br>最后把SVG的path数据插入代码。Σ(っ °Д °;)っ发现并不是自己想要的效果。<br>通过阅读官方文档和特效代码发现anime.js的动画是根据路径来呈现的，所以我应该提供的SVG的<code>&lt;path&gt;</code>只是一条线段就够了。</p>
-<hr>
-<p>又回到起点，从新开始使用<code>&lt;path&gt;</code>提供的命令画logo。<br>第一个h，好办的，只要把n的左边那条直线的Y坐标改长点就行。<br>第二个o,没有现成的o，只能在a上面动手脚，可是<code>&lt;path&gt;</code>的C命令就是三次贝塞尔曲线。表示不太会画，肿么办(<em>/ω＼</em>)?<br>上网找资料呗~ 找到张鑫旭大牛的一片文章<a href="http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/">深度掌握SVG路径path的贝塞尔曲线指令</a>还有dayu提供的<a href="http://dayu.pw/svgcontrol/">任意二次、三次贝塞尔曲线呈现工具</a><br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg" alt=""><br>已知a的三条弧线<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct26viiaj305r05udft.jpg" alt="">即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章<a href="http://www.cnblogs.com/ArthurQQ/articles/1730214.html">使用贝塞尔曲线拟合圆</a><br>不需要的童鞋可以发挥一下自带的我看看看看看出来，上图已经很明显了，o即圆形是上下左右对称的，通过对称的特性就可以得到那两个点的坐标。<br>第三个j,自由发挥了o(<em>￣︶￣</em>)o<br>第四个u,参考n把它给倒过来(⌒▽⌒)<br>第五个n,现成的有，大功告成ヾ(^▽^*)))</p>
-<p><a href="http://www.hojun.cn/2018/03/14/anime-js实现logo动画/">效果预览</a><br>感谢<a href="http://animejs.com">anime.js</a>以及<a href="http://www.5iweb.com.cn/resource/5iweb2017070301/index.html">51web</a>提供的特效代码</p>
+            <p>UML九种建模图：用例图、类图、对象图、顺序图、协作图、状态图、活动图、组件图、配置图。又可以静动分为静态视图和动态视图。静态图分为：用例图，类图，对象图，包图，构件图，部署图。动态图分为：状态图，活动图，协作图，序列图。</p>
+<h2 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a><strong>用例图</strong></h2><p>用例图(Use case diagrams)描述了作为一个外部的观察者的视角对系统的印象。强调这个系统是什么而不是这个系统怎么工作。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br>角色是人状的图标，用例是一个椭圆，通讯是连接角色和用例的线。<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fr2j4lg0eug30aa024t8h.gif" alt=""></p>
+<p>又一个栗子：<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fr2ih3rhuog30cs06igle.gif" alt=""></p>
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a><strong>类图</strong></h2><p>类图(Class diagram)通过显示出系统的类以及这些类之间的关系来表示系统。类图是静态的－它们显示出什么可以产生影响，但不会告诉你什么时候产生影响。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br>下面是一个顾客从零售商处预定商品的模型的类图。中心的类是Order。连接它的是购买货物的Customer和Payment。Payment有 三种形式：Cash，Check，或者Credit。订单包括OrderDetails（line item），每个这种类都连着Item。<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fr2j4km82rg30lh0anaa3.gif" alt=""><br>UML类的符号是一个被划分成三块的方框：类名，属性，和操作。抽象类的名字，像Payment是斜体的。类之间的关系是连接线。</p>
+<p>类图的几种关系详见之前那篇文章《UML类图几种关系总结》</p>
+<h2 id="包图"><a href="#包图" class="headerlink" title="包图"></a><strong>包图</strong></h2><p>包图由包和包之间的关系构成，它是维护和控制系统总体结构的重要建模工具。设计良好的包是高内聚、低耦合的，并且对其内容的访问具有严密的控制。包的图标是一个大矩形（内容框），左上角带一个小矩形（名字框）。包与包之间的联系主要有两种：依赖（尤其是输入依赖）和泛化。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fr2j4m2svqg30b607e744.gif" alt=""></p>
+<h2 id="对象图"><a href="#对象图" class="headerlink" title="对象图"></a><strong>对象图</strong></h2><p>对象图表示在某一时刻一组对象以及他们之间的关系的图。对象图可以被看作是类图在系统某一时刻的实例。<br>对象图由节点以及连接这些节点的连线组成。对象图是对象也可以是类，连线表示对象间的关系。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fr2j4mgretg30cq07bjr7.gif" alt=""></p>
+<h2 id="顺序图"><a href="#顺序图" class="headerlink" title="顺序图"></a><strong>顺序图</strong></h2><p>顺序图（又称时序图、序列图）（Sequence Diagram）是显示对象之间交互的图，这些对象是按时间顺序排列的。顺序图中显示的是参与交互的对象及其对象之间消息交互的顺序。时序图中包括的建模元素主要有：对象（Actor）、生命线（Lifeline）、控制焦点（Focus of control）、消息（Message）等等。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fr2kqe8hdtg30jg0bi0sr.gif" alt=""></p>
+<h2 id="协作图"><a href="#协作图" class="headerlink" title="协作图"></a><strong>协作图</strong></h2><p>协作图(Collaboration Diagram /Communication Diagram，也叫合作图)是一种交互图（interaction diagram），强调的是发送和接收消息的对象之间的组织结构。不关心什么时候消息被传递，只关心对象的角色。一个协作图显示了一系列的对象和在这些对象之间的联系以及对象间发送和接收的消息。对象通常是命名或匿名的类的实例，也可以代表其他事物的实例，例如协作、组件和节点。使用协作图来说明系统的动态情况。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fr2kqdlgdjg30im09qwed.gif" alt=""></p>
+<h2 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a><strong>状态图</strong></h2><p>对象拥有行为和状态。对象的状态是由对象当前的行动和条件决定的。状态图(statechart diagram)显示出了对象可能的状态以及由状态改变而导致的转移。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br>银行的在线登录系统<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fr2kqendfdg30le0b90sp.gif" alt=""></p>
+<p>状态是用圆角矩形来表示的。转移则是使用带箭头的连线表示。触发转移的事件或者条件写在箭头的旁边。我们的图上有两个自转移。一个是在Getting SSN，另一个则在上Getting PIN。</p>
+<p>初始状态（黑色圆圈）是开始动作的虚拟开始。结束状态也是动作的虚拟结束。</p>
+<h2 id="活动图"><a href="#活动图" class="headerlink" title="活动图"></a><strong>活动图</strong></h2><p>活动图(activity diagram)是一个很特别的流程图。活动图和状态图之间是有关系的。状态图把焦点集中在过程中的对象身上，而活动图则集中在一个单独过程动作流程。活动图告诉了我们活动之间的依赖关系。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br>用户登录<br><img class="lozad" data-src="http://wx2.sinaimg.cn/large/006bYVyvgy1fr337mkxfvj30gw0ll3yv.jpg" alt=""></p>
+<h2 id="组件图"><a href="#组件图" class="headerlink" title="组件图"></a><strong>组件图</strong></h2><p>组件图，又称构件图（Component diagram）是面向对象系统从物理方面建模时用到的图之一，显示一组构件之间的组织和依赖关系。使用组件图的思想是复用。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fr2wahb73uj30kg0bvglj.jpg" alt=""></p>
+<h2 id="部署图"><a href="#部署图" class="headerlink" title="部署图"></a><strong>部署图</strong></h2><p>部署图又称配置图（Deployment Diagrams）描述了系统运行时进行处理的结点以及在结点上活动的构件的配置。强调了物理设备以及之间的连接关系。</p>
+<p><img class="owoemoji" src="/OwO/img/献黄瓜.png">(这不是黄瓜)举个栗子：<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fr2walic01j30b406bt8m.jpg" alt=""></p>
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -202,9 +197,9 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/前端/">前端</a>
+            <a href="/tags/软考/">软考</a>
             
-            <a href="/tags/js/">js</a>
+            <a href="/tags/UML/">UML</a>
             
         </div>
         
@@ -213,7 +208,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个难点-SVG"><span class="toc-text">第一个难点 SVG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个难点-贝赛尔曲线"><span class="toc-text">第二个难点 贝赛尔曲线</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用例图"><span class="toc-text">用例图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类图"><span class="toc-text">类图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#包图"><span class="toc-text">包图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象图"><span class="toc-text">对象图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#顺序图"><span class="toc-text">顺序图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协作图"><span class="toc-text">协作图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#状态图"><span class="toc-text">状态图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#活动图"><span class="toc-text">活动图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#组件图"><span class="toc-text">组件图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署图"><span class="toc-text">部署图</span></a></li></ol>
     </div>
 </aside>
     
