@@ -6,3 +6,6 @@
 	75%{transform:rotate3d(1, 0, 0, 60deg);}
 	100% {transform:rotate3d(1, 0, 0, 0deg);}
 }
+.lozad {
+  min-width: 250px;
+}

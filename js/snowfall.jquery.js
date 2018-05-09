@@ -249,8 +249,8 @@ if (!Date.now)
 
             // local vars
             var i = 0,
-                elHeight = $(element).height(),
-                elWidth = $(element).width(),
+                elHeight = $(document).height(),
+                elWidth = $(document).width(),
                 widthOffset = 0,
                 snowTimeout = 0;
 
