@@ -19,11 +19,11 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>标签 - js - hojunBlog</title>
+<title>软考备考之广义表理解 - hojunBlog</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="软考">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="广义表(Lists，又称列表)是一种非线性的数据结构，是线性表的一种推广。即广义表中放松对表元素的原子限制，容许它们具有其自身结构。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -91,9 +91,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -145,173 +143,97 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/04/22/OwO-可爱的js表情符号插件/" target="_self" title="OwO-可爱的js表情符号插件" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fqdqbfhns2j30b40b074f.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-05-11">2018-05-11</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">软考备考之广义表理解</h2>
+            <div class="post-meta">
+                本文总共1815个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="什么是广义表？"><a href="#什么是广义表？" class="headerlink" title="什么是广义表？"></a><strong>什么是广义表</strong>？</h2><p>百度百科解释如下：<br>广义表(Lists，又称列表)是一种非线性的数据结构，是线性表的一种推广。即广义表中放松对表元素的原子限制，容许它们具有其自身结构。它被广泛的应用于人工智能等领域的表处理语言LISP语言中。在LISP语言中，广义表是一种最基本的数据结构，就连LISP 语言的程序也表示为一系列的广义表。（又见LISP，自从看了《黑客与画家》总感觉这LISP出现频率高了不少……）</p>
+<h3 id="广义表定义编辑"><a href="#广义表定义编辑" class="headerlink" title="广义表定义编辑"></a><strong>广义表定义编辑</strong></h3><p>广义表是n(n≥0)个元素a1，a2，…，ai，…，an的有限序列。<br>其中：</p>
+<ul>
+<li>①ai–或者是原子或者是一个广义表。</li>
+<li>②广义表通常记作：Ls=( a1，a2，…，ai，…，an)。</li>
+<li>③Ls是广义表的名字，n为它的长度。</li>
+<li>④若ai是广义表，则称它为Ls的子表。</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>①广义表通常用圆括号括起来，用逗号分隔其中的元素。</li>
+<li>②为了区分原子和广义表，书写时用大写字母表示广义表，用小写字母表示原子。</li>
+<li>③若广义表Ls非空(n≥1)，则al是LS的表头，其余元素组成的表(a1，a2，…，an)称为Ls的表尾。</li>
+<li>④广义表是递归定义的 [1] </li>
+</ul>
+<h3 id="广义表表示编辑"><a href="#广义表表示编辑" class="headerlink" title="广义表表示编辑"></a><strong>广义表表示编辑</strong></h3><h4 id="（1）广义表常用表示"><a href="#（1）广义表常用表示" class="headerlink" title="（1）广义表常用表示"></a>（1）广义表常用表示</h4><ul>
+<li>① E=() : E是一个空表，其长度为0。</li>
+<li>② L=(a，b) : L是长度为2的广义表，它的两个元素都是原子，因此它是一个线性表</li>
+<li>③ A=(x，L)=(x，(a，b)) : A是长度为2的广义表，第一个元素是原子x，第二个元素是子表L。</li>
+<li>④ B=(A，y)=((x，(a，b))，y) : B是长度为2的广义表，第一个元素是子表A，第二个元素是原子y。</li>
+<li>⑤ C=(A，B)=((x，(a，b))，((x，(a，b))，y)) : C的长度为2，两个元素都是子表。</li>
+<li>⑥ D=(a，D)=(a，(a，(a，(…)))) : D的长度为2，第一个元素是原子，第二个元素是D自身，展开后它是一个无限的广义表。</li>
+</ul>
+<h4 id="（2）广义表的深度"><a href="#（2）广义表的深度" class="headerlink" title="（2）广义表的深度"></a>（2）广义表的深度</h4><p>一个表的”深度”是指表展开后所含括号的层数。<br>【例】表L、A、B、C的深度为分别为1、2、3、4，表D的深度为∞。</p>
+<h4 id="（3）带名字的广义表表示"><a href="#（3）带名字的广义表表示" class="headerlink" title="（3）带名字的广义表表示"></a>（3）带名字的广义表表示</h4><p>如果规定任何表都是有名字的，为了既表明每个表的名字，又说明它的组成，则可以在每个表的前面冠以该表的名字，于是上例中的各表又可以写成：</p>
+<ul>
+<li>①E()</li>
+<li>②L(a，b)</li>
+<li>③A(x，L(a，b))</li>
+<li>④B(A(x，L(a，b))，y)</li>
+<li>⑤C(A(x，l(a，b))，B(A(x，L(a，b))，y))</li>
+<li>⑥D(a，D(a，D(…)))</li>
+</ul>
+<h2 id="广义表运算"><a href="#广义表运算" class="headerlink" title="广义表运算"></a><strong>广义表运算</strong></h2><p>由于广义表是对线性表和树的推广，并且具有共享和递归特性的广义表可以和有向图(见第7章)建立对应，因此广义表的大部分运算与这些数据结构上的运算类似。<br>在此，只讨论广义表的两个特殊的基本运算：取表头head(Ls)和取表尾tail(Ls)。<br>根据表头、表尾的定义可知：任何一个非空广义表的表头是表中第一个元素，它可以是原子，也可以是子表，而其表尾必定是子表。<br>【例】<br>head(L)=a，tail(L)=(b)<br>head(B)=A，tail(B)=(y)<br>由于tail(L)是非空表，可继续分解得到：<br>head(tail(L))=b， tail(tail(L))=()<br>对非空表A和(y)，也可继续分解。<br>注意:广义表()和(())不同。前者是长度为0的空表，对其不能做求表头和表尾的运算；而后者是长度为l的非空表(只不过该表中惟一的一个元素是空表)，对其可进行分解，得到的表头和表尾均是空表()。</p>
+<p>看了下说明还是不能够很理解，让我们来做道例题来加强理解：<br>2009年软考真题：若广义表L=((x,y,z),a,(u,t,w)),则从L中取出原子项y的运算是___?</p>
+<ul>
+<li>A.head(tail(tail(L)))</li>
+<li>B.tail(head(head(L)))</li>
+<li>C.head(tail(head(L)))</li>
+<li>D.tail(tail(head(L)))</li>
+</ul>
+<p>正确答案：C<br>head(L) = (x,y,z) ; tail(L) = (a,(u,t,w))<br>head(head(L)) = x<br>tail(head(L)) = (y,z)  //这一步理解了就行 tail得到的却是head外组成的新的广义表<br>head(tail(head(L))) = y</p>
+<font color="red">要注意的是head得到的是一个原子,而tail得到的却是原子外组成的新的广义表,不管是只有一个元素,但也是一个广义表,而不是直接的元素。</font>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2018-04-22
         </div>
-        <a class="post-title" href="/2018/04/22/OwO-可爱的js表情符号插件/" target="_self" title="OwO-可爱的js表情符号插件">OwO-可爱的js表情符号插件</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        
+        <div class="post-tags">标签：
             
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
+            <a href="/tags/软考/">软考</a>
             
         </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是广义表？"><span class="toc-text">什么是广义表？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#广义表定义编辑"><span class="toc-text">广义表定义编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#广义表表示编辑"><span class="toc-text">广义表表示编辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）广义表常用表示"><span class="toc-text">（1）广义表常用表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）广义表的深度"><span class="toc-text">（2）广义表的深度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）带名字的广义表表示"><span class="toc-text">（3）带名字的广义表表示</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#广义表运算"><span class="toc-text">广义表运算</span></a></li></ol>
     </div>
-    <div class="post-desc">
-        然而这并不是真正的目的，真正目的是为了在文章里添加表情*@(得意)@(得意)@(得意)*~~~
-    </div>
-</article>
+</aside>
+    
 
 
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/03/14/anime-js实现logo动画/" target="_self" title="anime.js实现logo动画" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct2gy98rj30ez09ojrf.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-03-14
-        </div>
-        <a class="post-title" href="/2018/03/14/anime-js实现logo动画/" target="_self" title="anime.js实现logo动画">anime.js实现logo动画</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/前端/" target="_self">前端</a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        实现自己的logo动画~
-    </div>
-</article>
 
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-04
-        </div>
-        <a class="post-title" href="/2018/02/04/打字特效/" target="_self" title="打字特效">打字特效</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        打字特效
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/01/10/snowfall-jquery-js实现樱花飘落效果/" target="_self" title="snowfall.jquery.js实现樱花飘落效果" data-background-image="https://wx2.sinaimg.cn/large/006bYVyvgy1fnbxdi3kr7g30dw07o7ou.gif"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-01-10
-        </div>
-        <a class="post-title" href="/2018/01/10/snowfall-jquery-js实现樱花飘落效果/" target="_self" title="snowfall.jquery.js实现樱花飘落效果">snowfall.jquery.js实现樱花飘落效果</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        snowfall.jquery.js实现樱花飘落效果
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/11/15/Lozad-js学习使用/" target="_self" title="Lozad.js学习使用" data-background-image="https://wx2.sinaimg.cn/mw690/006bYVyvgy1fljswcaig9j31700gewh3.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-11-15
-        </div>
-        <a class="post-title" href="/2017/11/15/Lozad-js学习使用/" target="_self" title="Lozad.js学习使用">Lozad.js学习使用</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        Lozad懒加载
-    </div>
-</article>
-
-
-
-    
 </div>
-<!-- 分页开始 -->
-
-
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">
