@@ -54,5 +54,15 @@ comments: false
       <span class="sitename">xia_sir</span>
     </a>
   </li>
+  <li>
+    <a href="http://www.jdshao.com/" title="jdshao 的技术小栈" target="_blank">
+      <img src="http://jdshao.com/wp-content/uploads/2018/02/avator.jpg" width="50" height="50">
+      <span class="sitename">jdshao</span>
+    </a>
+  </li>
 </ul>
 {% endraw %}
+
+ ----------
+
+#### 互加友链请将博客链接发送至博主邮箱：954655431@qq.com
