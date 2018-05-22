@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>vue.js初入门(十一组件-上篇) - hojunBlog</title>
+
+<meta name="keywords" content="vue">
+
+<meta name="description " content="Just A NoteBook">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a> -->
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/2018/02/18/喜欢的音乐/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友情链接"><i class="fa fa-link"></i><span>友情链接</span></a>
+        <a href="/help/" title="帮助中心"><i class="fa fa-question-circle"></i><span>帮助中心</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(无标题)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-05-20">2018-05-20</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">vue.js初入门(十一组件-上篇)</h2>
+            <div class="post-meta">
+                本文总共2352个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqxbjqosvfj30cj08caah.jpg" alt=""></p>
+<h2 id="什么是组件？"><a href="#什么是组件？" class="headerlink" title="什么是组件？"></a><strong>什么是组件？</strong></h2><p>组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。在较高层面上，组件是自定义元素， Vue.js 的编译器为它添加特殊功能。在有些情况下，组件也可以是原生 HTML 元素的形式，以 is 特性扩展。</p>
+<h2 id="全局注册使用"><a href="#全局注册使用" class="headerlink" title="全局注册使用"></a><strong>全局注册使用</strong></h2><p>举个栗子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Vue初入门<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/vue/2.4.2/vue.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">      <span class="comment">//全局注册</span></span></span><br><span class="line"><span class="javascript">      Vue.component(<span class="string">'my-component'</span>, &#123;</span></span><br><span class="line"><span class="xml">        template: '<span class="tag">&lt;<span class="name">div</span>&gt;</span>A custom component!<span class="tag">&lt;/<span class="name">div</span>&gt;</span>'</span></span><br><span class="line"><span class="undefined">      &#125;)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">new</span> Vue(&#123; <span class="attr">el</span>: <span class="string">'#app'</span> &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="局部注册使用"><a href="#局部注册使用" class="headerlink" title="局部注册使用"></a><strong>局部注册使用</strong></h2><p>举个栗子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">my-component</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> Child = &#123;</span></span><br><span class="line"><span class="xml">    template: '<span class="tag">&lt;<span class="name">div</span>&gt;</span>局部注册<span class="tag">&lt;/<span class="name">div</span>&gt;</span>'</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">    el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">    components: &#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// &lt;my-component&gt; 将只在父模板可用</span></span></span><br><span class="line"><span class="javascript">      <span class="string">'my-component'</span>: Child</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="DOM-模版解析说明"><a href="#DOM-模版解析说明" class="headerlink" title="DOM 模版解析说明"></a><strong>DOM 模版解析说明</strong></h2><p>当使用 DOM 作为模版时（例如，将 el 选项挂载到一个已存在的元素上）, 你会受到 HTML 的一些限制，因为 Vue 只有在浏览器解析和标准化 HTML 后才能获取模版内容。尤其像这些元素 <code>&lt;ul&gt; ， &lt;ol&gt;， &lt;table&gt; ， &lt;select&gt;</code> 限制了能被它包裹的元素， <code>&lt;option&gt;</code> 只能出现在其它元素内部。</p>
+<p>在自定义组件中使用这些受限制的元素时会导致一些问题，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">my-row</span>&gt;</span>...<span class="tag">&lt;/<span class="name">my-row</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>自定义组件 <code>&lt;my-row&gt;</code> 被认为是无效的内容，因此在渲染的时候会导致错误。变通的方案是使用特殊的 is 属性：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="data-必须是函数"><a href="#data-必须是函数" class="headerlink" title="data 必须是函数"></a><strong>data 必须是函数</strong></h2><p>如果不是函数，比如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  Vue.component(<span class="string">'button-counter'</span>, &#123;</span><br><span class="line">    data: &#123;</span><br><span class="line">      count: <span class="number">0</span></span><br><span class="line">    &#125;,</span><br><span class="line">    template: <span class="string">'&lt;button v-on:click="count++"&gt;You clicked me &#123;&#123; count &#125;&#125; times.&lt;/button&gt;'</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">new</span> Vue(&#123; <span class="attr">el</span>: <span class="string">'#app'</span> &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>2.4版vue会直接报错：<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fri3bslpvuj30cu051jrc.jpg" alt=""><br>正确的用法应该使用函数：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button-counter</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button-counter</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button-counter</span>&gt;</span><span class="tag">&lt;/<span class="name">button-counter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  Vue.component(<span class="string">'button-counter'</span>, &#123;</span></span><br><span class="line"><span class="javascript">    data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">        count: 0</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="xml">    template: '<span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"count++"</span>&gt;</span>You clicked me &#123;&#123; count &#125;&#125; times.<span class="tag">&lt;/<span class="name">button</span>&gt;</span>'</span></span><br><span class="line"><span class="undefined">  &#125;)</span></span><br><span class="line"><span class="javascript">  <span class="keyword">new</span> Vue(&#123; <span class="attr">el</span>: <span class="string">'#app'</span> &#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/前端/">前端</a>
+            
+            <a href="/tags/vue/">vue</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是组件？"><span class="toc-text">什么是组件？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局注册使用"><span class="toc-text">全局注册使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#局部注册使用"><span class="toc-text">局部注册使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM-模版解析说明"><span class="toc-text">DOM 模版解析说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#data-必须是函数"><span class="toc-text">data 必须是函数</span></a></li></ol>
+    </div>
+</aside>
+    
+
+
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a>
+        <p>
+            <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="帮助中心" >帮助中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+    });
+</script>
+</body>
+</html>
