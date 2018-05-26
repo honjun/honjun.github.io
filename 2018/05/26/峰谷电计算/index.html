@@ -19,7 +19,7 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hojunBlog - Just A NoteBook</title>
+<title>峰谷电计算 - hojunBlog</title>
 
 <meta name="keywords" content="undefined">
 
@@ -91,9 +91,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="active">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -145,312 +143,102 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    <!-- 首页默认取最最新文章集 -->
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-05-26">2018-05-26</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">峰谷电计算</h2>
+            <div class="post-meta">
+                本文总共871个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            
+<style>
+  .field{
+    width: 100%;
+    margin: 20px 0 0 0;
+    font-size: 18px;
+  }
+  .calc{
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    margin: 40px 0 0 20px;
+    background: #7bc549;
+    border: none;
+    color: #fff;
+  }
+  .fee{
+    color: #ff763b;
+    font-weight: 700;
+  }
+  .pv-fee{
+    color: #7bc549;
+    font-weight: 700;
+  }
+</style>
+<div class="field">总电量:<input type="" name="total"></div>
+<div class="field">峰电量:<input type="" name="peak"></div>
+<hr>
+<div class="field"><div class="calc">计算</div></div>
+<div class="field">不执行峰谷总费用:<span class="fee"></span></div>
+<div class="field">执行峰谷总费用:<span class="pv-fee"></span></div>
+<script src="/js/jquery.min.js"></script>
+<script>
+  $(function(){
+    $('body').on('click', '.calc', function() {
+      var t_price = 0.538;
+      var p_price = 0.568;
+      var v_price = 0.288;
+      var total = Number($("input[name='total']").val());
+      var peak = Number($("input[name='peak']").val());
+      var fee = (total * (1000 * t_price)) / 1000;
+      var pv_fee = (Number(peak * (1000 * p_price)) + Number((total - peak) * (1000 * v_price)))/1000;
+      $('.fee').html(fee);
+      $('.pv-fee').html(pv_fee);
+    })
+  });
+</script>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2018-03-15
         </div>
-        <a class="post-title" href="/2018/03/15/SVG深入浅出/" target="_self" title="SVG深入浅出">SVG深入浅出</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        
+        <div class="post-tags">标签：
             
-                <em>·</em>
-                <a href="/tags/svg/" target="_self">svg</a>
+            <a href="/tags/其他/">其他</a>
             
         </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        
     </div>
-    <div class="post-desc">
-        SVG深入浅出
-    </div>
-</article>
+</aside>
+    
 
 
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/03/14/anime-js实现logo动画/" target="_self" title="anime.js实现logo动画" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fpct2gy98rj30ez09ojrf.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-03-14
-        </div>
-        <a class="post-title" href="/2018/03/14/anime-js实现logo动画/" target="_self" title="anime.js实现logo动画">anime.js实现logo动画</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-                <em>·</em>
-                <a href="/tags/前端/" target="_self">前端</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        实现自己的logo动画~
-    </div>
-</article>
 
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-03-07
-        </div>
-        <a class="post-title" href="/2018/03/07/使用disqus评论/" target="_self" title="使用disqus评论">使用disqus评论</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        使用disqus评论
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/02/22/拼音学习StudyPinYin/" target="_self" title="拼音学习StudyPinYin" data-background-image="https://wx2.sinaimg.cn/large/006bYVyvgy1fp5qvionrnj30f709tdgb.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-22
-        </div>
-        <a class="post-title" href="/2018/02/22/拼音学习StudyPinYin/" target="_self" title="拼音学习StudyPinYin">拼音学习StudyPinYin</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/搞事/" target="_self">搞事</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        趁着年后空闲时间，做了一个拼音学习的网页2333333~~~
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/02/19/live2d-看板娘小埋/" target="_self" title="live2d-看板娘小埋" data-background-image="https://wx1.sinaimg.cn/large/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-19
-        </div>
-        <a class="post-title" href="/2018/02/19/live2d-看板娘小埋/" target="_self" title="live2d-看板娘小埋">live2d-看板娘小埋</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/live2d/" target="_self">live2d</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        最近群里有人在耍live2d看板娘，于是默默地跑去get到了一个小埋~
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-18
-        </div>
-        <a class="post-title" href="/2018/02/18/喜欢的音乐/" target="_self" title="喜欢的音乐">喜欢的音乐</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/music/" target="_self">music</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        一些喜欢的音乐
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-12
-        </div>
-        <a class="post-title" href="/2018/02/12/Python-selenium自动上传博客图片至新浪微博相册/" target="_self" title="Python+selenium自动上传博客图片至新浪微博相册">Python+selenium自动上传博客图片至新浪微博相册</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/python/" target="_self">python</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        写博客的时候每次使用图片都得先上传到新浪微博，然后在得到链接插入到markdown中。这样操作多来几次就受不了，于是就使用python+selenium自动上传博客图片。
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-09
-        </div>
-        <a class="post-title" href="/2018/02/09/sublime使用技巧/" target="_self" title="sublime使用技巧">sublime使用技巧</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/sublime/" target="_self">sublime</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        sublime的一些日常使用技巧
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/02/05/博客小人/" target="_self" title="博客小人" data-background-image="https://wx1.sinaimg.cn/mw690/006bYVyvgy1fo601tui4jj31kw0w076p.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-05
-        </div>
-        <a class="post-title" href="/2018/02/05/博客小人/" target="_self" title="博客小人">博客小人</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/blog/" target="_self">blog</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        博客小人
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-02-04
-        </div>
-        <a class="post-title" href="/2018/02/04/打字特效/" target="_self" title="打字特效">打字特效</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        打字特效
-    </div>
-</article>
-
-
-
-    
-    
 </div>
-<!-- 分页开始 -->
-
-<div id="btn-pager">
-    
-    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
-</div>
-
-
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">

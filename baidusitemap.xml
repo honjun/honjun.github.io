@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>https://honjun.github.io/2018/05/26/%E5%B3%B0%E8%B0%B7%E7%94%B5%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2018-05-26T16:51:00.713Z</lastmod>
+    <data>
+        <display>
+        <title>峰谷电计算</title>
+        <pubTime>2018-05-26T15:41:34.000Z</pubTime>
+        
+        <tag>其他</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://honjun.github.io/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://honjun.github.io/2018/05/22/vue-js%E5%88%9D%E5%85%A5%E9%97%A8-%E5%8D%81%E4%B8%80%E7%BB%84%E4%BB%B6-%E4%B8%8B%E7%AF%87/</loc>
@@ -1034,9 +1054,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>js</tag>
+         
+        <tag>前端</tag>
          
          
            
