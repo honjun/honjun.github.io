@@ -152,9 +152,6 @@
       });
     }
 
-    html2canvas(document.getElementById("show")).then(function(canvas) {
-        document.getElementById("root").appendChild(canvas);
-    });
     $save.onclick = function (e) {
       var canvas = document.getElementsByTagName("canvas")[0];
       var w = canvas.offsetwidth;
@@ -164,7 +161,6 @@
       ctx.drawImage(imgs, 0, 0, w, h);
       var data = canvas.toDataURL('image/jpeg');
       imgs.setAttribute('src', data);
-      Canvas2Image.convertToImage(canvas, w, h, 'jpeg')
     }
   }
 </script>
