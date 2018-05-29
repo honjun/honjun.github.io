@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 旅行社 旅游团队 客源地 游客总数 过夜游总数 入住酒店 游览景点 -->
+	<title>旅游信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="css/selectFilter.css" />
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+
+	<style type="text/css">
+	* { -ms-word-wrap: break-word; word-wrap: break-word; }
+	html { -webkit-text-size-adjust: none; text-size-adjust: none; }
+	html, body {height:100%;width:100%; font-family: '微软雅黑'; font-size: 14px;}
+	.input{position:absolute;top:0;left:0;width:80px;margin:0;padding-left:5px;height:30px;line-height:30px;font-size:12px;border:1px solid #c9cacb;}
+	.box{
+		width: 100%;
+		padding: 5px;
+		border-radius: 5px;
+		border: 1px solid #2d3430;
+	}
+	.row{
+	  display: -webkit-flex; /* Safari */
+	  display: flex;
+	  margin-top: 10px;
+	}
+	.left{
+		line-height: 30px;
+		flex: 1;
+	}
+	.filter-box{
+		flex: 3;
+	}
+	.right{
+		position: relative;
+		flex: 3;
+	}
+	.rinput{
+		width: 100%;
+		height: 100%;
+		padding: 0 30px 0 10px;
+		border: 1px solid #dadada;
+		font-size: 14px;
+	}
+  .province-box{
+  	position: relative;
+  	display: inline-block;
+  	width: 45%;
+  }
+  .num {
+  	float: right;
+  	width: 45%;
+  	margin-right: 10px;
+		height: 30px;
+		border: 1px solid #dadada;
+		font-size: 14px;
+  }
+  .kadd {
+		display: inline-block;
+		margin: 0 auto;
+	}
+  .rtextarea{
+		width: 100%;
+		height: 100%;
+		border: 1px solid #dadada;
+		font-size: 14px;
+	}
+	.add {
+		margin: 0 auto;
+	}
+	.iadd {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		line-height: 20px;
+		color: #fff;
+		text-align: center;
+		border: 0px solid;
+		border-radius: 50%;
+		background: #5fb878;
+	}
+	.tag {
+		display: block;
+		margin-top: 5px;
+		width: 100%;
+		border: 1px solid #dadada;
+	}
+	.stag {
+		display: inline-block;
+		margin: 3px 0;
+		border: 1px solid #5fb878;
+		font-size: 16px;
+	}
+	.button {
+		width: 100%;
+		height: 30px;
+		border-radius: 5px;
+		margin-top: 10px;
+		background: #5fb878;
+		color: #fff;
+		text-align: center;
+		font-size: 18px;
+		line-height: 28px;
+	}
+</style>
+
+</head>
+<body>
+<form>
+	<div class="box">
+		<div class="row">
+			<div class="left">旅行社:</div>
+			<div class="filter-box lxs1">
+				<div class="filter-text">
+					<input class="filter-title" type="text" readonly placeholder="请选择旅行社" />
+					<i class="icon icon-filter-arrow"></i>
+				</div>
+				<select name="filter">
+					<option value="龙城假期旅行社">龙城假期旅行社</option>
+					<option value="凤羽旅行社">凤羽旅行社</option>
+					<option value="武夷山“串线游”活动">武夷山“串线游”活动</option>
+					<option value="山水旅行社">山水旅行社</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">旅游团队:</div>
+			<div class="right">
+				<input class="rinput" type="text" placeholder="多少个旅行团队" />
+			</div>
+		</div>
+		<div class="row ">
+			<div class="left">客源地:</div>
+			<div class="right">
+				<div class="province-box sf1"><div class="filter-text"><input class="filter-title" type="text" readonly placeholder="请选择省份" /><i class="icon icon-filter-arrow"></i></div><select name="filter[]"><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="上海市">上海市</option><option value="重庆市">重庆市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="海南省">海南省</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="台湾省">台湾省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="广西壮族自治区">广西壮族自治区</option><option value="西藏自治区">西藏自治区</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option></select></div><input name="kynum[]" class="num" type="text" placeholder="多少个旅行团队" />
+				<div class="row "><div data-num="1" class="kadd"><span class="iadd">+</span></div></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">游客总数:</div>
+			<div class="right">
+				<input class="rinput" type="text" placeholder="请输入游客总数" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">游客总数:</div>
+			<div class="right">
+				<input class="rinput" type="text" placeholder="请输入游客人数" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">过夜游总数:</div>
+			<div class="right">
+				<input class="rinput" type="text" placeholder="请输入过夜游人数" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">游览景点:</div>
+			<div class="right">
+				<textarea class="rtextarea" placeholder="请输入游览景点"></textarea>
+			</div>
+		</div>
+		<div class="tag point">
+			<span class="stag">龙泉青瓷博物馆</span>
+			<span class="stag">龙泉宝剑厂</span>
+			<span class="stag">崇仁寺</span>
+			<span class="stag">瓯江壹号码头</span>
+			<span class="stag">兰巨现代农业观光园</span>
+		</div>
+		<div class="row">
+			<div class="left">入住酒店:</div>
+			<div class="right">
+				<textarea class="rtextarea" placeholder="请输入入住酒店"></textarea>
+			</div>
+		</div>
+		<div class="tag hotel">
+			<span class="stag">披云山庄</span>
+			<span class="stag">龙泉大酒店</span>
+			<span class="stag">龙泉国际大酒店</span>
+			<span class="stag">开元商务酒店</span>
+			<span class="stag">山水大酒店</span>
+		</div>
+		<div class="row">
+			<div class="add"><span class="iadd">+</span></div>
+		</div>
+	</div>
+	<div class="button">提交</div>
+</form>
+
+
+<div class="wrap"></div>
+
+<script type="text/javascript">
+$("#city").click(function (e) {
+	SelCity(this,e);
+});
+</script>
+<script type="text/javascript" src="js/selectFilter.js"></script>
+<script type="text/javascript">
+	//本小插件支持移动端哦
+	
+	//这里是初始化
+	$('.lxs1').selectFilter({
+		callBack : function (val){
+			//返回选择的值
+			console.log(val+'-是返回的值')
+		}
+	});
+	$('.sf1').selectFilter({
+		callBack : function (val){
+			//返回选择的值
+			console.log(val+'-是返回的值')
+		}
+	});
+
+</script>
+<script type="text/javascript">
+(function(){
+	var kystr = '<div class="filter-text"><input class="filter-title" type="text" readonly placeholder="请选择省份" /><i class="icon icon-filter-arrow"></i></div><select name="filter[]"><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="上海市">上海市</option><option value="重庆市">重庆市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="海南省">海南省</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="台湾省">台湾省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="广西壮族自治区">广西壮族自治区</option><option value="西藏自治区">西藏自治区</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option></select></div><input name="kynum[]" class="num" type="text" placeholder="多少个旅行团队" />';
+
+	$('body').on('click', '.kadd', function(){
+		var i = $(this).attr('data-num') + 1;
+		$(this).attr('data-num', i);
+		$(this).parent().before('<div class="province-box sf'+ i +'">' + kystr);
+		$('.sf' + i).selectFilter({
+			callBack : function (val){
+				//返回选择的值
+				console.log(val+'-是返回的值')
+			}
+		});
+	})
+})()
+</script>
+</body>
+</html>
+
+4月30日（明天），全市将迎来7个旅游团队，共1003名游客，其中539游客来龙过夜游。
+1、凤羽旅行社，迎来上海客源地1个旅游团队，共10名游客来龙旅游，主要游览住龙、宝溪，青瓷博物馆、龙泉宝剑厂，安仁永和桥等。
+2、武夷山“串线游”活动将迎来5个旅游团队，共261名游客来龙过夜游，其中上海客源地2个，安徽客源地2个，江苏客源地1个，分别入住紫晶商务酒店、星港A8假日酒店、青年旅舍酒店，家园快捷酒店，辰羽酒店，主要游览龙泉青瓷博物馆、龙泉宝剑厂、崇仁寺、瓯江壹号码头，兰巨现代农业观光园等。
+3、龙城假期旅行社，迎来732位游客，其中278名游客来龙过夜游，入住披云山庄，龙泉大酒店，龙泉国际大酒店，开元商务酒店，山水大酒店，龙泉山猎户山庄，主要游览青瓷小镇，白云岩，宝剑厂，龙泉山等。
