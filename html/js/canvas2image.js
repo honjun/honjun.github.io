@@ -1,3 +1,4 @@
+		console.log(1);
 /**
  * covert canvas to image
  * and save the image file
