@@ -368,7 +368,20 @@
     </div><!-- end #body -->
     <footer class="footer">
     <div class="footer-inner">
-        <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a>
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
         <p>
             <a href="/about"  title="关于本站">关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <a href="/help" title="帮助中心" >帮助中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
