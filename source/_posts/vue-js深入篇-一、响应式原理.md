@@ -10,7 +10,7 @@ tags:
  - 前端
  - vue
 keywords: vue
-description: 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值......
+description: 响应式原理......
 photos:
  https://wx3.sinaimg.cn/small/006bYVyvgy1fqxbjqosvfj30cj08caah.jpg
 ---

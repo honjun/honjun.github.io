@@ -60,6 +60,24 @@ comments: false
       <span class="sitename">jdshao</span>
     </a>
   </li>
+  <li>
+    <a href="http://www.bianxiaofeng.com/" title="少年心事当拿云" target="_blank">
+      <img src="http://resources.bianxiaofeng.top/authorHead.jpg" width="50" height="50">
+      <span class="sitename">Dimple</span>
+    </a>
+  </li>
+  <li>
+    <a href="http://blog.boxmoe.cn/" title="infiniteSky - 在自由的天空翱翔" target="_blank">
+      <img src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr1gyl3ofdj309z09z3z3.jpg" width="50" height="50">
+      <span class="sitename">infiniteSky</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://yyping.top/" title="Kebin.Wang - 最萌程序员" target="_blank">
+      <img src="http://yyping.top/images/avatar.jpg" width="50" height="50">
+      <span class="sitename">Kebin.Wang</span>
+    </a>
+  </li>
 </ul>
 {% endraw %}
 
