@@ -19,11 +19,11 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hojunBlog - Just A NoteBook</title>
+<title>手把手教你搭建hexo博客(三) - hojunBlog</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="hexo">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="为什么推荐hexo+github？最重要两点：简单、免费。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -91,9 +91,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="active">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -145,287 +143,83 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    <!-- 首页默认取最最新文章集 -->
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-06-08">2018-06-08</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">手把手教你搭建HEXO博客(三)</h2>
+            <div class="post-meta">
+                本文总共1051个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg" alt=""><br>手把手教你搭建HEXO+Github博客 （系列教程三）</p>
+<ul>
+<li>为什么推荐hexo+github？ </li>
+<li>最重要两点：简单、免费</li>
+</ul>
+<h2 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a><strong>安装HEXO</strong></h2><p>先在本地新建个blog文件夹（随意）<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tl19jjj30oy0er76i.jpg" alt=""><br>在cmd命令行进入到blog文件夹下。（win+R打开运行对话框，输入cmd打开命令行程序）<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tjwqe3j30t30f7jsz.jpg" alt=""><br>heox主页上的就是安装命令（npm install hexo-cli -g），复制下来<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tix5trj30su0dhjti.jpg" alt=""><br>在cmd从粘贴，回车确认命令，安装。安装需要时间，请耐心等待<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42tif1iuj30t50f6jtd.jpg" alt=""><br>安装成功后，运行初始化命令(hexo init hojunBlog)<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42th8zvsj30sn0f8q8t.jpg" alt=""><br>hexo官网也有部署命令的教程<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42tgnlq2j30t60gjtc5.jpg" alt=""><br>初始化好后，进入文件夹，输入命令安装依赖 npm install(安装需要时间，请耐心等待)<br>（网好的请无视）若网络较差，可以使用淘宝镜像：<br>命令:npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a><br>使用就是把npm改成cnpm即可。<br>网好的作者这里继续使用npm<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42tg3mm5j30t50f7k32.jpg" alt=""><br>安装完成后，输入hexo s -p 5555(在端口5555启动服务)<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tfed4hj30t80f7dpv.jpg" alt=""><br>在网页上输入localhost:5555预览一下（localhost表示本地访问，小伙伴是看不到的）<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42tekcydj31000j0k2a.jpg" alt=""></p>
+<h2 id="安装sublime"><a href="#安装sublime" class="headerlink" title="安装sublime"></a><strong>安装sublime</strong></h2><p>sublime不是必要的，只是编辑文本用的编辑器。不过安利大家推荐：<br>百度搜索sublime，进入官网下载<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tdyzfuj30sl0ef0ut.jpg" alt=""><br>点击按钮下载<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42tdesx5j30zg0h7woe.jpg" alt=""><br>下载好后确认安装<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42tcqmh8j30t60gj79t.jpg" alt=""><br>我们将其安装在D盘：<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42tbw18ej30t60gjtf7.jpg" alt=""><br>安装完成后，打开程序<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42tawt44j30t60gjthw.jpg" alt=""><br>直接将博客文件夹拖入编辑器<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42ta9hibj30t60gjn2h.jpg" alt=""><br>打开config文件，需要修改的地方有：网站名，介绍，关键字（这部分自己取），url(即是“http://用户名.github.io)。使用Ctrl+S保存文件<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t91tj5j31050lcqdq.jpg" alt=""><br>现在我们打开github获取仓库地址,点击头像-&gt;Your profile<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t7vw7cj30t60gjgq6.jpg" alt=""><br>点击对应的仓库<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42t7e1kzj30t60gjtcu.jpg" alt=""><br>点击Clone or download，复制仓库地址<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t6uctmj30t60gjq89.jpg" alt=""><br>在config的最后找到deploy，输入如下内容（注意要有空格和缩进，不然会报错）<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t54pvhj30v20hln30.jpg" alt=""><br>接下来还需要安装git插件，命令 npm install hexo-deployer-git –save<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42t5xfk3j30t60gjq6j.jpg" alt=""><br>安装好后输入hexo g生成命令<br><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42t3t2ahj30rw0eotg4.jpg" alt=""><br>输入hexo d部署到github<br><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t4iuwaj30s10elwnr.jpg" alt=""><br>第一提交会提示您配置github的邮箱和用户名<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t30g0lj30rx0eqn5a.jpg" alt=""><br>根据提示配置<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t20a1uj30ru0ekjyw.jpg" alt=""><br>在弹出的输入框中输入用户名，密码登录<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42t11faaj30so0etwii.jpg" alt=""><br>显示出INFO Deploy done: git表示成功发布到github上<br><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t0fro1j30rx0ep12s.jpg" alt=""><br>在浏览器上输入 “用户名.github.io” 即可访问自己的博客（你可以把这个链接发布给小伙伴啦）<br><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42szjvzzj30zn0icwh9.jpg" alt=""><br>To Be Continued…(未完待续)</p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2017-08-09
         </div>
-        <a class="post-title" href="/2017/08/09/Mysql-5-7-19-For-Windows-安装-修改密码/" target="_self" title="Mysql 5.7.19 For Windows 安装+修改密码">Mysql 5.7.19 For Windows 安装+修改密码</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        
+        <div class="post-tags">标签：
             
-                <em>·</em>
-                <a href="/tags/mysql/" target="_self">mysql</a>
+            <a href="/tags/hexo/">hexo</a>
             
-        </div>
-    </div>
-    <div class="post-desc">
-        Mysql 5.7
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-30
-        </div>
-        <a class="post-title" href="/2017/07/30/chrome启动参数/" target="_self" title="chrome启动参数">chrome启动参数</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            <a href="/tags/博客/">博客</a>
             
         </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装HEXO"><span class="toc-text">安装HEXO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装sublime"><span class="toc-text">安装sublime</span></a></li></ol>
     </div>
-    <div class="post-desc">
-        chrome启动参数
-    </div>
-</article>
+</aside>
+    
 
 
 
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-21
-        </div>
-        <a class="post-title" href="/2017/07/21/PHP根据url批量下载图片/" target="_self" title="PHP根据url批量下载图片">PHP根据url批量下载图片</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        PHP根据url批量下载图片
-    </div>
-</article>
 
 
 
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-19
-        </div>
-        <a class="post-title" href="/2017/07/19/利用ajax偷懒-批量操作/" target="_self" title="利用ajax偷懒-批量操作">利用ajax偷懒-批量操作</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        利用ajax偷懒-批量操作
-    </div>
-</article>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
+       if (typeof LivereTower === 'function') { return; }
 
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-18
-        </div>
-        <a class="post-title" href="/2017/07/18/mysql报字符集错误/" target="_self" title="mysql报字符集错误">mysql报字符集错误</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/mysql/" target="_self">mysql</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        mysql报字符集错误
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-17
-        </div>
-        <a class="post-title" href="/2017/07/17/js点击复制功能实现/" target="_self" title="js点击复制功能实现">js点击复制功能实现</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        js点击复制功能实现
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-12
-        </div>
-        <a class="post-title" href="/2017/07/12/解决父级元素不能被撑开/" target="_self" title="解决父级元素不能被撑开">解决父级元素不能被撑开</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/css/" target="_self">css</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        解决父级元素不能被撑开
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/07/10/逗比生活/" target="_self" title="逗比生活" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fqdqbfhns2j30b40b074f.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-10
-        </div>
-        <a class="post-title" href="/2017/07/10/逗比生活/" target="_self" title="逗比生活">逗比生活</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/生活/" target="_self">生活</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        逗比生活
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-09
-        </div>
-        <a class="post-title" href="/2017/07/09/博客添加gitment评论/" target="_self" title="博客添加gitment评论">博客添加gitment评论</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        博客添加gitment评论
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/07/07/按键精灵入门/" target="_self" title="按键精灵入门" data-background-image="https://wx3.sinaimg.cn/large/006bYVyvgy1fljtznbpbtj30e80e8gls.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-07
-        </div>
-        <a class="post-title" href="/2017/07/07/按键精灵入门/" target="_self" title="按键精灵入门">按键精灵入门</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/搞事/" target="_self">搞事</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        按键精灵入门
-    </div>
-</article>
-
-
-
-    
-    
-</div>
-<!-- 分页开始 -->
-
-<div id="btn-pager">
-    
-    <a class="extend prev" rel="prev" href="/page/9/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/">下一页</a>
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 
-
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
         </div><!-- end #main-->
     </div><!-- end #body -->
     <footer class="footer">
