@@ -19,16 +19,16 @@ photos:
 今天给各位博主带来了一个js表情插件,效果如下*@(高兴)*：
 
 {% raw %}
-<link rel="stylesheet" href="/demo/css/OwO.min.css">
+<link rel="stylesheet" href="/OwO/css/OwO.min.css">
 <textarea class="OwO-textarea" style="width: 100%; height: 50px; margin-bottom: 10px; padding: 10px;"></textarea>
 <div class="OwO"></div>
-<script src="/demo/js/OwO.min.js"></script>
+<script src="/OwO/js/OwO.min.js"></script>
 <script>
-    var OwO_demo = new OwO({
+    var OwO_OwO = new OwO({
         logo: 'OωO表情',
         container: document.getElementsByClassName('OwO')[0],
         target: document.getElementsByClassName('OwO-textarea')[0],
-        api: '/demo/json/OwO.json',
+        api: '/OwO/json/OwO.json',
         position: 'down',
         width: '100%',
         maxHeight: '250px'

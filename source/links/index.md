@@ -34,6 +34,7 @@ comments: false
       transition: .5s;
       -webkit-transition: .5s;
       width: 50px;
+      height: 50px;
   }
   .link-contentqt li a:hover img {
       transform: scale(1.2);
@@ -76,6 +77,12 @@ comments: false
     <a href="https://yyping.top/" title="Kebin.Wang - 最萌程序员" target="_blank">
       <img src="http://yyping.top/images/avatar.jpg" width="50" height="50">
       <span class="sitename">Kebin.Wang</span>
+    </a>
+  </li>
+  <li>
+    <a href="http://kurumi.ink/" title="如果是真的，我希望他是假的。如果是假的，我希望他是真的。" target="_blank">
+      <img src="http://kurumi.ink/avatar/Misaka.jpg" width="50" height="50">
+      <span class="sitename">SimonKing</span>
     </a>
   </li>
 </ul>
