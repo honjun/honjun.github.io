@@ -129,10 +129,9 @@
     var INSIGHT_CONFIG = {
         TRANSLATION: {
             POSTS: '文章',
-            PAGES: '页面',
+            // PAGES: '页面',
             CATEGORIES: '分类',
             TAGS: '标签',
-            UNTITLED: '(无标题)',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -147,6 +146,41 @@
 <div class="main-inner">
     
     <!-- 首页默认取最最新文章集 -->
+    
+    
+<article class="post">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a class="lozad" href="/2018/05/07/软考备考之UML十种建模图/" target="_self" title="软考备考之UML十种建模图" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvgy1fr2ih3rhuog30cs06igle.gif"></a>
+    </div>
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="null" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2018-05-07
+        </div>
+        <a class="post-title" href="/2018/05/07/软考备考之UML十种建模图/" target="_self" title="软考备考之UML十种建模图">软考备考之UML十种建模图</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/软考/" target="_self">软考</a>
+            
+                <em>·</em>
+                <a href="/tags/UML/" target="_self">UML</a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        UML九种建模图：用例图、类图、对象图、顺序图、协作图、状态图、活动图、组件图、配置图。又可以静动分为静态视图和动态视图。
+    </div>
+</article>
+
+
+
     
     
 <article class="post">
@@ -437,30 +471,6 @@
 
     
     
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-04-24
-        </div>
-        <a class="post-title" href="/2018/04/24/给博客添加图集展示/" target="_self" title="给博客添加图集展示">给博客添加图集展示</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        给博客添加图集展示
-    </div>
-</article>
-
-
-
-    
-    
 </div>
 <!-- 分页开始 -->
 
@@ -489,7 +499,7 @@
           xhr.send();
         </script>
         <p>
-            <a href="/about/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <a href="/help" title="关于本站" >关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <a href="/archives" title="文章归档">文章归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
 
