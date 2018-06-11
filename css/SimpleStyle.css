@@ -3698,7 +3698,7 @@ body.night-mode,.night-mode .btn,body.night-mode a,.night-mode .nav-user a,#sear
 }
 .markdown-body img
 {
-    max-width:100%;box-sizing:content-box;background-color:#fff
+    max-width:100%;box-sizing:content-box;/*background-color:#fff*/
 }
 .markdown-body img[align=right]
 {
@@ -4292,4 +4292,7 @@ pre .xml .cdata {
 }
 #article-toc-inner ol {
     margin-left: -16px;
+}
+.night-mode .markdown-body h1 {
+    border-color: #2f2f2f;
 }

@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>《算法图解》之狄克斯特拉算法 - hojunBlog</title>
+
+<meta name="keywords" content="狄克斯特拉算法">
+
+<meta name="description " content="如果你要找出最快的路径，该如何办呢？为此，可使用另一种算法——狄克斯特拉算法（Dijkstra’s algorithm）。">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="文章归档"><i class="fa fa-archives"></i><span>文章归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a> -->
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/2018/02/18/喜欢的音乐/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友情链接"><i class="fa fa-link"></i><span>友情链接</span></a>
+        <a href="/help/" title="关于本站"><i class="fa fa-question-circle"></i><span>关于本站</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-06-10">2018-06-10</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">《算法图解》之狄克斯特拉算法</h2>
+            <div class="post-meta">
+                本文总共4966个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>在学习广度优先搜索的时候，你找出了从A点到B点的路径。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frun7zdb3ej30dk05dgma.jpg" alt=""></p>
+<p>这是最短路径，因为段数最少——只有三段，但不一定是最快路径。如果给这些路段加上时间，你将发现有更快的路径。</p>
+<p><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1frun7ztp3xj30db07f75d.jpg" alt=""></p>
+<p>如果你要找出最快的路径，该如何办呢？为此，可使用另一种算法——狄克斯特拉算法（Dijkstra’s algorithm）。</p>
+<h2 id="使用狄克斯特拉算法"><a href="#使用狄克斯特拉算法" class="headerlink" title="使用狄克斯特拉算法"></a><strong>使用狄克斯特拉算法</strong></h2><p>下面来看看如何对下面的图使用这种算法。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frve7ii01oj309g06rmxq.jpg" alt=""></p>
+<p>其中每个数字表示的都是时间，单位分钟。为找出从起点到终点耗时最短的路径，你将使用狄克斯特拉算法。</p>
+<p>如果你使用广度优先搜索，将得到下面这条段数最少的路径。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frvef2k8d6j309m07sjs0.jpg" alt=""></p>
+<p>这条路径耗时7分钟。下面来看看能否找到耗时更短的路径！狄克斯特拉算法包含4个步骤。</p>
+<ul>
+<li>(1) 找出“最便宜”的节点，即可在最短时间内到达的节点。</li>
+<li>(2) 更新该节点的邻居的开销，其含义将稍后介绍。</li>
+<li>(3) 重复这个过程，直到对图中的每个节点都这样做了。</li>
+<li>(4) 计算最终路径。</li>
+</ul>
+<p><strong>第一步：找出最便宜的节点。</strong></p>
+<p>你站在起点，不知道该前往节点A还是前往节点B。前往这两个节点都要多长时间呢？</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frvef3bktcj309n08ajrz.jpg" alt=""></p>
+<p>前往节点A需要6分钟，而前往节点B需要2分钟。至于前往其他节点，你还不知道需要多长时间。<br>由于你还不知道前往终点需要多长时间，因此你假设为无穷大（这样做的原因你马上就会明白）。节点B是最近的——2分钟就能达到。</p>
+<p><strong>第二步：计算经节点B前往其各个邻居所需的时间。</strong></p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frven6pfv0j30l506x402.jpg" alt=""></p>
+<p>你刚找到了一条前往节点A的更短路径！直接前往节点A需要6分钟。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frven79qldj308805kwet.jpg" alt=""></p>
+<p>但经由节点B前往节点A只需5分钟！</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1frven7qda5j308d05874l.jpg" alt=""></p>
+<p>对于节点B的邻居，如果找到前往它的更短路径，就更新其开销。在这里，你找到了：</p>
+<ul>
+<li>前往节点A的更短路径（时间从6分钟缩短到5分钟）；</li>
+<li>前往终点的更短路径（时间从无穷大缩短到7分钟）。</li>
+</ul>
+<p><strong>第三步：重复！</strong></p>
+<p>重复第一步：找出可在最短时间内前往的节点。你对节点B执行了第二步，除节点B外，可在最短时间内前往的节点是节点A。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1frven880aej308n0623z0.jpg" alt=""></p>
+<p>重复第二步：更新节点A的所有邻居的开销。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1frvf6d4ii4j309e05ljrt.jpg" alt=""></p>
+<p>你发现前往终点的时间为6分钟！<br>你对每个节点都运行了狄克斯特拉算法（无需对终点这样做）。现在，你知道：</p>
+<ul>
+<li>前往节点B需要2分钟；</li>
+<li>前往节点A需要5分钟；</li>
+<li>前往终点需要6分钟。</li>
+</ul>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1frvf6dkwaqj3086054jrp.jpg" alt=""></p>
+<p>最后一步——计算最终路径将留到下一节去介绍，这里先直接将最终路径告诉你。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frvf6ece9bj308w05jt94.jpg" alt=""></p>
+<p>如果使用广度优先搜索，找到的最短路径将不是这条，因为这条路径包含3段，而有一条从起点到终点的路径只有两段。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1frvf6ex3p6j30c707kjsg.jpg" alt=""></p>
+<p>在前一章，你使用了广度优先搜索来查找两点之间的最短路径，那时“最短路径”的意思是段数最少。在狄克斯特拉算法中，你给每段都分配了一个数字或权重，因此狄克斯特拉算法找出的是总权重最小的路径。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1frvf6fm72gj30nv08stbp.jpg" alt=""></p>
+<p>这里重述一下，狄克斯特拉算法包含4个步骤。</p>
+<ul>
+<li>(1) 找出最便宜的节点，即可在最短时间内前往的节点。</li>
+<li>(2) 对于该节点的邻居，检查是否有前往它们的更短路径，如果有，就更新其开销。</li>
+<li>(3) 重复这个过程，直到对图中的每个节点都这样做了。</li>
+<li>(4) 计算最终路径。</li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a><strong>实现</strong></h2><p>注意：</p>
+<ul>
+<li>狄克斯特拉算法用于每条边都有关联数字的图，这些数字称为权重（weight）。</li>
+<li>如果有负权边，就不能使用狄克斯特拉算法。</li>
+</ul>
+<p>下面来看看如何使用代码来实现狄克斯特拉算法，这里以下面的图为例。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryzibjyy3j30am05g3yz.jpg" alt=""></p>
+<p>要编写解决这个问题的代码，需要三个散列表。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryz4ncnj3j30lt09cgo5.jpg" alt=""></p>
+<p>随着算法的进行，你将不断更新散列表costs和parents。首先，需要实现这个图，为此可使用一个散列表。<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">graph = &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在前一章中，你像下面这样将节点的所有邻居都存储在散列表中。</p>
+<p>graph[“you”] = [“alice”, “bob”, “claire”]<br>但这里需要同时存储邻居和前往邻居的开销。例如，起点有两个邻居——A和B。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryz4nu3mfj30d607n0t7.jpg" alt=""></p>
+<p>如何表示这些边的权重呢？为何不使用另一个散列表呢？<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">graph[<span class="string">"start"</span>] = &#123;&#125;</span><br><span class="line">graph[<span class="string">"start"</span>][<span class="string">"a"</span>] = <span class="number">6</span></span><br><span class="line">graph[<span class="string">"start"</span>][<span class="string">"b"</span>] = <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryz4obi2hj30by07djs7.jpg" alt=""></p>
+<p>因此graph[“start”]是一个散列表。要获取起点的所有邻居，可像下面这样做。<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> graph[<span class="string">"start"</span>].keys()</span><br><span class="line">[<span class="string">"a"</span>, <span class="string">"b"</span>]</span><br></pre></td></tr></table></figure></p>
+<p>有一条从起点到A的边，还有一条从起点到B的边。要获悉这些边的权重，该如何办呢？<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> graph[<span class="string">"start"</span>][<span class="string">"a"</span>]</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> graph[<span class="string">"start"</span>][<span class="string">"b"</span>]</span><br><span class="line"><span class="number">6</span></span><br></pre></td></tr></table></figure></p>
+<p>下面来添加其他节点及其邻居。<br>graph[“a”] = {}<br>graph[“a”][“fin”] = 1<br>graph[“b”] = {}<br>graph[“b”][“a”] = 3<br>graph[“b”][“fin”] = 5</p>
+<p>#终点没有任何邻居<br>graph[“fin”] = {}<br>表示整个图的散列表类似于下面这样。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryzl9pbp8j30c409mdhb.jpg" alt=""></p>
+<p>接下来，需要用一个散列表来存储每个节点的开销。<br>节点的开销指的是从起点出发前往该节点需要多长时间。你知道的，从起点到节点B需要2分钟，从起点到节点A需要6分钟（但你可能会找到所需时间更短的路径）。你不知道到终点需要多长时间。对于还不知道的开销，你将其设置为无穷大。在Python中能够表示无穷大吗？你可以这样做：<br>infinity = float(“inf”)<br>创建开销表的代码如下：<br>infinity = float(“inf”)<br>costs = {}<br>costs[“a”] = 6<br>costs[“b”] = 2<br>costs[“fin”] = infinity<br>还需要一个存储父节点的散列表：</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryz4oybm6j30bl091wfh.jpg" alt=""></p>
+<p>创建这个散列表的代码如下：<br>parents = {}<br>parents[“a”] = “start”<br>parents[“b”] = “start”<br>parents[“fin”] = None<br>最后，你需要一个数组，用于记录处理过的节点，因为对于同一个节点，你不用处理多次。<br>processed = []<br>准备工作做好了，下面来看看算法。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryz4q90snj30hb0euaco.jpg" alt=""></p>
+<p>我先列出代码，然后再详细介绍。代码如下。<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在未处理的节点中找出开销最小的节点</span></span><br><span class="line">node = find_lowest_cost_node(costs)</span><br><span class="line"><span class="comment">#这个while循环在所有节点都被处理过后结束</span></span><br><span class="line"><span class="keyword">while</span> node <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">  cost = costs[node]</span><br><span class="line">  neighbors = graph[node]</span><br><span class="line">  <span class="comment">#遍历当前节点的所有邻居</span></span><br><span class="line">  <span class="keyword">for</span> n <span class="keyword">in</span> neighbors.keys():</span><br><span class="line">    new_cost = cost + neighbors[n]</span><br><span class="line">    <span class="keyword">if</span> costs[n] &gt; new_cost:</span><br><span class="line">      costs[n] = new_cost</span><br><span class="line">      parents[n] = node</span><br><span class="line">  processed.append(node)</span><br><span class="line">  node = find_lowest_cost_node(costs)</span><br></pre></td></tr></table></figure></p>
+<p>这就是实现狄克斯特拉算法的Python代码！函数find_lowest_cost_node的代码稍后列<br>出，我们先来看看这些代码的执行过程。<br>找出开销最低的节点。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryzzm13tdj30o704qmy0.jpg" alt=""></p>
+<p>获取该节点的开销和邻居。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryzzmn73gj30n008vq4w.jpg" alt=""></p>
+<p>遍历邻居。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fryzznam1ej30kc05tt9v.jpg" alt=""></p>
+<p>每个节点都有开销。开销指的是从起点前往该节点需要多长时间。在这里，你计算从起点出发，经节点B前往节点A（而不是直接前往节点A）需要多长时间。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fryzzns296j30oi05at9p.jpg" alt=""></p>
+<p>接下来对新旧开销进行比较。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryzzoiauuj30ik09tac5.jpg" alt=""></p>
+<p>找到了一条前往节点A的更短路径！因此更新节点A的开销。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryzzp1c0wj30nz07i0u2.jpg" alt=""></p>
+<p>这条新路径经由节点B，因此节点A的父节点改为节点B。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryzzpj7oij30jc08nwfl.jpg" alt=""></p>
+<p>现在回到了for循环开头。下一个邻居是终点节点。</p>
+<p><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fryzzq0twxj30et05e0te.jpg" alt=""></p>
+<p>经节点B前往终点需要多长时间呢？</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryzzqqcnwj30km05jdgt.jpg" alt=""></p>
+<p>需要7分钟。终点原来的开销为无穷大，比7分钟长。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryzzrb2gdj30jz065myb.jpg" alt=""></p>
+<p>设置终点节点的开销和父节点。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fryzzrtzrqj30k30eijtz.jpg" alt=""></p>
+<p>你更新了节点B的所有邻居的开销。现在，将节点B标记为处理过。</p>
+<p><img class="lozad" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1frz06r146fj30k2049t94.jpg" alt=""></p>
+<p>找出接下来要处理的节点。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryzzsfus6j30q208vgne.jpg" alt=""></p>
+<p>获取节点A的开销和邻居。</p>
+<p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fryzzswk68j30f909ldgy.jpg" alt=""></p>
+<p>节点A只有一个邻居：终点节点。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fryzztf0ilj30g80540ta.jpg" alt=""></p>
+<p>当前，前往终点需要7分钟。如果经节点A前往终点，需要多长时间呢？</p>
+<p><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fryzzu3gcoj30la0fy41w.jpg" alt=""></p>
+<p>经节点A前往终点所需的时间更短！因此更新终点的开销和父节点。</p>
+<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fryzzuw7ovj30kh0f6go1.jpg" alt=""></p>
+<p>处理所有的节点后，这个算法就结束了。希望前面对执行过程的详细介绍让你对这个算法有更深入的认识。函数find_lowest_cost_node找出开销最低的节点，其代码非常简单，如下所示。<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_lowest_cost_node</span><span class="params">(costs)</span>:</span></span><br><span class="line">  lowest_cost = float(<span class="string">"inf"</span>)</span><br><span class="line">  lowest_cost_node = <span class="keyword">None</span></span><br><span class="line">  <span class="comment">#遍历所有的节点</span></span><br><span class="line">  <span class="keyword">for</span> node <span class="keyword">in</span> costs:</span><br><span class="line">    cost = costs[node]</span><br><span class="line">    <span class="comment">#如果当前节点的开销更低且未处理过</span></span><br><span class="line">    <span class="keyword">if</span> cost &lt; lowest_cost <span class="keyword">and</span> node <span class="keyword">not</span> <span class="keyword">in</span> processed:</span><br><span class="line">      <span class="comment">#就将其视为开销最低的节点</span></span><br><span class="line">      lowest_cost = cost</span><br><span class="line">      lowest_cost_node = node</span><br><span class="line">  <span class="keyword">return</span> lowest_cost_node</span><br></pre></td></tr></table></figure></p>
+<p>完整代码如下：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">graph = &#123;&#125;</span><br><span class="line">graph[<span class="string">"start"</span>] = &#123;&#125;</span><br><span class="line">graph[<span class="string">"start"</span>][<span class="string">"a"</span>] = <span class="number">6</span></span><br><span class="line">graph[<span class="string">"start"</span>][<span class="string">"b"</span>] = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">graph[<span class="string">"a"</span>] = &#123;&#125;</span><br><span class="line">graph[<span class="string">"a"</span>][<span class="string">"fin"</span>] = <span class="number">1</span></span><br><span class="line">graph[<span class="string">"b"</span>] = &#123;&#125;</span><br><span class="line">graph[<span class="string">"b"</span>][<span class="string">"a"</span>] = <span class="number">3</span></span><br><span class="line">graph[<span class="string">"b"</span>][<span class="string">"fin"</span>] = <span class="number">5</span></span><br><span class="line">graph[<span class="string">"fin"</span>] = &#123;&#125;</span><br><span class="line"></span><br><span class="line">infinity = float(<span class="string">"inf"</span>)</span><br><span class="line">costs = &#123;&#125;</span><br><span class="line">costs[<span class="string">"a"</span>] = <span class="number">6</span></span><br><span class="line">costs[<span class="string">"b"</span>] = <span class="number">2</span></span><br><span class="line">costs[<span class="string">"fin"</span>] = infinity</span><br><span class="line"></span><br><span class="line">parents = &#123;&#125;</span><br><span class="line">parents[<span class="string">"a"</span>] = <span class="string">"start"</span></span><br><span class="line">parents[<span class="string">"b"</span>] = <span class="string">"start"</span></span><br><span class="line">parents[<span class="string">"fin"</span>] = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">processed = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_lowest_cost_node</span><span class="params">(costs)</span>:</span></span><br><span class="line">  lowest_cost = float(<span class="string">"inf"</span>)</span><br><span class="line">  lowest_cost_node = <span class="keyword">None</span></span><br><span class="line">  <span class="comment">#遍历所有的节点</span></span><br><span class="line">  <span class="keyword">for</span> node <span class="keyword">in</span> costs:</span><br><span class="line">    cost = costs[node]</span><br><span class="line">    <span class="comment">#如果当前节点的开销更低且未处理过</span></span><br><span class="line">    <span class="keyword">if</span> cost &lt; lowest_cost <span class="keyword">and</span> node <span class="keyword">not</span> <span class="keyword">in</span> processed:</span><br><span class="line">      <span class="comment">#就将其视为开销最低的节点</span></span><br><span class="line">      lowest_cost = cost</span><br><span class="line">      lowest_cost_node = node</span><br><span class="line">  <span class="keyword">return</span> lowest_cost_node</span><br><span class="line"></span><br><span class="line"><span class="comment">#在未处理的节点中找出开销最小的节点</span></span><br><span class="line">node = find_lowest_cost_node(costs)</span><br><span class="line"><span class="comment">#这个while循环在所有节点都被处理过后结束</span></span><br><span class="line"><span class="keyword">while</span> node <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">  cost = costs[node]</span><br><span class="line">  neighbors = graph[node]</span><br><span class="line">  <span class="comment">#遍历当前节点的所有邻居</span></span><br><span class="line">  <span class="keyword">for</span> n <span class="keyword">in</span> neighbors.keys():</span><br><span class="line">    new_cost = cost + neighbors[n]</span><br><span class="line">    <span class="keyword">if</span> costs[n] &gt; new_cost:</span><br><span class="line">      costs[n] = new_cost</span><br><span class="line">      parents[n] = node</span><br><span class="line">  processed.append(node)</span><br><span class="line">  node = find_lowest_cost_node(costs)</span><br><span class="line"></span><br><span class="line">print(costs)</span><br></pre></td></tr></table></figure>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/悦读/">悦读</a>
+            
+            <a href="/tags/算法/">算法</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用狄克斯特拉算法"><span class="toc-text">使用狄克斯特拉算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a></li></ol>
+    </div>
+</aside>
+     
+
+
+
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于本站" >关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="文章归档">文章归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+    });
+</script>
+</body>
+</html>
