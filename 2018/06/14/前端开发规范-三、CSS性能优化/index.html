@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>前端开发规范(三、css性能优化) - hojunBlog</title>
+
+<meta name="keywords" content="前端">
+
+<meta name="description " content="Just A NoteBook">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="文章归档"><i class="fa fa-archives"></i><span>文章归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a> -->
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/2018/02/18/喜欢的音乐/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友情链接"><i class="fa fa-link"></i><span>友情链接</span></a>
+        <a href="/help/" title="关于本站"><i class="fa fa-question-circle"></i><span>关于本站</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-06-14">2018-06-14</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">前端开发规范(三、CSS性能优化)</h2>
+            <div class="post-meta">
+                本文总共4126个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs7mq864jvj30zk0k0q96.jpg" alt=""></p>
+<h1 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h1><h2 id="慎重选择高消耗的样式"><a href="#慎重选择高消耗的样式" class="headerlink" title="慎重选择高消耗的样式"></a>慎重选择高消耗的样式</h2><p>高消耗属性在绘制前需要浏览器进行大量计算：</p>
+<ul>
+<li>box-shadows</li>
+<li>border-radius</li>
+<li>transparency</li>
+<li>transforms</li>
+<li>CSS filters（性能杀手）</li>
+</ul>
+<h2 id="避免过分重排"><a href="#避免过分重排" class="headerlink" title="避免过分重排"></a>避免过分重排</h2><p>当发生重排的时候，浏览器需要重新计算布局位置与大小，更多详情。</p>
+<p>常见的重排元素:</p>
+<ul>
+<li>width</li>
+<li>height</li>
+<li>padding</li>
+<li>margin</li>
+<li>display</li>
+<li>border-width</li>
+<li>position</li>
+<li>top</li>
+<li>left</li>
+<li>right</li>
+<li>bottom</li>
+<li>font-size</li>
+<li>float</li>
+<li>text-align</li>
+<li>overflow-y</li>
+<li>font-weight</li>
+<li>overflow</li>
+<li>font-family</li>
+<li>line-height</li>
+<li>vertical-align</li>
+<li>clear</li>
+<li>white-space</li>
+<li>min-height</li>
+</ul>
+<h2 id="正确使用-Display-的属性"><a href="#正确使用-Display-的属性" class="headerlink" title="正确使用 Display 的属性"></a>正确使用 Display 的属性</h2><p>Display 属性会影响页面的渲染，请合理使用。</p>
+<ul>
+<li><p>display: inline后不应该再使用 width、height、margin、padding 以及 float；</p>
+</li>
+<li><p>display: inline-block 后不应该再使用 float；</p>
+</li>
+<li><p><strong>display: block 后不应该再使用 vertical-align；</strong></p>
+</li>
+<li><p>display: table-* 后不应该再使用 margin 或者 float；</p>
+</li>
+</ul>
+<h2 id="不滥用-Float"><a href="#不滥用-Float" class="headerlink" title="不滥用 Float"></a>不滥用 Float</h2><p>Float在渲染时计算量比较大，尽量减少使用。</p>
+<h2 id="动画性能优化"><a href="#动画性能优化" class="headerlink" title="动画性能优化"></a>动画性能优化</h2><p>动画的实现原理，是利用了人眼的“视觉暂留”现象，在短时间内连续播放数幅静止的画面，使肉眼因视觉残象产生错觉，而误以为画面在“动”。</p>
+<p>动画的基本概念：</p>
+<ul>
+<li>帧：在动画过程中，每一幅静止画面即为一“帧”;</li>
+<li>帧率：即每秒钟播放的静止画面的数量，单位是fps(Frame per second);</li>
+<li>帧时长：即每一幅静止画面的停留时间，单位一般是ms(毫秒);</li>
+<li>跳帧(掉帧/丢帧)：在帧率固定的动画中，某一帧的时长远高于平均帧时长，导致其后续数帧被挤压而丢失的现象。</li>
+</ul>
+<p>一般浏览器的渲染刷新频率是 60 fps，所以在网页当中，帧率如果达到 50-60 fps 的动画将会相当流畅，让人感到舒适。</p>
+<ul>
+<li>如果使用基于 javaScript 的动画，尽量使用 requestAnimationFrame. 避免使用 setTimeout, setInterval.</li>
+<li>避免通过类似 jQuery animate()-style 改变每帧的样式，使用 CSS 声明动画会得到更好的浏览器优化。</li>
+<li>使用 translate 取代 absolute 定位就会得到更好的 fps，动画会更顺滑。</li>
+</ul>
+<h2 id="多利用硬件能力，如通过-3D-变形开启-GPU-加速"><a href="#多利用硬件能力，如通过-3D-变形开启-GPU-加速" class="headerlink" title="多利用硬件能力，如通过 3D 变形开启 GPU 加速"></a>多利用硬件能力，如通过 3D 变形开启 GPU 加速</h2><p>一般在 Chrome 中，3D或透视变换（perspective transform）CSS属性和对 opacity 进行 CSS 动画会创建新的图层，在硬件加速渲染通道的优化下，GPU 完成 3D 变形等操作后，将图层进行复合操作（Compesite Layers），从而避免触发浏览器大面积重绘和重排。</p>
+<p>注：3D 变形会消耗更多的内存和功耗。</p>
+<p>使用 translate3d 右移 500px 的动画流畅度要明显优于直接使用 left：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ball-1</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: -webkit-transform .<span class="number">5s</span> ease;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">translate3d</span>(0, 0, 0);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ball-1</span><span class="selector-class">.slidein</span>&#123;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">translate3d</span>(500px, 0, 0);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ball-2</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: left .<span class="number">5s</span> ease; <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ball-2</span><span class="selector-class">.slidein</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>测试代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Test<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.ball-1</span> &#123;</span></span><br><span class="line"><span class="undefined">      width: 1000px;</span></span><br><span class="line"><span class="undefined">      height: 100px;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">transition</span>: <span class="selector-tag">-webkit-transform</span> <span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span></span><br><span class="line"><span class="undefined">      -webkit-transform: translate3d(0, 0, 0);</span></span><br><span class="line"><span class="css">      <span class="selector-tag">background</span>: <span class="selector-id">#F00</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.ball-1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="undefined">      -webkit-transform: translate3d(500px, 0, 0);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.ball-2</span> &#123;</span></span><br><span class="line"><span class="undefined">      position: relative;</span></span><br><span class="line"><span class="undefined">      left: 0px;</span></span><br><span class="line"><span class="undefined">      width: 1000px;</span></span><br><span class="line"><span class="undefined">      height: 100px;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">transition</span>: <span class="selector-tag">left</span> <span class="selector-class">.5s</span> <span class="selector-tag">ease</span>; </span></span><br><span class="line"><span class="css">      <span class="selector-tag">background</span>: <span class="selector-id">#00F</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.ball-2</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="undefined">      left: 500px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ball-1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ball-2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="提升-CSS-选择器性能"><a href="#提升-CSS-选择器性能" class="headerlink" title="提升 CSS 选择器性能"></a>提升 CSS 选择器性能</h2><p>CSS 选择器对性能的影响源于浏览器匹配选择器和文档元素时所消耗的时间，所以优化选择器的原则是应尽量避免使用消耗更多匹配时间的选择器。而在这之前我们需要了解 CSS 选择器匹配的机制， 如子选择器规则：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#header</span> &gt; <span class="selector-tag">a</span> &#123;<span class="attribute">font-weight</span>:blod;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们中的大多数人都是从左到右的阅读习惯，会习惯性的设定浏览器也是从左到右的方式进行匹配规则，推测这条规则的开销并不高。</p>
+<p>我们会假设浏览器以这样的方式工作：寻找 id 为 header 的元素，然后将样式规则应用到直系子元素中的 a 元素上。我们知道文档中只有一个 id 为 header 的元素，并且它只有几个 a 元素的子节点，所以这个 CSS 选择器应该相当高效。</p>
+<p>事实上，却恰恰相反，CSS 选择器是从右到左进行规则匹配。了解这个机制后，例子中看似高效的选择器在实际中的匹配开销是很高的，浏览器必须遍历页面中所有的 a 元素并且确定其父元素的 id 是否为 header 。</p>
+<p>如果把例子的子选择器改为后代选择器则会开销更多，在遍历页面中所有 a 元素后还需向其上级遍历直到根节点。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#header</span>  <span class="selector-tag">a</span> &#123;<span class="attribute">font-weight</span>:blod;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>理解了CSS选择器从右到左匹配的机制后，明白只要当前选择符的左边还有其他选择符，样式系统就会继续向左移动，直到找到和规则匹配的选择符，或者因为不匹配而退出。我们把最右边选择符称之为关键选择器。——更多详情</p>
+<h3 id="1、避免使用通用选择器"><a href="#1、避免使用通用选择器" class="headerlink" title="1、避免使用通用选择器"></a>1、避免使用通用选择器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Not recommended */</span></span><br><span class="line"><span class="selector-class">.content</span> * &#123;<span class="attribute">color</span>: red;&#125;</span><br></pre></td></tr></table></figure>
+<p>浏览器匹配文档中所有的元素后分别向上逐级匹配 class 为 content 的元素，直到文档的根节点。因此其匹配开销是非常大的，所以应避免使用关键选择器是通配选择器的情况。</p>
+<h3 id="2、避免使用标签或-class-选择器限制-id-选择器"><a href="#2、避免使用标签或-class-选择器限制-id-选择器" class="headerlink" title="2、避免使用标签或 class 选择器限制 id 选择器"></a>2、避免使用标签或 class 选择器限制 id 选择器</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Not recommended */</span></span><br><span class="line">button#backButton &#123;…&#125;</span><br><span class="line"><span class="comment">/* Recommended */</span></span><br><span class="line">#newMenuIcon &#123;…&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3、避免使用标签限制-class-选择器"><a href="#3、避免使用标签限制-class-选择器" class="headerlink" title="3、避免使用标签限制 class 选择器"></a>3、避免使用标签限制 class 选择器</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Not recommended */</span></span><br><span class="line">treecell.indented &#123;…&#125;</span><br><span class="line"><span class="comment">/* Recommended */</span></span><br><span class="line">.treecell-indented &#123;…&#125;</span><br><span class="line"><span class="comment">/* Much to recommended */</span></span><br><span class="line">.hierarchy-deep &#123;…&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4、避免使用多层标签选择器。使用-class-选择器替换，减少css查找"><a href="#4、避免使用多层标签选择器。使用-class-选择器替换，减少css查找" class="headerlink" title="4、避免使用多层标签选择器。使用 class 选择器替换，减少css查找"></a>4、避免使用多层标签选择器。使用 class 选择器替换，减少css查找</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Not recommended */</span></span><br><span class="line">treeitem[mailfolder="true"] &gt; treerow &gt; treecell &#123;…&#125;</span><br><span class="line"><span class="comment">/* Recommended */</span></span><br><span class="line">.treecell-mailfolder &#123;…&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5、避免使用子选择器"><a href="#5、避免使用子选择器" class="headerlink" title="5、避免使用子选择器"></a>5、避免使用子选择器</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Not recommended */</span></span><br><span class="line">treehead treerow treecell &#123;…&#125;</span><br><span class="line"><span class="comment">/* Recommended */</span></span><br><span class="line">treehead &gt; treerow &gt; treecell &#123;…&#125;</span><br><span class="line"><span class="comment">/* Much to recommended */</span></span><br><span class="line">.treecell-header &#123;…&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6、使用继承"><a href="#6、使用继承" class="headerlink" title="6、使用继承"></a>6、使用继承</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Not recommended */</span></span><br><span class="line"><span class="selector-id">#bookmarkMenuItem</span> &gt; <span class="selector-class">.menu-left</span> &#123; <span class="attribute">list-style-image</span>: <span class="built_in">url</span>(blah) &#125;</span><br><span class="line"><span class="comment">/* Recommended */</span></span><br><span class="line"><span class="selector-id">#bookmarkMenuItem</span> &#123; <span class="attribute">list-style-image</span>: <span class="built_in">url</span>(blah) &#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/前端/">前端</a>
+            
+            <a href="/tags/css/">css</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#性能优化"><span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#慎重选择高消耗的样式"><span class="toc-text">慎重选择高消耗的样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免过分重排"><span class="toc-text">避免过分重排</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正确使用-Display-的属性"><span class="toc-text">正确使用 Display 的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不滥用-Float"><span class="toc-text">不滥用 Float</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画性能优化"><span class="toc-text">动画性能优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多利用硬件能力，如通过-3D-变形开启-GPU-加速"><span class="toc-text">多利用硬件能力，如通过 3D 变形开启 GPU 加速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#提升-CSS-选择器性能"><span class="toc-text">提升 CSS 选择器性能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、避免使用通用选择器"><span class="toc-text">1、避免使用通用选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、避免使用标签或-class-选择器限制-id-选择器"><span class="toc-text">2、避免使用标签或 class 选择器限制 id 选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、避免使用标签限制-class-选择器"><span class="toc-text">3、避免使用标签限制 class 选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、避免使用多层标签选择器。使用-class-选择器替换，减少css查找"><span class="toc-text">4、避免使用多层标签选择器。使用 class 选择器替换，减少css查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、避免使用子选择器"><span class="toc-text">5、避免使用子选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、使用继承"><span class="toc-text">6、使用继承</span></a></li></ol></li></ol></li></ol>
+    </div>
+</aside>
+     
+
+
+
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于本站" >关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="文章归档">文章归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        window.onblur = function (){ 
+            document.title = '快回来学习~'; 
+        };
+        window.onfocus = function (){ 
+            document.title = '好好学习,天天向上！'; 
+        }; 
+    });
+</script>
+</body>
+</html>

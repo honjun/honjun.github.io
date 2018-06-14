@@ -394,6 +394,13 @@ var _hmt = _hmt || [];
         $('a[href^="http"]').each(function() {  
             $(this).attr('target', '_blank');  
         });
+
+        window.onblur = function (){ 
+            document.title = '快回来学习~'; 
+        };
+        window.onfocus = function (){ 
+            document.title = '好好学习,天天向上！'; 
+        }; 
     });
 </script>
 </body>

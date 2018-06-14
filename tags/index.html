@@ -158,7 +158,7 @@
                 
                 <li><a href="/tags/canvas/">canvas(1)</a></li>
                 
-                <li><a href="/tags/css/">css(3)</a></li>
+                <li><a href="/tags/css/">css(4)</a></li>
                 
                 <li><a href="/tags/debug/">debug(1)</a></li>
                 
@@ -216,7 +216,7 @@
                 
                 <li><a href="/tags/其他/">其他(1)</a></li>
                 
-                <li><a href="/tags/前端/">前端(25)</a></li>
+                <li><a href="/tags/前端/">前端(26)</a></li>
                 
                 <li><a href="/tags/博客/">博客(4)</a></li>
                 
@@ -356,6 +356,13 @@ var _hmt = _hmt || [];
         $('a[href^="http"]').each(function() {  
             $(this).attr('target', '_blank');  
         });
+
+        window.onblur = function (){ 
+            document.title = '快回来学习~'; 
+        };
+        window.onfocus = function (){ 
+            document.title = '好好学习,天天向上！'; 
+        }; 
     });
 </script>
 </body>

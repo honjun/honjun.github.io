@@ -155,6 +155,30 @@
             <a href="null" target="_self">
                 <strong>hojun</strong>
             </a>
+            <em>·</em>2017-10-16
+        </div>
+        <a class="post-title" href="/2017/10/16/excel笔记/" target="_self" title="excel笔记">excel笔记</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        excel笔记
+    </div>
+</article>
+
+
+
+    
+    
+<article class="post">
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="null" target="_self">
+                <strong>hojun</strong>
+            </a>
             <em>·</em>2017-09-13
         </div>
         <a class="post-title" href="/2017/09/13/给博客添加APlayer音乐播放器/" target="_self" title="给博客添加APlayer音乐播放器^-^">给博客添加APlayer音乐播放器^-^</a>
@@ -373,30 +397,6 @@
 
     
     
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-17
-        </div>
-        <a class="post-title" href="/2017/07/17/js点击复制功能实现/" target="_self" title="js点击复制功能实现">js点击复制功能实现</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        js点击复制功能实现
-    </div>
-</article>
-
-
-
-    
-    
 </div>
 <!-- 分页开始 -->
 
@@ -501,6 +501,13 @@ var _hmt = _hmt || [];
         $('a[href^="http"]').each(function() {  
             $(this).attr('target', '_blank');  
         });
+
+        window.onblur = function (){ 
+            document.title = '快回来学习~'; 
+        };
+        window.onfocus = function (){ 
+            document.title = '好好学习,天天向上！'; 
+        }; 
     });
 </script>
 </body>

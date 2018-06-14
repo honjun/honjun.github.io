@@ -151,6 +151,41 @@
     
     <!-- 有配图默认渲染第一张 -->
     <div class="post-cover">
+        <a class="lozad" href="/2018/05/20/vue-js初入门-十一组件-上篇/" target="_self" title="vue.js初入门(十一组件-上篇)" data-background-image="https://wx3.sinaimg.cn/large/006bYVyvgy1fqxbjqosvfj30cj08caah.jpg"></a>
+    </div>
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="null" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2018-05-20
+        </div>
+        <a class="post-title" href="/2018/05/20/vue-js初入门-十一组件-上篇/" target="_self" title="vue.js初入门(十一组件-上篇)">vue.js初入门(十一组件-上篇)</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+                <em>·</em>
+                <a href="/tags/vue/" target="_self">vue</a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        vue.js初入门(十一组件-上篇)
+    </div>
+</article>
+
+
+
+    
+    
+<article class="post">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
         <a class="lozad" href="/2018/05/18/vue-js初入门-十表单控件绑定/" target="_self" title="vue.js初入门(十表单控件绑定)" data-background-image="https://wx3.sinaimg.cn/large/006bYVyvgy1fqxbjqosvfj30cj08caah.jpg"></a>
     </div>
     
@@ -461,41 +496,6 @@
 
 
     
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/04/29/vue-js初入门(一)/" target="_self" title="vue.js初入门(一)" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fqtwjv30w8j30n50hzt97.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-04-29
-        </div>
-        <a class="post-title" href="/2018/04/29/vue-js初入门(一)/" target="_self" title="vue.js初入门(一)">vue.js初入门(一)</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/前端/" target="_self">前端</a>
-            
-                <em>·</em>
-                <a href="/tags/vue/" target="_self">vue</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。
-    </div>
-</article>
-
-
-
-    
 </div>
 <!-- 分页开始 -->
 
@@ -600,6 +600,13 @@ var _hmt = _hmt || [];
         $('a[href^="http"]').each(function() {  
             $(this).attr('target', '_blank');  
         });
+
+        window.onblur = function (){ 
+            document.title = '快回来学习~'; 
+        };
+        window.onfocus = function (){ 
+            document.title = '好好学习,天天向上！'; 
+        }; 
     });
 </script>
 </body>
