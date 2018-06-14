@@ -20,6 +20,7 @@ photos:
 [代码](https://github.com/journey-ad/Live2D?_blank)
 [AdobeAIRInstaller百度云](https://pan.baidu.com/s/1gfTTjTh?_blank)
 [live2dViewer百度云](https://pan.baidu.com/s/1ggqTLU7?_blank)你也可以去官网下载[官网](http://sites.cybernoids.jp/cubism2/tools/live2d-viewer?_blank)
+[小埋和薇尔莉特live2d模型资源](https://github.com/honjun/live2d-model)使用资源可跳过第二步
 ## **第二步 get资源**
 (注意:apk和lpk都可以用压缩工具打开)
 寻找资源，安利贴吧大佬的提供的资源[乖离性ma吧](https://tieba.baidu.com/p/4941885290?_blank)
