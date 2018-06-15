@@ -161,7 +161,7 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs7mq864jvj30zk0k0q96.jpg" alt=""></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs7mq864jvj30zk0k0q96.jpg" alt=""></p>
 <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a><strong>CSS</strong></h1><h2 id="代码组织"><a href="#代码组织" class="headerlink" title="代码组织"></a><strong>代码组织</strong></h2><ul>
 <li>以组件为单位组织代码段；</li>
 <li>制定一致的注释规范；</li>
@@ -280,7 +280,7 @@
 <h2 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h2><p>汉字的方块性质构成了汉字独有的艺术美感，使其具有工整的特点，从而显现出中文排版的重要原则：所有元素都是正方体. 但从二十世纪开始使用标点后，以及中西文混排的情况越来越多，为了保证「禁则处理」和「齐头尾」实现，可能需要在不同条件下进行适当的断词处理.</p>
 <p>「禁則」是来自日语的排版术语，主要指的就是禁止一些标点等字符出现在行首或行尾的规则，大致相当于汉语常说的「避头尾」.<br>可以设置以下属性实现「齐头尾」，其中inter-ideographic意思是「通过调整单词和字符之间的留白来实现两端对齐」.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line"><span class="attribute">text-align</span>: justify;</span><br><span class="line"><span class="attribute">text-justify</span>: inter-ideographic;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>但这样的「齐头尾」并不是完美的，主要由于技术遗留原因，在 Windows 和 Linux 上的 webkit 浏览器并没有实现 inter-ideographic 导致中西文混排的时候，容易出现过度拉伸字间距的情况。</p>
-<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs8fulcte0j30jj0bxdja.jpg" alt=""></p>
+<p><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs8fulcte0j30jj0bxdja.jpg" alt=""></p>
 <p>为此有一种不优雅的解决方案，在极易出现字间距拉伸的小尺寸屏幕（手机）上使用「断词处理」，避免字间距拉伸，可是这样也带来「无视避头尾规则」和「西文单词断词」的坏毛病. 这是用一种不优雅解决另一种不优雅，按需抉择吧.</p>
 <p>可以设置以下属性进行「断词处理」</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123; <span class="attribute">word-break</span>: break-all; &#125;</span><br></pre></td></tr></table></figure>

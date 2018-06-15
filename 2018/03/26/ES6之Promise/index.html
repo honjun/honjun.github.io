@@ -161,7 +161,7 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fpqj2739epj30m80go3yt.jpg" alt=""><br><strong>Promise 对象用于表示一个异步操作的最终状态（完成或失败），以及其返回的值。</strong></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fpqj2739epj30m80go3yt.jpg" alt=""><br><strong>Promise 对象用于表示一个异步操作的最终状态（完成或失败），以及其返回的值。</strong></p>
 <hr>
 <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a><strong>语法</strong></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new Promise( function(resolve, reject) &#123;...&#125; /* executor */  );</span><br></pre></td></tr></table></figure>
 <hr>
@@ -175,7 +175,7 @@
 </ul>
 <p>pending 状态的 Promise 对象可能触发fulfilled 状态并传递一个值给相应的状态处理方法，也可能触发失败状态（rejected）并传递失败信息。当其中任一种情况出现时，Promise 对象的 then 方法绑定的处理方法（handlers ）就会被调用（then方法包含两个参数：onfulfilled 和 onrejected，它们都是 Function 类型。当Promise状态为fulfilled时，调用 then 的 onfulfilled 方法，当Promise状态为rejected时，调用 then 的 onrejected 方法， 所以在异步操作的完成和绑定处理方法之间不存在竞争）。</p>
 <p>因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象， 所以它们可以被链式调用。</p>
-<p><img class="lozad" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fpqj0k8jedj30m9089q38.jpg" alt=""></p>
+<p><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fpqj0k8jedj30m9089q38.jpg" alt=""></p>
 <hr>
 <h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a><strong>属性</strong></h2><p>Promise.length<br>length属性，其值总是为 1 (构造器参数的数目).<br>Promise.prototype<br>表示 Promise 构造器的原型.</p>
 <hr>

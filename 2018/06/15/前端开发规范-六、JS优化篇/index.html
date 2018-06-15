@@ -157,11 +157,19 @@
             </div>
             <h2 class="post-title">前端开发规范(六、JS优化篇)</h2>
             <div class="post-meta">
-                本文总共1个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1448个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs7mq864jvj30zk0k0q96.jpg" alt=""></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs7mq864jvj30zk0k0q96.jpg" alt=""></p>
+<h1 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h1><h2 id="避免不必要的-DOM-操作"><a href="#避免不必要的-DOM-操作" class="headerlink" title="避免不必要的 DOM 操作"></a>避免不必要的 DOM 操作</h2><p>浏览器遍历 DOM 元素的代价是昂贵的。最简单优化 DOM 树查询的方案是，当一个元素出现多次时，将它保存在一个变量中，就避免多次查询 DOM 树了。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Recommended</span></span><br><span class="line"><span class="keyword">var</span> myList = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">var</span> myListHTML = <span class="built_in">document</span>.getElementById(<span class="string">"myList"</span>).innerHTML;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  myList += <span class="string">"&lt;span&gt;"</span> + i + <span class="string">"&lt;/span&gt;"</span>;</span><br><span class="line">&#125;</span><br><span class="line">myListHTML = myList;</span><br><span class="line"><span class="comment">// Not recommended</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">"myList"</span>).innerHTML += <span class="string">"&lt;span&gt;"</span> + i + <span class="string">"&lt;/span&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="缓存数组长度"><a href="#缓存数组长度" class="headerlink" title="缓存数组长度"></a>缓存数组长度</h2><p>循环无疑是和 JavaScript 性能非常相关的一部分。通过存储数组的长度，可以有效避免每次循环重新计算。</p>
+<p>注: 虽然现代浏览器引擎会自动优化这个过程，但是不要忘记还有旧的浏览器。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1000</span>),</span><br><span class="line">    len, i;</span><br><span class="line"><span class="comment">// Recommended - size is calculated only 1 time and then stored</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Not recommended - size needs to be recalculated 1000 times</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="异步加载第三方内容"><a href="#异步加载第三方内容" class="headerlink" title="异步加载第三方内容"></a>异步加载第三方内容</h2><p>当你无法保证嵌入第三方内容比如 Youtube 视频或者一个 like/tweet 按钮可以正常工作的时候，你需要考虑用异步加载这些代码，避免阻塞整个页面加载。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> script,</span><br><span class="line">        scripts = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'script'</span>)[<span class="number">0</span>];</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">load</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">      script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">      script.async = <span class="literal">true</span>;</span><br><span class="line">      script.src = url;</span><br><span class="line">      scripts.parentNode.insertBefore(script, scripts);</span><br><span class="line">    &#125;</span><br><span class="line">    load(<span class="string">'//apis.google.com/js/plusone.js'</span>);</span><br><span class="line">    load(<span class="string">'//platform.twitter.com/widgets.js'</span>);</span><br><span class="line">    load(<span class="string">'//s.widgetsite.com/widget.js'</span>);</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure></p>
+<h2 id="避免使用-jQuery-实现动画"><a href="#避免使用-jQuery-实现动画" class="headerlink" title="避免使用 jQuery 实现动画"></a>避免使用 jQuery 实现动画</h2><ul>
+<li>禁止使用 slideUp/Down() fadeIn/fadeOut() 等方法；</li>
+<li>尽量不使用 animate() 方法；</li>
+</ul>
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -173,9 +181,9 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/js/">js</a>
-            
             <a href="/tags/前端/">前端</a>
+            
+            <a href="/tags/js/">js</a>
             
         </div>
         
@@ -184,7 +192,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#性能优化"><span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#避免不必要的-DOM-操作"><span class="toc-text">避免不必要的 DOM 操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓存数组长度"><span class="toc-text">缓存数组长度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#异步加载第三方内容"><span class="toc-text">异步加载第三方内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#避免使用-jQuery-实现动画"><span class="toc-text">避免使用 jQuery 实现动画</span></a></li></ol></li></ol>
     </div>
 </aside>
      
