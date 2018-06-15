@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://honjun.github.io/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://honjun.github.io">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>前端开发规范(七、移动端优化) - hojunBlog</title>
+
+<meta name="keywords" content="前端">
+
+<meta name="description " content="Just A NoteBook">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="文章归档"><i class="fa fa-archives"></i><span>文章归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a> -->
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/2018/02/18/喜欢的音乐/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友情链接"><i class="fa fa-link"></i><span>友情链接</span></a>
+        <a href="/help/" title="关于本站"><i class="fa fa-question-circle"></i><span>关于本站</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="/images/avatar.png" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="/images/weixin-qrcode.png" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-06-15">2018-06-15</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">前端开发规范(七、移动端优化)</h2>
+            <div class="post-meta">
+                本文总共3348个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs7mq864jvj30zk0k0q96.jpg" alt=""></p>
+<h1 id="移动端优化"><a href="#移动端优化" class="headerlink" title="移动端优化"></a>移动端优化</h1><h2 id="click-的-300ms-延迟响应"><a href="#click-的-300ms-延迟响应" class="headerlink" title="click 的 300ms 延迟响应"></a>click 的 300ms 延迟响应</h2><p>click 的 300ms 延迟是由双击缩放(double tap to zoom)所导致的，由于用户可以进行双击缩放或者双击滚动的操作，当用户一次点击屏幕之后，浏览器并不能立刻判断用户是确实要打开这个链接，还是想要进行双击操作。因此，移动端浏览器就等待 300 毫秒，以判断用户是否再次点击了屏幕。</p>
+<p>随着响应式网页逐渐增多，用户使用双击缩放机会减少，这 300ms 的延迟就更不可接受了。浏览器开发商也随之提供相应的解决方案。这些方案在5 Ways to Prevent the 300ms Click Delay on Mobile Devices 中，被提及的包括“禁用缩放”和“width=device-width”等方案，但这些方案并不完美，需要针对某些版本浏览器，又或仅在 Android 的浏览器上使用。</p>
+<p>所以这时候就需要一个更简单通用的解决方案，其中 FT Labs 专门为解决移动端浏览器 300 毫秒点击延迟问题所开发的一个轻量级的库 FastClick 就是很好的选择。FastClick 在检测到 touchend 事件的时候，会通过 DOM 自定义事件立即触发一个模拟 click 事件，并把浏览器在 300 毫秒之后真正触发的 click 事件阻止掉。</p>
+<p>FastClick 的使用方法非常简单，在 window load 事件之后，在 <code>&lt;body&gt;</code> 上调用FastClick.attach() 即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener( <span class="string">"load"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    FastClick.attach( <span class="built_in">document</span>.body );</span><br><span class="line">&#125;, <span class="literal">false</span> );</span><br></pre></td></tr></table></figure>
+<h2 id="快速回弹滚动"><a href="#快速回弹滚动" class="headerlink" title="快速回弹滚动"></a>快速回弹滚动</h2><p>快速回弹滚动在手机浏览器上的发展历史：</p>
+<p>早期的时候，移动端的浏览器都不支持非 body 元素的滚动条，所以一般都借助 iScroll;<br>Android 3.0 / iOS 解决了非 body 元素的滚动问题，但滚动条不可见，同时 iOS 上只能通过2个手指进行滚动；<br>Android 4.0 解决了滚动条不可见及增加了快速回弹滚动效果，不过随后这个特性又被移除；<br>iOS从5.0开始解决了滚动条不可见及增加了快速回弹滚动效果<br>如果想要为某个元素拥有 Native 般的滚动效果，可以这样操作：</p>
+<p>.element {<br>    overflow: auto; /<em> auto | scroll </em>/<br>    -webkit-overflow-scrolling: touch;<br>}<br>除了 iScroll 之外，还有一个更加强大的滚动插件 Swiper，支持 3D 和内置滚动条等。</p>
+<h2 id="设备检测"><a href="#设备检测" class="headerlink" title="设备检测"></a>设备检测</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这段代码引用自：https://github.com/binnng/device.js</span></span><br><span class="line"><span class="keyword">var</span> WIN = <span class="built_in">window</span>;</span><br><span class="line"><span class="keyword">var</span> LOC = WIN[<span class="string">"location"</span>];</span><br><span class="line"><span class="keyword">var</span> NA = WIN.navigator;</span><br><span class="line"><span class="keyword">var</span> UA = NA.userAgent.toLowerCase();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">needle</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> needle.test(UA);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> IsTouch = <span class="string">"ontouchend"</span> <span class="keyword">in</span> WIN;</span><br><span class="line"><span class="keyword">var</span> IsAndroid = test(<span class="regexp">/android|htc/</span>) || <span class="regexp">/linux/i</span>.test(NA.platform + <span class="string">""</span>);</span><br><span class="line"><span class="keyword">var</span> IsIPad = !IsAndroid &amp;&amp; test(<span class="regexp">/ipad/</span>);</span><br><span class="line"><span class="keyword">var</span> IsIPhone = !IsAndroid &amp;&amp; test(<span class="regexp">/ipod|iphone/</span>);</span><br><span class="line"><span class="keyword">var</span> IsIOS = IsIPad || IsIPhone;</span><br><span class="line"><span class="keyword">var</span> IsWinPhone = test(<span class="regexp">/windows phone/</span>);</span><br><span class="line"><span class="keyword">var</span> IsWebapp = !!NA[<span class="string">"standalone"</span>];</span><br><span class="line"><span class="keyword">var</span> IsXiaoMi = IsAndroid &amp;&amp; test(<span class="regexp">/mi\s+/</span>);</span><br><span class="line"><span class="keyword">var</span> IsUC = test(<span class="regexp">/ucbrowser/</span>);</span><br><span class="line"><span class="keyword">var</span> IsWeixin = test(<span class="regexp">/micromessenger/</span>);</span><br><span class="line"><span class="keyword">var</span> IsBaiduBrowser = test(<span class="regexp">/baidubrowser/</span>);</span><br><span class="line"><span class="keyword">var</span> IsChrome = !!WIN[<span class="string">"chrome"</span>];</span><br><span class="line"><span class="keyword">var</span> IsBaiduBox = test(<span class="regexp">/baiduboxapp/</span>);</span><br><span class="line"><span class="keyword">var</span> IsPC = !IsAndroid &amp;&amp; !IsIOS &amp;&amp; !IsWinPhone;</span><br><span class="line"><span class="keyword">var</span> IsHTC = IsAndroid &amp;&amp; test(<span class="regexp">/htc\s+/</span>);</span><br><span class="line"><span class="keyword">var</span> IsBaiduWallet = test(<span class="regexp">/baiduwallet/</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="获取滚动条值"><a href="#获取滚动条值" class="headerlink" title="获取滚动条值"></a>获取滚动条值</h2><p>PC 端滚动条的值是通过 document.scrollTop 和 document.scrollLeft 获得，但在 iOS 中并没有滚动条的概念，所以仅能通过 windows.scroll 获取，同时也能兼容 Android 。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.scrollY</span><br><span class="line"><span class="built_in">window</span>.scrollX</span><br></pre></td></tr></table></figure></p>
+<h2 id="清除输入框内阴影"><a href="#清除输入框内阴影" class="headerlink" title="清除输入框内阴影"></a>清除输入框内阴影</h2><p>在 iOS 上，输入框默认有内部阴影，但无法使用 box-shadow 来清除，如果不需要阴影，可以这样操作：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">input,</span><br><span class="line">textarea &#123;</span><br><span class="line">    border: <span class="number">0</span>; <span class="comment">/* 方法1 */</span></span><br><span class="line">    -webkit-appearance: none; <span class="comment">/* 方法2 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Meta-相关"><a href="#Meta-相关" class="headerlink" title="Meta 相关"></a>Meta 相关</h2><p>页面窗口自动调整到设备宽度，并禁止用户缩放页面<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="电话号码识别"><a href="#电话号码识别" class="headerlink" title="电话号码识别"></a>电话号码识别</h3><p>iOS Safari ( Android 或其他浏览器不会) 会自动识别看起来像电话号码的数字，将其处理为电话号码链接，比如：</p>
+<p>7位数字，形如：1234567<br>带括号及加号的数字，形如：(+86)123456789<br>双连接线的数字，形如：00-00-00111<br>11位数字，形如：13800138000</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 关闭电话号码识别： --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 开启电话功能： --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"tel:123456"</span>&gt;</span>123456<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 开启短信功能： --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"sms:123456"</span>&gt;</span>123456<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="邮箱地址的识别"><a href="#邮箱地址的识别" class="headerlink" title="邮箱地址的识别"></a>邮箱地址的识别</h3><p>在 Android （ iOS 不会）上，浏览器会自动识别看起来像邮箱地址的字符串，不论有你没有加上邮箱链接，当你在这个字符串上长按，会弹出发邮件的提示。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 关闭邮箱地址识别： --&gt;</span><br><span class="line">&lt;meta name=<span class="string">"format-detection"</span> content=<span class="string">"email=no"</span> /&gt;</span><br><span class="line">&lt;!-- 开启邮件发送： --&gt;</span><br><span class="line">&lt;a mailto:&gt;mobile@gmail.com<span class="string">"&gt;mobile@gmail.com&lt;/a&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">### 指定 iOS 的 safari 顶端状态条的样式</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;meta name="</span>apple-mobile-web-app-status-bar-style<span class="string">" content="</span>black<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">&lt;!-- 可选default、black、black-translucent --&gt;</span></span><br></pre></td></tr></table></figure>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/前端/">前端</a>
+            
+            <a href="/tags/移动端/">移动端</a>
+            
+        </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#移动端优化"><span class="toc-text">移动端优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#click-的-300ms-延迟响应"><span class="toc-text">click 的 300ms 延迟响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速回弹滚动"><span class="toc-text">快速回弹滚动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设备检测"><span class="toc-text">设备检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取滚动条值"><span class="toc-text">获取滚动条值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#清除输入框内阴影"><span class="toc-text">清除输入框内阴影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Meta-相关"><span class="toc-text">Meta 相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#电话号码识别"><span class="toc-text">电话号码识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#邮箱地址的识别"><span class="toc-text">邮箱地址的识别</span></a></li></ol></li></ol></li></ol>
+    </div>
+</aside>
+     
+
+
+
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于本站" >关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="文章归档">文章归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p id="cnzz">
+<p>
+    <script type="text/javascript">
+    //太卡了不要了
+    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+</p>
+    </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: '/images/customImg.png',
+            tipImg: '/images/tipImg.png',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        window.onblur = function (){ 
+            document.title = '快回来学习~'; 
+        };
+        window.onfocus = function (){ 
+            document.title = '好好学习,天天向上！'; 
+        }; 
+    });
+</script>
+</body>
+</html>
