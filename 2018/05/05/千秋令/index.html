@@ -158,11 +158,16 @@
             </div>
             <h2 class="post-title">千秋令</h2>
             <div class="post-meta">
-                本文总共15个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共20个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="千秋令-一曲唱遍千古风流人物"><a href="#千秋令-一曲唱遍千古风流人物" class="headerlink" title="千秋令 一曲唱遍千古风流人物"></a>千秋令 一曲唱遍千古风流人物</h2><p><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fr0tc3y3avj31kw0vzqv5.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ufullbkj31kw0vz4qq.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ug1074xj31kw0vr4qp.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fr0ugfyw4aj31kw0vue82.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ug8ds8xj31kw0vxqv5.jpg" alt=""></p>
+            <h2 id="千秋令-一曲唱遍千古风流人物"><a href="#千秋令-一曲唱遍千古风流人物" class="headerlink" title="千秋令 一曲唱遍千古风流人物"></a>千秋令 一曲唱遍千古风流人物</h2>
+<img class="hj_img" src="https://wx1.sinaimg.cn/large/006bYVyvgy1fr0tc3y3avj31kw0vzqv5.jpg">
+<img class="hj_img" src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ufullbkj31kw0vz4qq.jpg">
+<img class="hj_img" src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ug1074xj31kw0vr4qp.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fr0ugfyw4aj31kw0vue82.jpg">
+<img class="hj_img" src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ug8ds8xj31kw0vxqv5.jpg">
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -255,15 +260,6 @@
 </p>
     </div>
 </footer>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/lozad.js"></script>
 <script src="/js/jquery.share.min.js"></script>
@@ -277,6 +273,31 @@ var _hmt = _hmt || [];
 <!-- <script src="/js/loading.js"></script> -->
 <!-- <script src="/js/APlayer.js"></script> -->
 <!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  if (arr.indexOf("图集") !== -1) {
+    $('.hj_img').each(function() {
+      $(this).wrap('<a class="fancybox" rel="gallery1" href="' + $(this).prop("src") + '"></a>'); 
+    })
+    $('.fancybox').fancybox({
+      padding: 0,
+      loop: false
+    });
+  }
+})();
+</script>
 
 </div>
 <div id="spig" class="spig">
