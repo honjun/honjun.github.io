@@ -85,6 +85,18 @@ comments: false
       <span class="sitename">SimonKing</span>
     </a>
   </li>
+  <li>
+    <a href="https://fkomm.cn/" title="FKomm’s Blogs" target="_blank">
+      <img src="https://fkomm.cn/img/avatar.jpg" width="50" height="50">
+      <span class="sitename">FKomm</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://riohsc.github.io/" title="RioHsc" target="_blank">
+      <img src="https://riohsc.github.io/img/logo.png" width="50" height="50">
+      <span class="sitename">RioHsc</span>
+    </a>
+  </li>
 </ul>
 {% endraw %}
 

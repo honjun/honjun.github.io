@@ -31,6 +31,18 @@
         <p id="cnzz"><%- partial('_widget/site-analytics') %></p>
     </div>
 </footer>
+<%- js(['js/jquery.min.js']) %>
+<%- js(['js/lozad.js']) %>
+<%- js(['js/jquery.share.min.js']) %>
+<%- js(['js/CodeLineHeight.js']) %>
+<%- js(['js/activate-power-mode.js']) %>
+<%- js(['js/xiaomai.js']) %>
+<%- js(['js/zoom.min.js']) %>
+<%- js(['js/jquery.fancybox.min.js']) %>
+<%- js(['js/InsightSearch','js/SimpleCore']) %>
+<!-- <%- js(['js/loading.js']) %> -->
+<!-- <%- js(['js/APlayer.js']) %> -->
+<!-- <%- js(['js/aplayerdemo.js']) %> -->
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -39,14 +51,20 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  if (arr.indexOf("图集") !== -1) {
+    $('.hj_img').each(function() {
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
+    })
+    $('.fancybox').fancybox({
+      padding: 0,
+      loop: false
+    });
+  }
+})();
 </script>
-<%- js(['js/jquery.min.js']) %>
-<%- js(['js/lozad.js']) %>
-<%- js(['js/jquery.share.min.js']) %>
-<%- js(['js/CodeLineHeight.js']) %>
-<%- js(['js/activate-power-mode.js']) %>
-<%- js(['js/xiaomai.js']) %>
-<%- js(['js/InsightSearch','js/SimpleCore']) %>
-<!-- <%- js(['js/loading.js']) %> -->
-<!-- <%- js(['js/APlayer.js']) %> -->
-<!-- <%- js(['js/aplayerdemo.js']) %> -->
