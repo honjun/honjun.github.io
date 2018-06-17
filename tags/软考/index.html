@@ -16,16 +16,16 @@
 <link rel="stylesheet" href="/css/xiaomai.css">
 <link rel="stylesheet" href="/css/share.min.css">
 <link rel="stylesheet" href="/css/zoom.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>标签 - 软考 - hojunBlog</title>
+<title>标签 - 软考 - hojun</title>
 
 <meta name="keywords" content="undefined">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -413,7 +413,7 @@
 <script src="/js/activate-power-mode.js"></script>
 <script src="/js/xiaomai.js"></script>
 <script src="/js/zoom.min.js"></script>
-<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
 <script src="/js/InsightSearch.js"></script>
 <script src="/js/SimpleCore.js"></script>
 <!-- <script src="/js/loading.js"></script> -->
@@ -435,7 +435,7 @@ var _hmt = _hmt || [];
   })
   if (arr.indexOf("图集") !== -1) {
     $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" rel="gallery1" href="' + $(this).prop("src") + '"></a>'); 
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
     })
     $('.fancybox').fancybox({
       padding: 0,

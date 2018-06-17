@@ -16,16 +16,16 @@
 <link rel="stylesheet" href="/css/xiaomai.css">
 <link rel="stylesheet" href="/css/share.min.css">
 <link rel="stylesheet" href="/css/zoom.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>给博客添加图集展示 - hojunBlog</title>
+<title>给博客添加图集展示 - hojun</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="图集">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="拖了这么久，决定用fancybox.js来搞个图集凑合凑合">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -158,11 +158,34 @@
             </div>
             <h2 class="post-title">给博客添加图集展示</h2>
             <div class="post-meta">
-                本文总共13个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2637个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <p>嗯。。。。。没想好怎么做</p>
+<hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>拖了这么久，决定用fancybox.js来搞个图集凑合凑合<img class="owoemoji" src="/OwO/img/想一想.png"></p>
+<h2 id="简单了解fancybox"><a href="#简单了解fancybox" class="headerlink" title="简单了解fancybox"></a>简单了解fancybox</h2><p><a href="https://fancyapps.com/fancybox/3/">参照官网</a><br>官网介绍如下：JavaScript lightbox library for presenting various types of media. Responsive, touch-enabled and customizable.<img class="owoemoji" src="/OwO/img/doge.png"><img class="owoemoji" src="/OwO/img/doge.png"><img class="owoemoji" src="/OwO/img/doge.png">看不懂的路过</p>
+<p>这里我们使用fancybox3，首页点击下载<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fsegct5pkcj30xs0hfae7.jpg" alt=""><br>往下拉可查看demo效果<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegcsm25kj30y50hc139.jpg" alt=""><br>下载至桌面，解压得到该文件夹。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsegcrtat7j30iy0i275u.jpg" alt=""><br>浏览器下打开该文件，阅读文档<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegcr8vpwj30ix0i1t9v.jpg" alt=""><br>在How to Use下面查阅代码例子<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegcqoqiaj30zk0i540v.jpg" alt=""><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"image_1.jpg"</span> <span class="attr">data-fancybox</span>=<span class="string">"gallery"</span> <span class="attr">data-caption</span>=<span class="string">"Caption #1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"thumbnail_1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"image_2.jpg"</span> <span class="attr">data-fancybox</span>=<span class="string">"gallery"</span> <span class="attr">data-caption</span>=<span class="string">"Caption #2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"thumbnail_2.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//我们需要的基本代码就是这样</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">$('[data-fancybox="gallery"]').fancybox(&#123;</span></span><br><span class="line"><span class="undefined">  // Options will go here</span></span><br><span class="line"><span class="undefined">&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在Options下查看fancybox的一些参数<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsegcpzmk3j30yq0gpwfm.jpg" alt=""></p>
+<h2 id="在hexo博客中使用fancybox"><a href="#在hexo博客中使用fancybox" class="headerlink" title="在hexo博客中使用fancybox"></a>在hexo博客中使用fancybox</h2><h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><p>在文章.md文件中使用raw标签直接插入如下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"jquery.fancybox.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"image_1.jpg"</span> <span class="attr">data-fancybox</span>=<span class="string">"gallery"</span> <span class="attr">data-caption</span>=<span class="string">"Caption #1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"thumbnail_1.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"image_2.jpg"</span> <span class="attr">data-fancybox</span>=<span class="string">"gallery"</span> <span class="attr">data-caption</span>=<span class="string">"Caption #2"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"thumbnail_2.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.fancybox.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">$('[data-fancybox="gallery"]').fancybox(&#123;</span></span><br><span class="line"><span class="undefined">  // Options will go here</span></span><br><span class="line"><span class="undefined">&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这种方法有些太麻烦了，于是有了方案二。</p>
+<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>在文章.md文件中使用raw标签直接插入如下代码:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"hj_img"</span> <span class="attr">src</span>=<span class="string">"https://wx1.sinaimg.cn/large/006bYVyvgy1fr0tc3y3avj31kw0vzqv5.jpg"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"hj_img"</span> <span class="attr">src</span>=<span class="string">"https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ufullbkj31kw0vz4qq.jpg"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"hj_img"</span> <span class="attr">src</span>=<span class="string">"https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ug1074xj31kw0vr4qp.jpg"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"hj_img"</span> <span class="attr">src</span>=<span class="string">"https://wx2.sinaimg.cn/large/006bYVyvgy1fr0ugfyw4aj31kw0vue82.jpg"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"hj_img"</span> <span class="attr">src</span>=<span class="string">"https://wx4.sinaimg.cn/large/006bYVyvgy1fr0ug8ds8xj31kw0vxqv5.jpg"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>接着使用js给他转换成需要的格式。<br>博主是在footer的模板下插入如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//前面需要引入fancybox的css和js，这里省略</span></span><br><span class="line">&lt;secrpt&gt;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//前面部分是判断是标签否为图集的文章，根据需求可以舍弃</span></span><br><span class="line">  <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">  <span class="keyword">var</span> $tags = $(<span class="string">'.post-tags'</span>).children(<span class="string">'a'</span>);</span><br><span class="line">  $tags.each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    arr.push($(<span class="keyword">this</span>).html())</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">if</span> (arr.indexOf(<span class="string">"图集"</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="comment">//如果是图集</span></span><br><span class="line">    $(<span class="string">'.hj_img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      $(<span class="keyword">this</span>).wrap(<span class="string">'&lt;a class="fancybox" data-fancybox="gallery" href="'</span> + $(<span class="keyword">this</span>).prop(<span class="string">"src"</span>) + <span class="string">'"&gt;&lt;/a&gt;'</span>); </span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//初始化fancybox，padding设为0，loop设为false</span></span><br><span class="line">    $(<span class="string">'.fancybox'</span>).fancybox(&#123;</span><br><span class="line">      padding: <span class="number">0</span>,</span><br><span class="line">      loop: <span class="literal">false</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h3><p>这里只提供个思路，因为方案二版的实现很简便，就没去折腾了。</p>
+<p>大致思路即是修改maked.js生成渲染的规则，根据图集图片的特定标志，识别出来，把需要的a标签渲染出来。直接生成文件。</p>
+<p>实现过程可参照我之前的两篇文章<a href="https://www.hojun.cn/2018/04/22/OwO-%E5%8F%AF%E7%88%B1%E7%9A%84js%E8%A1%A8%E6%83%85%E7%AC%A6%E5%8F%B7%E6%8F%92%E4%BB%B6/">OwO-可爱的js表情符号插件</a>和<a href="https://www.hojun.cn/2017/11/15/Lozad-js%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8/">Lozad.js学习使用</a></p>
+<h2 id="终·效果预览"><a href="#终·效果预览" class="headerlink" title="终·效果预览"></a>终·效果预览</h2><h3 id="安利一波-动漫-《K》"><a href="#安利一波-动漫-《K》" class="headerlink" title="安利一波 动漫 《K》"></a>安利一波 动漫 《K》</h3>
+<img class="hj_img" src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsegnd08yuj30xc1b446g.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegnfmy6ej30go0q40uq.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegnbb6kgj30go0quac7.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegnehstlj30jg0dsgmu.jpg">
+<img class="hj_img" src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsegn9bgldj30hs0dcmz9.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegn87jtsj30jg0e1jt8.jpg">
+<img class="hj_img" src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsegh7wng6j31ha0tywlt.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegh62sqrj30qo0m8mzl.jpg">
+<img class="hj_img" src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsegh3ot0yj30xc0n6q68.jpg">
+<img class="hj_img" src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsegh20z9sj33ri2ni4mu.jpg">
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -174,6 +197,12 @@
         
         <div class="post-tags">标签：
             
+            <a href="/tags/hexo/">hexo</a>
+            
+            <a href="/tags/图集/">图集</a>
+            
+            <a href="/tags/lab/">lab</a>
+            
         </div>
         
     </article>
@@ -181,7 +210,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单了解fancybox"><span class="toc-text">简单了解fancybox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在hexo博客中使用fancybox"><span class="toc-text">在hexo博客中使用fancybox</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方案一"><span class="toc-text">方案一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案二"><span class="toc-text">方案二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案三"><span class="toc-text">方案三</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#终·效果预览"><span class="toc-text">终·效果预览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安利一波-动漫-《K》"><span class="toc-text">安利一波 动漫 《K》</span></a></li></ol></li></ol>
     </div>
 </aside>
      
@@ -207,6 +236,7 @@
     </script>
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
+
 
 </div>
 <!-- 不蒜子 网页计数器 -->
@@ -260,7 +290,7 @@
 <script src="/js/activate-power-mode.js"></script>
 <script src="/js/xiaomai.js"></script>
 <script src="/js/zoom.min.js"></script>
-<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
 <script src="/js/InsightSearch.js"></script>
 <script src="/js/SimpleCore.js"></script>
 <!-- <script src="/js/loading.js"></script> -->
@@ -282,7 +312,7 @@ var _hmt = _hmt || [];
   })
   if (arr.indexOf("图集") !== -1) {
     $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" rel="gallery1" href="' + $(this).prop("src") + '"></a>'); 
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
     })
     $('.fancybox').fancybox({
       padding: 0,

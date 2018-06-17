@@ -16,16 +16,16 @@
 <link rel="stylesheet" href="/css/xiaomai.css">
 <link rel="stylesheet" href="/css/share.min.css">
 <link rel="stylesheet" href="/css/zoom.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>标签 - hexo - hojunBlog</title>
+<title>标签 - hexo - hojun</title>
 
 <meta name="keywords" content="undefined">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -293,6 +293,44 @@
     
     <!-- 有配图默认渲染第一张 -->
     <div class="post-cover">
+        <a class="lozad" href="/2018/04/24/给博客添加图集展示/" target="_self" title="给博客添加图集展示" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvgy1fsegct5pkcj30xs0hfae7.jpg"></a>
+    </div>
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="null" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2018-04-24
+        </div>
+        <a class="post-title" href="/2018/04/24/给博客添加图集展示/" target="_self" title="给博客添加图集展示">给博客添加图集展示</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/hexo/" target="_self">hexo</a>
+            
+                <em>·</em>
+                <a href="/tags/图集/" target="_self">图集</a>
+            
+                <em>·</em>
+                <a href="/tags/lab/" target="_self">lab</a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        拖了这么久，决定用fancybox.js来搞个图集凑合凑合
+    </div>
+</article>
+
+
+
+    
+    
+<article class="post">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
         <a class="lozad" href="/2018/03/29/python备份hexo博客图片/" target="_self" title="python备份hexo博客图片" data-background-image="https://wx3.sinaimg.cn/large/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg"></a>
     </div>
     
@@ -496,7 +534,7 @@
 <script src="/js/activate-power-mode.js"></script>
 <script src="/js/xiaomai.js"></script>
 <script src="/js/zoom.min.js"></script>
-<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
 <script src="/js/InsightSearch.js"></script>
 <script src="/js/SimpleCore.js"></script>
 <!-- <script src="/js/loading.js"></script> -->
@@ -518,7 +556,7 @@ var _hmt = _hmt || [];
   })
   if (arr.indexOf("图集") !== -1) {
     $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" rel="gallery1" href="' + $(this).prop("src") + '"></a>'); 
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
     })
     $('.fancybox').fancybox({
       padding: 0,

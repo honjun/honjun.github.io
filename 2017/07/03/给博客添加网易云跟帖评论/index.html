@@ -16,16 +16,16 @@
 <link rel="stylesheet" href="/css/xiaomai.css">
 <link rel="stylesheet" href="/css/share.min.css">
 <link rel="stylesheet" href="/css/zoom.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>给博客添加网易云跟帖评论 - hojunBlog</title>
+<title>给博客添加网易云跟帖评论 - hojun</title>
 
 <meta name="keywords" content="博客添加网易云跟帖">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -217,6 +217,7 @@
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 
+
 </div>
 <!-- 不蒜子 网页计数器 -->
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -269,7 +270,7 @@
 <script src="/js/activate-power-mode.js"></script>
 <script src="/js/xiaomai.js"></script>
 <script src="/js/zoom.min.js"></script>
-<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
 <script src="/js/InsightSearch.js"></script>
 <script src="/js/SimpleCore.js"></script>
 <!-- <script src="/js/loading.js"></script> -->
@@ -291,7 +292,7 @@ var _hmt = _hmt || [];
   })
   if (arr.indexOf("图集") !== -1) {
     $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" rel="gallery1" href="' + $(this).prop("src") + '"></a>'); 
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
     })
     $('.fancybox').fancybox({
       padding: 0,

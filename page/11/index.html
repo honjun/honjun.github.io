@@ -16,16 +16,16 @@
 <link rel="stylesheet" href="/css/xiaomai.css">
 <link rel="stylesheet" href="/css/share.min.css">
 <link rel="stylesheet" href="/css/zoom.css">
-<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hojunBlog - Just A NoteBook</title>
+<title>hojun - 好少年光芒万丈</title>
 
 <meta name="keywords" content="undefined">
 
-<meta name="description " content="Just A NoteBook">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -148,6 +148,33 @@
 <div class="main-inner">
     
     <!-- 首页默认取最最新文章集 -->
+    
+    
+<article class="post">
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="null" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2017-08-09
+        </div>
+        <a class="post-title" href="/2017/08/09/Mysql-5-7-19-For-Windows-安装-修改密码/" target="_self" title="Mysql 5.7.19 For Windows 安装+修改密码">Mysql 5.7.19 For Windows 安装+修改密码</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/mysql/" target="_self">mysql</a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        Mysql 5.7
+    </div>
+</article>
+
+
+
     
     
 <article class="post">
@@ -391,33 +418,6 @@
 
     
     
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-07-06
-        </div>
-        <a class="post-title" href="/2017/07/06/自定义菜单创建 —— 微信公众平台开发/" target="_self" title="自定义菜单创建 —— 微信公众平台开发">自定义菜单创建 —— 微信公众平台开发</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/weixin/" target="_self">weixin</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        自定义菜单创建 —— 微信公众平台开发
-    </div>
-</article>
-
-
-
-    
-    
 </div>
 <!-- 分页开始 -->
 
@@ -475,7 +475,7 @@
 <script src="/js/activate-power-mode.js"></script>
 <script src="/js/xiaomai.js"></script>
 <script src="/js/zoom.min.js"></script>
-<script src="/js/jquery.fancybox.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
 <script src="/js/InsightSearch.js"></script>
 <script src="/js/SimpleCore.js"></script>
 <!-- <script src="/js/loading.js"></script> -->
@@ -497,7 +497,7 @@ var _hmt = _hmt || [];
   })
   if (arr.indexOf("图集") !== -1) {
     $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" rel="gallery1" href="' + $(this).prop("src") + '"></a>'); 
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
     })
     $('.fancybox').fancybox({
       padding: 0,
