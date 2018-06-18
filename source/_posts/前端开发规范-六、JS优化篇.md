@@ -2,7 +2,9 @@ title: 前端开发规范(六、JS优化篇)
 author: hojun
 avatar: /images/favicon.png
 authorDesc: 一个好奇的人
-categories: 技术
+categories: 
+ - 技术
+ - 前端开发规范
 comments: true
 date: 2018-06-15 21:55:14
 authorLink:
