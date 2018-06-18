@@ -21,11 +21,11 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>hojun - 好少年光芒万丈</title>
+<title>给hexo博客添加mathjax数学公式支持 - hojun</title>
 
 <meta name="keywords" content="undefined">
 
-<meta name="description " content="好少年光芒万丈">
+<meta name="description " content="由于网上教程不靠谱，忽悠人一大圈还没啥卵用。花点时间折腾了下Mathjax.js，出了这篇教程。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -93,9 +93,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="active">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -146,346 +144,91 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    <!-- 首页默认取最最新文章集 -->
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="null" target="_blank">hojun</a>
+                    <span title="最后编辑于2018-06-18">2018-06-18</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">给Hexo博客添加Mathjax数学公式支持</h2>
+            <div class="post-meta">
+                本文总共1218个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>小白文，大神请略过……</p>
+<p>最近群里经常有人询问Hexo博客的Mathjax的扩展使用，由于网上教程不靠谱，忽悠人一大圈还没啥卵用。花点时间折腾了下Mathjax.js，出了这篇教程。（表示没用数学公式，mathjax也是第一次接触）</p>
+<p>唠叨一下修改代码的建议：可以在其上扩展，最好不要修改。修改会出现: 改好一个bug，出来N多个bug的这种情况，因为你不知道其他地方是否还用到你修改的这部分代码，后果很严重。</p>
+<h2 id="开始搞"><a href="#开始搞" class="headerlink" title="开始搞"></a>开始搞</h2><p>百度搜索mathjax<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg" alt=""><br>点击第一个进入其官网<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpde5obej30zg0ho405.jpg" alt=""><br>找到Getting Started，点击Learn more<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg" alt=""><br>拉到最下边，Jump to our docs<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg" alt=""><br>找到其demo代码<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdggngij30us0gx41m.jpg" alt=""></p>
+<p><font color='red'>注意其代码有个坑，js的src应改为<code>https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML</code></font><br>接下来就是实验代码了，新建文章输入以下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  MathJax.Hub.Config(&#123;tex2jax: &#123;inlineMath: [['$','$'], ['\\(','\\)']]&#125;&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这里发现了个bug,即代码快里面放入raw标签会把代码直接当成html，会被解析了。所以上面的代码缺少了raw标签,还需用raw标签包起来。</p>
+<p>正确的代码如下图：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg" alt=""></p>
+<p>接下来再页面上预览一下<br>图片：<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg" alt=""><br>真实效果<br>
+<p>
+When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+</p>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+</p>
+<p>ok了，很简单有木有。而且在md插入这种不常用的js可以节省一些资源。</p>
+
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2017-06-27
         </div>
-        <a class="post-title" href="/2017/06/27/小测试题/" target="_self" title="小测试题">小测试题</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/php/" target="_self">php</a>
+        
+        <div class="post-tags">标签：
             
         </div>
+        
+    </article>
+    <aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始搞"><span class="toc-text">开始搞</span></a></li></ol>
     </div>
-    <div class="post-desc">
-        图片上传简易处理
-    </div>
-</article>
+</aside>
+     
 
 
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/24/勿忘初心/" target="_self" title="勿忘初心" data-background-image="https://wx2.sinaimg.cn/sq612/006bYVyvgy1fh9g4tvgoej30c822hjyq.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-24
-        </div>
-        <a class="post-title" href="/2017/06/24/勿忘初心/" target="_self" title="勿忘初心">勿忘初心</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/生活/" target="_self">生活</a>
-            
-                <em>·</em>
-                <a href="/tags/情感/" target="_self">情感</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        勿忘初心
-    </div>
-</article>
 
 
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/18/关于此博客搭建/" target="_self" title="关于此博客搭建" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fljtskjz95j304g04g749.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-18
-        </div>
-        <a class="post-title" href="/2017/06/18/关于此博客搭建/" target="_self" title="关于此博客搭建">关于此博客搭建</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/blog/" target="_self">blog</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        使用hexo搭建github博客
-    </div>
-</article>
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
+       if (typeof LivereTower === 'function') { return; }
 
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/17/分享一些资源/" target="_self" title="分享一些资源" data-background-image="https://wx3.sinaimg.cn/large/006bYVyvgy1fljtrdph43j304g04gweg.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-17
-        </div>
-        <a class="post-title" href="/2017/06/17/分享一些资源/" target="_self" title="分享一些资源">分享一些资源</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/资源/" target="_self">资源</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        一些网络上的资源
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/16/摄像机跟随人物移动/" target="_self" title="摄像机跟随人物移动" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fljtvfkcfxj30ep08yk1n.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-16
-        </div>
-        <a class="post-title" href="/2017/06/16/摄像机跟随人物移动/" target="_self" title="摄像机跟随人物移动">摄像机跟随人物移动</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/Unity/" target="_self">Unity</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        摄像机跟随人物移动
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/16/修复人物idle和run动画切换之间的延迟的Bug/" target="_self" title="修复人物idle和run动画切换之间的延迟的Bug" data-background-image="https://wx1.sinaimg.cn/mw690/006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="null" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-16
-        </div>
-        <a class="post-title" href="/2017/06/16/修复人物idle和run动画切换之间的延迟的Bug/" target="_self" title="修复人物idle和run动画切换之间的延迟的Bug">修复人物idle和run动画切换之间的延迟的Bug</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/Unity/" target="_self">Unity</a>
-            
-                <em>·</em>
-                <a href="/tags/debug/" target="_self">debug</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        Unity修复人物idle和run动画切换之间的延迟的Bug
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/11/转-睡眠与养生/" target="_self" title="[转]睡眠与养生" data-background-image="https://wx4.sinaimg.cn/large/006bYVyvgy1fljtph73m6j304g04gt8n.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="http://eyehere.net/2011/sleep-health/" target="_self">
-                <strong>xishui</strong>
-            </a>
-            <em>·</em>2017-06-11
-        </div>
-        <a class="post-title" href="/2017/06/11/转-睡眠与养生/" target="_self" title="[转]睡眠与养生">[转]睡眠与养生</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/生活/" target="_self">生活</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        睡眠与养生
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/07/BadUSB-——-Teensy-2-0/" target="_self" title="BadUSB —— Teensy++2.0" data-background-image="https://wx1.sinaimg.cn/large/006bYVyvgy1fljtj7mwiaj30dw0dwdmi.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about_hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-07
-        </div>
-        <a class="post-title" href="/2017/06/07/BadUSB-——-Teensy-2-0/" target="_self" title="BadUSB —— Teensy++2.0">BadUSB —— Teensy++2.0</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/搞事/" target="_self">搞事</a>
-            
-                <em>·</em>
-                <a href="/tags/硬件/" target="_self">硬件</a>
-            
-                <em>·</em>
-                <a href="/tags/hacker/" target="_self">hacker</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        BadUSB —— Teensy++2.0
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about_hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-07
-        </div>
-        <a class="post-title" href="/2017/06/07/base64-DataUrl-blod-file-canvas图片格式转换/" target="_self" title="base64 DataUrl blod file canvas图片格式转换">base64 DataUrl blod file canvas图片格式转换</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/前端/" target="_self">前端</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        图片格式转换
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2017/06/07/canvas两张图片合成一张/" target="_self" title="canvas两张图片合成一张" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about_hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2017-06-07
-        </div>
-        <a class="post-title" href="/2017/06/07/canvas两张图片合成一张/" target="_self" title="canvas两张图片合成一张">canvas两张图片合成一张</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/前端/" target="_self">前端</a>
-            
-                <em>·</em>
-                <a href="/tags/html5/" target="_self">html5</a>
-            
-                <em>·</em>
-                <a href="/tags/canvas/" target="_self">canvas</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        两张图片合成一张
-    </div>
-</article>
-
-
-
-    
-    
-</div>
-<!-- 分页开始 -->
-
-<div id="btn-pager">
-    
-    <a class="extend prev" rel="prev" href="/page/12/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/14/">下一页</a>
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+    </script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         </div><!-- end #main-->
     </div><!-- end #body -->
