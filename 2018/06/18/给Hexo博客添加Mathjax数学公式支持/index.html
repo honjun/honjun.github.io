@@ -166,7 +166,7 @@
 <p>最近群里经常有人询问Hexo博客的Mathjax的扩展使用，由于网上教程不靠谱，忽悠人一大圈还没啥卵用<img class="owoemoji" src="/OwO/img/无奈.png">。于是花点时间折腾了下Mathjax.js，出了这篇教程。（表示没用数学公式，mathjax也是第一次接触）</p>
 <p>唠叨一下修改代码的建议：可以在其上扩展，最好不要修改。修改会出现: 改好一个bug，出来N多个bug的这种情况，因为你不知道其他地方是否还用到你修改的这部分代码，后果很严重<img class="owoemoji" src="/OwO/img/内伤.png">。</p>
 <h2 id="开始搞"><a href="#开始搞" class="headerlink" title="开始搞"></a>开始搞</h2><p>百度搜索mathjax<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg" alt=""><br>点击第一个进入其官网<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpde5obej30zg0ho405.jpg" alt=""><br>找到Getting Started，点击Learn more<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg" alt=""><br>拉到最下边，Jump to our docs<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg" alt=""><br>找到其demo代码<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdggngij30us0gx41m.jpg" alt=""></p>
-<p><font color='red'><img class="owoemoji" src="/OwO/img/不出所料.png">注意其代码有个坑，js的src应改为<code>https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML</code></font><br>接下来就是实验代码了，新建文章输入以下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  MathJax.Hub.Config(&#123;tex2jax: &#123;inlineMath: [['$','$'], ['\\(','\\)']]&#125;&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><font color='red'><img class="owoemoji" src="/OwO/img/不出所料.png">注意其代码有个坑，js的src应改为<code>https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML</code></font><br>接下来就是实验代码了，新建文章输入以下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  MathJax.Hub.Config(&#123;<span class="attr">tex2jax</span>: &#123;<span class="attr">inlineMath</span>: [[<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">'\\('</span>,<span class="string">'\\)'</span>]]&#125;&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>这里发现了个bug,即代码快里面放入raw标签会把代码直接当成html，会被解析了。所以上面的代码缺少了raw标签,还需用raw标签包起来。关于raw标签的介绍请参考<a href="https://hexo.io/zh-cn/docs/tag-plugins.html">hexo标签插件</a></p>
 <p>正确的代码如下图<img class="owoemoji" src="/OwO/img/得意.png">：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg" alt=""></p>
 <p>接下来再页面上预览一下<br>图片：<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg" alt=""><br>真实效果<br>
@@ -189,6 +189,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
             </a>
         </div>
         
+        
         <div class="post-tags">标签：
             
             <a href="/tags/搞事/">搞事</a>
@@ -198,6 +199,22 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         </div>
         
     </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <i class="fa fa-chevron-left"></i>-<a href="/2018/06/20/vue-js深入篇-四、Render函数/" >
+                vue.js深入篇(四、Render函数)</a>
+            </a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/06/17/添加系列文章功能/" >
+                添加系列文章功能 -</a><i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
     <aside id="article-toc" role="navigation" class="fixed">
     <div id="article-toc-inner">
         <strong class="sidebar-title">
@@ -352,7 +369,7 @@ var _hmt = _hmt || [];
             document.title = '快回来学习~'; 
         };
         window.onfocus = function (){ 
-            document.title = '好好学习,天天向上！'; 
+            document.title = 'hojun-好少年光芒万丈！'; 
         }; 
     });
 </script>
