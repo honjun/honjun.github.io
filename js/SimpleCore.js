@@ -34,7 +34,7 @@ var SimpleCore = {
         $(document).on('click', '.btn-weixin-tip', function (e) {
             e.preventDefault();
             if (SimpleCore.tipImg != '') {
-                SimpleCore.alert('多谢支持','<img style="width:160px;background:#fff;" src="' + SimpleCore.tipImg + '">');
+                SimpleCore.alert('多谢支持','<img style="width:300px;background:#fff;" src="' + SimpleCore.tipImg + '">');
             } else {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
@@ -42,7 +42,7 @@ var SimpleCore = {
         $(document).on('click', '.btn-weixin-mp', function (e) {
             e.preventDefault();
             if (SimpleCore.customImg != '') {
-                SimpleCore.alert('联系博主','<img style="width:160px;background:#fff;" src="' + SimpleCore.customImg + '">');
+                SimpleCore.alert('联系博主','<img style="width:300px;background:#fff;" src="' + SimpleCore.customImg + '">');
             } else {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
@@ -160,7 +160,7 @@ var SimpleCore = {
         var id = 'notice-' + (new Date().getTime());
         var html = '<div id="' + id + '" class="notice-item">'
             + '<span class="notice-item-close"><i class="fa fa-close"></i></span>'
-            + '<p><h3 style="text-align: center;margin:0 0 10px 0">'+title+'</h3>' + msg + '</p></div>';
+            + '<p><h3 style="text-align: center;margin:0">'+title+'</h3>' + msg + '</p></div>';
         var notice = $('#notice');
         if (notice.length == 0) {
             $('<div id="notice"></div>').appendTo($('body'));
