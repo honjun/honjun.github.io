@@ -25,6 +25,15 @@
                 <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
         </div>
+        <% if (post.series){ %>
+        <div class="post-series"><%= post.series %>-<%= __('series') %>：
+            <% site.posts.sort('date').map(function(p){  %>
+                <% if (post.series == p.series){ %>
+                    <li><a href="<%- url_for(p.path) %>"><%= p.title %></a></li>
+                <% } %>
+            <% }) %>
+        </div>
+        <% } %>
         <% if (post.tags){ %>
         <div class="post-tags"><%= __('tags') %>：
             <% post.tags.each(function(tag){ %>
@@ -33,6 +42,18 @@
         </div>
         <% } %>
     </article>
+    <div class="post-nav">
+        <% if (post.prev){ %>
+        <div class="post-nav-prev post-nav-item">
+            <a href="<%- url_for(post.prev.path) %>" ><%= post.prev.title %><i class="fa fa-chevron-left"></i></a>
+        </div>
+        <% } %>
+        <% if (post.next){ %>
+        <div class="post-nav-next post-nav-item">
+            <a href="<%- url_for(post.next.path) %>" ><%= post.next.title %><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <% } %>
+    </div>
     <%- partial('_partial/toc', {post: post}) %>
     <%- partial('_partial/comments', {post: post}) %>
 </div>

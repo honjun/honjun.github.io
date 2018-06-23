@@ -3,6 +3,7 @@ author: hojun
 avatar: /images/favicon.png
 authorDesc: 一个好奇的人
 categories: 技术
+series: hexo折腾
 comments: true
 date: 2018-06-18 22:04:14
 authorLink:
@@ -12,7 +13,7 @@ tags:
  - 搞事
 keywords: mathjax
 description: 由于网上教程不靠谱，忽悠人一大圈还没啥卵用。花点时间折腾了下Mathjax.js，出了这篇教程。
-photos: http://wx3.sinaimg.cn/small/006bYVyvgy1fsfpde5obej30zg0ho405.jpg
+photos: https://wx3.sinaimg.cn/small/006bYVyvgy1fsfpde5obej30zg0ho405.jpg
 ---
 ## 前言
 

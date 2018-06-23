@@ -3,6 +3,7 @@ author: hojun
 avatar: /images/favicon.png
 authorDesc: 一个好奇的人
 categories: 技术
+series: vue.js深入篇
 date: 2018-06-02 17:09:31
 authorLink:
 authorAbout:

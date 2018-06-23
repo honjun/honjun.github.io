@@ -3,6 +3,7 @@ author: hojun
 avatar: /images/favicon.png
 authorDesc: 一个好奇的人
 categories: 技术
+series: hexo折腾
 date: 2018-03-14 20:34:51
 authorLink:
 authorAbout:
