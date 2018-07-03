@@ -21,11 +21,11 @@
 <link rel="shortcut icon" href="/images/favicon.png">
 
 
-<title>手把手教你搭建hexo博客(三) - hojun</title>
+<title>给博客添加文章目录 - hojun</title>
 
-<meta name="keywords" content="hexo">
+<meta name="keywords" content="目录">
 
-<meta name="description " content="为什么推荐hexo+github？最重要两点：简单、免费。">
+<meta name="description " content="因为JSimple主题没有自带目录，所以需要自己动手给hexo博客文章添加目录功能。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -152,23 +152,24 @@
                 </a>
                 <p><span class="label">作者</span>
                     <a href="null" target="_blank">hojun</a>
-                    <span title="最后编辑于2018-06-08">2018-06-08</span>
+                    <span title="最后编辑于2018-07-03">2018-07-03</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">手把手教你搭建HEXO博客(三)</h2>
+            <h2 class="post-title">给博客添加文章目录</h2>
             <div class="post-meta">
-                本文总共1087个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1616个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg" alt=""><br>手把手教你搭建HEXO+Github博客 （系列教程三）</p>
-<ul>
-<li>为什么推荐hexo+github？ </li>
-<li>最重要两点：简单、免费</li>
-</ul>
-<h2 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a><strong>安装HEXO</strong></h2><p>先在本地新建个blog文件夹（随意）<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tl19jjj30oy0er76i.jpg" alt=""><br>在cmd命令行进入到blog文件夹下。（win+R打开运行对话框，输入cmd打开命令行程序）<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tjwqe3j30t30f7jsz.jpg" alt=""><br>heox主页上的就是安装命令（npm install hexo-cli -g），复制下来<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tix5trj30su0dhjti.jpg" alt=""><br>在cmd从粘贴，回车确认命令，安装。安装需要时间，请耐心等待<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42tif1iuj30t50f6jtd.jpg" alt=""><br>安装成功后，运行初始化命令(hexo init hojunBlog)<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42th8zvsj30sn0f8q8t.jpg" alt=""><br>hexo官网也有部署命令的教程<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42tgnlq2j30t60gjtc5.jpg" alt=""><br>初始化好后，进入文件夹，输入命令安装依赖 npm install(安装需要时间，请耐心等待)<br>（网好的请无视）若网络较差，可以使用淘宝镜像：<br>命令:npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a><br>使用就是把npm改成cnpm即可。<br>网好的作者这里继续使用npm<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42tg3mm5j30t50f7k32.jpg" alt=""><br>安装完成后，输入hexo s -p 5555(在端口5555启动服务)<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tfed4hj30t80f7dpv.jpg" alt=""><br>在网页上输入localhost:5555预览一下（localhost表示本地访问，小伙伴是看不到的）<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42tekcydj31000j0k2a.jpg" alt=""></p>
-<h2 id="安装sublime"><a href="#安装sublime" class="headerlink" title="安装sublime"></a><strong>安装sublime</strong></h2><p>sublime不是必要的，只是编辑文本用的编辑器。不过安利大家推荐：<br>百度搜索sublime，进入官网下载<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42tdyzfuj30sl0ef0ut.jpg" alt=""><br>点击按钮下载<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42tdesx5j30zg0h7woe.jpg" alt=""><br>下载好后确认安装<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42tcqmh8j30t60gj79t.jpg" alt=""><br>我们将其安装在D盘：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42tbw18ej30t60gjtf7.jpg" alt=""><br>安装完成后，打开程序<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42tawt44j30t60gjthw.jpg" alt=""><br>直接将博客文件夹拖入编辑器<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42ta9hibj30t60gjn2h.jpg" alt=""><br>打开config文件，需要修改的地方有：网站名，介绍，关键字（这部分自己取），url(即是“http://用户名.github.io)。使用Ctrl+S保存文件<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t91tj5j31050lcqdq.jpg" alt=""><br>现在我们打开github获取仓库地址,点击头像-&gt;Your profile<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t7vw7cj30t60gjgq6.jpg" alt=""><br>点击对应的仓库<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42t7e1kzj30t60gjtcu.jpg" alt=""><br>点击Clone or download，复制仓库地址<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t6uctmj30t60gjq89.jpg" alt=""><br>在config的最后找到deploy，输入如下内容（注意要有空格和缩进，不然会报错）<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t54pvhj30v20hln30.jpg" alt=""><br>接下来还需要安装git插件，命令 npm install hexo-deployer-git –save<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42t5xfk3j30t60gjq6j.jpg" alt=""><br>安装好后输入hexo g生成命令<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs42t3t2ahj30rw0eotg4.jpg" alt=""><br>输入hexo d部署到github<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs42t4iuwaj30s10elwnr.jpg" alt=""><br>第一提交会提示您配置github的邮箱和用户名<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t30g0lj30rx0eqn5a.jpg" alt=""><br>根据提示配置<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t20a1uj30ru0ekjyw.jpg" alt=""><br>在弹出的输入框中输入用户名，密码登录<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42t11faaj30so0etwii.jpg" alt=""><br>显示出INFO Deploy done: git表示成功发布到github上<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs42t0fro1j30rx0ep12s.jpg" alt=""><br>在浏览器上输入 “用户名.github.io” 即可访问自己的博客（你可以把这个链接发布给小伙伴啦）<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs42szjvzzj30zn0icwh9.jpg" alt=""><br>To Be Continued…(未完待续)<br><a href="http://baijiahao.baidu.com/builder/preview/s?id=1602625496419176522">视频教程-hexo安装</a><br><a href="http://baijiahao.baidu.com/builder/preview/s?id=1602625553939166110">视频教程-sublime安装</a><br><a href="http://baijiahao.baidu.com/builder/preview/s?id=1602720282034365017">视频教程-hexo发布</a></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为JSimple主题没有自带目录，所以需要自己动手给hexo博客文章添加目录功能。</p>
+<h2 id="第一步-查阅hexo文档"><a href="#第一步-查阅hexo文档" class="headerlink" title="第一步 查阅hexo文档"></a>第一步 查阅hexo文档</h2><p>在Hexo官网 <strong>文档</strong>&gt;<strong>自定义</strong>&gt;<strong>辅助函数</strong>&gt;最下面，可以找到toc这个函数，看其介绍能知道它就是来实现文章目录的。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsx42m87djj30m60a9aa7.jpg" alt=""></p>
+<h2 id="第二步-决定目录位置"><a href="#第二步-决定目录位置" class="headerlink" title="第二步 决定目录位置"></a>第二步 决定目录位置</h2><p>根据博客浏览文章的页面，决定将目录放在右上角空白处。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsx431epr9j31080iigq9.jpg" alt=""></p>
+<h2 id="第三步-编写主题模板"><a href="#第三步-编写主题模板" class="headerlink" title="第三步 编写主题模板"></a>第三步 编写主题模板</h2><p>首先，找到文章模板页面，博主这里是在\themes\jsimple\layout_widget\common-article.ejs这个文件中，插入需要的代码。（因为toc需要post变量，所以我们把post传入）<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsx42xkuybj30on0fjta7.jpg" alt=""><br>这里博主采用的是局部模板和局部变量，把目录当成一块独立的组件分离了出去。（你也可以不用分离，直接在当前文件中写详细的代码）<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsx42trh06j30js0jqmy7.jpg" alt=""><br>既然用到了局部模板，我们就要新建一个toc.ejs的模板，其中插入的代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aside</span> <span class="attr">id</span>=<span class="string">"article-toc"</span> <span class="attr">role</span>=<span class="string">"navigation"</span> <span class="attr">class</span>=<span class="string">"fixed"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"article-toc-inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">strong</span> <span class="attr">class</span>=<span class="string">"sidebar-title"</span>&gt;</span></span><br><span class="line">        目录<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">toc</span>(<span class="attr">post.content</span>, &#123;<span class="attr">list_number:</span> <span class="attr">false</span>&#125;) %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>其中，list_number: false表示目录不显示编号。<br>出来html标签，我们还需要css样式来布局目录的位置大小等。<br>css如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#article-toc-inner</span><span class="selector-pseudo">:after</span>,<span class="selector-id">#article-toc-inner</span><span class="selector-pseudo">:before</span>,<span class="selector-class">.inner</span><span class="selector-pseudo">:after</span>,<span class="selector-class">.inner</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: table</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#article-toc-inner</span><span class="selector-pseudo">:after</span>,<span class="selector-class">.inner</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> screen &#123;</span><br><span class="line">    <span class="selector-id">#article-toc-inner</span>,<span class="selector-class">.inner</span> &#123;</span><br><span class="line">        <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#article-toc</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">25%</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: -<span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">opacity</span>: .<span class="number">8</span></span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">769px</span>) &#123;</span><br><span class="line">    <span class="selector-id">#article-toc</span> &#123;</span><br><span class="line">        <span class="attribute">display</span>: block</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#article-toc</span><span class="selector-class">.fixed</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">55px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.fixed</span> <span class="selector-id">#article-toc-inner</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">55px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#article-toc-inner</span> <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>将css引入页面即可。</p>
+<h2 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h2><p><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsx42pzxgnj31070i8n1y.jpg" alt=""></p>
 
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
@@ -178,7 +179,7 @@
             </a>
         </div>
         
-        <div class="post-series">手把手教你搭建HEXO博客-系列文章：
+        <div class="post-series">hexo折腾-系列文章：
             
                 
             
@@ -213,16 +214,20 @@
                 
             
                 
-            
+                    <li><a href="/2017/07/01/给博客添加自己的域名/">给博客添加个人域名</a></li>
                 
             
                 
-            
+                    <li><a href="/2017/07/02/给hexo的jsimple主题添加代码高亮/">给hexo的jsimple主题添加代码高亮</a></li>
                 
             
                 
+                    <li><a href="/2017/07/03/给博客添加网易云跟帖评论/">给博客添加网易云跟帖评论</a></li>
+                
             
                 
+                    <li><a href="/2017/07/04/给博客添加https支持/">给博客添加https支持</a></li>
+                
             
                 
             
@@ -230,6 +235,8 @@
             
                 
             
+                
+                    <li><a href="/2017/07/09/博客添加gitment评论/">博客添加gitment评论</a></li>
                 
             
                 
@@ -255,6 +262,8 @@
                 
             
                 
+                    <li><a href="/2017/09/13/给博客添加APlayer音乐播放器/">给博客添加APlayer音乐播放器^-^</a></li>
+                
             
                 
             
@@ -263,6 +272,8 @@
                 
             
                 
+                    <li><a href="/2017/11/15/Lozad-js学习使用/">Lozad.js学习使用</a></li>
+                
             
                 
             
@@ -270,6 +281,8 @@
             
                 
             
+                
+                    <li><a href="/2018/01/10/snowfall-jquery-js实现樱花飘落效果/">snowfall.jquery.js实现樱花飘落效果</a></li>
                 
             
                 
@@ -277,11 +290,17 @@
                 
             
                 
+                    <li><a href="/2018/01/25/Hexo博客备份—妈妈再也不用担心你使用hexo写博客/">Hexo博客备份—妈妈再也不用担心你使用hexo写博客</a></li>
+                
             
                 
+                    <li><a href="/2018/01/25/github博客迁移至coding并提交百度收录/">github博客迁移至coding并提交百度收录</a></li>
+                
             
                 
             
+                
+                    <li><a href="/2018/02/05/博客小人/">博客小人</a></li>
                 
             
                 
@@ -291,11 +310,17 @@
                 
             
                 
+                    <li><a href="/2018/02/19/live2d-看板娘小埋/">live2d-看板娘小埋</a></li>
+                
             
                 
             
                 
+                    <li><a href="/2018/03/07/使用disqus评论/">使用disqus评论</a></li>
+                
             
+                
+                    <li><a href="/2018/03/14/anime-js实现logo动画/">anime.js实现logo动画</a></li>
                 
             
                 
@@ -345,10 +370,14 @@
                 
             
                 
+                    <li><a href="/2018/04/22/OwO-可爱的js表情符号插件/">OwO-可爱的js表情符号插件</a></li>
+                
             
                 
             
                 
+                    <li><a href="/2018/04/24/给博客添加图集展示/">给博客添加图集展示</a></li>
+                
             
                 
             
@@ -419,19 +448,17 @@
                 
             
                 
-                    <li><a href="/2018/06/06/手把手教你搭建HEXO博客-一/">手把手教你搭建HEXO博客(一)</a></li>
+                    <li><a href="/2018/06/04/评论系统之来必力/">评论系统之来必力</a></li>
                 
             
-                
-                    <li><a href="/2018/06/07/手把手教你搭建HEXO博客-二/">手把手教你搭建HEXO博客(二)</a></li>
                 
             
                 
-                    <li><a href="/2018/06/08/手把手教你搭建HEXO博客-三/">手把手教你搭建HEXO博客(三)</a></li>
+            
                 
             
                 
-                    <li><a href="/2018/06/09/手把手教你搭建HEXO博客-四/">手把手教你搭建HEXO博客(四)</a></li>
+            
                 
             
                 
@@ -450,9 +477,13 @@
             
                 
             
+                
+                    <li><a href="/2018/06/17/添加系列文章功能/">添加系列文章功能</a></li>
                 
             
                 
+                    <li><a href="/2018/06/18/给Hexo博客添加Mathjax数学公式支持/">给Hexo博客添加Mathjax数学公式支持</a></li>
+                
             
                 
             
@@ -461,7 +492,11 @@
                 
             
                 
+                    <li><a href="/2018/06/23/给博客添加上一篇下一篇功能/">给博客添加上一篇下一篇功能</a></li>
+                
             
+                
+                    <li><a href="/2018/07/03/给博客添加文章目录/">给博客添加文章目录</a></li>
                 
             
         </div>
@@ -471,20 +506,14 @@
             
             <a href="/tags/hexo/">hexo</a>
             
-            <a href="/tags/博客/">博客</a>
-            
         </div>
         
     </article>
     <div class="post-nav">
         
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/06/09/手把手教你搭建HEXO博客-四/" >手把手教你搭建HEXO博客(四)<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/06/07/手把手教你搭建HEXO博客-二/" >手把手教你搭建HEXO博客(二)<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/06/23/给博客添加上一篇下一篇功能/" >给博客添加上一篇下一篇功能<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
@@ -492,7 +521,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装HEXO"><span class="toc-text">安装HEXO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装sublime"><span class="toc-text">安装sublime</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-查阅hexo文档"><span class="toc-text">第一步 查阅hexo文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-决定目录位置"><span class="toc-text">第二步 决定目录位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-编写主题模板"><span class="toc-text">第三步 编写主题模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#效果预览"><span class="toc-text">效果预览</span></a></li></ol>
     </div>
 </aside>
      
