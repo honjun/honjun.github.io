@@ -146,6 +146,7 @@
         <div class="menu mode sequen">顺</div>
         <div class="menu mode random">乱</div>
         <div class="menu mode freedom">自</div>
+        <div class="menu help">辅</div>
         <div class="sound"></div>
       </div>
     </div>
@@ -175,6 +176,7 @@
     let mode = 1; //0随机 1顺序
     let sound = ON; //OFF关闭 ON开启
     let freedom = OFF;
+    let help = OFF;
     let timer = null;
     let audio = null;
     let $player = $('#player');
@@ -189,6 +191,7 @@
     let sounds = $('.sounds');
     let $con = $('.con');
     let $mode = $('.mode');
+    let $help = $('.help');
     let single = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; //26
     let multiple = ["ai", "an", "ang", "ao", "ci", "chi", "ei", "en", "eng", "er", "ian", "ie", "in", "ing", "iu", "ong", "ou", "si", "shi", "ue", "ui", "un", "vn", "wu", "yan", "ye", "yi", "yin", "ying", "yu", "yuan", "yue", "yun", "zi", "zhi"]  //35
     let assist = ["艾", "安", "肮", "奥", "次", "吃", "诶", "恩", "恩", "二", "淹", "叶", "因", "英", "优", "ong", "欧", "四", "事", "约", "微", "温", "晕", "屋", "烟", "叶", "衣", "因", "英", "雨", "渊", "", "晕", "自", "只"]
@@ -245,6 +248,10 @@
         $freedom.addClass('active');
         $con.removeClass('active');
         $mode.removeClass('active');
+      }
+      if (Util.StorageGetter('help') === 'on') {
+        help = ON;
+        $help.addClass('active');
       }
       if (Util.StorageGetter('sound') === 'off') {
         sound = OFF;
@@ -342,7 +349,7 @@
           $pinyin.css('font-size', '200px');
         }
         let str = lowerChar + upperChar;
-        if (useArrName === 'multiple') {
+        if (useArrName === 'multiple' && help === ON) {
           str += '<br>' + assist[random];
         }
         $pinyin.append(str);
@@ -462,6 +469,17 @@
         Util.StorageSetter('useArr','typing');
         restart();
       });
+      $help.click(function() {
+        if (help === ON) {
+          Util.StorageSetter('help','off');
+          help = OFF;
+          $help.removeClass('active')
+        } else {
+          Util.StorageSetter('help','on');
+          help = ON;
+          $help.addClass('active')
+        }
+      })
       $sequen.click(function() {
         mode = 1;
         Util.StorageSetter('mode','1');
