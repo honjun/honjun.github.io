@@ -174,9 +174,11 @@
 <p>对于大多数对象选项，可以使用 methods 的合并策略:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strategies = Vue.config.optionMergeStrategies</span><br><span class="line">strategies.myOption = strategies.methods</span><br></pre></td></tr></table></figure></p>
 <p>更多高级的例子可以在 Vuex 1.x的混合策略里找到:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> merge = Vue.config.optionMergeStrategies.computed</span><br><span class="line">Vue.config.optionMergeStrategies.vuex = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!toVal) <span class="keyword">return</span> fromVal</span><br><span class="line">  <span class="keyword">if</span> (!fromVal) <span class="keyword">return</span> toVal</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    getters: merge(toVal.getters, fromVal.getters),</span><br><span class="line">    state: merge(toVal.state, fromVal.state),</span><br><span class="line">    actions: merge(toVal.actions, fromVal.actions)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦(๑•̀ㅂ•́)و✧</p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦</p>
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
-        <p style="text-align: center;">您的支持是作者写作最大的动力</p>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力</p>
         <div class="post-tool">
             <a class="btn-weixin-tip" href="javascript:void(0);">
                 <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
@@ -471,6 +473,8 @@
             
                 
                     <li><a href="/2018/06/21/vue-js深入篇-六、混合/">vue.js深入篇(六、混合)</a></li>
+                
+            
                 
             
                 
