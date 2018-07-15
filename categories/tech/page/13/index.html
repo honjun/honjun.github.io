@@ -21,11 +21,11 @@
 <link rel="shortcut icon" href="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8a9g6xj303c03cdfv.jpg">
 
 
-<title>软考备考之前趋图pv操作 - hojun</title>
+<title>分类 - 技术 - hojun</title>
 
-<meta name="keywords" content="软考">
+<meta name="keywords" content="undefined">
 
-<meta name="description " content="P操作，我们可以看作是获得或者请求、消耗一个信号量。 V操作，我们可以看作是释放或者发送一个信号量。">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 </head>
 <body>
@@ -93,9 +93,11 @@
 </div>
             <div class="page-title">
     <ul>
-        <li><a href="/">首页</a></li>
-        
         <li class="">
+            <a href="/" data-name="Home">首页</a>
+        </li>
+        
+        <li class="active">
             <a href="/categories/tech" data-name="技术">技术</a>
         </li>
         
@@ -144,408 +146,54 @@
     </ul>
 </div>
 <div class="main-inner">
-    <article class="post" itemscope itemtype="http://www.hojun.cn">
-        <div class="post-header">
-            <div class="post-author clearfix">
-                <a class="avatar fleft" href="null" target="_blank">
-                    <img width="48" src="/images/favicon.png" alt="avatar"/>
-                </a>
-                <p><span class="label">作者</span>
-                    <a href="null" target="_blank">hojun</a>
-                    <span title="最后编辑于2018-05-30">2018-05-30</span>
-                </p>
-                <p>一个好奇的人</p>
-            </div>
-            <h2 class="post-title">软考备考之前趋图PV操作</h2>
-            <div class="post-meta">
-                本文总共580个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
-            </div>
-        </div>
-        <div class="post-content markdown-body">
-            <p><a href="https://blog.csdn.net/mengmei16/article/details/49453869">来源</a><a href="https://blog.csdn.net/mengmei16/article/details/49453869">https://blog.csdn.net/mengmei16/article/details/49453869</a><br> 我们对于P、V的含义肯定不陌生。</p>
-<p>P（S）：①将信号量S的值减1，即S=S-1；<br>       ②如果S&gt;=0，则该进程继续执行；否则该进程置为等待状态，排入等待队列。<br>V（S）：①将信号量S的值加1，即S=S+1；<br>       ②如果S&gt;0，则该进程继续执行；否则释放队列中第一个等待信号量的进程。</p>
-<p>   概念理解的再透彻，也不过是纸上谈兵。</p>
-<p>例：看一道我们在软考中经常遇到的题，每次都束手无策的那道。</p>
-<p><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fre3kkgn7cj30kb0b6acl.jpg" alt=""></p>
-<p>P操作，我们可以看作是获得或者请求、消耗一个信号量。</p>
-<p>V操作，我们可以看作是释放或者发送一个信号量。</p>
-<p>我们可以这样理解：看前驱图，</p>
-<p>P1执行完之后，会向P2和P3分别发送两个信号S1和S2（所以a处填V（S1）V（S2）；</p>
-<p>然后是P2执行，P2执行之前，要先获得S1（所以b处填P（S1））;</p>
-<p>P2执行完之后，会向P3发送一个信号S3（所以b下一处为V（S3））；</p>
-<p>P3执行之前，要先获得P2发送给P3的信号，也要获得P1发送给P3的信号（所以c处填（P（S2）P（S3）））；P3执行完后，会向P4发送一个信号S4（所以c下一处为V（S4））；</p>
-<p>P4执行之前，要先获得P3发送给P4的信号方可执行（所以d处填P（S4））。</p>
-
-            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦(๑•̀ㅂ•́)و✧</p>
-            <p style="text-align: center;">有好的文章也可以向博主投稿哦</p>
-        </div>
-        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
-        <p style="text-align: center;">您的喜欢是作者写作最大的动力</p>
-        <div class="post-tool">
-            <a class="btn-weixin-tip" href="javascript:void(0);">
-                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
-            </a>
-        </div>
-        
-        <div class="post-series">软考-软件设计师-系列文章：
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/05/07/软考备考之UML十种建模图/">软考备考之UML十种建模图</a></li>
-                
-            
-                
-                    <li><a href="/2018/05/07/软考备考之UML类图几种关系总结/">软考备考之UML类图几种关系总结</a></li>
-                
-            
-                
-                    <li><a href="/2018/05/09/软考备考之数据库数据模型/">软考备考之数据库数据模型</a></li>
-                
-            
-                
-            
-                
-                    <li><a href="/2018/05/11/软考备考之广义表理解/">软考备考之广义表理解</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/05/30/软考之软件设计师经验总结/">软考之软件设计师经验总结</a></li>
-                
-            
-                
-                    <li><a href="/2018/05/30/软考备考之前趋图PV操作/">软考备考之前趋图PV操作</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/07/07/2018软考成绩查询！/">2018软考成绩查询！</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-        </div>
-        
-        
-        <div class="post-tags">标签：
-            
-            <a href="/tags/软考/">软考</a>
-            
-        </div>
-        
-    </article>
-    <div class="post-nav">
-        
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/05/30/vue-js深入篇-二、过渡效果上篇/" >vue.js深入篇(二、过渡效果上篇)<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
-        
-        <div class="post-nav-next post-nav-item">
-            <a href="/2018/05/30/软考之软件设计师经验总结/" >软考之软件设计师经验总结<i class="fa fa-chevron-right"></i></a>
-        </div>
-        
+    
+    
+    
+<article class="post">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a class="lozad" href="/2017/06/03/Jcrop截取头像上传/" target="_self" title="Jcrop截取头像上传" data-background-image="https://wx3.sinaimg.cn/large/006bYVyvgy1fljtemuc42g30uy0ekgs6.gif"></a>
     </div>
     
-<aside id="article-toc" role="navigation" class="fixed">
-    <div id="article-toc-inner">
-        <strong class="sidebar-title">
-        目录</strong>
-        
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="/about_hojun.html" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2017-06-03
+        </div>
+        <a class="post-title" href="/2017/06/03/Jcrop截取头像上传/" target="_self" title="Jcrop截取头像上传">Jcrop截取头像上传</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/jquery/" target="_self">jquery</a>
+            
+                <em>·</em>
+                <a href="/tags/jcrop/" target="_self">jcrop</a>
+            
+                <em>·</em>
+                <a href="/tags/前端/" target="_self">前端</a>
+            
+        </div>
     </div>
-</aside>
-
-     
-
-
-
+    <div class="post-desc">
+        截取头像图片上传
+    </div>
+</article>
 
 
 
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
-    <script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
+    
+</div>
+<!-- 分页开始 -->
 
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-    </script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+<div id="btn-pager">
+    
+    <a class="extend prev" rel="prev" href="/categories/tech/page/12/">上一页</a><a class="page-number" href="/categories/tech/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/tech/page/11/">11</a><a class="page-number" href="/categories/tech/page/12/">12</a><span class="page-number current">13</span>
 </div>
 
-
-</div>
-<!-- 不蒜子 网页计数器 -->
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         </div><!-- end #main-->
     </div><!-- end #body -->
