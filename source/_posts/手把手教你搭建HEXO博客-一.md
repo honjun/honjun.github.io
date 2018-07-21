@@ -3,6 +3,7 @@ author: hojun
 avatar: /images/favicon.png
 authorDesc: 一个好奇的人
 categories: 技术
+series: 手把手教你搭建HEXO博客
 date: 2018-06-06 21:25:30
 authorLink:
 authorAbout:

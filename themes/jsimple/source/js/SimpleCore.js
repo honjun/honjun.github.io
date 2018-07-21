@@ -13,6 +13,8 @@ var SimpleCore = {
         SimpleCore.current = params.current;
         SimpleCore.customImg = params.customImg;
         SimpleCore.tipImg = params.tipImg;
+        SimpleCore.isTip = false;
+        SimpleCore.isCustomImg = false;
     },
     //外部调用初始化
     init: function (params) {
@@ -33,8 +35,10 @@ var SimpleCore = {
         });
         $(document).on('click', '.btn-weixin-tip', function (e) {
             e.preventDefault();
+            console.log(SimpleCore.isTip);
             if (SimpleCore.tipImg != '') {
-                SimpleCore.alert('多谢支持','<img style="width:300px;background:#fff;" src="' + SimpleCore.tipImg + '">');
+                SimpleCore.isTip == true ? SimpleCore.close() : SimpleCore.alert('多谢支持','<img style="width:300px;background:#fff;" src="' + SimpleCore.tipImg + '">');
+                SimpleCore.isTip = !SimpleCore.isTip;
             } else {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
@@ -42,7 +46,8 @@ var SimpleCore = {
         $(document).on('click', '.btn-weixin-mp', function (e) {
             e.preventDefault();
             if (SimpleCore.customImg != '') {
-                SimpleCore.alert('联系博主','<img style="width:300px;background:#fff;" src="' + SimpleCore.customImg + '">');
+                SimpleCore.isCustomImg == true ? SimpleCore.close() : SimpleCore.alert('联系博主','<img style="width:300px;background:#fff;" src="' + SimpleCore.customImg + '">');
+                SimpleCore.isCustomImg = !SimpleCore.isCustomImg;
             } else {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
@@ -138,8 +143,8 @@ var SimpleCore = {
             $('body').addClass('night-mode');
             btn.find('i').attr('class', 'fa fa-moon-o');
             $(".cover-img").css({
-                'background': "url('/images/cover-night.jpg')",
-                'background-image': '/images/cover-night.jpg',
+                'background': "url('https://wx3.sinaimg.cn/large/006bYVyvgy1ftan88wcjrj30b50rudgx.jpg')",
+                'background-image': 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan88wcjrj30b50rudgx.jpg',
                 'background-size': 'cover',
                 'background-position': 'center',
                 'background-repeat': 'no-repeat'
@@ -148,8 +153,8 @@ var SimpleCore = {
             $('body').removeClass('night-mode');
             btn.find('i').attr('class', 'fa fa-sun-o');
             $(".cover-img").css({
-                'background': "url('/images/cover-day.jpg')",
-                'background-image': '/images/cover-day.jpg',
+                'background': "url('https://wx2.sinaimg.cn/large/006bYVyvgy1ftan83yt2ij30c30u9jtr.jpg')",
+                'background-image': 'https://wx2.sinaimg.cn/large/006bYVyvgy1ftan83yt2ij30c30u9jtr.jpg',
                 'background-size': 'cover',
                 'background-position': 'center',
                 'background-repeat': 'no-repeat'
@@ -169,11 +174,10 @@ var SimpleCore = {
             $(this).parent().remove();
             return false;
         });
-        //居中显示，于20秒后自动关闭
         $('#notice').css('margin-right', -$('#notice').width() / 2);
-        setTimeout(function () {
-            $('#' + id).remove();
-        }, 20000);
+    },
+    close: function () {
+        $('#notice').remove();
     },
     setLocalData: function (key, value) {
         if (window.localStorage) {

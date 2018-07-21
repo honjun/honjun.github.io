@@ -87,7 +87,7 @@ theme: jsimple
 deploy:
   type: git
   repo: 
-    github: git@github.com:honjun/honjun.github.io.git
+    # github: git@github.com:honjun/honjun.github.io.git
     # github: https://github.com/honjun/honjun.github.io.git
     coding: https://git.coding.net/hojun/hojun.git
   branch: master
@@ -97,7 +97,8 @@ backup:
   type: git
   message: backup my blog of https://honjun.github.io/
   repository:
-    github: https://github.com/honjun/honjun.github.io.git,backup
+    # github: https://github.com/honjun/honjun.github.io.git,backup
+    coding: https://git.coding.net/hojun/hojun.git,backup
 
 # Baidusitemap settings see:https://github.com/coneycode/hexo-generator-baidu-sitemap
 baidusitemap:

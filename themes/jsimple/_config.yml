@@ -7,8 +7,8 @@ shortName: HJ
 fullHttps: false
 
 # favicon and site master avatar
-favicon: /images/favicon.png
-avatar: /images/avatar.png
+favicon: https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8a9g6xj303c03cdfv.jpg
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 
 # Home page sort type: -1: newer first，1: older first.
 homePageSortType: -1

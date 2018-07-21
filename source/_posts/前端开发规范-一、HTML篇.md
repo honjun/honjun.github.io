@@ -3,6 +3,7 @@ author: hojun
 avatar: /images/favicon.png
 authorDesc: 一个好奇的人
 categories: 技术
+series: 前端开发规范
 comments: true
 date: 2018-06-11 22:13:04
 authorLink:
