@@ -1,6 +1,6 @@
 /*! Font Awesome  http://fontawesome.io | MIT License */@font-face
 {
-    font-family:'FontAwesome';src:url('fonts/fontawesome-webfont.eot?');src:url('fonts/fontawesome-webfont.eot?#iefix&') format('embedded-opentype'),url('fonts/fontawesome-webfont.woff2?') format('woff2'),url('fonts/fontawesome-webfont.woff?') format('woff'),url('fonts/fontawesome-webfont.ttf?') format('truetype'),url('fonts/fontawesome-webfont.svg?#fontawesomeregular') format('svg');font-weight:normal;font-style:normal
+    font-family:'FontAwesome';src:url('fonts/fontawesome-webfont.eot');src:url('fonts/fontawesome-webfont.eot') format('embedded-opentype'),url('fonts/fontawesome-webfont.woff') format('woff2'),url('fonts/fontawesome-webfont.woff') format('woff'),url('fonts/fontawesome-webfont.ttf?') format('truetype'),url('fonts/fontawesome-webfont.svg') format('svg');font-weight:normal;font-style:normal
 }
 .fa
 {
@@ -3205,10 +3205,6 @@ body
 {
     background-color:#d9534f
 }
-#notice .notice-item:hover
-{
-    margin-top:15px
-}
 #notice .notice-item:hover .notice-item-close
 {
     filter:alpha(opacity=100);-moz-opacity:1;-khtml-opacity:1;opacity:1
@@ -4297,6 +4293,13 @@ pre .xml .cdata {
     border-color: #2f2f2f;
 }
 .post-series {
+    margin-bottom: 20px;
+    padding: 10px 0px;
+    border-color: #eee!important;
+    border-width: 1px 0;
+    border-style: solid;
+}
+.night-mode .post-series {
     margin-bottom: 20px;
     padding: 10px 0px;
     border-color: #555!important;
