@@ -180,11 +180,11 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var vm = new Vue(&#123;</span><br><span class="line">el: '#example',</span><br><span class="line">  data: &#123;</span><br><span class="line">    message: '123'</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.message = 'new message' // 更改数据</span><br><span class="line">vm.$el.textContent === 'new message' // false</span><br><span class="line">Vue.nextTick(function () &#123;</span><br><span class="line">  vm.$el.textContent === 'new message' // true</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>vm.$nextTick() 这个实例方法在组件内使用特别方便，因为它不需要全局 Vue，它的回调 this 将自动绑定到当前的 Vue 实例上：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Vue.component('example', &#123;</span><br><span class="line">  template: '<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>',</span><br><span class="line">  data: function () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      message: 'not updated'</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    updateMessage: function () &#123;</span><br><span class="line">      this.message = 'updated'</span><br><span class="line">      console.log(this.$el.textContent) // =&gt; 'not updated'</span><br><span class="line">      this.$nextTick(function () &#123;</span><br><span class="line">        console.log(this.$el.textContent) // =&gt; 'updated'</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 
-            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦(๑•̀ㅂ•́)و✧</p>
-            <p style="text-align: center;">有好的文章也可以向博主投稿哦</p>
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
-        <p style="text-align: center;">您的喜欢是作者写作最大的动力</p>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
         
 
         <div class="post-tool">
@@ -192,7 +192,8 @@
                 <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
         </div>
-        <p style="text-align: center;">入群聊交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">入群交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
         <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"></p>
         
         <div class="post-series">vue.js深入篇-系列文章：
@@ -483,6 +484,10 @@
             
                 
                     <li><a href="/2018/06/21/vue-js深入篇-六、混合/">vue.js深入篇(六、混合)</a></li>
+                
+            
+                
+            
                 
             
                 

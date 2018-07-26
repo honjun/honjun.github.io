@@ -178,11 +178,11 @@
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>一旦一个函数的参数列表中使用了剩余参数的语法糖，便不可以再添加任何参数，否则会抛出错误。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params">...rest</span>) </span>&#123;<span class="comment">/*...*/</span>&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params">...rest, foo</span>) </span>&#123;<span class="comment">/*...*/</span>&#125; <span class="comment">//报错</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="解构传参"><a href="#解构传参" class="headerlink" title="解构传参"></a>解构传参</h2><p>在ECMAScript对函数的定义中，有两个用于实现自定义函数调用的方法————apply和call。这两个方法都可以让开发者以一个之定义的上下文(函数中的this)来传入参数，其区别是：apply需要以数组的方式传入参数，而call则需要想象普通调用一样传入参数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">fo</span>: <span class="string">'bar'</span>&#125;</span><br><span class="line">fn.apply(obj, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">fn.call(obj, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
 
-            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦(๑•̀ㅂ•́)و✧</p>
-            <p style="text-align: center;">有好的文章也可以向博主投稿哦</p>
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
         </div>
         <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
-        <p style="text-align: center;">您的喜欢是作者写作最大的动力</p>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
         
 
         <div class="post-tool">
@@ -190,7 +190,8 @@
                 <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
         </div>
-        <p style="text-align: center;">入群聊交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">入群交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
         <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"></p>
         
         <div class="post-series">《实战ES2015》-系列文章：
@@ -494,7 +495,11 @@
                 
             
                 
+            
+                
                     <li><a href="/2018/07/25/《实战ES2015》新语法/">《实战ES2015》新语法</a></li>
+                
+            
                 
             
         </div>
@@ -513,9 +518,13 @@
     </article>
     <div class="post-nav">
         
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/07/26/距离玩BeatSaber还差/" >距离玩BeatSaber还差...<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/07/21/《实战ES2015》字符串模板语法/" >《实战ES2015》字符串模板语法<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/07/23/HEXO发布到Github报错-凉凉-迁移到Coding/" >HEXO发布到Github报错?凉凉,迁移到Coding<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
