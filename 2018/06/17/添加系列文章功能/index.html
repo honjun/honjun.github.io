@@ -166,17 +166,17 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="null" target="_blank">
-                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
-                    <a href="null" target="_blank">hojun</a>
+                    <span>hojun</span>
                     <span title="最后编辑于2018-06-17">2018-06-17</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
             <h2 class="post-title">添加系列文章功能</h2>
             <div class="post-meta">
-                本文总共1673个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1719个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -187,7 +187,7 @@
 <p>嗯<img class="owoemoji" src="/OwO/img/深思.png">…就在我快用二级分类来实现系列文章功能的时候，我发现之前绕了远路<img class="owoemoji" src="/OwO/img/喜极而泣.png">。</p>
 <p>之前是想用分类和标签来遍历出对应的文章。由于没有系列这个变量使用了二级分类来代替…但是我们可以通过遍历文章来显示出有关的系列文章。这种方法就容易实现很多，而且比用二级分类代替更加合理。</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>废话不多说，加下来带大家来实现。在这里只介绍用遍历文章法实现的：</p>
-<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsl5ldivjtj3099050mx3.jpg" alt=""><br>在改文件里添加一个series，效果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">author: hojun</span><br><span class="line">avatar: /images/favicon.png</span><br><span class="line">authorLink: </span><br><span class="line">authorAbout: </span><br><span class="line">authorDesc: 一个好奇的人</span><br><span class="line">categories: 技术</span><br><span class="line">comments: true</span><br><span class="line">series:</span><br><span class="line">tags: </span><br><span class="line">keywords: </span><br><span class="line">description: </span><br><span class="line">photos: </span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsl5ldivjtj3099050mx3.jpg" alt=""><br>在改文件里添加一个series，效果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">author: hojun</span><br><span class="line">avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg</span><br><span class="line">authorLink: </span><br><span class="line">authorAbout: </span><br><span class="line">authorDesc: 一个好奇的人</span><br><span class="line">categories: 技术</span><br><span class="line">comments: true</span><br><span class="line">series:</span><br><span class="line">tags: </span><br><span class="line">keywords: </span><br><span class="line">description: </span><br><span class="line">photos: </span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
 <p>内容看你自己的主题而定，你只需加个series:就行。<br>这时候你新建的md文件就都有series:这个项了，我们可以在其中填写系列名称。</p>
 <h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在md文章中添加series:的值。如：<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsl5l95lbrj30k60920t9.jpg" alt=""></p>
 <h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>这步才是干货，在主题对应渲染文章的模板文件下添加系列文件显示。<br>由于博主的主题用的是ejs写的，以下仅给出ejs的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (post.series)&#123; %&gt;</span><br><span class="line">    &lt;div class=&quot;post-series&quot;&gt;&lt;%= post.series %&gt;-&lt;%= __(&apos;series&apos;) %&gt;：</span><br><span class="line">        &lt;% site.posts.sort(&apos;date&apos;).map(function(p)&#123;  %&gt;</span><br><span class="line">            &lt;% if (post.series == p.series)&#123; %&gt;</span><br><span class="line">                &lt;li&gt;&lt;a href=&quot;&lt;%- url_for(p.path) %&gt;&quot;&gt;&lt;%= p.title %&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line">        &lt;% &#125;) %&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
@@ -563,6 +563,8 @@
             
                 
             
+                
+            
         </div>
         
         
@@ -663,13 +665,7 @@
           <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
           <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
-        <p id="cnzz">
-<p>
-    <script type="text/javascript">
-    //太卡了不要了
-    // var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262747754'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262747754%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
-</p>
-</p>
+        <p id="cnzz"></p>
     </div>
 </footer>
 <script src="/js/jquery.min.js"></script>
