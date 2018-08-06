@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/08/06/%E5%A5%BD%E5%B0%91%E5%B9%B4%E5%85%89%E8%8A%92%E4%B8%87%E4%B8%88/</loc>
+    <lastmod>2018-08-06T15:10:38.591Z</lastmod>
+    <data>
+        <display>
+        <title>好少年光芒万丈</title>
+        <pubTime>2018-08-06T05:18:10.000Z</pubTime>
+        
+        <tag>flag</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/08/03/%E4%BA%BA%E5%A4%A7%E4%BA%86%EF%BC%8C%E5%BF%83%E5%B0%8F%E4%BA%86/</loc>
+    <lastmod>2018-08-05T16:34:52.829Z</lastmod>
+    <data>
+        <display>
+        <title>人大了，心小了</title>
+        <pubTime>2018-08-03T14:45:49.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/08/05/%E7%94%B5%E8%84%91%E5%BC%80%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5/</loc>
     <lastmod>2018-08-05T11:01:14.419Z</lastmod>
     <data>
@@ -19,26 +59,6 @@
            
              
               <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/08/03/%E4%BA%BA%E5%A4%A7%E4%BA%86%EF%BC%8C%E5%BF%83%E5%B0%8F%E4%BA%86/</loc>
-    <lastmod>2018-08-05T10:50:34.511Z</lastmod>
-    <data>
-        <display>
-        <title>人大了，心小了</title>
-        <pubTime>2018-08-03T14:45:49.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
           
         </display>
     </data>
@@ -511,9 +531,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>搞事</tag>
+         
+        <tag>hexo</tag>
          
          
            
@@ -1135,9 +1155,9 @@
         <title>前端开发规范(四、JS篇)</title>
         <pubTime>2018-06-15T13:23:05.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>前端</tag>
+         
+        <tag>js</tag>
          
          
            
@@ -1157,9 +1177,9 @@
         <title>前端开发规范(六、JS优化篇)</title>
         <pubTime>2018-06-15T13:55:14.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>前端</tag>
+         
+        <tag>js</tag>
          
          
            
@@ -2217,9 +2237,9 @@
         <title>Thinkphp3.2.3发现SQL注入漏洞！</title>
         <pubTime>2018-04-16T11:40:40.000Z</pubTime>
         
-        <tag>thinkphp</tag>
-         
         <tag>php</tag>
+         
+        <tag>thinkphp</tag>
          
          
            
@@ -2965,9 +2985,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>前端</tag>
+         
+        <tag>js</tag>
          
          
            
