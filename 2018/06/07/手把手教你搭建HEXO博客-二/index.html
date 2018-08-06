@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://www.hojun.cn/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2018/06/07/手把手教你搭建HEXO博客-二/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://www.hojun.cn">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+
+
+<title>手把手教你搭建hexo博客(二) - hojun</title>
+
+<meta name="keywords" content="hexo">
+
+<meta name="description " content="为什么推荐hexo+github？最重要两点：简单、免费。">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2018/06/07/手把手教你搭建HEXO博客-二/",
+        "appid": "1594654793276567",
+        "title": "手把手教你搭建HEXO博客(二)",
+        "images": ["https://wx4.sinaimg.cn/small/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg"],
+        "pubDate": "2018-06-07T10:20:12"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="文章归档"><i class="fa fa-archives"></i><span>文章归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a> -->
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/2018/02/18/喜欢的音乐/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友情链接"><i class="fa fa-link"></i><span>友情链接</span></a>
+        <a href="/help/" title="关于本站"><i class="fa fa-question-circle"></i><span>关于本站</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-06-07">2018-06-07</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">手把手教你搭建HEXO博客(二)</h2>
+            <div class="post-meta">
+                本文总共508个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg" alt=""><br>手把手教你搭建HEXO+Github博客 （系列教程二）</p>
+<ul>
+<li>为什么推荐hexo+github？ </li>
+<li>最重要两点：简单、免费</li>
+</ul>
+<h2 id="gitforwin安装"><a href="#gitforwin安装" class="headerlink" title="gitforwin安装"></a><strong>gitforwin安装</strong></h2><p>百度搜索gitforwindows，点击进入官网点击下载：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs2z2yf63sj30t60gjwj2.jpg" alt=""><br>下载好后确认安装：<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs2z2xleamj30t60gjqle.jpg" alt=""><br>我们选择安装在D盘<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs2z2wt125j30t60gjwvf.jpg" alt=""><br>这里我们选择Use Windows的这个选项，我们就可以在cmd窗口中使用git命令<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fs2z2v7rypj30t60gj1cy.jpg" alt=""><br>win+R打开运行对话框，输入cmd打开命令行<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs2z2t0cerj30ch06gab6.jpg" alt=""><br>输入git检查是否安装成功，输出一堆git相关命令表示安装成功<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs2z2tw47wj30t20f6akb.jpg" alt=""></p>
+<h2 id="github-SSH-Key-配置"><a href="#github-SSH-Key-配置" class="headerlink" title="github SSH Key 配置"></a><strong>github SSH Key 配置</strong></h2><p>接下来来到我们gitforwin的安装目录下，打开git-bash<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs2z2sgjjbj30p30hptho.jpg" alt=""><br>输入ssh-keygen -t rsa -C “github的注册邮箱地址”<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs2z2qcr6nj30ie0ah0te.jpg" alt=""><br>一路回车生成密钥，默认生成在C:\Users\用户名.ssh目录下面<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fs2z2r2jtej30ic0agdkr.jpg" alt=""><br>接下来来到github官网，点击头像选择setting<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs2z2p4p3oj30t60gj0yk.jpg" alt=""><br>再点击SSH and GPG keys，选择右边的New SSH key<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs2z2o54r2j30vi0fcdje.jpg" alt=""><br>标题可以自定义<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs2z2nh1l0j30t60gjjug.jpg" alt=""><br>找到我们生成的密钥，默认生成在C:\Users\用户名.ssh目录下面<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fs2z2mvvwqj30t60gj78q.jpg" alt=""><br>拷贝到Key下<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs2z2lyxqvj30t60gjgod.jpg" alt=""><br>成功<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fs2z8m6frzj30vq0e678t.jpg" alt=""><br>To Be Continued…(未完待续)<br><a href="http://baijiahao.baidu.com/builder/preview/s?id=1602590264037271838">视频教程-gitforwin安装</a><br><a href="http://baijiahao.baidu.com/builder/preview/s?id=1602590443087061279">视频教程-gitsshkey配置</a></p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">入群交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
+        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"></p>
+        
+        <div class="post-series">手把手教你搭建HEXO博客-系列文章：
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/06/06/手把手教你搭建HEXO博客-一/">手把手教你搭建HEXO博客(一)</a></li>
+                
+            
+                
+                    <li><a href="/2018/06/07/手把手教你搭建HEXO博客-二/">手把手教你搭建HEXO博客(二)</a></li>
+                
+            
+                
+                    <li><a href="/2018/06/08/手把手教你搭建HEXO博客-三/">手把手教你搭建HEXO博客(三)</a></li>
+                
+            
+                
+                    <li><a href="/2018/06/09/手把手教你搭建HEXO博客-四/">手把手教你搭建HEXO博客(四)</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/hexo/">hexo</a>
+            
+            <a href="/tags/博客/">博客</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/06/08/手把手教你搭建HEXO博客-三/" >手把手教你搭建HEXO博客(三)<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/06/06/手把手教你搭建HEXO博客-一/" >手把手教你搭建HEXO博客(一)<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gitforwin安装"><span class="toc-text">gitforwin安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github-SSH-Key-配置"><span class="toc-text">github SSH Key 配置</span></a></li></ol>
+    </div>
+</aside>
+
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ"
+  })
+</script>
+
+
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于本站" >关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="文章归档">文章归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  if (arr.indexOf("图集") !== -1) {
+    $('.hj_img').each(function() {
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
+    })
+    $('.fancybox').fancybox({
+      padding: 0,
+      loop: false
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-好少年光芒万丈！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://www.hojun.cn/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2018/07/25/《实战ES2015》新语法/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://www.hojun.cn">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+
+
+<title>《实战es2015》新语法 - hojun</title>
+
+<meta name="keywords" content="ES5">
+
+<meta name="description " content="ES2015的一些新语法">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2018/07/25/《实战ES2015》新语法/",
+        "appid": "1594654793276567",
+        "title": "《实战ES2015》新语法",
+        "images": ["https://wx2.sinaimg.cn/small/006bYVyvgy1ftc1xvhj97j30me0gcmyh.jpg"],
+        "pubDate": "2018-07-25T11:27:10"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="文章归档"><i class="fa fa-archives"></i><span>文章归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/video" title="视频资源"><i class="fa fa-video-camera"></i><span>视频资源</span></a> -->
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/2018/02/18/喜欢的音乐/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友情链接"><i class="fa fa-link"></i><span>友情链接</span></a>
+        <a href="/help/" title="关于本站"><i class="fa fa-question-circle"></i><span>关于本站</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="null" target="_blank">
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-07-25">2018-07-25</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">《实战ES2015》新语法</h2>
+            <div class="post-meta">
+                本文总共2808个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftc1xvhj97j30me0gcmyh.jpg" alt=""></p>
+<h2 id="函数类属性的省略语法"><a href="#函数类属性的省略语法" class="headerlink" title="函数类属性的省略语法"></a>函数类属性的省略语法</h2><p>因为ES2015中引入了类的机制(Class)，普通的对象字面量也吸收了其中一些语法糖，这可以让方法属性省略function，因此让方法属性可以以一种更直观的语法来表达。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="comment">//Syntax: &#123; method() &#123; ... &#125;&#125;</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> obj = &#123;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//之前的写法</span></span></span><br><span class="line"><span class="javascript">    foo: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="string">'foo'</span></span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="javascript">    <span class="comment">//现在的写法</span></span></span><br><span class="line"><span class="undefined">    bar() &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">return</span> <span class="string">'bar'</span></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>有了这个语法糖，对象字面量中的方法类属性更像是一个方法，而不只是一个以函数为值得属性。</p>
+<h2 id="支持proto注入"><a href="#支持proto注入" class="headerlink" title="支持proto注入"></a>支持<strong>proto</strong>注入</h2><h2 id="可动态计算的属性名"><a href="#可动态计算的属性名" class="headerlink" title="可动态计算的属性名"></a>可动态计算的属性名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> prefix = <span class="string">'es2015'</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  [prefix + <span class="string">'enhancedObject'</span>]: <span class="string">'foobar'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="将属性名定义省略"><a href="#将属性名定义省略" class="headerlink" title="将属性名定义省略"></a>将属性名定义省略</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="number">123</span></span><br><span class="line"><span class="keyword">const</span> bar = <span class="function"><span class="params">()</span> =&gt;</span> foo</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  foo,</span><br><span class="line">  bar</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">//=&gt; &#123; foo: 123, bar: [Function: bar]&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="支持多返回值"><a href="#支持多返回值" class="headerlink" title="支持多返回值"></a>支持多返回值</h2><h3 id="使用对象作为返回值"><a href="#使用对象作为返回值" class="headerlink" title="使用对象作为返回值"></a>使用对象作为返回值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Syntax: &#123; arg1, arg2&#125; = &#123; arg1: value1, arg2: value2 &#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getState</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    error: <span class="literal">null</span>,</span><br><span class="line">    logined: <span class="literal">true</span>,</span><br><span class="line">    user: &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">### 使用数组作为返回值</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`js</span></span><br><span class="line"><span class="string">//Syntax: [ arg1, arg2 ] = [ value1, value2 ]</span></span><br><span class="line"><span class="string">const [foo, bar] = [1, 2]</span></span><br><span class="line"><span class="string">console.log(foo, bar) //=&gt; 1 2</span></span><br></pre></td></tr></table></figure>
+<p>如果你希望跳过数组中的某些元素，那么可以通过空开一个元素的方式来实现。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Syntax: [ arg1, , arg2 ] = [ value1, value2, value3]</span></span><br><span class="line"><span class="keyword">const</span> [foo, bar] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="built_in">console</span>.log(foo, bar) <span class="comment">//=&gt; 1 3</span></span><br></pre></td></tr></table></figure></p>
+<p>如果你希望能在获取指定位置的元素以外，也可以不定项的获取后续的元素，那么可以用…语句来实现。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Syntax: [arg1, arg2, ...restArgs] = [value1, value2, value3, value4]</span></span><br><span class="line"><span class="keyword">const</span> [a, b, ...rest] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="built_in">console</span>.log(a, b) <span class="comment">//=&gt; 1 2</span></span><br><span class="line"><span class="built_in">console</span>.log(rest) <span class="comment">//=&gt; [3, 4, 5]</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Swap-变量值交换"><a href="#Swap-变量值交换" class="headerlink" title="Swap (变量值交换)"></a>Swap (变量值交换)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">以前</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">swap</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> tmp = a</span><br><span class="line">  a = b</span><br><span class="line">  b = tmp</span><br><span class="line">&#125;</span><br><span class="line">现在</span><br><span class="line">[foo, bar] = [bar, foo]</span><br></pre></td></tr></table></figure>
+<h2 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h2><h3 id="结构别名"><a href="#结构别名" class="headerlink" title="结构别名"></a>结构别名</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fetchData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    response: [<span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="comment">/*...*/</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> &#123;<span class="attr">response</span>: data&#125; = fetchData()</span><br><span class="line"><span class="built_in">console</span>.log(data) <span class="comment">//=&gt; foo bar ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="无法匹配的缺省值"><a href="#无法匹配的缺省值" class="headerlink" title="无法匹配的缺省值"></a>无法匹配的缺省值</h3><p>如果不希望得到undefined,ES2015也允许我们为参数赋予一个默认值。即当无法匹配到相应的值时，该变量便会使用该默认值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;foo = <span class="number">1</span>&#125; = &#123;<span class="attr">bar</span>: <span class="number">1</span>&#125;</span><br><span class="line"><span class="built_in">console</span>.log(foo) <span class="comment">//=&gt;1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> [a, b = <span class="number">2</span>] = [<span class="number">1</span>]</span><br><span class="line"><span class="built_in">console</span>.log(a, b) <span class="comment">//=&gt; 1 2</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="深层匹配"><a href="#深层匹配" class="headerlink" title="深层匹配"></a>深层匹配</h3><p>我们可以通过嵌套解构表达式来获取深层的内容，而且可以在对象中嵌套数组来获取对象中的数组的某元素，反之亦然。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Object in Object</span></span><br><span class="line"><span class="keyword">const</span> &#123;a, <span class="attr">b</span>: &#123;c&#125;&#125; = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: &#123;<span class="attr">c</span>: <span class="number">2</span>&#125;&#125;</span><br><span class="line">consolle.log(a, c) <span class="comment">//=&gt; 1 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Array in Object</span></span><br><span class="line"><span class="keyword">const</span> &#123;d, <span class="attr">e</span>: [f]&#125; = &#123;<span class="attr">d</span>: <span class="number">1</span>, <span class="attr">e</span>: [<span class="number">2</span>, <span class="number">3</span>]&#125;</span><br><span class="line"><span class="built_in">console</span>.log(d, f) <span class="comment">//=&gt; 1 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Object in Array</span></span><br><span class="line"><span class="keyword">const</span> [g, &#123;h&#125;] = [<span class="number">1</span>, &#123;<span class="attr">h</span>: <span class="number">2</span>&#125;]</span><br><span class="line"><span class="built_in">console</span>.log(g h) <span class="comment">//=&gt; 1 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Array in Array</span></span><br><span class="line"><span class="keyword">const</span> [i, [j]] = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>]]</span><br><span class="line"><span class="built_in">console</span>.log(i, j) <span class="comment">//=&gt; 1 2</span></span><br></pre></td></tr></table></figure></p>
+<p>同样，别名、缺省值等语法也可以使用在深层匹配中。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>一旦一个函数的参数列表中使用了剩余参数的语法糖，便不可以再添加任何参数，否则会抛出错误。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params">...rest</span>) </span>&#123;<span class="comment">/*...*/</span>&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params">...rest, foo</span>) </span>&#123;<span class="comment">/*...*/</span>&#125; <span class="comment">//报错</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="解构传参"><a href="#解构传参" class="headerlink" title="解构传参"></a>解构传参</h2><p>在ECMAScript对函数的定义中，有两个用于实现自定义函数调用的方法————apply和call。这两个方法都可以让开发者以一个之定义的上下文(函数中的this)来传入参数，其区别是：apply需要以数组的方式传入参数，而call则需要想象普通调用一样传入参数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">fo</span>: <span class="string">'bar'</span>&#125;</span><br><span class="line">fn.apply(obj, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">fn.call(obj, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">入群交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
+        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"></p>
+        
+        <div class="post-series">《实战ES2015》-系列文章：
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/16/《实战ES2015》之var、let、const/">《实战ES2015》之var、let、const</a></li>
+                
+            
+                
+                    <li><a href="/2018/07/18/《实战ES2015》之箭头函数/">《实战ES2015》之箭头函数</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/21/《实战ES2015》字符串模板语法/">《实战ES2015》字符串模板语法</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/25/《实战ES2015》新语法/">《实战ES2015》新语法</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/js/">js</a>
+            
+            <a href="/tags/悦读/">悦读</a>
+            
+            <a href="/tags/es5/">es5</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/07/26/距离玩BeatSaber还差/" >距离玩BeatSaber还差...<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/07/23/HEXO发布到Github报错-凉凉-迁移到Coding/" >HEXO发布到Github报错?凉凉,迁移到Coding<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#函数类属性的省略语法"><span class="toc-text">函数类属性的省略语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#支持proto注入"><span class="toc-text">支持proto注入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#可动态计算的属性名"><span class="toc-text">可动态计算的属性名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将属性名定义省略"><span class="toc-text">将属性名定义省略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#支持多返回值"><span class="toc-text">支持多返回值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用对象作为返回值"><span class="toc-text">使用对象作为返回值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swap-变量值交换"><span class="toc-text">Swap (变量值交换)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高级用法"><span class="toc-text">高级用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#结构别名"><span class="toc-text">结构别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无法匹配的缺省值"><span class="toc-text">无法匹配的缺省值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深层匹配"><span class="toc-text">深层匹配</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解构传参"><span class="toc-text">解构传参</span></a></li></ol>
+    </div>
+</aside>
+
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ"
+  })
+</script>
+
+
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于本站" >关于本站</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="文章归档">文章归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  if (arr.indexOf("图集") !== -1) {
+    $('.hj_img').each(function() {
+      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
+    })
+    $('.fancybox').fancybox({
+      padding: 0,
+      loop: false
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-好少年光芒万丈！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
