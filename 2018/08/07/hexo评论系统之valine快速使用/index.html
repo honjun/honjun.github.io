@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/2018/06/18/给Hexo博客添加Mathjax数学公式支持/"/>
+<link rel="canonical" href="https://www.hojun.com/2018/08/07/hexo评论系统之valine快速使用/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -27,21 +27,21 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>给hexo博客添加mathjax数学公式支持 - hojun</title>
+<title>hexo评论系统之valine快速使用 - hojun</title>
 
-<meta name="keywords" content="mathjax">
+<meta name="keywords" content="undefined">
 
-<meta name="description " content="由于网上教程不靠谱，忽悠人一大圈还没啥卵用。花点时间折腾了下Mathjax.js，出了这篇教程。">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/2018/06/18/给Hexo博客添加Mathjax数学公式支持/",
+        "@id": "https://www.hojun.com/2018/08/07/hexo评论系统之valine快速使用/",
         "appid": "1594654793276567",
-        "title": "给Hexo博客添加Mathjax数学公式支持",
-        "images": ["https://wx3.sinaimg.cn/small/006bYVyvgy1fsfpde5obej30zg0ho405.jpg"],
-        "pubDate": "2018-06-18T10:04:14"
+        "title": "hexo评论系统之valine快速使用",
+        "images": ["https://wx3.sinaimg.cn/small/006bYVyvgy1fu1j2asd1pj30oo0li3zi.jpg"],
+        "pubDate": "2018-08-07T10:48:32"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -170,34 +170,21 @@
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
-                    <span title="最后编辑于2018-06-18">2018-06-18</span>
+                    <span title="最后编辑于2018-08-07">2018-08-07</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">给Hexo博客添加Mathjax数学公式支持</h2>
+            <h2 class="post-title">hexo评论系统之valine快速使用</h2>
             <div class="post-meta">
-                本文总共1241个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共910个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>小白文，大神请略过……</p>
-<p>最近群里经常有人询问Hexo博客的Mathjax的扩展使用，由于网上教程不靠谱，忽悠人一大圈还没啥卵用<img class="owoemoji" src="/OwO/img/无奈.png">。于是花点时间折腾了下Mathjax.js，出了这篇教程。（表示没用数学公式，mathjax也是第一次接触）</p>
-<p>唠叨一下修改代码的建议：可以在其上扩展，最好不要修改。修改会出现: 改好一个bug，出来N多个bug的这种情况，因为你不知道其他地方是否还用到你修改的这部分代码，后果很严重<img class="owoemoji" src="/OwO/img/内伤.png">。</p>
-<h2 id="开始搞"><a href="#开始搞" class="headerlink" title="开始搞"></a>开始搞</h2><p>百度搜索mathjax<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg" alt=""><br>点击第一个进入其官网<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpde5obej30zg0ho405.jpg" alt=""><br>找到Getting Started，点击Learn more<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg" alt=""><br>拉到最下边，Jump to our docs<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg" alt=""><br>找到其demo代码<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdggngij30us0gx41m.jpg" alt=""></p>
-<p><font color='red'><img class="owoemoji" src="/OwO/img/不出所料.png">注意其代码有个坑，js的src应改为<code>https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML</code></font><br>接下来就是实验代码了，新建文章输入以下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  MathJax.Hub.Config(&#123;<span class="attr">tex2jax</span>: &#123;<span class="attr">inlineMath</span>: [[<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">'\\('</span>,<span class="string">'\\)'</span>]]&#125;&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这里发现了个bug,即代码快里面放入raw标签会把代码直接当成html，会被解析了。所以上面的代码缺少了raw标签,还需用raw标签包起来。关于raw标签的介绍请参考<a href="https://hexo.io/zh-cn/docs/tag-plugins.html">hexo标签插件</a></p>
-<p>正确的代码如下图<img class="owoemoji" src="/OwO/img/得意.png">：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg" alt=""></p>
-<p>接下来再页面上预览一下<br>图片：<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg" alt=""><br>真实效果<br>
-<p>
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-</p>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-</p>
-<p><img class="owoemoji" src="/OwO/img/不出所料.png">ok了，很简单有木有。而且在md插入这种不常用的js可以节省一些资源。</p>
+            <p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fu1j2asd1pj30oo0li3zi.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>咳咳，昨天不是立了个每日签到的flag，再计算分值之后，用评论记录的时候，发现加载要很久。一言不合就动手换了它，加入valine评论系统阵营。</p>
+<h2 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h2><p>来到其官网valine.js.org，(抠了1元钱打赏了作者，还是群里的群友)点击 快速开始<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1ilnqz6yj30wd0he0tv.jpg" alt=""><br>嗯，需要注册LeanCloud，注册如下<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fu1ilialrzj30ox0k3t9e.jpg" alt=""><br>验证邮箱和绑定手机号<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fu1ilj62w0j31050hatap.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1iljy87zj30l00e0wf2.jpg" alt=""><br>然后点击创建应用&gt;开发版<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fu1ilkm79lj30zt0gnabw.jpg" alt=""><br>建好之后点击进入到应用中<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1ill5issj30rr0eh3yq.jpg" alt=""><br>依次点击设置&gt;应用Key 得到App ID和App Key<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fu1illmu8ij30vs0h7dhe.jpg" alt=""><br>设置安全域名，可设可不设咯。舍得话要设自己博客域名哦（不要设博主的哦）<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1ilm8yuej30zu0hzacc.jpg" alt=""><br>注册好了，去valine官网找到demo<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fu1ilmqe8jj30nj0eg0tc.jpg" alt=""><br>直接插入到自己博客（hexo）评论模板那里<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (config.valine &amp;&amp; page.comments) &#123; %&gt;</span><br><span class="line">&lt;script src=<span class="string">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=<span class="string">'//unpkg.com/valine/dist/Valine.min.js'</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;div id=<span class="string">"vcomments"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">new</span> Valine(&#123;</span><br><span class="line">    el: <span class="string">'#vcomments'</span>,</span><br><span class="line">    appId: <span class="string">"&lt;%=config.v_appId %&gt;"</span>,</span><br><span class="line">    appKey: <span class="string">"&lt;%=config.v_appKey %&gt;"</span></span><br><span class="line">  &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>然后在配置里配置参数(_config.yml)<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="attr">valine:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">v_appId:</span> <span class="string">GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz</span></span><br><span class="line"><span class="attr">v_appKey:</span> <span class="string">mgOpfzbkHYqU92CV4IDlAUHQ</span></span><br></pre></td></tr></table></figure></p>
+<p>OK，发布的时候可能还不能马上评论，等两分钟好啦~<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1iln9h86j30os0e6q31.jpg" alt=""><br>嗯。。。。。点下题，换的真的很快，大约半小时不到<img class="owoemoji" src="/OwO/img/doge.png"></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -578,8 +565,6 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         
         <div class="post-tags">标签：
             
-            <a href="/tags/搞事/">搞事</a>
-            
             <a href="/tags/hexo/">hexo</a>
             
         </div>
@@ -587,13 +572,9 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
     </article>
     <div class="post-nav">
         
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/06/20/vue-js深入篇-四、Render函数/" >vue.js深入篇(四、Render函数)<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/06/17/添加系列文章功能/" >添加系列文章功能<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/08/06/好少年光芒万丈/" >好少年光芒万丈<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
@@ -602,7 +583,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始搞"><span class="toc-text">开始搞</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Valine"><span class="toc-text">Valine</span></a></li></ol>
     </div>
 </aside>
 
