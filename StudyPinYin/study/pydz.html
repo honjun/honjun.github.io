@@ -38,7 +38,7 @@
       .footer {
         position: fixed;
         width: 100%;
-        height: 100px;
+        height: 200px;
         bottom: 0;
         /*background-color: #f00;*/
       }
@@ -90,8 +90,9 @@
         background-size: 100%;
       }
       .sound {
-        display: inline-block;
-        float: right;
+        position: absolute;
+        right: 10px;
+        top: 10px;
         margin-right: 10px;
         width: 100px;
         height: 100px;
@@ -130,8 +131,9 @@
     </style>
   </head>
   <body>
+    <div class="sound"></div>
     <div class="root">
-      <div class="header"></div>
+      <div class="header"><textarea name="" id="text" cols="30" rows="10"></textarea></div>
       <div class="container">
         <div class="pinyin">
           
@@ -147,7 +149,6 @@
         <div class="menu mode random">乱</div>
         <div class="menu mode freedom">自</div>
         <div class="menu help">辅</div>
-        <div class="sound"></div>
       </div>
     </div>
     <div class="sounds"></div>
@@ -338,7 +339,7 @@
             lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + tempTyping[1].charAt(i) + '</div>';
             upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + tempTyping[1].charAt(i).toUpperCase() + '</div>';
           }
-          upperChar += '<br>' + tempTyping[0] + '<div class="fayin"><div>';
+          upperChar += '<div class="zh">' + tempTyping[0] + '</div><div class="fayin"><div>';
           $pinyin.css('font-size', '100px');
         } else {
           useLength = useArr[random].length;
@@ -369,7 +370,11 @@
         }
       }
       $(document).keyup(function(event) {
-        if (event.keyCode < 65 || event.keyCode > 91) return;
+        let str = $('#text').val();
+        let lastChar = str.charAt(str.length - 1);
+        let zh = $('.zh').html();
+        if(zh === lastChar) create();
+        // if (event.keyCode < 65 || event.keyCode > 91) return;
         let code = single[event.keyCode - 65];
         if (freedom === ON) {
           $pinyin.html('');
