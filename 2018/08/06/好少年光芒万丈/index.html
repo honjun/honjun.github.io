@@ -175,7 +175,7 @@
             </div>
             <h2 class="post-title">好少年光芒万丈</h2>
             <div class="post-meta">
-                本文总共738个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1282个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -196,6 +196,26 @@
     margin-top: 10px;
     text-align: center;
   }
+  .bubbles > .particle {
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(128,255,0,0.7);
+    animation: bubbles 18s ease-in infinite;
+    border-radius: 100%;
+  }
+  @keyframes bubbles {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      transform: translate(0, -20%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0, -8000%);
+    }
+  }
 </style>
 <span class="key">发布博文</span><input class="ginput" type="number" data-score="10">*10<br>
 <span class="key">悦读30分钟</span><input class="ginput" type="number" data-score="2">*2<br>
@@ -208,6 +228,7 @@
 <span class="key">记单词10个</span><input class="ginput" type="number" data-score="5">*5<br>
 <p class="toadyCount">总分:0</p>
 <p class="toadyCount">每日打分后评论记录</p>
+<div style="width: 100%; height: 100px; position: relative; bottom: 0px;" class="particletext bubbles">Bubbles</div>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script>
   ;(function(){
@@ -222,6 +243,21 @@
        $(".toadyCount").html('总分：' + calcCount());
     });
   })()
+  function bubbles() {
+     $.each($(".particletext.bubbles"), function(){
+        var bubblecount = ($(this).width()/50)*10;
+        for(var i = 0; i <= bubblecount; i++) {
+           var size = ($.rnd(40,80)/10);
+           $(this).append('<span class="particle" style="top:' + $.rnd(20,80) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,180)/10) + 's;"></span>');
+        }
+     });
+  }
+  jQuery.rnd = function(m,n) {
+      m = parseInt(m);
+      n = parseInt(n);
+      return Math.floor( Math.random() * (n - m + 1) ) + m;
+  }
+  bubbles();
 </script>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
