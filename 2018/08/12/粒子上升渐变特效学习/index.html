@@ -29,9 +29,9 @@
 
 <title>粒子上升渐变特效学习 - hojun</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="粒子特效">
 
-<meta name="description " content="好少年光芒万丈">
+<meta name="description " content="之前在某个网站发现有个粒子缓缓上升的特效，最近想用的时候发现找不到了找不到了找不到了。求助群里的大佬们，在大佬推荐的网站上找到了一样的特效。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
@@ -40,6 +40,7 @@
         "@id": "https://www.hojun.com/2018/08/12/粒子上升渐变特效学习/",
         "appid": "1594654793276567",
         "title": "粒子上升渐变特效学习",
+        "images": ["https://wx2.sinaimg.cn/small/006bYVyvgy1fu76p0idvdj30mb0kkgmd.jpg"],
         "pubDate": "2018-08-12T08:20:52"
     }
     </script>
@@ -175,14 +176,14 @@
             </div>
             <h2 class="post-title">粒子上升渐变特效学习</h2>
             <div class="post-meta">
-                本文总共2374个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2367个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>之前在某个网站发现有个粒子缓缓上升的特效，最近想用的时候发现找不到了找不到了找不到了。求助群里的大佬们，在大佬推荐的网站上找到了一样的特效。于是把特效顺带学习了波。<br>特效demo如下：<br><img class="lozad" data-action="zoom" data-src="http://wx2.sinaimg.cn/small/006bYVyvgy1fu76p0idvdj30mb0kkgmd.jpg" alt=""><br>这里只取了Bubbles的特效。学习过程记录在代码注释中<br>css代码如下<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.bubbles</span> &gt; <span class="selector-class">.particle</span> &#123;</span><br><span class="line">    <span class="comment">/*初始透明度为0*/</span></span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/*初始颜色为荧光色，透明度为0.7*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(128,255,0,0.7);</span><br><span class="line">    <span class="comment">/*使用bubbles动画，持续时间18秒，缓慢进入，无限循环*/</span></span><br><span class="line">    <span class="attribute">animation</span>: bubbles <span class="number">18s</span> ease-in infinite;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*css keyframes 动画*/</span></span><br><span class="line">@<span class="keyword">keyframes</span> bubbles &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    5% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translate</span>(0, -20%);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*这里-8000%表示是气泡的8000%*/</span></span><br><span class="line">    100% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translate</span>(0, -8000%);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+            <p>之前在某个网站发现有个粒子缓缓上升的特效，最近想用的时候发现找不到了找不到了找不到了。求助群里的大佬们，在大佬推荐的网站上找到了一样的特效。于是把特效顺带学习了波。<br>特效demo如下：<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fu76p0idvdj30mb0kkgmd.jpg" alt=""><br>这里只取了Bubbles的特效。学习过程记录在代码注释中<br>css代码如下<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line"><span class="selector-class">.bubbles</span> &gt; <span class="selector-class">.particle</span> &#123;</span><br><span class="line">    <span class="comment">/*初始透明度为0*/</span></span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="comment">/*初始颜色为荧光色，透明度为0.7*/</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(128,255,0,0.7);</span><br><span class="line">    <span class="comment">/*使用bubbles动画，持续时间18秒，缓慢进入，无限循环*/</span></span><br><span class="line">    <span class="attribute">animation</span>: bubbles <span class="number">18s</span> ease-in infinite;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*css keyframes 动画*/</span></span><br><span class="line">@<span class="keyword">keyframes</span> bubbles &#123;</span><br><span class="line">    0% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    5% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translate</span>(0, -20%);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*这里-8000%表示是气泡的8000%*/</span></span><br><span class="line">    100% &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translate</span>(0, -8000%);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
 <p>html元素如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 这里让元素宽度100%（和页面等宽） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width: 100%; height: 100px; position: relative; bottom: 0px;"</span> <span class="attr">class</span>=<span class="string">"particletext bubbles"</span>&gt;</span>Bubbles<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>js如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/jquery.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">bubbles</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     $.each($(<span class="string">".particletext.bubbles"</span>), <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bubblecount = ($(<span class="keyword">this</span>).width()/<span class="number">50</span>)*<span class="number">10</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= bubblecount; i++) &#123;</span><br><span class="line">           <span class="keyword">var</span> size = ($.rnd(<span class="number">40</span>,<span class="number">80</span>)/<span class="number">10</span>);</span><br><span class="line">           <span class="comment">//这里的animation-delay很重要，关系到你的特效是否看上去是连续无断层的，上一步中css是18秒，所以这一步中延迟时间就设置成$.rnd(0,180)/10)</span></span><br><span class="line">           $(<span class="keyword">this</span>).append(<span class="string">'&lt;span class="particle" style="top:'</span> + $.rnd(<span class="number">20</span>,<span class="number">80</span>) + <span class="string">'%; left:'</span> + $.rnd(<span class="number">0</span>,<span class="number">95</span>) + <span class="string">'%;width:'</span> + size + <span class="string">'px; height:'</span> + size + <span class="string">'px;animation-delay: '</span> + ($.rnd(<span class="number">0</span>,<span class="number">180</span>)/<span class="number">10</span>) + <span class="string">'s;"&gt;&lt;/span&gt;'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  jQuery.rnd = <span class="function"><span class="keyword">function</span>(<span class="params">m,n</span>) </span>&#123;</span><br><span class="line">      m = <span class="built_in">parseInt</span>(m);</span><br><span class="line">      n = <span class="built_in">parseInt</span>(n);</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">Math</span>.floor( <span class="built_in">Math</span>.random() * (n - m + <span class="number">1</span>) ) + m;</span><br><span class="line">  &#125;</span><br><span class="line">  bubbles();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>好了，代码就学习到这里，实现原理已经明了啦。<br>最后预览下效果：<br><img class="lozad" data-action="zoom" data-src="http://wx4.sinaimg.cn/small/006bYVyvgy1fu76p00m7gg30zy0kp7wh.gif" alt=""><br>
+<p>好了，代码就学习到这里，实现原理已经明了啦。<br>最后预览下效果：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu76p00m7gg30zy0kp7wh.gif" alt=""><br>
 <style>
   .bubbles > .particle {
     opacity: 0;
@@ -205,7 +206,7 @@
     }
   }
 </style>
-<div style="width: 100%; height: 100px; position: relative; bottom: 0px;" class="particletext bubbles">Bubbles</div>
+<div style="width: 100%; height: 100px; position: relative; bottom: 0px;" class="particletext bubbles"></div>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script>
   function bubbles() {
@@ -245,10 +246,18 @@
         
         <div class="post-tags">标签：
             
+            <a href="/tags/前端/">前端</a>
+            
+            <a href="/tags/特效/">特效</a>
+            
         </div>
         
     </article>
     <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/08/13/快速开发属于自己的APP-FusionApp/" >快速开发属于自己的APP-FusionApp<i class="fa fa-chevron-left"></i></a>
+        </div>
         
         
         <div class="post-nav-next post-nav-item">
@@ -277,16 +286,16 @@
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <div id="vcomments"></div>
-<span id="/2018/08/12/粒子上升渐变特效学习/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+<!-- <span id="/2018/08/12/粒子上升渐变特效学习/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
     <span class="post-meta-item-text">阅读量 </span>
     <span class="leancloud-visitors-count">1000000</span>
-</span>
+</span> -->
 <script>
   new Valine({
     el: '#vcomments',
     appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
     appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
-    visitor: true
+    // visitor: true
   })
 </script>
 
