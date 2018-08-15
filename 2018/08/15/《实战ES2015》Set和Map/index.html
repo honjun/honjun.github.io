@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/2018/06/21/vue-js深入篇-六、混合/"/>
+<link rel="canonical" href="https://www.hojun.com/2018/08/15/《实战ES2015》Set和Map/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -27,21 +27,21 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>vue.js深入篇(六、混合) - hojun</title>
+<title>《实战es2015》set和map - hojun</title>
 
-<meta name="keywords" content="vue">
+<meta name="keywords" content="ES5">
 
-<meta name="description " content="混合是一种灵活的分布式复用 Vue 组件的方式。混合对象可以包含任意组件选项。以组件使用混合对象时，所有混合对象的选项将被混入该组件本身的选项。">
+<meta name="description " content="Set和Map">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/2018/06/21/vue-js深入篇-六、混合/",
+        "@id": "https://www.hojun.com/2018/08/15/《实战ES2015》Set和Map/",
         "appid": "1594654793276567",
-        "title": "vue.js深入篇(六、混合)",
-        "images": ["https://wx3.sinaimg.cn/small/006bYVyvgy1fqxbjqosvfj30cj08caah.jpg"],
-        "pubDate": "2018-06-21T07:08:53"
+        "title": "《实战ES2015》Set和Map",
+        "images": ["https://wx2.sinaimg.cn/small/006bYVyvgy1ftc1xvhj97j30me0gcmyh.jpg"],
+        "pubDate": "2018-08-15T10:46:12"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -170,27 +170,174 @@
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
-                    <span title="最后编辑于2018-06-21">2018-06-21</span>
+                    <span title="最后编辑于2018-08-15">2018-08-15</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">vue.js深入篇(六、混合)</h2>
+            <h2 class="post-title">《实战ES2015》Set和Map</h2>
             <div class="post-meta">
-                本文总共2578个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2463个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqxbjqosvfj30cj08caah.jpg" alt=""></p>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>混合是一种灵活的分布式复用 Vue 组件的方式。混合对象可以包含任意组件选项。以组件使用混合对象时，所有混合对象的选项将被混入该组件本身的选项。</p>
-<p>例子：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 定义一个混合对象</span><br><span class="line">var myMixin = &#123;</span><br><span class="line">  created: function () &#123;</span><br><span class="line">    this.hello()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    hello: function () &#123;</span><br><span class="line">      console.log('hello from mixin!')</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 定义一个使用混合对象的组件</span><br><span class="line">var Component = Vue.extend(&#123;</span><br><span class="line">  mixins: [myMixin]</span><br><span class="line">&#125;)</span><br><span class="line">var component = new Component() // -&gt; "hello from mixin!"</span><br></pre></td></tr></table></figure></p>
-<p>选项合并<br>当组件和混合对象含有同名选项时，这些选项将以恰当的方式混合。比如，同名钩子函数将混合为一个数组，因此都将被调用。另外，混合对象的 钩子将在组件自身钩子 之前 调用 ：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mixin = &#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'mixin hook called'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  mixins: [mixin],</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'component hook called'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// -&gt; "混合对象的钩子被调用"</span></span><br><span class="line"><span class="comment">// -&gt; "组件钩子被调用"</span></span><br></pre></td></tr></table></figure></p>
-<p>值为对象的选项，例如 methods, components 和 directives，将被混合为同一个对象。 两个对象键名冲突时，取组件对象的键值对。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mixin = &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    foo: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'foo'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    conflicting: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'from mixin'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  mixins: [mixin],</span><br><span class="line">  methods: &#123;</span><br><span class="line">    bar: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'bar'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    conflicting: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'from self'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.foo() <span class="comment">// -&gt; "foo"</span></span><br><span class="line">vm.bar() <span class="comment">// -&gt; "bar"</span></span><br><span class="line">vm.conflicting() <span class="comment">// -&gt; "from self"</span></span><br></pre></td></tr></table></figure></p>
-<p>注意： Vue.extend() 也使用同样的策略进行合并。</p>
-<p>全局混合<br>也可以全局注册混合对象。 注意使用！ 一旦使用全局混合对象，将会影响到 所有 之后创建的 Vue 实例。使用恰当时，可以为自定义对象注入处理逻辑。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 为自定义的选项 'myOption' 注入一个处理器。 </span></span><br><span class="line">Vue.mixin(&#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> myOption = <span class="keyword">this</span>.$options.myOption</span><br><span class="line">    <span class="keyword">if</span> (myOption) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(myOption)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  myOption: <span class="string">'hello!'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// -&gt; "hello!"</span></span><br></pre></td></tr></table></figure></p>
-<p>谨慎使用全局混合对象，因为会影响到每个单独创建的 Vue 实例（包括第三方模板）。大多数情况下，只应当应用于自定义选项，就像上面示例一样。 也可以将其用作 Plugins 以避免产生重复应用</p>
-<p>自定义选项混合策略<br>自定义选项将使用默认策略，即简单地覆盖已有值。 如果想让自定义选项以自定义逻辑混合，可以向 Vue.config.optionMergeStrategies 添加一个函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vue.config.optionMergeStrategies.myOption = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// return mergedVal</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>对于大多数对象选项，可以使用 methods 的合并策略:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> strategies = Vue.config.optionMergeStrategies</span><br><span class="line">strategies.myOption = strategies.methods</span><br></pre></td></tr></table></figure></p>
-<p>更多高级的例子可以在 Vuex 1.x的混合策略里找到:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> merge = Vue.config.optionMergeStrategies.computed</span><br><span class="line">Vue.config.optionMergeStrategies.vuex = <span class="function"><span class="keyword">function</span> (<span class="params">toVal, fromVal</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!toVal) <span class="keyword">return</span> fromVal</span><br><span class="line">  <span class="keyword">if</span> (!fromVal) <span class="keyword">return</span> toVal</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    getters: merge(toVal.getters, fromVal.getters),</span><br><span class="line">    state: merge(toVal.state, fromVal.state),</span><br><span class="line">    actions: merge(toVal.actions, fromVal.actions)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftc1xvhj97j30me0gcmyh.jpg" alt=""></p>
+<h2 id="新增无序集合-Set"><a href="#新增无序集合-Set" class="headerlink" title="新增无序集合(Set)"></a>新增无序集合(Set)</h2><p><strong>数组与集合的区别</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">数组</th>
+<th style="text-align:center">集合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">元素序列</td>
+<td style="text-align:center">有序</td>
+<td style="text-align:center">无序</td>
+</tr>
+<tr>
+<td style="text-align:center">元素可重复性</td>
+<td style="text-align:center">元素可重复</td>
+<td style="text-align:center">元素不可重复</td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用语法"><a href="#使用语法" class="headerlink" title="使用语法"></a>使用语法</h2><p>在ES2015中，集合与数组不一样的是，集合无法像数组那样使用[]语法来直接生成，而需要新建对象的方法来创建一个新的集合对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Syntax: new Set([iterable]) : Set</span></span><br><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>()</span><br></pre></td></tr></table></figure></p>
+<p>在创建集合对象时，我们同样可以直接使用一个现成的数组对象作为该集合对象的初始元素。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> set = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure></p>
+<p><strong>集合对象的操作方法</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作方法</th>
+<th style="text-align:center">方法内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">set.add(value)</td>
+<td style="text-align:center">添加元素到集合内</td>
+</tr>
+<tr>
+<td style="text-align:center">set.delete(value)</td>
+<td style="text-align:center">删除集合内的指定元素</td>
+</tr>
+<tr>
+<td style="text-align:center">set.clear()</td>
+<td style="text-align:center">清空集合内的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">set.forEach(callbackFn[, context])</td>
+<td style="text-align:center">遍历集合内的所有元素，并作为第一参数调用callbackFn</td>
+</tr>
+<tr>
+<td style="text-align:center">set.has(value)</td>
+<td style="text-align:center">检查集合内是否含有某元素</td>
+</tr>
+</tbody>
+</table>
+<h2 id="WeakSet"><a href="#WeakSet" class="headerlink" title="WeakSet"></a>WeakSet</h2><p>WeakSet与Set三个不一样的地方</p>
+<p>1.WeakSet 不能包含值类型元素，否则则会抛出一个TypeError<br>2.WeakSet 不能包含无引用的对象，否则会自动清除出集合。<br>3.WeakSet 无法被探知其大小，也无法被探知其中所包含的元素。</p>
+<h2 id="Map映射类型"><a href="#Map映射类型" class="headerlink" title="Map映射类型"></a>Map映射类型</h2><p>映射类型在计算机科学中的定义属于关联数组（Associative Array），而关联数组的定义为若干个键值对（Key/Value Pair）组成的集合，其中每一个键（Key）都只能出现一次。这与数学中的函数一样，每一个输入值都有且只有一个函数值。<br>在ES2015之前，ECMAScript中的Object在结构上也属于映射类型。那么问题就来了，既然已经有了Object这一对象类型，为何还要引入Map这个对象呢？</p>
+<h3 id="使用语法-1"><a href="#使用语法-1" class="headerlink" title="使用语法"></a>使用语法</h3><p>同样地，映射类型也没有像对象字面量那样的表达语法，需要使用创建一个相应的实例来进行使用。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Syntax: new Map([iterable]):Map</span></span><br><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br></pre></td></tr></table></figure></p>
+<p>在创建映射对象时，可以将一个以二元数组（键值对）作为元素的数组传入到构建函数中，其中每一个键值对都会加入到该映射对象中。该数组内的元素会以数组顺序进行排序进行处理，如果存在相同的键，则会按照FIFO(First In First Out, 先进先出)原则，以该键最后一个处理的对应值为最终值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([[<span class="string">'foo'</span>, <span class="number">1</span>], [<span class="string">'foo'</span>, <span class="number">2</span>]])</span><br><span class="line"><span class="built_in">console</span>.log(map.get(<span class="string">'foo'</span>)) <span class="comment">//=&gt;2</span></span><br></pre></td></tr></table></figure></p>
+<p>与对象字面量一样，映射对象可以对其中的键值对进行添加、检查、获取、删除等操作。当然，作为新特性的映射对象也拥有一些Object没有的方法。我们先通过表3.6了解一下映射对象对键值对的操作方法，然后逐条详细学习。</p>
+<p><strong>映射对象操作方法</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作方法</th>
+<th style="text-align:center">方法内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">map.set(key, value)</td>
+<td style="text-align:center">添加键值对到映射中</td>
+</tr>
+<tr>
+<td style="text-align:center">map.get(key)</td>
+<td style="text-align:center">获取映射中某一个键的对应值</td>
+</tr>
+<tr>
+<td style="text-align:center">map.delete(key)</td>
+<td style="text-align:center">将某一键值对移除出映射</td>
+</tr>
+<tr>
+<td style="text-align:center">map.clear()</td>
+<td style="text-align:center">清空映射中的所有键值对</td>
+</tr>
+<tr>
+<td style="text-align:center">map.entries()</td>
+<td style="text-align:center">返回一个以二元数组(键值对)作为元素的数组</td>
+</tr>
+<tr>
+<td style="text-align:center">map.has(key)</td>
+<td style="text-align:center">检查映射中是否包含某一键值对</td>
+</tr>
+<tr>
+<td style="text-align:center">map.keys()</td>
+<td style="text-align:center">返回一个以当前映射中所有键作为元素的可迭代对象</td>
+</tr>
+<tr>
+<td style="text-align:center">map.values()</td>
+<td style="text-align:center">返回一个以当前映射中所有值作为元素的可迭代对象</td>
+</tr>
+<tr>
+<td style="text-align:center">map.size</td>
+<td style="text-align:center">映射中键值对的数量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>映射对象与普通对象的区别</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">映射对象map</th>
+<th style="text-align:center">普通对象Object</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">存储键值对</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">V</td>
+</tr>
+<tr>
+<td style="text-align:center">遍历所有键值对</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">V</td>
+</tr>
+<tr>
+<td style="text-align:center">检查是否包含指定键值对</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">V</td>
+</tr>
+<tr>
+<td style="text-align:center">使用字符串(String)作为键</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">V</td>
+</tr>
+<tr>
+<td style="text-align:center">使用Symbol作为键</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center">V</td>
+</tr>
+<tr>
+<td style="text-align:center">使用任意对象作为键</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">可以方便地知道键值对的数量</td>
+<td style="text-align:center">V</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>映射对象和普通对象的区别还体现在JSON的序列化结果中。Object的JSON序列化结果是标准的对象字面量形式，而映射对象的JSON处理结果则是以关联数组的形式表达。这种序列化的结果的意义在于可以通过网络等方式传输了结果后，再通过JSON.parse方法直接将解释结果传入Map构造函数中，来得到正确的映射对象。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">map.set(<span class="string">'foo'</span>, <span class="number">1</span>)</span><br><span class="line">map.set(<span class="string">'bar'</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">const</span> str = <span class="built_in">JSON</span>.stringify(map)</span><br><span class="line"><span class="built_in">console</span>.log(str) <span class="comment">//=&gt; [['foo',1],['bar',2]]</span></span><br><span class="line"><span class="keyword">const</span> otherMap = <span class="keyword">new</span> <span class="built_in">Map</span>(<span class="built_in">JSON</span>.parse(str))</span><br><span class="line"><span class="built_in">console</span>.log(map.get(<span class="string">'bar'</span>))</span><br></pre></td></tr></table></figure></p>
+<h2 id="WeakMap"><a href="#WeakMap" class="headerlink" title="WeakMap"></a>WeakMap</h2><p>WeakMap和WeakSet很类似，只不过WeakMap的键会检查变量引用，只要其中任意一个引用全被解除，该键值对就会被删除。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Syntax: new WeakMap([iterable]) : WeakMap</span></span><br><span class="line"><span class="keyword">const</span> weakm = <span class="keyword">new</span> <span class="built_in">WeakMap</span>()</span><br><span class="line"><span class="keyword">let</span> keyObject = &#123;<span class="attr">id</span>: <span class="number">1</span>&#125;</span><br><span class="line"><span class="keyword">const</span> valObject = &#123;<span class="attr">score</span>: <span class="number">100</span>&#125;</span><br><span class="line">weakm.set(keyObject, valObject)</span><br><span class="line">weakm.get(keyObject) <span class="comment">//=&gt;&#123;score: 100&#125;</span></span><br><span class="line">keyObject = <span class="literal">null</span></span><br><span class="line"><span class="built_in">console</span>.log(weakm.has(keyObject)) <span class="comment">//=&gt;false</span></span><br></pre></td></tr></table></figure></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -208,7 +355,7 @@
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">入群交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
         <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"></p>
         
-        <div class="post-series">vue.js深入篇-系列文章：
+        <div class="post-series">《实战ES2015》-系列文章：
             
                 
             
@@ -427,32 +574,22 @@
                 
             
                 
-                    <li><a href="/2018/05/29/vue-js深入篇-一、响应式原理/">vue.js深入篇(一、响应式原理)</a></li>
-                
             
                 
             
                 
             
                 
-                    <li><a href="/2018/05/30/vue-js深入篇-二、过渡效果上篇/">vue.js深入篇(二、过渡效果上篇)</a></li>
-                
             
                 
             
-                
-                    <li><a href="/2018/06/01/vue-js深入篇-二、过渡效果中篇/">vue.js深入篇(二、过渡效果中篇)</a></li>
                 
             
                 
-                    <li><a href="/2018/06/01/vue-js深入篇-二、过渡效果下篇/">vue.js深入篇(二、过渡效果下篇)</a></li>
-                
             
                 
             
                 
-                    <li><a href="/2018/06/02/vue-js深入篇-三、状态过渡/">vue.js深入篇(三、状态过渡)</a></li>
-                
             
                 
             
@@ -486,17 +623,11 @@
             
                 
             
-                
-                    <li><a href="/2018/06/20/vue-js深入篇-四、Render函数/">vue.js深入篇(四、Render函数)</a></li>
                 
             
                 
-                    <li><a href="/2018/06/21/vue-js深入篇-五、自定义指令/">vue.js深入篇(五、自定义指令)</a></li>
-                
             
                 
-                    <li><a href="/2018/06/21/vue-js深入篇-六、混合/">vue.js深入篇(六、混合)</a></li>
-                
             
                 
             
@@ -510,17 +641,25 @@
             
                 
             
+                
+                    <li><a href="/2018/07/16/《实战ES2015》之var、let、const/">《实战ES2015》之var、let、const</a></li>
                 
             
                 
+                    <li><a href="/2018/07/18/《实战ES2015》之箭头函数/">《实战ES2015》之箭头函数</a></li>
+                
             
                 
             
+                
+                    <li><a href="/2018/07/21/《实战ES2015》字符串模板语法/">《实战ES2015》字符串模板语法</a></li>
                 
             
                 
             
                 
+                    <li><a href="/2018/07/25/《实战ES2015》新语法/">《实战ES2015》新语法</a></li>
+                
             
                 
             
@@ -548,6 +687,8 @@
             
                 
             
+                
+                    <li><a href="/2018/08/15/《实战ES2015》Set和Map/">《实战ES2015》Set和Map</a></li>
                 
             
         </div>
@@ -555,22 +696,20 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/前端/">前端</a>
+            <a href="/tags/js/">js</a>
             
-            <a href="/tags/vue/">vue</a>
+            <a href="/tags/悦读/">悦读</a>
+            
+            <a href="/tags/es5/">es5</a>
             
         </div>
         
     </article>
     <div class="post-nav">
         
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/06/23/给博客添加上一篇下一篇功能/" >给博客添加上一篇下一篇功能<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/06/21/vue-js深入篇-五、自定义指令/" >vue.js深入篇(五、自定义指令)<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/08/13/快速开发属于自己的APP-FusionApp/" >快速开发属于自己的APP-FusionApp<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
@@ -579,7 +718,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础"><span class="toc-text">基础</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新增无序集合-Set"><span class="toc-text">新增无序集合(Set)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用语法"><span class="toc-text">使用语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WeakSet"><span class="toc-text">WeakSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map映射类型"><span class="toc-text">Map映射类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用语法-1"><span class="toc-text">使用语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WeakMap"><span class="toc-text">WeakMap</span></a></li></ol>
     </div>
 </aside>
 
@@ -595,7 +734,7 @@
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <div id="vcomments"></div>
-<!-- <span id="/2018/06/21/vue-js深入篇-六、混合/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+<!-- <span id="/2018/08/15/《实战ES2015》Set和Map/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
     <span class="post-meta-item-text">阅读量 </span>
     <span class="leancloud-visitors-count">1000000</span>
 </span> -->
