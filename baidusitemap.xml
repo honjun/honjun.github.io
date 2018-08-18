@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/08/18/PS%E5%B0%8F%E7%99%BD-%E7%BE%BD%E5%8C%96%E5%9B%BE%E7%89%87%E4%BD%BF%E5%85%B6%E8%9E%8D%E5%85%A5%E8%83%8C%E6%99%AF%E8%89%B2/</loc>
+    <lastmod>2018-08-18T15:02:45.770Z</lastmod>
+    <data>
+        <display>
+        <title>PS小白-羽化图片使其融入背景色</title>
+        <pubTime>2018-08-18T14:57:46.000Z</pubTime>
+        
+        <tag>ps</tag>
+         
+        <tag>设计</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/08/18/%E7%86%8A%E6%8E%8C%E6%83%85%E4%B9%A6/</loc>
+    <lastmod>2018-08-18T11:28:09.471Z</lastmod>
+    <data>
+        <display>
+        <title>熊掌情书</title>
+        <pubTime>2018-08-18T11:21:55.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/08/15/%E3%80%8A%E5%AE%9E%E6%88%98ES2015%E3%80%8BSet%E5%92%8CMap/</loc>
     <lastmod>2018-08-15T14:58:07.574Z</lastmod>
     <data>
@@ -348,9 +390,9 @@
         <title>《数据重现》之一硬盘探秘</title>
         <pubTime>2018-04-21T13:53:43.000Z</pubTime>
         
-        <tag>硬件</tag>
-         
         <tag>悦读</tag>
+         
+        <tag>硬件</tag>
          
          
            
@@ -1734,9 +1776,9 @@
         <title>BadUSB —— Teensy++2.0</title>
         <pubTime>2017-06-07T03:18:31.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
         <tag>硬件</tag>
+         
+        <tag>搞事</tag>
          
         <tag>hacker</tag>
          
@@ -2464,9 +2506,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>搞事</tag>
          
          
            
