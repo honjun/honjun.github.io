@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/2018/01/24/tesseract-OCR字库练习/"/>
+<link rel="canonical" href="https://www.hojun.com/2018/08/19/《实战ES2015》生成器/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -27,20 +27,21 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>tesseract-ocr字库练习 - hojun</title>
+<title>《实战es2015》生成器 - hojun</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="ES5">
 
-<meta name="description " content="好少年光芒万丈">
+<meta name="description " content="生成器（Generator）可以说是在ES2015中最为强悍的一个新特性，因为生成器是涉及ECMAScript引擎运行底层的特性，可以实现一些从前无法想象的事情。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/2018/01/24/tesseract-OCR字库练习/",
+        "@id": "https://www.hojun.com/2018/08/19/《实战ES2015》生成器/",
         "appid": "1594654793276567",
-        "title": "tesseract-OCR字库练习",
-        "pubDate": "2018-01-24T04:18:47"
+        "title": "《实战ES2015》生成器",
+        "images": ["https://wx2.sinaimg.cn/small/006bYVyvgy1ftc1xvhj97j30me0gcmyh.jpg"],
+        "pubDate": "2018-08-19T10:00:29"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -169,51 +170,28 @@
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
-                    <span title="最后编辑于2018-01-24">2018-01-24</span>
+                    <span title="最后编辑于2018-08-19">2018-08-19</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">tesseract-OCR字库练习</h2>
+            <h2 class="post-title">《实战ES2015》生成器</h2>
             <div class="post-meta">
-                本文总共2900个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1513个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="第一步：需要用到的安装包"><a href="#第一步：需要用到的安装包" class="headerlink" title="第一步：需要用到的安装包"></a><strong>第一步：需要用到的安装包</strong></h2><p><a href="https://pan.baidu.com/s/1i6X1JyX">jdk-8u101-windows-x64</a><br><a href="https://pan.baidu.com/s/1kWPV6YV">tesseract-ocr-setup-3.05.01</a><br><a href="https://pan.baidu.com/s/1dFRTzFj">jTessBoxEditor-1.7.3</a><br><a href="https://pan.baidu.com/s/1pMPhzVd">简体中文chi_sim</a><br>注意 tesseract需要编译器(安装包没提供)Supported Compilers are:</p>
-<ul>
-<li>GCC 4.8 and above</li>
-<li>Clang 3.4 and above</li>
-<li>MSVC 2015, 2017</li>
-</ul>
-<p>安装略…</p>
-<h2 id="第二步：tesseract-OCR初认识"><a href="#第二步：tesseract-OCR初认识" class="headerlink" title="第二步：tesseract-OCR初认识"></a><strong>第二步：tesseract-OCR初认识</strong></h2><p><strong>-l lang</strong></p>
-<pre><code>使用的语言。如果没有指定，则采用英文。可以指定多种语言，由加号字符分隔。Tesseract使用3个字符的ISO 639-2语言代码。（请参阅语言）
-</code></pre><p><strong>–psm N</strong><br>将Tesseract设置为只运行布局分析的一个子集并假定某种形式的图像。N的选项是：</p>
-<pre><code>0 =只有方向和脚本检测（OSD）。
-1 =使用OSD自动分页。
-2 =自动分页，但没有OSD或OCR。
-3 =全自动页面分割，但没有OSD。（默认）
-4 =假设一列可变大小的文本。
-5 =假设一个统一的垂直排列文本块。
-6 =假设一个统一的文本块。
-7 =将图像作为单个文本行处理。
-8 =将图像视为一个单词。
-9 =将图像视为一个圆圈中的单个单词。
-10 =将图像视为单个字符。
-</code></pre><p>基本的命令行用法：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]</span><br></pre></td></tr></table></figure></p>
-<h2 id="第三步：jTessBoxEditor训练字库"><a href="#第三步：jTessBoxEditor训练字库" class="headerlink" title="第三步：jTessBoxEditor训练字库"></a><strong>第三步：jTessBoxEditor训练字库</strong></h2><p>之前玩冲顶大会的时候用过tesseract-OCR识别中文，可惜准确率很不理想，如下图：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fnrqt1ubg2j312w06et8j.jpg" alt=""><br>使用tesseract-OCR识别会得到<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract question.jpg result -l chi_sim --psm <span class="number">6</span></span><br></pre></td></tr></table></figure></p>
-<p>result.txt<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8.手木几生产商诺墓亚最子刀是L又生产&#123;十么为主?</span><br></pre></td></tr></table></figure></p>
-<p>发现错了好多，机、基、初、以都没有识别出来，有的还识别成两个字。这个时候就需要我们来训练中文字库</p>
-<p>准备好要识别的图片question.jpg<br>第一步：<br>1、将图片转换成tif格式，用于后面生成box文件。可以通过画图，然后另存为tif即可。tif文面命名格式是有要求的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[lang].[fontname].exp[num].tif</span><br></pre></td></tr></table></figure></p>
-<p>lang 语言名(这可自定义，不要与现有的相同 eng、chi_sim等)<br>fontname 字体(就是字体名字，比如normal、italic、bold)<br>num 序号 </p>
-<p>把question.jpg用自带的画图另存为hojun.normal.exp0.jpg和hojun.normal.exp0.tif(注意，重命名改后缀不行)，放在E:\TessBox\下<br>接着打开cmd进入到该文件下，输入以下命令：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">E:\<span class="title">TessBox</span>&gt;<span class="title">tesseract</span> <span class="title">hojun.normal.exp0.tif</span> <span class="title">hojun.normal.exp0</span> -<span class="title">l</span> <span class="title">chi_sim</span> --<span class="title">psm</span> 6 <span class="title">batch.nochop</span> <span class="title">makebox</span></span></span><br><span class="line"><span class="function"><span class="title">Tesseract</span> <span class="title">Open</span> <span class="title">Source</span> <span class="title">OCR</span> <span class="title">Engine</span> <span class="title">v3</span>.05.01 <span class="title">with</span> <span class="title">Leptonica</span></span></span><br><span class="line"><span class="function"><span class="title">Page</span> 1</span></span><br></pre></td></tr></table></figure></p>
-<p>会得到hojun.normal.exp0.box文件，右键使用记事本打开效果如下图<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fns08l26xuj30b40b0q30.jpg" alt=""></p>
-<p>打开jTessBoxEditor目录，双击train.bat打开(可能要等待5-6秒，耐心等待程序响应)<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns0dowm5ej30hf098q3l.jpg" alt=""><br>打开软件后点击Box Editor-&gt;Open-&gt;选择对应的tif文件打开<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns0mmqis3j30kt0e33z5.jpg" alt=""><br>得到如下效果<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg" alt=""><br>如果右边字体没有框框，左边没有内容是因为java8没安装好，或者安装了两个java版本，使用的是其他java版本<br>可以在控制台输入<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">E:&gt;<span class="title">java</span> -<span class="title">version</span></span></span><br><span class="line"><span class="function"><span class="title">java</span> <span class="title">version</span> "1.8.0_101"</span></span><br><span class="line"><span class="function"><span class="title">Java</span>(<span class="title">TM</span>) <span class="title">SE</span> <span class="title">Runtime</span> <span class="title">Environment</span> (<span class="title">build</span> 1.8.0_101-<span class="title">b13</span>)</span></span><br><span class="line"><span class="function"><span class="title">Java</span> <span class="title">HotSpot</span>(<span class="title">TM</span>) 64-<span class="title">Bit</span> <span class="title">Server</span> <span class="title">VM</span> (<span class="title">build</span> 25.101-<span class="title">b13</span>, <span class="title">mixed</span> <span class="title">mode</span>)</span></span><br></pre></td></tr></table></figure></p>
-<p>来查看java版本。如果使用其他版本的，一般在环境变量Path里面把java8的路径写在最前面就行。<br>接下来就是调整了。删删改改如下：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg" alt=""><br>然后点击save保存即可。<br>接着在E:\TessBox\下新建一个font_properties文件，注意没有后缀<br>里面内容写入normal 0 0 0 0 0 表示默认普通字体<br>再接着新建一个txt文件，里面内容写入<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> Run Tesseract <span class="keyword">for</span> Training.. </span><br><span class="line">tesseract.exe hojun.normal.exp0.tif hojun.normal.exp0 nobatch box.train </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> Compute the Character <span class="built_in">Set</span>.. </span><br><span class="line">unicharset_extractor.exe hojun.normal.exp0.box</span><br><span class="line">shapeclustering -F font_properties -U unicharset hojun.normal.exp0.tr</span><br><span class="line">mftraining -F font_properties -U unicharset -O unicharset hojun.normal.exp0.tr </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> Clustering.. </span><br><span class="line">cntraining.exe hojun.normal.exp0.tr </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="built_in">Rename</span> Files.. </span><br><span class="line"><span class="built_in">rename</span> normproto hojun.normproto </span><br><span class="line"><span class="built_in">rename</span> inttemp hojun.inttemp </span><br><span class="line"><span class="built_in">rename</span> pffmtable hojun.pffmtable </span><br><span class="line"><span class="built_in">rename</span> shapetable hojun.shapetable  </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> Create Tessdata.. </span><br><span class="line">combine_tessdata.exe hojun. </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>. &amp; <span class="built_in">pause</span></span><br></pre></td></tr></table></figure></p>
-<p>保存，修改文件名为Train.bat。(为了偷懒，你也可以在命令里一句一句命令的敲)<br>双击批处理文件生成！<br>成功结果如下<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns1yedn1sj30e108udfy.jpg" alt=""><br>把hojun.traineddata复制到C:\Program Files (x86)\Tesseract-OCR\tessdata下<br>试着识别<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract hojun.normal.exp0.jpg result -l hojun --psm <span class="number">6</span></span><br></pre></td></tr></table></figure></p>
-<p>得到正确的结果<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns2xz091pj30iu030q2t.jpg" alt=""></p>
-<hr>
-<p>参考:<br><a href="https://github.com/tesseract-ocr/tesseract/wiki/Training-Tesseract">https://github.com/tesseract-ocr/tesseract/wiki/Training-Tesseract</a><br><a href="https://github.com/tesseract-ocr/tesseract/wiki/Training-Tesseract#the-font_properties-file">训练Tesseract</a><br><a href="http://www.cnblogs.com/cnlian/p/5765871.html">Tesseract-OCR的简单使用与训练</a><br><a href="https://www.cnblogs.com/wzben/p/5930538.html#undefined">Tesseract-OCR识别中文与训练字库实例</a><br><a href="http://yunzhu.iteye.com/blog/1551433">JAVA_HOME无效，java版本保持不变的问题解决</a></p>
+            <h2 id="生成器（Generator）"><a href="#生成器（Generator）" class="headerlink" title="生成器（Generator）"></a>生成器（Generator）</h2><p>生成器（Generator）可以说是在ES2015中最为强悍的一个新特性，因为生成器是涉及ECMAScript引擎运行底层的特性，可以实现一些从前无法想象的事情。</p>
+<h3 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h3><p>生成器第一次出现在CLU语言中，生成器在CLU语言和C#语言中被称为迭代器（Iterator），而在Ruby语言中被称为枚举器（Enumerator）。<br>然而无论被称为什么，它被赋予的能力都是相同的。生成器的主要功能是：通过一段程序，持续迭代或枚举出符合某个公式或算法的有序数列中的元素。这个程序便是用于实现这个公式或算法的，而不需要将目标数列完整写出。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>生成器是ES2015中生成器最主要表现方式，它与普通函数的语法差别在于，在function语句之后后函数名之前，有一个“*”作为生成器函数的标识符。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">fibo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>生成器函数并不是强制性使用声明式进行定义的，与普通函数一样也可以使用表达式进行定义。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fnName = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123; <span class="comment">/* ... */</span> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>生成器函数的函数体内容将会是所生成的生成器的执行内容，在这些内容之中，yield语句的引入使得生成器函数与普通函数有了区别。yield语句的作用与return语句有些相似，但并非退出函数体，而是切出当前函数的运行时（此处为一个类协程，Semi-coroutine）,与此同时可以将一个值（可以是任何类型）带到主线程中。</p>
+<h3 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h3><p>从计算机科学角度上看，生成器是一种类协程或半协程，它提供了一种可以通过特定语句或方法使其执行对象（Execution）暂停的功能，而这语句一般都是yield语句。在ES2015中，yield语句可以将一个值带出协程，而主线程也可以通过生成器对象的方法将一个值带回生成器的执行对象中去。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> inputValue = <span class="keyword">yield</span> outputValue</span><br></pre></td></tr></table></figure></p>
+<p>生成器切出执行对象并带出outputValue,主线程经过同步或异步处理后，通过.next(val)方法将inputValue带回生成器的执行对象中。</p>
+<h3 id="构建生成器函数"><a href="#构建生成器函数" class="headerlink" title="构建生成器函数"></a>构建生成器函数</h3><p>使用生成器的第一步自然是要构建一个生成器函数，以生成相对应的生成器对象。假设我们需要按照下面这个公式来生成一个数列，并以生成器作为构建基础 a1 = 2, an = a(n-1) / 2a(n-1) + 1 (n &gt;= 2)<br>为了使生成器能根据公式不断输出数列元素，使用while(true)循环以保持程序的不断执行。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">genFn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">yield</span> a =<span class="number">2</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">yield</span> a = a / (<span class="number">2</span> * a + <span class="number">1</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在定义首项为2之后，首先将首项通过yield作为第一个值切出，其后通过循环和公式将每一项输出。</p>
+<h3 id="启动生成器"><a href="#启动生成器" class="headerlink" title="启动生成器"></a>启动生成器</h3><p>生成器函数不能直接作为普通函数来使用，因为在调用时无法直接执行其中的逻辑代码。执行生成器函数会返回一个生成器对象，用于运行生成器内容和接受其中的值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> gen = genFn()</span><br></pre></td></tr></table></figure></p>
+<h3 id="运行生成器内容"><a href="#运行生成器内容" class="headerlink" title="运行生成器内容"></a>运行生成器内容</h3><p>因为生成器对象自身也是一种可迭代对象，所以我们直接使用for-of循环将其中输出的值打印出来。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> a <span class="keyword">of</span> gen) &#123;</span><br><span class="line">  <span class="keyword">if</span> (a &lt; <span class="number">1</span>/<span class="number">100</span>) <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//=&gt;</span></span><br><span class="line"><span class="comment">//2</span></span><br><span class="line"><span class="comment">//0.4</span></span><br><span class="line"><span class="comment">//0.222222222</span></span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure></p>
+<p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fufd44out3j30gr08z3yv.jpg" alt=""></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -231,21 +209,369 @@
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">入群交流HEXO<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=38c95d16d04881f948421c16ad5c6d54e9210e0475073e4ceb327937c04ea7dd"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Hexo交流群" title="Hexo交流群"></a></p>
         <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"></p>
         
+        <div class="post-series">《实战ES2015》-系列文章：
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/16/《实战ES2015》之var、let、const/">《实战ES2015》之var、let、const</a></li>
+                
+            
+                
+                    <li><a href="/2018/07/18/《实战ES2015》之箭头函数/">《实战ES2015》之箭头函数</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/21/《实战ES2015》字符串模板语法/">《实战ES2015》字符串模板语法</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/25/《实战ES2015》新语法/">《实战ES2015》新语法</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/08/15/《实战ES2015》Set和Map/">《实战ES2015》Set和Map</a></li>
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/08/19/《实战ES2015》生成器/">《实战ES2015》生成器</a></li>
+                
+            
+        </div>
+        
         
         <div class="post-tags">标签：
+            
+            <a href="/tags/js/">js</a>
+            
+            <a href="/tags/悦读/">悦读</a>
+            
+            <a href="/tags/es5/">es5</a>
             
         </div>
         
     </article>
     <div class="post-nav">
         
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/01/25/Hexo博客备份—妈妈再也不用担心你使用hexo写博客/" >Hexo博客备份—妈妈再也不用担心你使用hexo写博客<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/01/11/Python玩转冲顶大会/" >Python玩转冲顶大会<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/08/18/PS小白-羽化图片使其融入背景色/" >PS小白-羽化图片使其融入背景色<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
@@ -254,7 +580,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步：需要用到的安装包"><span class="toc-text">第一步：需要用到的安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步：tesseract-OCR初认识"><span class="toc-text">第二步：tesseract-OCR初认识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步：jTessBoxEditor训练字库"><span class="toc-text">第三步：jTessBoxEditor训练字库</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#生成器（Generator）"><span class="toc-text">生成器（Generator）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#由来"><span class="toc-text">由来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成器"><span class="toc-text">生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构建生成器函数"><span class="toc-text">构建生成器函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动生成器"><span class="toc-text">启动生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行生成器内容"><span class="toc-text">运行生成器内容</span></a></li></ol></li></ol>
     </div>
 </aside>
 
@@ -270,7 +596,7 @@
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <div id="vcomments"></div>
-<!-- <span id="/2018/01/24/tesseract-OCR字库练习/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+<!-- <span id="/2018/08/19/《实战ES2015》生成器/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
     <span class="post-meta-item-text">阅读量 </span>
     <span class="leancloud-visitors-count">1000000</span>
 </span> -->
