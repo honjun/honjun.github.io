@@ -176,7 +176,7 @@
             </div>
             <h2 class="post-title">好少年光芒万丈</h2>
             <div class="post-meta">
-                本文总共1282个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1448个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -218,27 +218,34 @@
     }
   }
 </style>
-<span class="key">发布博文</span><input class="ginput" type="number" data-score="10">*10<br>
-<span class="key">悦读30分钟</span><input class="ginput" type="number" data-score="2">*2<br>
-<span class="key">夜走</span><input class="ginput" type="number" data-score="5">*5<br>
-<span class="key">锻炼</span><input class="ginput" type="number" data-score="5">*5<br>
-<span class="key">早睡</span><input class="ginput" type="number" data-score="5">*5<br>
-<span class="key">音乐5首</span><input class="ginput" type="number" data-score="1">*1<br>
-<span class="key">学习视频30分钟</span><input class="ginput" type="number" data-score="2.5">*2.5<br>
-<span class="key">coding30分钟</span><input class="ginput" type="number" data-score="2.5">*2.5<br>
-<span class="key">记单词10个</span><input class="ginput" type="number" data-score="5">*5<br>
+<span class="key">夜走</span><input class="ginput" type="number" data-item="夜走" data-score="5">*5<br>
+<span class="key">锻炼</span><input class="ginput" type="number" data-item="锻炼" data-score="5">*5<br>
+<span class="key">早睡</span><input class="ginput" type="number" data-item="早睡" data-score="5">*5<br>
+<span class="key">发布博文</span><input class="ginput" type="number" data-item="发布博文" data-score="10">*10<br>
+<span class="key">音乐五首</span><input class="ginput" type="number" data-item="音乐五首" data-score="1">*1<br>
+<span class="key">动漫一话</span><input class="ginput" type="number" data-item="动漫一话" data-score="2">*2<br>
+<span class="key">电影一部</span><input class="ginput" type="number" data-item="电影一部" data-score="5">*5<br>
+<span class="key">悦读30分钟</span><input class="ginput" type="number" data-item="悦读30分钟" data-score="3">*3<br>
+<span class="key">游戏30分钟</span><input class="ginput" type="number" data-item="游戏30分钟" data-score="1">*1<br>
+<span class="key">记单词10个</span><input class="ginput" type="number" data-item="记单词10个" data-score="5">*5<br>
+<span class="key">coding30分钟</span><input class="ginput" type="number" data-item="coding30分钟" data-score="5">*5<br>
+<span class="key">学习视频30分钟</span><input class="ginput" type="number" data-item="学习视频30分钟" data-score="5">*5<br>
 <p class="toadyCount">总分:0</p>
-<p class="toadyCount">每日打分后评论记录</p>
+<p style="text-align: center;">每日打分后评论记录</p>
 <div style="width: 100%; height: 100px; position: relative; bottom: 0px;" class="particletext bubbles">Bubbles</div>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script>
   ;(function(){
     function calcCount(){
       var count = 0;
+      var item = '';
       $(".ginput").each(function(){
+        if ($(this).val()) {
+          item += $(this).attr('data-item') + '*' + $(this).val() + "、";
+        }
         count += Number($(this).val()) * Number($(this).attr('data-score'));
       })
-      return count;
+      return count + "--" + item;
     }
     $(".ginput").on("input propertychange change",function(event){
        $(".toadyCount").html('总分：' + calcCount());
