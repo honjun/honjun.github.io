@@ -1,0 +1,55 @@
+{
+  "version": "Live2DViewerEX Config 1.0",
+  "model": "neko.moc",
+  "textures": [
+    "neko.2048/texture_00.png"
+  ],
+  "layout": {
+    "center_x": 0.0,
+    "center_y": 0.0,
+    "width": 2.0
+  },
+  "motions": {
+    "tap": [
+      {
+        "file": "motions/tap/1.mtn"
+      },
+      {
+        "file": "motions/tap/2.mtn"
+      },
+      {
+        "file": "motions/tap/3.mtn"
+      },
+      {
+        "file": "motions/tap/4.mtn"
+      },
+      {
+        "file": "motions/tap/5.mtn"
+      },
+      {
+        "file": "motions/tap/6.mtn"
+      },
+      {
+        "file": "motions/tap/7.mtn"
+      },
+      {
+        "file": "motions/tap/8.mtn"
+      },
+      {
+        "file": "motions/tap/9.mtn"
+      }
+    ],
+    "idle": [
+      {
+        "file": "motions/idle/idle.mtn"
+      }
+    ]
+  },
+  "expressions": [
+    {
+      "name": "F00.exp.json",
+      "file": "expressions/F00.exp.json"
+    }
+  ],
+  "physics": "physics.json"
+}
