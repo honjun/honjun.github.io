@@ -15,7 +15,7 @@
           xhr.send();
         </script>
         <p>
-            <a href="/hojun.html"  title="<%= __('about') %>"><%= __('about') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/about/hojun.html"  title="<%= __('about') %>"><%= __('about') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <a href="/help" title="<%= __('help') %>" ><%= __('help') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
             <a href="/archives" title="<%= __('archives') %>"><%= __('archives') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
 
@@ -27,6 +27,14 @@
             ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
             ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
             ，Hosted by <a href="<%= theme.gitPageServerUrl %>" target="_blank"><%= theme.gitPageServerName %></a>，Hosted by <a href="<%= theme.codingPageServerUrl %>" target="_blank"><%= theme.codingPageServerName %></a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"><%- partial('_widget/site-analytics') %></p>
     </div>
@@ -66,5 +74,19 @@ var _hmt = _hmt || [];
       loop: false
     });
   }
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
 })();
 </script>

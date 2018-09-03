@@ -1,10 +1,10 @@
 title: 软考备考之UML类图几种关系总结
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-05-07 21:13:02
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 series: 软考-软件设计师
 tags:

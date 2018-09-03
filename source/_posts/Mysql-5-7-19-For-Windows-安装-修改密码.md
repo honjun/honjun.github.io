@@ -1,10 +1,10 @@
 title: Mysql 5.7.19 For Windows 安装+修改密码
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-08-09 23:50:45
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - mysql

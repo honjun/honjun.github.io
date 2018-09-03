@@ -1,10 +1,10 @@
 title: Win10小技巧之创建不可删除文件夹，还能保护隐私哦~
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-03-24 19:50:37
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - win10

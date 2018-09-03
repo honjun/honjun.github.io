@@ -1,15 +1,27 @@
 <!--[if lte IE 9]>
 <meta http-equiv="refresh" content="0;url=<%= config.url %>/warn.html">
 <![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
 <meta charset="utf-8">
 <% if (theme.fullHttps){ %>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <% } %>
+<link rel="canonical" href="https://www.hojun.com<%=url_for(page.path) %>"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 <meta http-equiv="mobile-agent" content="format=html5; url=<%= config.url %>">
 <meta name="author" content="<%= config.author %>">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5634033670687375",
+    enable_page_level_ads: true
+  });
+</script>
 <%- css(['/css/SimpleStyle.css']) %>
 <!-- <%- css(['/css/loading.css']) %> -->
 <%- css(['/css/xiaomai.css']) %>

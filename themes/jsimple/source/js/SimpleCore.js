@@ -43,15 +43,15 @@ var SimpleCore = {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
         });
-        $(document).on('click', '.btn-weixin-mp', function (e) {
-            e.preventDefault();
-            if (SimpleCore.customImg != '') {
-                SimpleCore.isCustomImg == true ? SimpleCore.close() : SimpleCore.alert('联系博主','<img style="width:300px;background:#fff;" src="' + SimpleCore.customImg + '">');
-                SimpleCore.isCustomImg = !SimpleCore.isCustomImg;
-            } else {
-                SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
-            }
-        });
+        // $(document).on('click', '.btn-weixin-mp', function (e) {
+        //     e.preventDefault();
+        //     if (SimpleCore.customImg != '') {
+        //         SimpleCore.isCustomImg == true ? SimpleCore.close() : SimpleCore.alert('点击关注博主熊掌号','<a href="http://author.baidu.com/home/1594654793276567"><img style="width:300px;background:#fff;" src="' + SimpleCore.customImg + '"></a>');
+        //         SimpleCore.isCustomImg = !SimpleCore.isCustomImg;
+        //     } else {
+        //         SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
+        //     }
+        // });
         $(document).on('click', '.btn-gotop', function (e) {
             e.preventDefault();
             SimpleCore.goTop();

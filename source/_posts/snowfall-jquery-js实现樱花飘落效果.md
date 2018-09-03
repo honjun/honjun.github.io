@@ -1,11 +1,11 @@
 title: snowfall.jquery.js实现樱花飘落效果
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
 date: 2018-01-10 23:01:54
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - js
@@ -63,11 +63,9 @@ $(document).snowfall({image:"4.png", flakeCount:10, minSpeed:1, minSize:8, maxSi
 
 飘落的时候添加了css的3D翻转效果，使之更加逼真
 图片是用ps一个一个扣下来的。扣好发现jpg格式不能带透明度，然后又心酸的重新扣png格式的。。。
-[代码demo](https://github.com/honjun/demo/tree/master/sakura)
 {% raw %}
 <link rel="stylesheet" href="/css/sakura.css" />
 <script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/snowfall.jquery.js"></script>
 <script type="text/javascript" src="/js/snowfall.jquery.js"></script>
 <script>
     function sakuraInit() {

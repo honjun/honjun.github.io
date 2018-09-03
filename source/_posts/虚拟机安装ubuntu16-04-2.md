@@ -1,10 +1,10 @@
 title: 虚拟机安装ubuntu16.04.2
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-04 20:07:31
-authorLink: /about_hojun.html
+authorLink: /about/hojun.html /about_hojun.html
 authorAbout:
 tags:
 	- linux

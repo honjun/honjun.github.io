@@ -1,10 +1,10 @@
 title: 修复人物idle和run动画切换之间的延迟的Bug
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-16 23:47:38
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - Unity

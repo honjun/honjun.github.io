@@ -1,11 +1,11 @@
 title: live2d-看板娘小埋
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
 date: 2018-02-19 21:10:03
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - live2d
@@ -18,9 +18,9 @@ photos:
 ![](https://wx1.sinaimg.cn/large/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg)
 ## **第一步 准备代码和工具**
 (注意：代码要在服务器环境下跑)
-[代码](https://github.com/journey-ad/Live2D?_blank)
-[AdobeAIRInstaller百度云](https://pan.baidu.com/s/1gfTTjTh?_blank)
-[live2dViewer百度云](https://pan.baidu.com/s/1ggqTLU7?_blank)你也可以去官网下载[官网](http://sites.cybernoids.jp/cubism2/tools/live2d-viewer?_blank)
+[代码百度云公众号回复demo002获取]
+[AdobeAIRInstaller同上]
+[live2dViewer同上]你也可以去官网下载[官网](http://sites.cybernoids.jp/cubism2/tools/live2d-viewer?_blank)
 [小埋和薇尔莉特live2d模型资源](https://github.com/honjun/live2d-model)使用资源可跳过第二步
 ## **第二步 get资源**
 (注意:apk和lpk都可以用压缩工具打开)

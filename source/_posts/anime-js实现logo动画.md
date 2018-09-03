@@ -1,11 +1,11 @@
 title: anime.js实现logo动画
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
 date: 2018-03-14 20:34:51
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - 前端

@@ -1,12 +1,12 @@
 title: 给Hexo博客添加Mathjax数学公式支持
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
 comments: true
 date: 2018-06-18 22:04:14
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - hexo

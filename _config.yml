@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://honjun.github.io
+url: https://www.hojun.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -113,12 +113,17 @@ path: baidusitemap.xml
 
 # gitment
 # gitment: true
+# client_id: 387efef7cc982e65330a
+# client_secret: 326d79b4c7aedb781ef5813a5faf9eeafd63b3b8
 
-#来必力
-livere: true 
+# 来必力
+# livere: MTAyMC8zNzA1NC8xMzU5MA== 
 
-
+# Valine
+valine: true
+v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
+v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 
 # CNZZ count
 # cnzz_siteid: 1262103305
-cnzz_siteid: 1262747754
+# cnzz_siteid: 1262747754

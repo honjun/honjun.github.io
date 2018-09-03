@@ -1,10 +1,10 @@
 title: Python玩转冲顶大会
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-01-11 21:59:56
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
 keywords:

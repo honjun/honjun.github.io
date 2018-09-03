@@ -1,11 +1,11 @@
 title: 手把手教你搭建HEXO博客(二)
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: 手把手教你搭建HEXO博客
 date: 2018-06-07 22:20:12
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - hexo

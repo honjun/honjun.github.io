@@ -1,11 +1,11 @@
 title: 给hexo的jsimple主题添加代码高亮
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
 date: 2017-07-02 23:13:33
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - blog

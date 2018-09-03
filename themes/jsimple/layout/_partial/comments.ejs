@@ -41,8 +41,8 @@ var gitment = new Gitment({
   owner: 'honjun',
   repo: 'honjun.github.io',
   oauth: {
-    client_id: '387efef7cc982e65330a',
-    client_secret: '326d79b4c7aedb781ef5813a5faf9eeafd63b3b8',
+    client_id: "<%=config.client_id %>",
+    client_secret: "<%=config.client_secret %>",
   },
 })
 gitment.render('gitment-container')
@@ -50,7 +50,7 @@ gitment.render('gitment-container')
 <% } %>
 
 <% if (config.livere && page.comments) { %>
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzA1NC8xMzU5MA==">
+<div id="lv-container" data-id="city" data-uid="<%=config.livere %>">
     <script type="text/javascript">
    (function(d, s) {
        var j, e = d.getElementsByTagName(s)[0];
@@ -67,3 +67,23 @@ gitment.render('gitment-container')
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 <% } %>
+
+<% if (config.valine && page.comments) { %>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="<%- url_for(post.path) %>" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "<%=config.v_appId %>",
+    appKey: "<%=config.v_appKey %>",
+    // visitor: true
+  })
+</script>
+<% } %>
+
+

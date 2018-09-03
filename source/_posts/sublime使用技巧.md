@@ -1,10 +1,10 @@
 title: sublime使用技巧
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 生活
 date: 2018-02-09 19:49:59
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - sublime

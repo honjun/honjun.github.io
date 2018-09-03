@@ -1,10 +1,10 @@
 title: 拼音学习StudyPinYin
 author: hojun
-avatar: /images/favicon.png
+avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 生活
 date: 2018-02-22 23:00:38
-authorLink:
+authorLink: /about/hojun.html
 authorAbout:
 tags:
  - 搞事
