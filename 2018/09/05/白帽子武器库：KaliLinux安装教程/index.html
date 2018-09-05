@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/2018/08/07/hexo评论系统之valine快速使用/"/>
+<link rel="canonical" href="https://www.hojun.com/2018/09/05/白帽子武器库：KaliLinux安装教程/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -34,21 +34,21 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>hexo评论系统之valine快速使用 - hojun</title>
+<title>白帽子武器库：kalilinux安装教程 - hojun</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="Kali Linux">
 
-<meta name="description " content="好少年光芒万丈">
+<meta name="description " content="Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。面向专业的渗透测试和安全审计。">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/2018/08/07/hexo评论系统之valine快速使用/",
+        "@id": "https://www.hojun.com/2018/09/05/白帽子武器库：KaliLinux安装教程/",
         "appid": "1594654793276567",
-        "title": "hexo评论系统之valine快速使用",
-        "images": ["https://wx3.sinaimg.cn/small/006bYVyvgy1fu1j2asd1pj30oo0li3zi.jpg"],
-        "pubDate": "2018-08-07T10:48:32"
+        "title": "白帽子武器库：KaliLinux安装教程",
+        "images": ["https://wx1.sinaimg.cn/small/006bYVyvgy1fuxz448hsnj311s0lcnn8.jpg"],
+        "pubDate": "2018-09-05T03:56:30"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -178,21 +178,26 @@
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
-                    <span title="最后编辑于2018-08-07">2018-08-07</span>
+                    <span title="最后编辑于2018-09-05">2018-09-05</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">hexo评论系统之valine快速使用</h2>
+            <h2 class="post-title">白帽子武器库：KaliLinux安装教程</h2>
             <div class="post-meta">
-                本文总共865个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共984个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fu1j2asd1pj30oo0li3zi.jpg" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>咳咳，昨天不是立了个每日签到的flag，再计算分值之后，用评论记录的时候，发现加载要很久。一言不合就动手换了它，加入valine评论系统阵营。</p>
-<h2 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h2><p>来到其官网valine.js.org，(抠了1元钱打赏了作者，还是群里的群友)点击 快速开始<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1ilnqz6yj30wd0he0tv.jpg" alt=""><br>嗯，需要注册LeanCloud，注册如下<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fu1ilialrzj30ox0k3t9e.jpg" alt=""><br>验证邮箱和绑定手机号<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fu1ilj62w0j31050hatap.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1iljy87zj30l00e0wf2.jpg" alt=""><br>然后点击创建应用&gt;开发版<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fu1ilkm79lj30zt0gnabw.jpg" alt=""><br>建好之后点击进入到应用中<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1ill5issj30rr0eh3yq.jpg" alt=""><br>依次点击设置&gt;应用Key 得到App ID和App Key<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fu1illmu8ij30vs0h7dhe.jpg" alt=""><br>设置安全域名，可设可不设咯。舍得话要设自己博客域名哦（不要设博主的哦）<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1ilm8yuej30zu0hzacc.jpg" alt=""><br>注册好了，去valine官网找到demo<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fu1ilmqe8jj30nj0eg0tc.jpg" alt=""><br>直接插入到自己博客（hexo）评论模板那里<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (config.valine &amp;&amp; page.comments) &#123; %&gt;</span><br><span class="line">&lt;script src=<span class="string">"//cdn1.lncld.net/static/js/3.0.4/av-min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">'//unpkg.com/valine/dist/Valine.min.js'</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;div id=<span class="string">"vcomments"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">new</span> Valine(&#123;</span><br><span class="line">    el: <span class="string">'#vcomments'</span>,</span><br><span class="line">    appId: <span class="string">"&lt;%=config.v_appId %&gt;"</span>,</span><br><span class="line">    appKey: <span class="string">"&lt;%=config.v_appKey %&gt;"</span></span><br><span class="line">  &#125;)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>然后在配置里配置参数(_config.yml)<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="attr">valine:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">v_appId:</span> <span class="string">xxxxxx</span></span><br><span class="line"><span class="attr">v_appKey:</span> <span class="string">xxxxxx</span></span><br></pre></td></tr></table></figure></p>
-<p>OK，发布的时候可能还不能马上评论，等两分钟好啦~<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fu1iln9h86j30os0e6q31.jpg" alt=""><br>嗯。。。。。点下题，换的真的很快，大约半小时不到<img class="owoemoji" src="/OwO/img/doge.png"></p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Kali介绍<br>Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。面向专业的渗透测试和安全审计。</p>
+<ul>
+<li>集成化：预装超过300个渗透测试工具</li>
+<li>兼容好：Kali可以安装到手机、PC和树莓派等</li>
+<li>安全性：Kali Linux开发团队由一群可信任的人组成,他们只能在使用多种安全协议的时候提交包或管理源。</li>
+<li>免费用： Kali Linux一如既往的免费。你永远无需为Kali Linux付费。</li>
+</ul>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="下载安装虚拟机"><a href="#下载安装虚拟机" class="headerlink" title="下载安装虚拟机"></a>下载安装虚拟机</h3><p>使用的是windows电脑，选择VMwareWorkstation虚拟机。</p>
+<h3 id="下载Kali镜像"><a href="#下载Kali镜像" class="headerlink" title="下载Kali镜像"></a>下载Kali镜像</h3><p>去Kali官网下载镜像文件（网上说32位的兼容性好，于是选择了32位的2018.3版本）</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>打开VMware&gt;文件&gt;新建虚拟机<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fuxvwq4yh6j30cm08jmxr.jpg" alt="image"><br>点击下一步<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fuxvxmenkxj30dz0by0ti.jpg" alt="image"><br>这里选择稍后再安装操作系统<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fuxw20ns8aj30dz0bymxk.jpg" alt="image"><br>选择linux,版本里找不到Kali,可以选择Ubuntu和Debian都行（不要选64位）<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fuxw3qk1luj30dz0byq38.jpg" alt="image"><br>虚拟机名称就改成Kali（自定义），位置这里采用默认的，也可以自定义<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fuxw4ufehbj30dz0byjrk.jpg" alt="image"><br>默认下一步<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvgy1fuxw6x95yij30dz0byweu.jpg" alt="image"><br>这里点击自定义硬件<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fuxw8fft82j30dz0bygly.jpg" alt="image"><br>新CD/DVD&gt;使用ISO映像文件&gt;选择Kali的镜像。设置好后点击关闭<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvgy1fuxwbmyz5xj30kf0gw0td.jpg" alt="image"><br>点击完成<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fuxwdfwjmij30dz0byq3a.jpg" alt="image"><br>点击开启此虚拟机<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fuxweq32atj30uo0jdjt7.jpg" alt="image"><br>进入如下页面后<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fuxwiuvud7j30pr0fdn1w.jpg" alt="image"><br>键盘↓键移动到Install,敲击Enter键开始安装。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fuxwkk814aj30mf0fuq7m.jpg" alt="image"><br>选择简体中文&gt;汉字…等等<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fuxwliwpyuj30qt0gvgm7.jpg" alt="image"><br>分区选择第一个向导<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fuxwric6ugj30pe0e4jrr.jpg" alt="image"><br>选择第一个（新手推荐）中间还有部创建开机密码的步骤。这里无截图略过~<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fuxws80jkkj30pq0c574i.jpg" alt="image"><br>网络镜像选择否！<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fuxxg5cvx7j30o40d33yn.jpg" alt="image"><br>提示安装好后重启虚拟机（进度条可能没走完），就是上面有个播放的按钮下拉里面可以选择重启。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fuxxk20u47j30pg0fs0w5.jpg" alt="image"><br>注意：启动过程中使用的用户名为root,密码为你自己设的。<br>duangduangduang,启动如下。Kali的logo是不是很酷，接下来点击安装Tools。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fuxxn3ja90j30t60i7asu.jpg" alt="image"><br>双击打开桌面上那个光盘一样的东东。把压缩包拖到Home去。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fuxxpo9vtjj30r90gl75l.jpg" alt="image"><br>点击左侧第二个，打开终端。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fuxxramm5xj30o20ejakt.jpg" alt="image"><br>输入ls命令，可以看到我们的安装包，在输入tar -zxvf VM，然后敲击Tab补全，再敲击Enter进行解压。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fuxxuecouqj30nk0ccqca.jpg" alt="image"><br>解压好后，ls可以看到我们的解压文件。cd进入，输入./vmware-install.pl运行脚本安装Tools。<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fuxxwt7a86j30k20ed7ga.jpg" alt="image"><br>一路Enter确认即可，出现Enjoy说明安装完成。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fuxxzolnfhj30mp0fitlf.jpg" alt="image"><br>重新启动虚拟机<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fuxy0ef7lkj30k407itac.jpg" alt="image"><br>重启后发现虚拟机桌面很小，我们可以在设置中调整它的分辨率和你的显示器一致，这样全屏的时候就会铺满屏幕。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fuxz2hbyc3j30qv0dnadh.jpg" alt="image"><br>好了，虚拟机安装Kali完成了~<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fuxz448hsnj311s0lcnn8.jpg" alt="image"></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -210,341 +215,19 @@
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
         <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
         
-        <div class="post-series">hexo折腾-系列文章：
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2017/07/01/给博客添加自己的域名/">给博客添加个人域名</a></li>
-                
-            
-                
-                    <li><a href="/2017/07/02/给hexo的jsimple主题添加代码高亮/">给hexo的jsimple主题添加代码高亮</a></li>
-                
-            
-                
-                    <li><a href="/2017/07/03/给博客添加网易云跟帖评论/">给博客添加网易云跟帖评论</a></li>
-                
-            
-                
-                    <li><a href="/2017/07/04/给博客添加https支持/">给博客添加https支持</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2017/07/09/博客添加gitment评论/">博客添加gitment评论</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2017/09/13/给博客添加APlayer音乐播放器/">给博客添加APlayer音乐播放器^-^</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2017/11/15/Lozad-js学习使用/">Lozad.js学习使用</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/01/10/snowfall-jquery-js实现樱花飘落效果/">snowfall.jquery.js实现樱花飘落效果</a></li>
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/01/25/Hexo博客备份—妈妈再也不用担心你使用hexo写博客/">Hexo博客备份—妈妈再也不用担心你使用hexo写博客</a></li>
-                
-            
-                
-                    <li><a href="/2018/01/25/github博客迁移至coding并提交百度收录/">github博客迁移至coding并提交百度收录</a></li>
-                
-            
-                
-            
-                
-                    <li><a href="/2018/02/05/博客小人/">博客小人</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/02/19/live2d-看板娘小埋/">live2d-看板娘小埋</a></li>
-                
-            
-                
-            
-                
-                    <li><a href="/2018/03/07/使用disqus评论/">使用disqus评论</a></li>
-                
-            
-                
-                    <li><a href="/2018/03/14/anime-js实现logo动画/">anime.js实现logo动画</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/04/22/OwO-可爱的js表情符号插件/">OwO-可爱的js表情符号插件</a></li>
-                
-            
-                
-            
-                
-                    <li><a href="/2018/04/24/给博客添加图集展示/">给博客添加图集展示</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/06/04/评论系统之来必力/">评论系统之来必力</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/06/17/添加系列文章功能/">添加系列文章功能</a></li>
-                
-            
-                
-                    <li><a href="/2018/06/18/给Hexo博客添加Mathjax数学公式支持/">给Hexo博客添加Mathjax数学公式支持</a></li>
-                
-            
-                
-                    <li><a href="/2018/06/23/给博客添加上一篇下一篇功能/">给博客添加上一篇下一篇功能</a></li>
-                
-            
-                
-                    <li><a href="/2018/07/03/给博客添加文章目录/">给博客添加文章目录</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/08/07/hexo评论系统之valine快速使用/">hexo评论系统之valine快速使用</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        </div>
-        
         
         <div class="post-tags">标签：
             
-            <a href="/tags/hexo/">hexo</a>
+            <a href="/tags/linux/">linux</a>
             
         </div>
         
     </article>
     <div class="post-nav">
         
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/08/09/PS小白学切图/" >PS小白学切图<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/08/06/好少年光芒万丈/" >好少年光芒万丈<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/09/04/还没好图床的小伙伴看过来，微博是个好图床！/" >还没好图床的小伙伴看过来，微博是个好图床！<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
@@ -553,7 +236,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Valine"><span class="toc-text">Valine</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前期准备"><span class="toc-text">前期准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载安装虚拟机"><span class="toc-text">下载安装虚拟机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下载Kali镜像"><span class="toc-text">下载Kali镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始安装"><span class="toc-text">开始安装</span></a></li></ol>
     </div>
 </aside>
 
@@ -569,7 +252,7 @@
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <div id="vcomments"></div>
-<!-- <span id="/2018/08/07/hexo评论系统之valine快速使用/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+<!-- <span id="/2018/09/05/白帽子武器库：KaliLinux安装教程/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
     <span class="post-meta-item-text">阅读量 </span>
     <span class="leancloud-visitors-count">1000000</span>
 </span> -->
