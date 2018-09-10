@@ -4,6 +4,43 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/09/06/%E8%BD%AE%E5%9B%9E/</loc>
+    <lastmod>2018-09-10T11:13:27.793Z</lastmod>
+    <data>
+        <display>
+        <title>轮回</title>
+        <pubTime>2018-09-06T15:47:48.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/09/06/%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%AAjs-canvas%E7%9A%84%E7%83%9F%E8%8A%B1%E7%89%B9%E6%95%88%EF%BC%8C%E5%BF%AB%E5%BF%AB%E5%88%86%E4%BA%AB%E6%9C%8B%E5%8F%8B%E4%B8%80%E8%B5%B7%E5%AD%A6%E8%B5%B7%E6%9D%A5/</loc>
+    <lastmod>2018-09-06T15:58:29.223Z</lastmod>
+    <data>
+        <display>
+        <title>推荐一个js+canvas的烟花特效，快快分享朋友一起学起来~</title>
+        <pubTime>2018-09-06T15:47:29.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/09/05/%E7%99%BD%E5%B8%BD%E5%AD%90%E6%AD%A6%E5%99%A8%E5%BA%93%EF%BC%9AKaliLinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2018-09-05T14:56:34.666Z</lastmod>
     <data>
@@ -40,7 +77,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.hojun.cn/2018/09/04/%E8%BF%98%E6%B2%A1%E5%A5%BD%E5%9B%BE%E5%BA%8A%E7%9A%84%E5%B0%8F%E4%BC%99%E4%BC%B4%E7%9C%8B%E8%BF%87%E6%9D%A5%EF%BC%8C%E5%BE%AE%E5%8D%9A%E6%98%AF%E4%B8%AA%E5%A5%BD%E5%9B%BE%E5%BA%8A%EF%BC%81/</loc>
@@ -966,9 +1002,9 @@
         <title>Lozad.js学习使用</title>
         <pubTime>2017-11-15T10:39:54.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>js</tag>
          
          
            
