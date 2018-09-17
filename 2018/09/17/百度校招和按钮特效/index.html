@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/categories/tech/index.html"/>
+<link rel="canonical" href="https://www.hojun.com/2018/09/17/百度校招和按钮特效/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -34,7 +34,7 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>分类 - 技术 - hojun</title>
+<title>百度校招和按钮特效 - hojun</title>
 
 <meta name="keywords" content="undefined">
 
@@ -44,10 +44,11 @@
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/categories/tech/index.html",
-        "appid": "1594654793276567","title": "hojun-好少年光芒万丈",
-        "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],
-        "pubDate": "2018-09-17T11:44:20"
+        "@id": "https://www.hojun.com/2018/09/17/百度校招和按钮特效/",
+        "appid": "1594654793276567",
+        "title": "百度校招和按钮特效",
+        "images": ["https://ws4.sinaimg.cn/small/006bYVyvgy1fvcy4lb4llj30zs0gr1a6.jpg"],
+        "pubDate": "2018-09-17T11:31:00"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -118,11 +119,9 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
-        <li class="active">
+        <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
         </li>
         
@@ -171,305 +170,98 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/09/17/百度校招和按钮特效/" target="_self" title="百度校招和按钮特效" data-background-image="https://ws4.sinaimg.cn/small/006bYVyvgy1fvcy4lb4llj30zs0gr1a6.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-09-17">2018-09-17</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">百度校招和按钮特效</h2>
+            <div class="post-meta">
+                本文总共388个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>今天在百度首页偶然看到了百度校招的消息（按F12键选择console页面）<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fvcxvyfp2xj30x30fz44g.jpg" alt="image"><br>可以看到console页面下有这么一段话：<br>同学，祝贺你喜提彩蛋~<br>或许你们还在犹豫是否加入，我会坦诚的告诉你我们超酷；<br>在这里大家都用无人车代步，AI音箱不仅播放还可以交互；<br>人工智能是发展的核心技术，做自己让未来不只领先几步；<br>在这里做自己，欢迎来到百度！<br>嘤嘤嘤~还是同学的各位赶紧去尝试下呗。<br>点击下方的那个链接进入校招的页面~<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fvcy4lb4llj30zs0gr1a6.jpg" alt="image"><br>呃！时间好像有些晚了。不过发现其按钮效果做的不错。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fvcy9pv0xlg30gc0crdrq.gif" alt="image"><br>嗯，不错，收下了（仅供学习参考23333）<br>召唤出F12开发者工具，指针选择工具选取按钮。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fvcydd0bbej30qm0dtgtc.jpg" alt="image"><br>copy元素代码233333<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fvcyf7oykqj30ry0grdpr.jpg" alt="image"><br>copy其css样式233333<br>估计这特效只是hover+css动画特效，js就没去管他了。<br>整理了代码，还原效果如下（边框是白的，所以加了个蓝色的背景好观察效果）<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fvcyjew5nzg30a006gabr.gif" alt="image"><br>完。<br>关注公众号回复demo008获取demo代码。</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2018-09-17
         </div>
-        <a class="post-title" href="/2018/09/17/百度校招和按钮特效/" target="_self" title="百度校招和按钮特效">百度校招和按钮特效</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/特效/" target="_self">特效</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        百度校招和按钮特效
-    </div>
-</article>
 
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-16
-        </div>
-        <a class="post-title" href="/2018/09/16/php本地虚拟域名配置和端口的一些折腾/" target="_self" title="php本地虚拟域名配置和端口的一些折腾">php本地虚拟域名配置和端口的一些折腾</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
+        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
             
-                <em>·</em>
-                <a href="/tags/php/" target="_self">php</a>
+            <a href="/tags/特效/">特效</a>
             
         </div>
-    </div>
-    <div class="post-desc">
-        php本地虚拟域名配置和端口的一些折腾
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-11
+        
+    </article>
+    <div class="post-nav">
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/09/16/php本地虚拟域名配置和端口的一些折腾/" >php本地虚拟域名配置和端口的一些折腾<i class="fa fa-chevron-right"></i></a>
         </div>
-        <a class="post-title" href="/2018/09/11/anyproxy生成rootCA根证书/" target="_self" title="anyproxy生成rootCA根证书">anyproxy生成rootCA根证书</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        AnyProxy是一个基于NodeJS的，可供插件配置的HTTP/HTTPS代理服务器。
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-06
-        </div>
-        <a class="post-title" href="/2018/09/06/推荐一个js-canvas的烟花特效，快快分享朋友一起学起来/" target="_self" title="推荐一个js+canvas的烟花特效，快快分享朋友一起学起来~">推荐一个js+canvas的烟花特效，快快分享朋友一起学起来~</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        推荐一个js+canvas的烟花特效，快快分享朋友一起学起来~
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/09/05/coding绑定腾讯云有福利，拿去续费域名/" target="_self" title="coding绑定腾讯云有福利，拿去续费域名" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvgy1fuz0z7vhnmj30mv0eqacm.jpg"></a>
+        
     </div>
     
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-05
-        </div>
-        <a class="post-title" href="/2018/09/05/coding绑定腾讯云有福利，拿去续费域名/" target="_self" title="coding绑定腾讯云有福利，拿去续费域名">coding绑定腾讯云有福利，拿去续费域名</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        
     </div>
-    <div class="post-desc">
-        发现现在coding升级白银会员需要绑定腾讯云，而且绑定腾讯云后还会送100元全产品代金券。
-    </div>
-</article>
+</aside>
+
+     
 
 
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/09/05/白帽子武器库：KaliLinux安装教程/" target="_self" title="白帽子武器库：KaliLinux安装教程" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvgy1fuxz448hsnj311s0lcnn8.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-05
-        </div>
-        <a class="post-title" href="/2018/09/05/白帽子武器库：KaliLinux安装教程/" target="_self" title="白帽子武器库：KaliLinux安装教程">白帽子武器库：KaliLinux安装教程</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/linux/" target="_self">linux</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        Kali Linux是基于Debian的Linux发行版， 设计用于数字取证操作系统。面向专业的渗透测试和安全审计。
-    </div>
-</article>
 
 
 
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-04
-        </div>
-        <a class="post-title" href="/2018/09/04/还没好图床的小伙伴看过来，微博是个好图床！/" target="_self" title="还没好图床的小伙伴看过来，微博是个好图床！">还没好图床的小伙伴看过来，微博是个好图床！</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/图床/" target="_self">图床</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        偶然间听说有个谷歌新浪图床的插件，用于自动上传图片到新浪相册中。
-    </div>
-</article>
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2018/09/17/百度校招和按钮特效/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
 
 
 
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-09-02
-        </div>
-        <a class="post-title" href="/2018/09/02/给网页的input输入框添加炫酷打字特效/" target="_self" title="给网页的input输入框添加炫酷打字特效">给网页的input输入框添加炫酷打字特效</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/特效/" target="_self">特效</a>
-            
-                <em>·</em>
-                <a href="/tags/js/" target="_self">js</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        这篇文章源自是《打字特效》的详细版。有盆友问博主关于评论框打字特效是怎么实现的？
-    </div>
-</article>
 
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/08/30/网页看板娘-Live2d蕾姆/" target="_self" title="网页看板娘-Live2d蕾姆" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvgy1fur1uxrnnij30gi0frq71.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-08-30
-        </div>
-        <a class="post-title" href="/2018/08/30/网页看板娘-Live2d蕾姆/" target="_self" title="网页看板娘-Live2d蕾姆">网页看板娘-Live2d蕾姆</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/live2d/" target="_self">live2d</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        网页看板娘-Live2d蕾姆
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/08/28/CSS-SVG路径描边特效/" target="_self" title="CSS+SVG路径描边特效" data-background-image="https://wx1.sinaimg.cn/large/006bYVyvgy1fupr88zxp1g30g507lq9d.gif"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-08-28
-        </div>
-        <a class="post-title" href="/2018/08/28/CSS-SVG路径描边特效/" target="_self" title="CSS+SVG路径描边特效">CSS+SVG路径描边特效</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/特效/" target="_self">特效</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        在猫与向日葵大佬那看到了他的Logo特效，偷偷学过来~
-    </div>
-</article>
-
-
-
-    
 </div>
-<!-- 分页开始 -->
-
-<div id="btn-pager">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/categories/tech/page/2/">2</a><a class="page-number" href="/categories/tech/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/categories/tech/page/11/">11</a><a class="extend next" rel="next" href="/categories/tech/page/2/">下一页</a>
-</div>
-
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         </div><!-- end #main-->
     </div><!-- end #body -->
