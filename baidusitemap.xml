@@ -4,8 +4,34 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/09/19/%E8%AE%B0%E5%BD%95%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0%E9%87%87%E9%9B%86-%E4%B8%80%E3%80%81Anyproxy/</loc>
+    <lastmod>2018-09-19T15:08:14.399Z</lastmod>
+    <data>
+        <display>
+        <title>记录微信公众号历史文章采集(一、Anyproxy)</title>
+        <pubTime>2018-09-19T15:02:07.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>爬虫</tag>
+         
+        <tag>微信</tag>
+         
+        <tag>Anyproxy</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/09/17/%E7%99%BE%E5%BA%A6%E6%A0%A1%E6%8B%9B%E5%92%8C%E6%8C%89%E9%92%AE%E7%89%B9%E6%95%88/</loc>
-    <lastmod>2018-09-17T15:39:38.277Z</lastmod>
+    <lastmod>2018-09-18T14:08:08.374Z</lastmod>
     <data>
         <display>
         <title>百度校招和按钮特效</title>
@@ -2150,9 +2176,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>搞事</tag>
+         
+        <tag>hexo</tag>
          
          
            
