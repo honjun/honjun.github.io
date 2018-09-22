@@ -3,9 +3,39 @@
 
 
     
+    
+    
+    
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/09/21/%E8%AE%B0%E5%BD%95%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0%E9%87%87%E9%9B%86-%E4%B8%89%E3%80%81%E7%88%AC%E5%8F%96%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0%E4%BF%A1%E6%81%AF%E5%92%8C%E5%8E%9F%E6%96%87%E5%9C%B0%E5%9D%80/</loc>
+    <lastmod>2018-09-21T15:28:28.343Z</lastmod>
+    <data>
+        <display>
+        <title>记录微信公众号历史文章采集(三、爬取历史文章信息和原文地址)</title>
+        <pubTime>2018-09-21T15:23:25.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>爬虫</tag>
+         
+        <tag>微信</tag>
+         
+        <tag>anyproxy</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://www.hojun.cn/2018/09/19/%E8%AE%B0%E5%BD%95%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0%E9%87%87%E9%9B%86-%E4%B8%80%E3%80%81Anyproxy/</loc>
-    <lastmod>2018-09-19T15:08:14.399Z</lastmod>
+    <lastmod>2018-09-20T15:38:14.849Z</lastmod>
     <data>
         <display>
         <title>记录微信公众号历史文章采集(一、Anyproxy)</title>
@@ -17,7 +47,33 @@
          
         <tag>微信</tag>
          
-        <tag>Anyproxy</tag>
+        <tag>anyproxy</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/09/20/%E8%AE%B0%E5%BD%95%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%86%E5%8F%B2%E6%96%87%E7%AB%A0%E9%87%87%E9%9B%86-%E4%BA%8C%E3%80%81js%E4%BB%A3%E7%A0%81%E5%AE%8C%E5%96%84%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BB%BA%E7%AB%8B/</loc>
+    <lastmod>2018-09-20T15:38:08.344Z</lastmod>
+    <data>
+        <display>
+        <title>记录微信公众号历史文章采集(二、js代码完善和数据库建立)</title>
+        <pubTime>2018-09-20T15:34:00.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>爬虫</tag>
+         
+        <tag>微信</tag>
+         
+        <tag>anyproxy</tag>
          
          
            
@@ -106,7 +162,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.hojun.cn/2018/09/06/%E8%BD%AE%E5%9B%9E/</loc>
@@ -2911,11 +2966,5 @@
     </data>
     </url>
 
-    
-    
-    
-    
-    
-    
     
 </urlset>
