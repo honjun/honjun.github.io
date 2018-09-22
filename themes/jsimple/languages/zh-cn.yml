@@ -1,5 +1,5 @@
 home: 首页
-archives: 文章归档
+archives: 归档
 about: 关于作者
 categories: 分类
 series: 系列文章
@@ -7,10 +7,10 @@ search: 搜索
 searchPlaceHolder: 请输入关键字
 tags: 标签
 tagcloud: 标签云
-video: 视频资源
-help: 关于本站
-links: 友情链接
-sign: 每日签到
+video: 视频
+help: 关于
+links: 友链
+sign: 签到
 photo: 图集
 book: 悦读
 music: 音乐

@@ -1,7 +1,7 @@
 title: 友链
 author: hojun
-avatar: /images/favicon.png
-authorLink:
+avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+authorLink: /about/hojun.html
 authorAbout:
 authorDesc: 一个好奇的人
 date: 2017-04-26 13:40:53
@@ -146,7 +146,7 @@ comments: false
     </a>
   </li>
   <li>
-    <a href="https://jerryc.me" title="Never put off till tomorrow what you can do today" target="_blank">
+    <a href="http://jerryc.me" title="Never put off till tomorrow what you can do today" target="_blank">
       <img src="https://wx4.sinaimg.cn/large/006bYVyvgy1fr1gyl3ofdj309z09z3z3.jpg" width="50" height="50">
       <span class="sitename">JerryC</span>
     </a>
@@ -189,8 +189,20 @@ comments: false
   </li>
   <li>
     <a href="http://voicezyx.top" title="Keep learning，do a good programmer" target="_blank">
-      <img src="http://wx2.sinaimg.cn/small/006bYVyvgy1fuwlat5ftej305z05z0td.jpg" width="50" height="50">
+      <img src="https://wx2.sinaimg.cn/small/006bYVyvgy1fuwlat5ftej305z05z0td.jpg" width="50" height="50">
       <span class="sitename">voicezyx’s Blog</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://blog.timelless.xyz" title="希望阳光很暖，微风不燥，时光不老，你我都好。" target="_blank">
+      <img src="https://wx3.sinaimg.cn/small/006bYVyvgy1fv4ngkx0wgj305c05ct8i.jpg" width="50" height="50">
+      <span class="sitename">Hoshizora</span>
+    </a>
+  </li>
+  <li>
+    <a href="http://tonychenn.cf" title="人不逼自己一把，永远不知道自己有多优秀！" target="_blank">
+      <img src="https://wx4.sinaimg.cn/small/006bYVyvgy1fv4o866gehj30hs0hswfg.jpg" width="50" height="50">
+      <span class="sitename">TonyChenn</span>
     </a>
   </li>
 </ul>

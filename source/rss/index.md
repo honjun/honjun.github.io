@@ -1,6 +1,7 @@
 title: 关于此博客搭建
 author: hojun
-avatar: /images/favicon.png
+avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 date: 2017-06-18 23:39:18
 authorLink:
