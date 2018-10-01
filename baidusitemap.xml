@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/10/01/PS%E5%B0%8F%E7%99%BD%C2%B7%E9%B2%9C%E6%9E%9C%E6%9E%9C%E6%B1%81%E5%B9%BF%E5%91%8A/</loc>
+    <lastmod>2018-10-01T13:22:21.221Z</lastmod>
+    <data>
+        <display>
+        <title>PS小白·鲜果果汁广告</title>
+        <pubTime>2018-10-01T12:46:50.000Z</pubTime>
+        
+        <tag>ps</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/09/29/PS%E5%B0%8F%E7%99%BD%C2%B7%E6%89%8B%E6%9C%BA%E4%B8%AD%E7%9A%84%E7%BE%8A/</loc>
     <lastmod>2018-09-29T15:27:09.188Z</lastmod>
     <data>
@@ -2297,9 +2317,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>搞事</tag>
+         
+        <tag>hexo</tag>
          
          
            
