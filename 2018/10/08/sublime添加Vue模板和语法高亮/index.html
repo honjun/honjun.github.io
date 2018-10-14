@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/2018/07/19/细说网页开发者工具F12-前端开发利器三/"/>
+<link rel="canonical" href="https://www.hojun.com/2018/10/08/sublime添加Vue模板和语法高亮/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -34,21 +34,20 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>细说网页开发者工具f12-前端开发利器三 - hojun</title>
+<title>sublime添加vue模板和语法高亮 - hojun</title>
 
-<meta name="keywords" content="网页开发者工具">
+<meta name="keywords" content="undefined">
 
-<meta name="description " content="写这篇文章是细说网页开发者工具F12 - 前端开发利器的第三篇文章">
+<meta name="description " content="好少年光芒万丈">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/2018/07/19/细说网页开发者工具F12-前端开发利器三/",
+        "@id": "https://www.hojun.com/2018/10/08/sublime添加Vue模板和语法高亮/",
         "appid": "1594654793276567",
-        "title": "细说网页开发者工具F12-前端开发利器三",
-        "images": ["https://wx2.sinaimg.cn/small/006bYVyvgy1ft7fa2zq7rj31c5104ae8.jpg"],
-        "pubDate": "2018-07-19T11:40:07"
+        "title": "sublime添加Vue模板和语法高亮",
+        "pubDate": "2018-10-08T10:12:02"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -178,19 +177,18 @@
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
-                    <span title="最后编辑于2018-07-19">2018-07-19</span>
+                    <span title="最后编辑于2018-10-08">2018-10-08</span>
                 </p>
                 <p>一个好奇的人</p>
             </div>
-            <h2 class="post-title">细说网页开发者工具F12-前端开发利器三</h2>
+            <h2 class="post-title">sublime添加Vue模板和语法高亮</h2>
             <div class="post-meta">
-                本文总共882个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共492个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ft7fa2zq7rj31c5104ae8.jpg" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>写这篇文章是细说网页开发者工具F12 - 前端开发利器三，Network篇，若觉得不错请关注作者。<br>哎，是时候让人类感受黑暗的恐惧了！……居然停电了。<br>这次我们来细说F12工具的Network面板。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftflfetcijj31050kjk0p.jpg" alt=""><br>功能有些多，我们从上往下来介绍，首先是记录network的开关，默认为打开状态。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflfe85ovj31060ki40t.jpg" alt=""><br>第二个Clear按钮，可以清除记录下来的Network内容。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1ftflfdmlbdj31060jkwjg.jpg" alt=""><br>第三个是捕获网页加载截图(Capture Screenshots)。可以记录每次的页面有新加载的时候的截图。可以通过这个截图了解页面的具体显示过程。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflfd0t46j310a0jl49l.jpg" alt=""><br>第四个是Filter滤镜功能，就是提供下面红框框起来的功能的。下文在详细介绍<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflfcefftj31090jnwpk.jpg" alt=""><br>第五个是显示request(请求)列表的样式的按钮，提供大和小(large|small)两种。<br>下图的选择大的样式<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftflfbmxefj31090jmwl6.jpg" alt=""><br>下图是显示小的样式<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflfazw0mj31080ieaft.jpg" alt=""><br>第六个是总的概览图(咳咳，作用未知。知道的小伙伴欢迎留言)<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1ftflfaf4i7j31070jqq9l.jpg" alt=""><br>第七个是Group by frame(咳咳，作用未知。知道的小伙伴欢迎留言)<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf9vcb7j31080jlwl7.jpg" alt=""><br>第八个是Preserve log。勾选这个按钮可以保存network不被页面刷新清除。下图是我们勾选Preserve log刷新四次的效果，可以看到四次network的记录<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftflf97ozxj31060jk7b9.jpg" alt=""><br>第九个是Disable cache(禁用缓存)。功能就是禁用本地缓存，强制刷新<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf8lz40j31080jln3e.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf7yfeoj31090jkgrf.jpg" alt=""><br>第十个是离线，效果如下，就是断网状态。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftflf7eekgj31070jiq4l.jpg" alt=""></p>
-<h2 id="Filder"><a href="#Filder" class="headerlink" title="Filder"></a>Filder</h2><p>接下来细说Filder，第一个作用未知，咳咳<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf6y5dij31080jiafv.jpg" alt=""><br>第二个All表示显示所有类型的request<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf6btulj31070jn0yj.jpg" alt=""><br>XHR表示显示xhr请求，就是常说的ajax。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftflf5rt7rj31080jiad9.jpg" alt=""><br>js,css,img,media,font略过，doc表示document<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftflf5arzfj31070jiwhl.jpg" alt=""><br>接下来我们打开一个请求，第一栏是header,这里有请求头和响应头数据。(写爬虫的时候经常用到)<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1ftflf4u2ypj31070jiwj7.jpg" alt=""><br>Preview，表示响应预览。doc的就是显示的代码，若是图片，就可以看到预览图。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf47tzej31090jmdl0.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftflf3m6pvj310a0jm13f.jpg" alt=""><br>Response表示返回值，doc的还是显示的代码，有一些会返回的json格式。比如一言接口的返回值。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftflf2uwdjj31090jbwjn.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftflf1x2gtj31090jcdiz.jpg" alt=""><br>Timing,记录着整个请求的时间段<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftflf1f8zkj31080iv77c.jpg" alt=""><br>还有一个是Cookie,记录这request请求发送和接收到的cookie<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftflf0f4u0j310a0jljvq.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftflezq96oj31090jjgq1.jpg" alt=""><br>未完待续……Continued……</p>
+            <h2 id="版本：sublime-text-3"><a href="#版本：sublime-text-3" class="headerlink" title="版本：sublime text 3"></a>版本：sublime text 3</h2><h3 id="安装VuejsCompletePackage高亮插件"><a href="#安装VuejsCompletePackage高亮插件" class="headerlink" title="安装VuejsCompletePackage高亮插件"></a>安装VuejsCompletePackage高亮插件</h3><p>Preferences-&gt;PackageControl<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fw01a7pdl8j30f509yjrk.jpg" alt=""><br>输入InstallPackage<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fw01b56fuhj30lm0aejrq.jpg" alt=""><br>输入Vue，选择安装VuejsCompletePackage<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fw01qh46dhj30om0dnq4d.jpg" alt=""><br>无高亮|有高亮 效果对比<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fw01rjzi74j30fk0b63z0.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvgy1fw01s2v9fxj30f50bs3z2.jpg" alt=""></p>
+<h3 id="安装SublimeTmpl模板插件并配置"><a href="#安装SublimeTmpl模板插件并配置" class="headerlink" title="安装SublimeTmpl模板插件并配置"></a>安装SublimeTmpl模板插件并配置</h3><p>继续上一步，安装SublimeTmpl<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fw01xzzyzqj30nv0b4wfa.jpg" alt=""><br>Preferences-&gt;BrowsePackages<br>进入SublimeTmpl-&gt;templates，新建一个vue.tmpl<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvgy1fw02094n9yj30pb0g0tam.jpg" alt=""><br>vue.tmpl内容如下。<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fw024y1bqcj30i00cjdgk.jpg" alt=""><br>PackageSetings&gt;SublimeTmpl&gt;MenuDefault<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fw025q4f63j30lb0df0t9.jpg" alt=""><br>添加如下内容<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fw026o7qbnj30hg0dm0td.jpg" alt=""><br>PackageSetings&gt;SublimeTmpl&gt;KeyBindingsDefault<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fw02765ug2j30l60icgmg.jpg" alt=""><br>添加如下内容。使用ctrl+alt+v就能快速创建vue模板。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fw027ygdsfj30l20fx3zv.jpg" alt=""><br>PackageSetings&gt;SublimeTmpl&gt;SetingsDefault<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fw02byfzijj30le0gk0tm.jpg" alt=""><br>嗯，这里应该是添加绑定高亮。可是新版sublime没有文件夹，只有.package文件。也不知道怎么绑定。求大佬教。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fw03bkfs9rj30i30a9gma.jpg" alt=""></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -208,333 +206,19 @@
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
         <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
         
-        <div class="post-series">网页开发者工具-系列文章：
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    <li><a href="/2018/07/12/细说网页开发者工具F12-前端开发利器一/">细说网页开发者工具F12-前端开发利器一</a></li>
-                
-            
-                
-                    <li><a href="/2018/07/15/细说网页开发者工具F12-前端开发利器二/">细说网页开发者工具F12-前端开发利器二</a></li>
-                
-            
-                
-                    <li><a href="/2018/07/19/细说网页开发者工具F12-前端开发利器三/">细说网页开发者工具F12-前端开发利器三</a></li>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        </div>
-        
         
         <div class="post-tags">标签：
             
-            <a href="/tags/网页开发者工具/">网页开发者工具</a>
+            <a href="/tags/sublime/">sublime</a>
             
         </div>
         
     </article>
     <div class="post-nav">
         
-        <div class="post-nav-prev post-nav-item">
-            <a href="/2018/07/23/HEXO发布到Github报错-凉凉-迁移到Coding/" >HEXO发布到Github报错?凉凉,迁移到Coding<i class="fa fa-chevron-left"></i></a>
-        </div>
-        
         
         <div class="post-nav-next post-nav-item">
-            <a href="/2018/07/15/细说网页开发者工具F12-前端开发利器二/" >细说网页开发者工具F12-前端开发利器二<i class="fa fa-chevron-right"></i></a>
+            <a href="/2018/10/01/PS小白·鲜果果汁广告/" >PS小白·鲜果果汁广告<i class="fa fa-chevron-right"></i></a>
         </div>
         
     </div>
@@ -543,7 +227,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filder"><span class="toc-text">Filder</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本：sublime-text-3"><span class="toc-text">版本：sublime text 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装VuejsCompletePackage高亮插件"><span class="toc-text">安装VuejsCompletePackage高亮插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装SublimeTmpl模板插件并配置"><span class="toc-text">安装SublimeTmpl模板插件并配置</span></a></li></ol></li></ol>
     </div>
 </aside>
 
@@ -559,7 +243,7 @@
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <div id="vcomments"></div>
-<!-- <span id="/2018/07/19/细说网页开发者工具F12-前端开发利器三/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+<!-- <span id="/2018/10/08/sublime添加Vue模板和语法高亮/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
     <span class="post-meta-item-text">阅读量 </span>
     <span class="leancloud-visitors-count">1000000</span>
 </span> -->
