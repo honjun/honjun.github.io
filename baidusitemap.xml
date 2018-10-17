@@ -3,6 +3,25 @@
 
 
     
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/10/16/Mongo%E5%AE%A2%E6%88%B7%E7%AB%AFMongoVUE%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-10-16T15:26:14.364Z</lastmod>
+    <data>
+        <display>
+        <title>Mongo客户端MongoVUE安装</title>
+        <pubTime>2018-10-16T15:23:39.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://www.hojun.cn/2018/10/15/MongoDB%E5%88%9D%E4%BD%93%E9%AA%8C%E2%80%94Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2018-10-15T15:48:00.142Z</lastmod>
@@ -22,7 +41,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.hojun.cn/2018/10/08/sublime%E6%B7%BB%E5%8A%A0Vue%E6%A8%A1%E6%9D%BF%E5%92%8C%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE/</loc>
@@ -1651,9 +1669,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>js</tag>
+         
+        <tag>前端</tag>
          
          
            
@@ -2357,9 +2375,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>搞事</tag>
          
          
            
