@@ -5,12 +5,14 @@
     
   <url>
     <loc>https://www.hojun.cn/2018/10/19/%E5%A6%82%E6%9E%9C%E6%88%91%E6%AF%8F%E5%A4%A9%E9%83%BD%E6%97%A9%E7%9D%A1%E6%97%A9%E8%B5%B7%E4%BC%9A%E4%B8%8D%E4%BC%9A%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%BE%88%E5%A5%BD%E7%9A%84%E4%BA%BA/</loc>
-    <lastmod>2018-10-19T15:32:42.345Z</lastmod>
+    <lastmod>2018-10-21T15:06:17.783Z</lastmod>
     <data>
         <display>
         <title>如果我每天都早睡早起会不会成为一个很好的人</title>
         <pubTime>2018-10-19T14:46:40.000Z</pubTime>
         
+        <tag>生活</tag>
+         
          
            
              
@@ -23,11 +25,131 @@
     
   <url>
     <loc>https://www.hojun.cn/2018/10/19/%E8%AE%B0%E5%BD%95%E4%B8%8Bhojun%E7%9A%84%E4%B8%87%E4%BA%8B%E5%B1%8B%E6%B7%98%E5%AE%9D%E5%B0%8F%E5%BA%97%E5%BC%80%E5%BC%A0/</loc>
-    <lastmod>2018-10-19T14:41:16.016Z</lastmod>
+    <lastmod>2018-10-21T15:04:25.865Z</lastmod>
     <data>
         <display>
         <title>记录下hojun的万事屋淘宝小店开张</title>
         <pubTime>2018-10-19T14:41:15.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/08/13/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84APP-FusionApp/</loc>
+    <lastmod>2018-10-21T14:39:00.575Z</lastmod>
+    <data>
+        <display>
+        <title>快速开发属于自己的APP-FusionApp</title>
+        <pubTime>2018-08-13T14:35:06.000Z</pubTime>
+        
+        <tag>搞事</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/08/25/miccall%E4%B8%BB%E9%A2%98%E5%8F%8AH5%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2018-10-21T14:38:37.630Z</lastmod>
+    <data>
+        <display>
+        <title>miccall主题及html5up站点推荐</title>
+        <pubTime>2018-08-25T14:37:08.000Z</pubTime>
+        
+        <tag>资源</tag>
+         
+         
+           
+             
+              <breadCrumb title="资源" url="https://www.hojun.cn/categories/%E8%B5%84%E6%BA%90/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/08/28/CSS-SVG%E8%B7%AF%E5%BE%84%E6%8F%8F%E8%BE%B9%E7%89%B9%E6%95%88/</loc>
+    <lastmod>2018-10-21T14:38:30.671Z</lastmod>
+    <data>
+        <display>
+        <title>CSS+SVG路径描边特效</title>
+        <pubTime>2018-08-28T12:39:45.000Z</pubTime>
+        
+        <tag>特效</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/09/04/%E8%BF%98%E6%B2%A1%E5%A5%BD%E5%9B%BE%E5%BA%8A%E7%9A%84%E5%B0%8F%E4%BC%99%E4%BC%B4%E7%9C%8B%E8%BF%87%E6%9D%A5%EF%BC%8C%E5%BE%AE%E5%8D%9A%E6%98%AF%E4%B8%AA%E5%A5%BD%E5%9B%BE%E5%BA%8A%EF%BC%81/</loc>
+    <lastmod>2018-10-21T14:38:13.550Z</lastmod>
+    <data>
+        <display>
+        <title>还没好图床的小伙伴看过来，微博是个好图床！</title>
+        <pubTime>2018-09-04T13:49:06.000Z</pubTime>
+        
+        <tag>图床</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/08/30/%E7%BD%91%E9%A1%B5%E7%9C%8B%E6%9D%BF%E5%A8%98-Live2d%E8%95%BE%E5%A7%86/</loc>
+    <lastmod>2018-10-21T14:38:10.431Z</lastmod>
+    <data>
+        <display>
+        <title>网页看板娘-Live2d蕾姆</title>
+        <pubTime>2018-08-30T15:56:28.000Z</pubTime>
+        
+        <tag>live2d</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2017/10/23/hexo-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</loc>
+    <lastmod>2018-10-21T14:37:24.623Z</lastmod>
+    <data>
+        <display>
+        <title>hexo 使用说明</title>
+        <pubTime>2017-10-22T16:04:35.000Z</pubTime>
         
          
            
@@ -186,24 +308,6 @@
     
     
     
-    
-  <url>
-    <loc>https://www.hojun.cn/2017/10/23/hexo-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</loc>
-    <lastmod>2018-09-22T01:35:33.639Z</lastmod>
-    <data>
-        <display>
-        <title>hexo 使用说明</title>
-        <pubTime>2017-10-22T16:04:35.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
     
@@ -438,26 +542,6 @@
 
     
   <url>
-    <loc>https://www.hojun.cn/2018/09/04/%E8%BF%98%E6%B2%A1%E5%A5%BD%E5%9B%BE%E5%BA%8A%E7%9A%84%E5%B0%8F%E4%BC%99%E4%BC%B4%E7%9C%8B%E8%BF%87%E6%9D%A5%EF%BC%8C%E5%BE%AE%E5%8D%9A%E6%98%AF%E4%B8%AA%E5%A5%BD%E5%9B%BE%E5%BA%8A%EF%BC%81/</loc>
-    <lastmod>2018-09-04T13:56:33.363Z</lastmod>
-    <data>
-        <display>
-        <title>还没好图床的小伙伴看过来，微博是个好图床！</title>
-        <pubTime>2018-09-04T13:49:06.000Z</pubTime>
-        
-        <tag>图床</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.hojun.cn/2018/09/02/%E7%BB%99%E7%BD%91%E9%A1%B5%E7%9A%84input%E8%BE%93%E5%85%A5%E6%A1%86%E6%B7%BB%E5%8A%A0%E7%82%AB%E9%85%B7%E6%89%93%E5%AD%97%E7%89%B9%E6%95%88/</loc>
     <lastmod>2018-09-02T15:47:01.525Z</lastmod>
     <data>
@@ -580,26 +664,6 @@
 
     
   <url>
-    <loc>https://www.hojun.cn/2018/08/30/%E7%BD%91%E9%A1%B5%E7%9C%8B%E6%9D%BF%E5%A8%98-Live2d%E8%95%BE%E5%A7%86/</loc>
-    <lastmod>2018-08-30T15:59:15.697Z</lastmod>
-    <data>
-        <display>
-        <title>网页看板娘-Live2d蕾姆</title>
-        <pubTime>2018-08-30T15:56:28.000Z</pubTime>
-        
-        <tag>live2d</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/</loc>
     <lastmod>2018-08-30T15:40:53.555Z</lastmod>
     <data>
@@ -608,26 +672,6 @@
         <pubTime>2018-02-19T13:10:03.000Z</pubTime>
         
         <tag>live2d</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/08/28/CSS-SVG%E8%B7%AF%E5%BE%84%E6%8F%8F%E8%BE%B9%E7%89%B9%E6%95%88/</loc>
-    <lastmod>2018-08-28T14:20:28.370Z</lastmod>
-    <data>
-        <display>
-        <title>CSS+SVG路径描边特效</title>
-        <pubTime>2018-08-28T12:39:45.000Z</pubTime>
-        
-        <tag>特效</tag>
          
          
            
@@ -673,26 +717,6 @@
            
              
               <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/08/25/miccall%E4%B8%BB%E9%A2%98%E5%8F%8AH5%E7%AB%99%E7%82%B9%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2018-08-26T11:57:51.962Z</lastmod>
-    <data>
-        <display>
-        <title>miccall主题及html5up站点推荐</title>
-        <pubTime>2018-08-25T14:37:08.000Z</pubTime>
-        
-        <tag>资源</tag>
-         
-         
-           
-             
-              <breadCrumb title="资源" url="https://www.hojun.cn/categories/%E8%B5%84%E6%BA%90/"/>
           
         </display>
     </data>
@@ -812,26 +836,6 @@
         <pubTime>2018-08-18T11:21:55.000Z</pubTime>
         
         <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/08/13/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84APP-FusionApp/</loc>
-    <lastmod>2018-08-13T14:37:51.149Z</lastmod>
-    <data>
-        <display>
-        <title>快速开发属于自己的APP-FusionApp</title>
-        <pubTime>2018-08-13T14:35:06.000Z</pubTime>
-        
-        <tag>搞事</tag>
          
          
            
