@@ -11,7 +11,7 @@
 </script> -->
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/tags/网页开发者工具/index.html"/>
+<link rel="canonical" href="https://www.hojun.com/2018/10/23/修改Hexo引用样式为双引号形式/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -34,7 +34,7 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>标签 - 网页开发者工具 - hojun</title>
+<title>修改hexo引用样式为双引号形式 - hojun</title>
 
 <meta name="keywords" content="undefined">
 
@@ -44,10 +44,10 @@
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/tags/网页开发者工具/index.html",
-        "appid": "1594654793276567","title": "hojun-好少年光芒万丈",
-        "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],
-        "pubDate": "2018-10-23T10:35:11"
+        "@id": "https://www.hojun.com/2018/10/23/修改Hexo引用样式为双引号形式/",
+        "appid": "1594654793276567",
+        "title": "修改Hexo引用样式为双引号形式",
+        "pubDate": "2018-10-23T10:10:01"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -118,9 +118,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -171,107 +169,101 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/07/19/细说网页开发者工具F12-前端开发利器三/" target="_self" title="细说网页开发者工具F12-前端开发利器三" data-background-image="https://wx2.sinaimg.cn/small/006bYVyvgy1ft7fa2zq7rj31c5104ae8.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-10-23">2018-10-23</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">修改Hexo引用样式为双引号形式</h2>
+            <div class="post-meta">
+                本文总共828个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>这篇文章教大家怎么修改主题的引用样式为双引号形式。<br>比如我们在md里使用&gt;引用语法写下：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;博主为啥开淘宝店？</span><br><span class="line">&gt;1.我说好奇你信吗。</span><br><span class="line">&gt;2.生活所迫<span class="emphasis">*@(装大款)*</span></span><br></pre></td></tr></table></figure></p>
+<p>博主的JSimple主题默认显示的引用样式如下：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fwiinunietj30g403qwey.jpg" alt=""><br>想把它改成这种样子的<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fwiisocut1j30kc04aaa1.jpg" alt=""></p>
+<p>因为这里双引号正好在引用块的前后，可以使用css的before\after伪元素实现。<br>首先使用F12开发工具找到引用块的元素<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fwij4uxoxwj30su0dzgti.jpg" alt=""><br>然后给这个元素添加css代码。<br>这里直接给出代码如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">blockquote</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">'\f10e'</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">1rem</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>:-<span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#233</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: FontAwesome;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">blockquote</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"\f10d"</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>:-<span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#233</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: FontAwesome;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.markdown-body</span> <span class="selector-tag">blockquote</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>:<span class="number">1em</span>;<span class="attribute">margin-right</span>:<span class="number">1em</span>;<span class="attribute">padding</span>:.<span class="number">25em</span> <span class="number">1em</span>;<span class="attribute">color</span>:<span class="number">#666</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中<code>.markdown-body blockquote</code>去掉了左边的边框。<br>然后content中的字符是根据字体文件的内容：<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fwij0tt9f8j30xr0d7tlv.jpg" alt=""><br>就这样，不想多说。太懂的可以参考<a href="https://www.bilibili.com/video/av34413878/">B站视频教程</a></p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="share-component social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2018-07-19
         </div>
-        <a class="post-title" href="/2018/07/19/细说网页开发者工具F12-前端开发利器三/" target="_self" title="细说网页开发者工具F12-前端开发利器三">细说网页开发者工具F12-前端开发利器三</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/网页开发者工具/" target="_self">网页开发者工具</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        写这篇文章是细说网页开发者工具F12 - 前端开发利器的第三篇文章
-    </div>
-</article>
 
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/07/15/细说网页开发者工具F12-前端开发利器二/" target="_self" title="细说网页开发者工具F12-前端开发利器二" data-background-image="https://wx2.sinaimg.cn/small/006bYVyvgy1ft7fa2zq7rj31c5104ae8.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-07-15
-        </div>
-        <a class="post-title" href="/2018/07/15/细说网页开发者工具F12-前端开发利器二/" target="_self" title="细说网页开发者工具F12-前端开发利器二">细说网页开发者工具F12-前端开发利器二</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
+        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
             
-                <em>·</em>
-                <a href="/tags/网页开发者工具/" target="_self">网页开发者工具</a>
+            <a href="/tags/hexo/">hexo</a>
             
         </div>
-    </div>
-    <div class="post-desc">
-        写这篇文章是细说网页开发者工具F12 - 前端开发利器的第二篇文章
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/07/12/细说网页开发者工具F12-前端开发利器一/" target="_self" title="细说网页开发者工具F12-前端开发利器一" data-background-image="https://wx2.sinaimg.cn/small/006bYVyvgy1ft7fa2zq7rj31c5104ae8.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-07-12
+        
+    </article>
+    <div class="post-nav">
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/10/19/如果我每天都早睡早起会不会成为一个很好的人/" >如果我每天都早睡早起会不会成为一个很好的人<i class="fa fa-chevron-right"></i></a>
         </div>
-        <a class="post-title" href="/2018/07/12/细说网页开发者工具F12-前端开发利器一/" target="_self" title="细说网页开发者工具F12-前端开发利器一">细说网页开发者工具F12-前端开发利器一</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/网页开发者工具/" target="_self">网页开发者工具</a>
-            
-        </div>
+        
     </div>
-    <div class="post-desc">
-        写这篇文章的目的主要是为了帮助前端小白，学习使用浏览器自带的F12网页开发者工具，来快速定位调试分析问题、解决问题。
-    </div>
-</article>
-
-
-
     
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        
+    </div>
+</aside>
+
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2018/10/23/修改Hexo引用样式为双引号形式/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
 </div>
-<!-- 分页开始 -->
-
+<!-- 不蒜子 网页计数器 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         </div><!-- end #main-->
     </div><!-- end #body -->
