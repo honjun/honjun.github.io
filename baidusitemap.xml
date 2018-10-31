@@ -4,6 +4,47 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/10/31/ngrok%E5%85%8D%E8%B4%B9%E5%B8%A6%E4%BD%A0%E7%A9%BF%E9%80%8F%E5%86%85%E7%BD%91%E6%98%A0%E5%B0%84%E5%88%B0%E5%A4%96%E7%BD%91/</loc>
+    <lastmod>2018-10-31T16:04:27.546Z</lastmod>
+    <data>
+        <display>
+        <title>ngrok免费带你穿透内网映射到外网</title>
+        <pubTime>2018-10-31T15:59:35.000Z</pubTime>
+        
+        <tag>tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/</loc>
+    <lastmod>2018-10-24T05:08:48.555Z</lastmod>
+    <data>
+        <display>
+        <title>live2d-看板娘小埋</title>
+        <pubTime>2018-02-19T13:10:03.000Z</pubTime>
+        
+        <tag>live2d</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/10/23/%E4%BF%AE%E6%94%B9Hexo%E5%BC%95%E7%94%A8%E6%A0%B7%E5%BC%8F%E4%B8%BA%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%BD%A2%E5%BC%8F/</loc>
     <lastmod>2018-10-23T14:30:38.674Z</lastmod>
     <data>
@@ -200,7 +241,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.hojun.cn/2018/10/15/MongoDB%E5%88%9D%E4%BD%93%E9%AA%8C%E2%80%94Windows%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
@@ -697,26 +737,6 @@
            
              
               <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/</loc>
-    <lastmod>2018-08-30T15:40:53.555Z</lastmod>
-    <data>
-        <display>
-        <title>live2d-看板娘小埋</title>
-        <pubTime>2018-02-19T13:10:03.000Z</pubTime>
-        
-        <tag>live2d</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
           
         </display>
     </data>
