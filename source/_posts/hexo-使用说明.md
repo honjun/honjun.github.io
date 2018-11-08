@@ -3,6 +3,7 @@ author: hojun
 avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
+series: hexo折腾
 date: 2017-10-23 00:04:35
 authorLink: /about/hojun.html
 authorAbout:
@@ -20,5 +21,13 @@ hexo n page 页面名
 hexo g
 //提交
 hexo d
+//生成+提交
+hexo g -d
 //备份
 hexo b
+//清空生成内容
+hexo clean
+//默认启动服务在4000端口
+hexo s
+//启动服务在5555端口
+hexo s -p 5555

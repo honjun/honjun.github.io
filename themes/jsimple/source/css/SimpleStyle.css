@@ -2741,7 +2741,7 @@ table
 }
 body
 {
-    font:14px/1.7 "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STXihei,"华文细黑","WenQuanYi Micro Hei",sans-serif;color:#1a1a1a;transition: all .8s ease-in-out;
+    font:14px "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STXihei,"华文细黑","WenQuanYi Micro Hei",sans-serif;color:#1a1a1a;transition: all .8s ease-in-out;
 }
 a
 {
@@ -3094,7 +3094,7 @@ body
 }
 .post-content
 {
-    padding-bottom:10px
+    padding-bottom:10px;font-size: 15px;
 }
 .post-tool
 {
@@ -3575,10 +3575,10 @@ body.night-mode,.night-mode .btn,body.night-mode a,.night-mode .nav-user a,#sear
 {
     height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0
 }
-.markdown-body blockquote
+/*.markdown-body blockquote
 {
     margin-left:1em;margin-right:1em;padding:.25em 1em;color:#777;border-left:.25em solid #ddd
-}
+}*/
 .markdown-body blockquote>:first-child
 {
     margin-top:0
@@ -4342,4 +4342,27 @@ pre .xml .cdata {
     top: 30%;
     font-size: 12px;
     line-height: 100%;
+}
+blockquote:after {
+    position: relative;
+    content: '\f10e' !important;
+    font-size: 1rem;
+    float: right;
+    top: -1rem;
+    margin-right:-1em;
+    color: #233;
+    font-family: FontAwesome;
+}
+blockquote:before {
+    position: relative;
+    content: "\f10d" !important;
+    font-size: 1rem;
+    left: 0;
+    margin-left:-1em;
+    color: #233;
+    font-family: FontAwesome;
+}
+.markdown-body blockquote
+{
+    margin-left:1em;margin-right:1em;padding:.25em 1em;color:#666;
 }

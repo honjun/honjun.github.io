@@ -7,7 +7,7 @@ categories: 技术
 comments: true
 date: 2018-08-28 20:39:45
 authorAbout:
-series:
+series: hexo折腾
 tags:
  - 特效
 keywords: 

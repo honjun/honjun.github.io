@@ -4,10 +4,10 @@ avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
+series: hexo折腾
 comments: true
 date: 2018-08-30 23:56:28
 authorAbout:
-series:
 tags:
  - live2d
 keywords: Live2d蕾姆

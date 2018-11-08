@@ -7,7 +7,7 @@ categories: 技术
 comments: true
 date: 2018-08-13 22:35:06
 authorAbout:
-series:
+series: hexo折腾
 tags:
  - 搞事
 keywords: FusionApp

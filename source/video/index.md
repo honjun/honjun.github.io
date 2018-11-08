@@ -17,4 +17,5 @@ photos:
 {% endraw %}
 ### [整套视频地址https://www.bilibili.com/video/av24897960](https://www.bilibili.com/video/av24897960)
  
+### [更多推荐视频](/tags/视频/)
  ----------

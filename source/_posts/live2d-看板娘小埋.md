@@ -53,7 +53,7 @@ photos:
     <canvas id="live2d" width="280" height="375" class="live2d"></canvas>
     <div class="hide-button">隐藏</div>
 </div>
-<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript">
     var message_Path = '/live2d/'
     var home_Path = 'https://www.hojun.com/'
