@@ -3,6 +3,66 @@
 
 
     
+  <url>
+    <loc>https://www.hojun.cn/2018/11/25/live2d%E6%8F%90%E5%8F%96%E7%B3%BB%E5%88%97233333/</loc>
+    <lastmod>2018-11-25T13:31:31.329Z</lastmod>
+    <data>
+        <display>
+        <title>live2d提取系列233333</title>
+        <pubTime>2018-11-25T13:03:40.000Z</pubTime>
+        
+        <tag>live2d</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/11/25/%E7%A7%8B%EF%BC%8C%E5%93%A6%E4%B8%8D%EF%BC%8C%E5%86%AC%E3%80%82/</loc>
+    <lastmod>2018-11-25T13:31:10.236Z</lastmod>
+    <data>
+        <display>
+        <title>秋，哦不，冬。</title>
+        <pubTime>2018-11-25T13:01:38.000Z</pubTime>
+        
+        <tag>图集</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/11/25/%E7%BB%99materialX%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0pjax%E6%94%AF%E6%8C%81/</loc>
+    <lastmod>2018-11-25T13:17:33.978Z</lastmod>
+    <data>
+        <display>
+        <title>给materialX主题添加pjax支持</title>
+        <pubTime>2018-11-25T12:41:13.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -1811,9 +1871,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>前端</tag>
+         
+        <tag>js</tag>
          
          
            
