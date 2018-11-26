@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2018/11/25/Hexo%E7%BB%99materialX%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0pjax%E6%94%AF%E6%8C%81/</loc>
+    <lastmod>2018-11-26T15:29:16.621Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo给materialX主题添加pjax支持</title>
+        <pubTime>2018-11-25T12:41:13.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2018/11/25/live2d%E6%8F%90%E5%8F%96%E7%B3%BB%E5%88%97233333/</loc>
     <lastmod>2018-11-25T13:31:31.329Z</lastmod>
     <data>
@@ -37,26 +57,6 @@
            
              
               <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/11/25/%E7%BB%99materialX%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0pjax%E6%94%AF%E6%8C%81/</loc>
-    <lastmod>2018-11-25T13:17:33.978Z</lastmod>
-    <data>
-        <display>
-        <title>给materialX主题添加pjax支持</title>
-        <pubTime>2018-11-25T12:41:13.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
           
         </display>
     </data>
