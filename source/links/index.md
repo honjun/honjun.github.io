@@ -49,6 +49,36 @@ comments: false
 </style>
 <ul class="link-contentqt clearfix">
   <li>
+    <a href="http://fankekeke.club/" title="风在呼唤我的名字" target="_blank">
+      <img src="https://wx3.sinaimg.cn/small/006bYVyvly1fxo4l2rdanj30go0go771.jpg" width="50" height="50">
+      <span class="sitename">悲伤的橘子树</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.yueluo.xyz/" title="Perfare's Blog" target="_blank">
+      <img src="https://ws3.sinaimg.cn/large/006bYVyvly1fxibk03pwyj305k05kaa3.jpg" width="50" height="50">
+      <span class="sitename">yue_luo‘s Blog</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.perfare.net/" title="Perfare's Blog" target="_blank">
+      <img src="https://ws1.sinaimg.cn/large/006bYVyvly1fxiajmn8gdj301y01yq30.jpg" width="50" height="50">
+      <span class="sitename">perfare</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://shansan.top" title="The self-entertainment of chicken dishes" target="_blank">
+      <img src="https://wx2.sinaimg.cn/large/006bYVyvly1fxbfetzfh5j3028028aa5.jpg" width="50" height="50">
+      <span class="sitename">shansan</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.xingaiting.com" title="又是另一个你" target="_blank">
+      <img src="https://wx4.sinaimg.cn/small/006bYVyvly1fx92ez4at4j30320323yr.jpg" width="50" height="50">
+      <span class="sitename">柒情</span>
+    </a>
+  </li>
+  <li>
     <a href="http://mo3.top/" title="渗透技术博客" target="_blank">
       <img src="https://ws1.sinaimg.cn/small/006bYVyvly1fx5hy82tkmj30k00k0jwy.jpg" width="50" height="50">
       <span class="sitename">JunMo</span>
