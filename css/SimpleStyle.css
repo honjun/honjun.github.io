@@ -2880,6 +2880,10 @@ a.btn:hover
 {
     background-color:#8a8a8a
 }
+.btn-bili
+{
+    background-color:#06b4d9
+}
 a.avatar img,img.avatar
 {
     vertical-align:middle;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%
