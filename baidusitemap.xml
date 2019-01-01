@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>https://www.hojun.cn/2019/01/01/%E5%86%99%E5%9C%A82019-1-1/</loc>
+    <lastmod>2019-01-01T13:56:19.649Z</lastmod>
+    <data>
+        <display>
+        <title>写在2019.1.1</title>
+        <pubTime>2019-01-01T13:37:10.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://www.hojun.cn/2018/12/07/Web%E7%AB%AF720%E5%85%A8%E6%99%AF%E5%AE%9E%E7%8E%B0%E6%8F%AD%E7%A7%98/</loc>
@@ -1545,9 +1565,9 @@
         <title>Lozad.js学习使用</title>
         <pubTime>2017-11-15T10:39:54.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>js</tag>
          
          
            
@@ -2597,9 +2617,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>搞事</tag>
          
          
            
