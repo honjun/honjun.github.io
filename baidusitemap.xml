@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2019/01/08/yaml%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0Hexo%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2019-01-08T16:02:07.507Z</lastmod>
+    <data>
+        <display>
+        <title>yaml基本语法及实现Hexo二级导航栏功能</title>
+        <pubTime>2019-01-08T15:55:01.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>yaml</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2019/01/01/%E5%86%99%E5%9C%A82019-1-1/</loc>
     <lastmod>2019-01-01T13:56:19.649Z</lastmod>
     <data>
@@ -1911,9 +1933,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>前端</tag>
+         
+        <tag>js</tag>
          
          
            
@@ -2617,9 +2639,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>搞事</tag>
+         
+        <tag>hexo</tag>
          
          
            
