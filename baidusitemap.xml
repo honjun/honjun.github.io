@@ -4,14 +4,40 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2019/01/12/hexo-sakura%E4%B8%BB%E9%A2%98%E5%AE%9E%E7%8E%B0%E5%85%AC%E5%91%8A%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2019-01-12T13:28:38.967Z</lastmod>
+    <data>
+        <display>
+        <title>hexo-sakura主题实现公告功能</title>
+        <pubTime>2019-01-12T13:24:34.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>hexo-sakura</tag>
+         
+        <tag>yaml</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2019/01/08/yaml%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0Hexo%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2019-01-08T16:02:07.507Z</lastmod>
+    <lastmod>2019-01-12T13:24:07.376Z</lastmod>
     <data>
         <display>
         <title>yaml基本语法及实现Hexo二级导航栏功能</title>
         <pubTime>2019-01-08T15:55:01.000Z</pubTime>
         
         <tag>hexo</tag>
+         
+        <tag>hexo-sakura</tag>
          
         <tag>yaml</tag>
          
