@@ -4,59 +4,15 @@
 
     
   <url>
-    <loc>https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/</loc>
-    <lastmod>2019-01-18T15:42:38.814Z</lastmod>
+    <loc>https://www.hojun.cn/2019/02/01/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8A%A0%E5%85%A5Bili%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%A7%86%E9%A2%91/</loc>
+    <lastmod>2019-02-02T14:30:38.629Z</lastmod>
     <data>
         <display>
-        <title>jsDeliver+github使用教程，免费好用的cdn</title>
-        <pubTime>2019-01-18T15:38:41.000Z</pubTime>
-        
-        <tag>cdn</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/</loc>
-    <lastmod>2019-01-14T13:26:41.656Z</lastmod>
-    <data>
-        <display>
-        <title>live2d-看板娘小埋</title>
-        <pubTime>2018-02-19T13:10:03.000Z</pubTime>
-        
-        <tag>live2d</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/01/12/hexo-sakura%E4%B8%BB%E9%A2%98%E5%AE%9E%E7%8E%B0%E5%85%AC%E5%91%8A%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2019-01-12T13:28:38.967Z</lastmod>
-    <data>
-        <display>
-        <title>hexo-sakura主题实现公告功能</title>
-        <pubTime>2019-01-12T13:24:34.000Z</pubTime>
+        <title>Hexo博客中加入Bili标签插件添加视频</title>
+        <pubTime>2019-02-01T14:07:18.000Z</pubTime>
         
         <tag>hexo</tag>
          
-        <tag>hexo-sakura</tag>
-         
-        <tag>yaml</tag>
-         
          
            
              
@@ -68,38 +24,14 @@
 
     
   <url>
-    <loc>https://www.hojun.cn/2019/01/08/yaml%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0Hexo%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2019-01-12T13:24:07.376Z</lastmod>
+    <loc>https://www.hojun.cn/2018/11/25/%E7%A7%8B%EF%BC%8C%E5%93%A6%E4%B8%8D%EF%BC%8C%E5%86%AC%E3%80%82/</loc>
+    <lastmod>2019-02-02T14:00:25.291Z</lastmod>
     <data>
         <display>
-        <title>yaml基本语法及实现Hexo二级导航栏功能</title>
-        <pubTime>2019-01-08T15:55:01.000Z</pubTime>
+        <title>秋，哦不，冬。</title>
+        <pubTime>2018-11-25T13:01:38.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>hexo-sakura</tag>
-         
-        <tag>yaml</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/01/01/%E5%86%99%E5%9C%A82019-1-1/</loc>
-    <lastmod>2019-01-01T13:56:19.649Z</lastmod>
-    <data>
-        <display>
-        <title>写在2019.1.1</title>
-        <pubTime>2019-01-01T13:37:10.000Z</pubTime>
-        
-        <tag>生活</tag>
+        <tag>图集</tag>
          
          
            
@@ -111,50 +43,9 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/12/07/Web%E7%AB%AF720%E5%85%A8%E6%99%AF%E5%AE%9E%E7%8E%B0%E6%8F%AD%E7%A7%98/</loc>
-    <lastmod>2018-12-06T16:07:28.149Z</lastmod>
-    <data>
-        <display>
-        <title>Web端720全景实现揭秘</title>
-        <pubTime>2018-12-06T16:01:57.000Z</pubTime>
-        
-        <tag>web</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/11/25/Hexo%E7%BB%99materialX%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0pjax%E6%94%AF%E6%8C%81/</loc>
-    <lastmod>2018-11-26T15:29:16.621Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo给materialX主题添加pjax支持</title>
-        <pubTime>2018-11-25T12:41:13.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>https://www.hojun.cn/2018/11/25/live2d%E6%8F%90%E5%8F%96%E7%B3%BB%E5%88%97233333/</loc>
-    <lastmod>2018-11-25T13:31:31.329Z</lastmod>
+    <lastmod>2019-02-02T13:58:45.547Z</lastmod>
     <data>
         <display>
         <title>live2d提取系列233333</title>
@@ -173,14 +64,34 @@
 
     
   <url>
-    <loc>https://www.hojun.cn/2018/11/25/%E7%A7%8B%EF%BC%8C%E5%93%A6%E4%B8%8D%EF%BC%8C%E5%86%AC%E3%80%82/</loc>
-    <lastmod>2018-11-25T13:31:10.236Z</lastmod>
+    <loc>https://www.hojun.cn/2018/12/07/Web%E7%AB%AF720%E5%85%A8%E6%99%AF%E5%AE%9E%E7%8E%B0%E6%8F%AD%E7%A7%98/</loc>
+    <lastmod>2019-02-02T13:58:21.188Z</lastmod>
     <data>
         <display>
-        <title>秋，哦不，冬。</title>
-        <pubTime>2018-11-25T13:01:38.000Z</pubTime>
+        <title>Web端720全景实现揭秘</title>
+        <pubTime>2018-12-06T16:01:57.000Z</pubTime>
         
-        <tag>图集</tag>
+        <tag>web</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/01/01/%E5%86%99%E5%9C%A82019-1-1/</loc>
+    <lastmod>2019-02-02T13:58:15.293Z</lastmod>
+    <data>
+        <display>
+        <title>写在2019.1.1</title>
+        <pubTime>2019-01-01T13:37:10.000Z</pubTime>
+        
+        <tag>生活</tag>
          
          
            
@@ -192,6 +103,125 @@
     </url>
 
     
+  <url>
+    <loc>https://www.hojun.cn/2019/01/08/yaml%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0Hexo%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2019-02-02T13:56:47.510Z</lastmod>
+    <data>
+        <display>
+        <title>yaml基本语法及实现Hexo二级导航栏功能</title>
+        <pubTime>2019-01-08T15:55:01.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>yaml</tag>
+         
+        <tag>sakura</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/01/12/hexo-sakura%E4%B8%BB%E9%A2%98%E5%AE%9E%E7%8E%B0%E5%85%AC%E5%91%8A%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2019-02-02T13:56:29.923Z</lastmod>
+    <data>
+        <display>
+        <title>hexo-sakura主题实现公告功能</title>
+        <pubTime>2019-01-12T13:24:34.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>yaml</tag>
+         
+        <tag>sakura</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/</loc>
+    <lastmod>2019-02-02T13:56:04.213Z</lastmod>
+    <data>
+        <display>
+        <title>jsDeliver+github使用教程，免费好用的cdn</title>
+        <pubTime>2019-01-18T15:38:41.000Z</pubTime>
+        
+        <tag>cdn</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/01/28/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8A%A0%E5%85%A5B%E7%AB%99%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
+    <lastmod>2019-02-02T13:55:23.596Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客中加入B站视频播放器</title>
+        <pubTime>2019-01-28T13:43:12.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/02/19/live2d-%E7%9C%8B%E6%9D%BF%E5%A8%98%E5%B0%8F%E5%9F%8B/</loc>
+    <lastmod>2019-01-14T13:26:41.656Z</lastmod>
+    <data>
+        <display>
+        <title>live2d-看板娘小埋</title>
+        <pubTime>2018-02-19T13:10:03.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/11/25/Hexo%E7%BB%99materialX%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0pjax%E6%94%AF%E6%8C%81/</loc>
+    <lastmod>2018-11-26T15:29:16.621Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo给materialX主题添加pjax支持</title>
+        <pubTime>2018-11-25T12:41:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://www.hojun.cn/2018/11/08/%E7%94%B5%E8%84%91%E6%98%AF%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E5%A4%9A%E9%95%BF%E6%97%B6%E9%97%B4%E6%98%AF%E4%B8%80%E7%A7%92%E7%9A%84/</loc>
@@ -201,13 +231,8 @@
         <title>电脑是怎么知道多长时间是一秒的?</title>
         <pubTime>2018-11-08T14:38:37.000Z</pubTime>
         
-        <tag>你知道吗？</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -221,13 +246,8 @@
         <title>hexo博客快速迁移至coding</title>
         <pubTime>2018-11-05T15:20:20.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -241,13 +261,8 @@
         <title>ngrok免费带你穿透内网映射到外网</title>
         <pubTime>2018-10-31T15:59:35.000Z</pubTime>
         
-        <tag>tools</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -261,13 +276,8 @@
         <title>修改Hexo引用样式为双引号形式</title>
         <pubTime>2018-10-23T14:10:01.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -281,13 +291,8 @@
         <title>记录下hojun的万事屋淘宝小店开张</title>
         <pubTime>2018-10-19T14:41:15.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -301,13 +306,8 @@
         <title>分享一些资源</title>
         <pubTime>2017-06-17T15:08:34.000Z</pubTime>
         
-        <tag>资源</tag>
-         
          
            
-             
-              <breadCrumb title="资源" url="https://www.hojun.cn/categories/%E8%B5%84%E6%BA%90/"/>
-          
         </display>
     </data>
     </url>
@@ -321,13 +321,8 @@
         <title>如果我每天都早睡早起会不会成为一个很好的人</title>
         <pubTime>2018-10-19T14:46:40.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -341,13 +336,8 @@
         <title>快速开发属于自己的APP-FusionApp</title>
         <pubTime>2018-08-13T14:35:06.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -361,13 +351,8 @@
         <title>miccall主题及html5up站点推荐</title>
         <pubTime>2018-08-25T14:37:08.000Z</pubTime>
         
-        <tag>资源</tag>
-         
          
            
-             
-              <breadCrumb title="资源" url="https://www.hojun.cn/categories/%E8%B5%84%E6%BA%90/"/>
-          
         </display>
     </data>
     </url>
@@ -381,13 +366,8 @@
         <title>CSS+SVG路径描边特效</title>
         <pubTime>2018-08-28T12:39:45.000Z</pubTime>
         
-        <tag>特效</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -401,13 +381,8 @@
         <title>还没好图床的小伙伴看过来，微博是个好图床！</title>
         <pubTime>2018-09-04T13:49:06.000Z</pubTime>
         
-        <tag>图床</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -421,13 +396,8 @@
         <title>网页看板娘-Live2d蕾姆</title>
         <pubTime>2018-08-30T15:56:28.000Z</pubTime>
         
-        <tag>live2d</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -443,9 +413,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -459,13 +426,8 @@
         <title>MongoDB初体验—Windows下安装配置</title>
         <pubTime>2018-10-15T15:40:52.000Z</pubTime>
         
-        <tag>数据库</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -479,13 +441,8 @@
         <title>Mongo客户端MongoVUE安装</title>
         <pubTime>2018-10-16T15:23:39.000Z</pubTime>
         
-        <tag>数据库</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -499,13 +456,8 @@
         <title>sublime添加Vue模板和语法高亮</title>
         <pubTime>2018-10-08T14:12:02.000Z</pubTime>
         
-        <tag>sublime</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -519,13 +471,8 @@
         <title>PS小白·鲜果果汁广告</title>
         <pubTime>2018-10-01T12:46:50.000Z</pubTime>
         
-        <tag>ps</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -539,13 +486,8 @@
         <title>PS小白·手机中的羊</title>
         <pubTime>2018-09-28T16:09:08.000Z</pubTime>
         
-        <tag>ps</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -559,13 +501,8 @@
         <title>PS小白画星空图</title>
         <pubTime>2018-09-23T16:32:44.000Z</pubTime>
         
-        <tag>ps</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -579,15 +516,8 @@
         <title>动漫·宝石之国</title>
         <pubTime>2018-09-22T03:30:56.000Z</pubTime>
         
-        <tag>视频</tag>
-         
-        <tag>动漫</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -607,19 +537,8 @@
         <title>记录微信公众号历史文章采集(三、爬取历史文章信息和原文地址)</title>
         <pubTime>2018-09-21T15:23:25.000Z</pubTime>
         
-        <tag>php</tag>
-         
-        <tag>爬虫</tag>
-         
-        <tag>微信</tag>
-         
-        <tag>anyproxy</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -633,19 +552,8 @@
         <title>记录微信公众号历史文章采集(一、Anyproxy)</title>
         <pubTime>2018-09-19T15:02:07.000Z</pubTime>
         
-        <tag>php</tag>
-         
-        <tag>爬虫</tag>
-         
-        <tag>微信</tag>
-         
-        <tag>anyproxy</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -659,19 +567,8 @@
         <title>记录微信公众号历史文章采集(二、js代码完善和数据库建立)</title>
         <pubTime>2018-09-20T15:34:00.000Z</pubTime>
         
-        <tag>php</tag>
-         
-        <tag>爬虫</tag>
-         
-        <tag>微信</tag>
-         
-        <tag>anyproxy</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -685,13 +582,8 @@
         <title>百度校招和按钮特效</title>
         <pubTime>2018-09-17T15:31:00.000Z</pubTime>
         
-        <tag>特效</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -705,13 +597,8 @@
         <title>php本地虚拟域名配置和端口的一些折腾</title>
         <pubTime>2018-09-16T15:05:06.000Z</pubTime>
         
-        <tag>php</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -725,13 +612,8 @@
         <title>包图网广告资源分享</title>
         <pubTime>2018-09-12T14:55:30.000Z</pubTime>
         
-        <tag>资源</tag>
-         
          
            
-             
-              <breadCrumb title="资源" url="https://www.hojun.cn/categories/%E8%B5%84%E6%BA%90/"/>
-          
         </display>
     </data>
     </url>
@@ -747,9 +629,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -765,9 +644,6 @@
         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -783,9 +659,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -799,13 +672,8 @@
         <title>白帽子武器库：KaliLinux安装教程</title>
         <pubTime>2018-09-05T07:56:30.000Z</pubTime>
         
-        <tag>linux</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -821,9 +689,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -837,15 +702,8 @@
         <title>给网页的input输入框添加炫酷打字特效</title>
         <pubTime>2018-09-02T14:48:03.000Z</pubTime>
         
-        <tag>特效</tag>
-         
-        <tag>js</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -859,13 +717,8 @@
         <title>不能承受的生命之轻·记</title>
         <pubTime>2018-03-28T15:53:09.000Z</pubTime>
         
-        <tag>悦读</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -879,13 +732,8 @@
         <title>整理好过去, 重新出发! 怦然心动的人生整理魔法·记</title>
         <pubTime>2018-04-08T16:52:23.000Z</pubTime>
         
-        <tag>悦读</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -899,13 +747,8 @@
         <title>黑客与画家·读后感：你对技术一无所知</title>
         <pubTime>2018-03-27T14:31:52.000Z</pubTime>
         
-        <tag>悦读</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -919,13 +762,8 @@
         <title>超级整理术·记</title>
         <pubTime>2018-04-05T06:59:06.000Z</pubTime>
         
-        <tag>悦读</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -939,13 +777,8 @@
         <title>开学啦</title>
         <pubTime>2018-08-31T15:18:09.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -959,13 +792,8 @@
         <title>一台电脑上配置两个Git账号？可能你并不需要</title>
         <pubTime>2018-08-28T08:43:20.000Z</pubTime>
         
-        <tag>git</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -979,13 +807,8 @@
         <title>Coding的SVN服务踩坑记</title>
         <pubTime>2018-08-28T08:36:19.000Z</pubTime>
         
-        <tag>svn</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -999,13 +822,8 @@
         <title>node更新</title>
         <pubTime>2018-08-25T14:46:52.000Z</pubTime>
         
-        <tag>node</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1019,13 +837,8 @@
         <title>好少年光芒万丈</title>
         <pubTime>2018-08-06T05:18:10.000Z</pubTime>
         
-        <tag>flag</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -1039,15 +852,8 @@
         <title>樱花飘落特效</title>
         <pubTime>2018-08-23T11:20:40.000Z</pubTime>
         
-        <tag>特效</tag>
-         
-        <tag>jquery</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1061,13 +867,8 @@
         <title>snowfall.jquery.js实现樱花飘落效果</title>
         <pubTime>2018-01-10T15:01:54.000Z</pubTime>
         
-        <tag>js</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1081,15 +882,8 @@
         <title>PS小白-羽化图片使其融入背景色</title>
         <pubTime>2018-08-18T14:57:46.000Z</pubTime>
         
-        <tag>ps</tag>
-         
-        <tag>设计</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1103,13 +897,8 @@
         <title>熊掌情书</title>
         <pubTime>2018-08-18T11:21:55.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1123,15 +912,8 @@
         <title>粒子上升渐变特效学习</title>
         <pubTime>2018-08-12T12:20:52.000Z</pubTime>
         
-        <tag>特效</tag>
-         
-        <tag>前端</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1145,13 +927,8 @@
         <title>欧阳明净</title>
         <pubTime>2018-08-03T13:59:02.000Z</pubTime>
         
-        <tag>连载小说</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -1165,15 +942,8 @@
         <title>修复人物idle和run动画切换之间的延迟的Bug</title>
         <pubTime>2017-06-16T15:47:38.000Z</pubTime>
         
-        <tag>Unity</tag>
-         
-        <tag>debug</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1187,13 +957,8 @@
         <title>使用disqus评论</title>
         <pubTime>2018-03-07T15:07:28.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1207,13 +972,8 @@
         <title>人大了，心小了</title>
         <pubTime>2018-08-03T14:45:49.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -1227,13 +987,8 @@
         <title>Win10小技巧之创建不可删除文件夹，还能保护隐私哦~</title>
         <pubTime>2018-03-24T11:50:37.000Z</pubTime>
         
-        <tag>win10</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1247,15 +1002,8 @@
         <title>Thinkphp3.2.3发现SQL注入漏洞！</title>
         <pubTime>2018-04-16T11:40:40.000Z</pubTime>
         
-        <tag>php</tag>
-         
-        <tag>thinkphp</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1271,9 +1019,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1287,13 +1032,8 @@
         <title>SVG深入浅出</title>
         <pubTime>2018-03-14T16:36:54.000Z</pubTime>
         
-        <tag>svg</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1307,13 +1047,8 @@
         <title>sublime使用技巧</title>
         <pubTime>2018-02-09T11:49:59.000Z</pubTime>
         
-        <tag>sublime</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -1327,13 +1062,8 @@
         <title>python玩转跳一跳</title>
         <pubTime>2018-01-08T14:24:34.000Z</pubTime>
         
-        <tag>python</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1349,9 +1079,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1365,15 +1092,8 @@
         <title>python模拟登陆入门教程</title>
         <pubTime>2018-04-11T17:25:19.000Z</pubTime>
         
-        <tag>python</tag>
-         
-        <tag>爬虫</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1387,13 +1107,8 @@
         <title>python操作word</title>
         <pubTime>2018-04-18T15:45:53.000Z</pubTime>
         
-        <tag>python</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1407,15 +1122,8 @@
         <title>python备份hexo博客图片</title>
         <pubTime>2018-03-29T14:27:19.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>python</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1429,15 +1137,8 @@
         <title>python+wget轻松爬取MP3音乐文件</title>
         <pubTime>2018-04-03T12:10:28.000Z</pubTime>
         
-        <tag>python</tag>
-         
-        <tag>wget</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1451,13 +1152,8 @@
         <title>Python+selenium自动上传博客图片至新浪微博相册</title>
         <pubTime>2018-02-12T12:57:04.000Z</pubTime>
         
-        <tag>python</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1471,13 +1167,8 @@
         <title>python+Chrome爬取动态异步生成的页面内容</title>
         <pubTime>2018-04-04T11:41:20.000Z</pubTime>
         
-        <tag>python</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1491,15 +1182,8 @@
         <title>PS小白学切图</title>
         <pubTime>2018-08-09T14:23:59.000Z</pubTime>
         
-        <tag>ps</tag>
-         
-        <tag>设计</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1513,15 +1197,8 @@
         <title>PHP模拟登陆</title>
         <pubTime>2017-10-22T15:53:05.000Z</pubTime>
         
-        <tag>php</tag>
-         
-        <tag>模拟登陆</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1537,9 +1214,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1553,13 +1227,8 @@
         <title>php中功能强大的函数</title>
         <pubTime>2017-06-30T12:50:44.000Z</pubTime>
         
-        <tag>php</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1573,13 +1242,8 @@
         <title>OwO-可爱的js表情符号插件</title>
         <pubTime>2018-04-22T13:32:40.000Z</pubTime>
         
-        <tag>js</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1593,13 +1257,8 @@
         <title>mysql报字符集错误</title>
         <pubTime>2017-07-18T12:14:09.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1613,13 +1272,8 @@
         <title>Mysql 5.7.19 For Windows 安装+修改密码</title>
         <pubTime>2017-08-09T15:50:45.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1633,15 +1287,8 @@
         <title>Lozad.js学习使用</title>
         <pubTime>2017-11-15T10:39:54.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>js</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1657,9 +1304,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1673,17 +1317,8 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
-        <tag>jquery</tag>
-         
-        <tag>jcrop</tag>
-         
-        <tag>前端</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1697,13 +1332,8 @@
         <title>hexo评论系统之valine快速使用</title>
         <pubTime>2018-08-07T14:48:32.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1717,13 +1347,8 @@
         <title>HEXO发布到Github报错?凉凉,迁移到Coding</title>
         <pubTime>2018-07-23T13:58:58.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1737,13 +1362,8 @@
         <title>Hexo博客备份—妈妈再也不用担心你使用hexo写博客</title>
         <pubTime>2018-01-25T14:06:39.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1759,9 +1379,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1777,9 +1394,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1793,13 +1407,8 @@
         <title>Github</title>
         <pubTime>2018-03-24T13:00:24.000Z</pubTime>
         
-        <tag>github</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1813,15 +1422,8 @@
         <title>Fiddler小白入门</title>
         <pubTime>2018-07-11T11:03:42.000Z</pubTime>
         
-        <tag>抓包</tag>
-         
-        <tag>分析</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1837,9 +1439,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1853,13 +1452,8 @@
         <title>ES6之Promise</title>
         <pubTime>2018-03-26T12:39:36.000Z</pubTime>
         
-        <tag>es6</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1873,13 +1467,8 @@
         <title>CSS妙用伪元素before、after</title>
         <pubTime>2018-04-19T13:22:48.000Z</pubTime>
         
-        <tag>css</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1895,9 +1484,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1911,17 +1497,8 @@
         <title>canvas两张图片合成一张</title>
         <pubTime>2017-06-07T02:48:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
-        <tag>html5</tag>
-         
-        <tag>canvas</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1935,13 +1512,8 @@
         <title>base64 DataUrl blod file canvas图片格式转换</title>
         <pubTime>2017-06-07T03:15:47.000Z</pubTime>
         
-        <tag>前端</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1955,17 +1527,8 @@
         <title>BadUSB —— Teensy++2.0</title>
         <pubTime>2017-06-07T03:18:31.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
-        <tag>硬件</tag>
-         
-        <tag>hacker</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -1979,15 +1542,8 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2001,13 +1557,8 @@
         <title>2018软考成绩查询！</title>
         <pubTime>2018-07-07T12:52:14.000Z</pubTime>
         
-        <tag>软考</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2021,13 +1572,8 @@
         <title>2018立夏</title>
         <pubTime>2018-05-05T15:59:48.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2043,9 +1589,6 @@
         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2059,13 +1602,8 @@
         <title>2018-0514每日锻炼</title>
         <pubTime>2018-05-14T15:08:07.000Z</pubTime>
         
-        <tag>锻炼</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2079,13 +1617,8 @@
         <title>逗比生活</title>
         <pubTime>2017-07-10T15:38:10.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2099,15 +1632,8 @@
         <title>逗比日记-180422</title>
         <pubTime>2018-04-22T13:15:17.000Z</pubTime>
         
-        <tag>生活</tag>
-         
-        <tag>日记</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2121,15 +1647,8 @@
         <title>逗比日记</title>
         <pubTime>2018-04-13T15:47:40.000Z</pubTime>
         
-        <tag>生活</tag>
-         
-        <tag>日记</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2143,15 +1662,8 @@
         <title>这是一个测试</title>
         <pubTime>2017-04-26T05:40:53.000Z</pubTime>
         
-        <tag>测试</tag>
-         
-        <tag>hojun</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2165,13 +1677,8 @@
         <title>还在找遥控器？小米手机这功能就够了</title>
         <pubTime>2018-08-10T13:29:34.000Z</pubTime>
         
-        <tag>手机</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2185,15 +1692,8 @@
         <title>软考备考之数据库数据模型</title>
         <pubTime>2018-05-08T16:15:15.000Z</pubTime>
         
-        <tag>软考</tag>
-         
-        <tag>数据库</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2207,13 +1707,8 @@
         <title>软考备考之广义表理解</title>
         <pubTime>2018-05-11T13:03:38.000Z</pubTime>
         
-        <tag>软考</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2227,13 +1722,8 @@
         <title>软考备考之前趋图PV操作</title>
         <pubTime>2018-05-30T04:55:31.000Z</pubTime>
         
-        <tag>软考</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2247,15 +1737,8 @@
         <title>软考备考之UML类图几种关系总结</title>
         <pubTime>2018-05-07T13:13:02.000Z</pubTime>
         
-        <tag>软考</tag>
-         
-        <tag>UML</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2269,15 +1752,8 @@
         <title>软考备考之UML十种建模图</title>
         <pubTime>2018-05-07T13:10:37.000Z</pubTime>
         
-        <tag>软考</tag>
-         
-        <tag>UML</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2291,13 +1767,8 @@
         <title>软考之软件设计师经验总结</title>
         <pubTime>2018-05-30T04:53:30.000Z</pubTime>
         
-        <tag>软考</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2311,13 +1782,8 @@
         <title>[转]睡眠与养生</title>
         <pubTime>2017-06-11T14:58:16.000Z</pubTime>
         
-        <tag>生活</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2333,9 +1799,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2349,15 +1812,8 @@
         <title>距离玩BeatSaber还差...</title>
         <pubTime>2018-07-26T15:12:31.000Z</pubTime>
         
-        <tag>flag</tag>
-         
-        <tag>game</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2371,13 +1827,8 @@
         <title>评论系统之来必力</title>
         <pubTime>2018-06-04T12:47:20.000Z</pubTime>
         
-        <tag>评论</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2391,13 +1842,8 @@
         <title>解决父级元素不能被撑开</title>
         <pubTime>2017-07-12T15:10:32.000Z</pubTime>
         
-        <tag>css</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2411,25 +1857,8 @@
         <title>虚拟机安装ubuntu16.04.2</title>
         <pubTime>2017-06-04T12:07:31.000Z</pubTime>
         
-        <tag>mysql</tag>
-         
-        <tag>php</tag>
-         
-        <tag>sublime</tag>
-         
-        <tag>linux</tag>
-         
-        <tag>nginx</tag>
-         
-        <tag>vmware</tag>
-         
-        <tag>ubuntu</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2443,13 +1872,8 @@
         <title>自定义菜单创建 —— 微信公众平台开发</title>
         <pubTime>2017-07-06T14:15:08.000Z</pubTime>
         
-        <tag>weixin</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2463,13 +1887,8 @@
         <title>自动上传博客图片至新浪微博相册之Headless版</title>
         <pubTime>2018-04-14T11:37:44.000Z</pubTime>
         
-        <tag>python</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2483,13 +1902,8 @@
         <title>网页引导-Jquerypagewalkthrough.js</title>
         <pubTime>2017-09-06T15:23:16.000Z</pubTime>
         
-        <tag>jquery</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2503,13 +1917,8 @@
         <title>网页图片实现层次+旋转的3D展示效果</title>
         <pubTime>2018-04-15T13:25:41.000Z</pubTime>
         
-        <tag>前端</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2523,13 +1932,8 @@
         <title>给博客添加个人域名</title>
         <pubTime>2017-07-01T13:45:49.000Z</pubTime>
         
-        <tag>blog</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2543,13 +1947,8 @@
         <title>给博客添加网易云跟帖评论</title>
         <pubTime>2017-07-03T14:10:57.000Z</pubTime>
         
-        <tag>blog</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2563,13 +1962,8 @@
         <title>给博客添加文章目录</title>
         <pubTime>2018-07-03T15:20:53.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2583,17 +1977,8 @@
         <title>给博客添加图集展示</title>
         <pubTime>2018-04-24T15:04:40.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>图集</tag>
-         
-        <tag>lab</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2607,13 +1992,8 @@
         <title>给博客添加上一篇下一篇功能</title>
         <pubTime>2018-06-23T10:23:40.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2627,13 +2007,8 @@
         <title>给博客添加https支持</title>
         <pubTime>2017-07-04T12:01:34.000Z</pubTime>
         
-        <tag>blog</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2649,9 +2024,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2665,13 +2037,8 @@
         <title>给hexo的jsimple主题添加代码高亮</title>
         <pubTime>2017-07-02T15:13:33.000Z</pubTime>
         
-        <tag>blog</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2685,15 +2052,8 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>搞事</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2707,13 +2067,8 @@
         <title>细说网页开发者工具F12-前端开发利器二</title>
         <pubTime>2018-07-15T14:30:18.000Z</pubTime>
         
-        <tag>网页开发者工具</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2727,13 +2082,8 @@
         <title>细说网页开发者工具F12-前端开发利器三</title>
         <pubTime>2018-07-19T15:40:07.000Z</pubTime>
         
-        <tag>网页开发者工具</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2747,13 +2097,8 @@
         <title>细说网页开发者工具F12-前端开发利器一</title>
         <pubTime>2018-07-12T13:57:52.000Z</pubTime>
         
-        <tag>网页开发者工具</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2767,13 +2112,8 @@
         <title>简单理解海明校验码</title>
         <pubTime>2018-04-16T16:26:32.000Z</pubTime>
         
-        <tag>软考</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2787,13 +2127,8 @@
         <title>百度站长网站改版踩坑记</title>
         <pubTime>2018-08-01T15:44:31.000Z</pubTime>
         
-        <tag>seo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2807,15 +2142,8 @@
         <title>电脑开机自动发送邮件通知</title>
         <pubTime>2018-08-05T10:35:53.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
-        <tag>lab</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2829,13 +2157,8 @@
         <title>添加系列文章功能</title>
         <pubTime>2018-06-17T03:54:58.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2849,13 +2172,8 @@
         <title>消息加解密 —— 微信公众平台开发</title>
         <pubTime>2017-07-05T15:08:38.000Z</pubTime>
         
-        <tag>weixin</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2871,9 +2189,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2887,13 +2202,8 @@
         <title>每日签到</title>
         <pubTime>2017-12-30T04:08:23.000Z</pubTime>
         
-        <tag>锻炼</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -2909,9 +2219,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2925,13 +2232,8 @@
         <title>数据恢复练习必备——创建虚拟磁盘</title>
         <pubTime>2018-04-30T13:32:36.000Z</pubTime>
         
-        <tag>win10</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2945,13 +2247,8 @@
         <title>摄像机跟随人物移动</title>
         <pubTime>2017-06-16T15:48:13.000Z</pubTime>
         
-        <tag>Unity</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2965,13 +2262,8 @@
         <title>按键精灵入门</title>
         <pubTime>2017-07-07T15:16:37.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -2985,13 +2277,8 @@
         <title>拼音学习StudyPinYin</title>
         <pubTime>2018-02-22T15:00:38.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3005,13 +2292,8 @@
         <title>打字特效</title>
         <pubTime>2018-02-04T15:58:10.000Z</pubTime>
         
-        <tag>js</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3025,15 +2307,8 @@
         <title>手把手教你搭建HEXO博客(四)</title>
         <pubTime>2018-06-09T06:56:11.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>博客</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3047,15 +2322,8 @@
         <title>手把手教你搭建HEXO博客(二)</title>
         <pubTime>2018-06-07T14:20:12.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>博客</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3069,15 +2337,8 @@
         <title>手把手教你搭建HEXO博客(三)</title>
         <pubTime>2018-06-08T15:37:04.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>博客</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3091,15 +2352,8 @@
         <title>手把手教你搭建HEXO博客(一)</title>
         <pubTime>2018-06-06T13:25:30.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
-        <tag>博客</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3113,13 +2367,8 @@
         <title>峰谷电计算</title>
         <pubTime>2018-05-26T15:41:34.000Z</pubTime>
         
-        <tag>其他</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3133,13 +2382,8 @@
         <title>小测试题</title>
         <pubTime>2017-06-27T15:03:01.000Z</pubTime>
         
-        <tag>php</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3155,9 +2399,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3173,9 +2414,6 @@
         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3189,13 +2427,8 @@
         <title>图片种子制作原来这么简单—老司机快上车</title>
         <pubTime>2018-04-10T16:32:37.000Z</pubTime>
         
-        <tag>小技巧</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3209,13 +2442,8 @@
         <title>喜欢的音乐</title>
         <pubTime>2018-02-18T03:12:14.000Z</pubTime>
         
-        <tag>music</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3229,13 +2457,8 @@
         <title>喜大奔普~拼音打字练习功能支持手机了！</title>
         <pubTime>2018-08-11T09:25:44.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3249,13 +2472,8 @@
         <title>博客添加gitment评论</title>
         <pubTime>2017-07-09T15:16:20.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3269,13 +2487,8 @@
         <title>博客小人</title>
         <pubTime>2018-02-04T16:11:09.000Z</pubTime>
         
-        <tag>blog</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3289,13 +2502,8 @@
         <title>千秋令</title>
         <pubTime>2018-05-05T14:47:13.000Z</pubTime>
         
-        <tag>图集</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3309,15 +2517,8 @@
         <title>勿忘初心</title>
         <pubTime>2017-06-24T15:36:49.000Z</pubTime>
         
-        <tag>生活</tag>
-         
-        <tag>情感</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3333,9 +2534,6 @@
         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3349,13 +2547,8 @@
         <title>关于此博客搭建</title>
         <pubTime>2017-06-18T15:39:18.000Z</pubTime>
         
-        <tag>blog</tag>
-         
          
            
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
         </display>
     </data>
     </url>
@@ -3369,13 +2562,8 @@
         <title>六一儿童节flag</title>
         <pubTime>2018-06-01T15:47:11.000Z</pubTime>
         
-        <tag>节日</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
@@ -3389,13 +2577,8 @@
         <title>八重樱:文雅，你言而不决中的温柔和耐心</title>
         <pubTime>2018-04-23T12:22:43.000Z</pubTime>
         
-        <tag>图集</tag>
-         
          
            
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
         </display>
     </data>
     </url>
