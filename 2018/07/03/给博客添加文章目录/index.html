@@ -621,10 +621,18 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
         <div class="post-tags">标签：
+            
+            <a href="/tags/hexo/">hexo</a>
             
         </div>
         
@@ -753,15 +761,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>

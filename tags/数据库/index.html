@@ -58,7 +58,7 @@
         "@id": "https://www.hojun.com/tags/数据库/index.html",
         "appid": "1594654793276567","title": "hojun-好少年光芒万丈",
         "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],
-        "pubDate": "2019-01-28T12:32:28"
+        "pubDate": "2019-02-11T12:28:52"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -351,15 +351,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>

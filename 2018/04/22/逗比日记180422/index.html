@@ -223,6 +223,10 @@
         
         <div class="post-tags">标签：
             
+            <a href="/tags/生活/">生活</a>
+            
+            <a href="/tags/日记/">日记</a>
+            
         </div>
         
     </article>
@@ -350,15 +354,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>

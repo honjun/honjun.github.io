@@ -202,11 +202,11 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="燃·Unbroken"><a href="#燃·Unbroken" class="headerlink" title="燃·Unbroken"></a>燃·Unbroken</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=1861309&cid=2868158&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
+            <h2 id="燃·Unbroken"><a href="#燃·Unbroken" class="headerlink" title="燃·Unbroken"></a>燃·Unbroken</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=1861309&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
 <h2 id="原创"><a href="#原创" class="headerlink" title="原创"></a>原创</h2><blockquote>
 <p>手把手教你搭建属于自己的hexo+github博客</p>
 </blockquote>
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=24897960&cid=42007944&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=24897960&page=" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
 <h3 id="整套视频地址https-www-bilibili-com-video-av24897960"><a href="#整套视频地址https-www-bilibili-com-video-av24897960" class="headerlink" title="整套视频地址https://www.bilibili.com/video/av24897960"></a><a href="https://www.bilibili.com/video/av24897960">整套视频地址https://www.bilibili.com/video/av24897960</a></h3><h3 id="更多推荐视频"><a href="#更多推荐视频" class="headerlink" title="更多推荐视频"></a><a href="/tags/视频/">更多推荐视频</a></h3><hr>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -335,15 +335,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>

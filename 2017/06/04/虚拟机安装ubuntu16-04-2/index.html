@@ -227,6 +227,20 @@
         
         <div class="post-tags">标签：
             
+            <a href="/tags/mysql/">mysql</a>
+            
+            <a href="/tags/php/">php</a>
+            
+            <a href="/tags/sublime/">sublime</a>
+            
+            <a href="/tags/linux/">linux</a>
+            
+            <a href="/tags/nginx/">nginx</a>
+            
+            <a href="/tags/vmware/">vmware</a>
+            
+            <a href="/tags/ubuntu/">ubuntu</a>
+            
         </div>
         
     </article>
@@ -354,15 +368,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>

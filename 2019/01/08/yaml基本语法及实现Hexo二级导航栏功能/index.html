@@ -198,7 +198,7 @@
             </div>
             <h2 class="post-title">yaml基本语法及实现Hexo二级导航栏功能</h2>
             <div class="post-meta">
-                本文总共8241个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共4473个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -235,94 +235,6 @@
 <p>在学习了阮一峰老师的那部分内容应该能看懂上图的配置了。接下来就是模板中怎么遍历出菜单了。<br>废话不多说，直接上代码：（注意这里是ejs模板的代码，swig、pub等模板代码还需自己照瓢画葫芦）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"menu-new"</span> <span class="attr">class</span>=<span class="string">"menu"</span>&gt;</span></span><br><span class="line">  //这里是开始循环外层菜单（就是横着的那部分）</span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">menu</span> <span class="attr">in</span> <span class="attr">theme.menus</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">      //a标签里当然是输出菜单的路径咯</span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menus[menu].path) %&gt;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"faa-parent animated-hover"</span>&gt;</span></span><br><span class="line">          //i标签里输出菜单的icon的class咯</span><br><span class="line">          <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa  &lt;%= theme.menus[menu].fa %&gt;"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">          //这里输出菜单名咯</span><br><span class="line">          <span class="tag">&lt;<span class="name">%=</span> <span class="attr">menu</span> %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      //这里判断有没有二级菜单，有的话遍历出二级菜单（就是竖着的那部分）</span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.menus</span>[<span class="attr">menu</span>]<span class="attr">.submenus</span>) &#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"sub-menu"</span>&gt;</span></span><br><span class="line">          //遍历出二级菜单（就是竖着的那部分）</span><br><span class="line">          <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">submenu</span> <span class="attr">in</span> <span class="attr">theme.menus</span>[<span class="attr">menu</span>]<span class="attr">.submenus</span>)&#123; %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">              //a标签里当然是输出二级菜单的路径咯</span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menus[menu].submenus[submenu].path) %&gt;"</span>&gt;</span></span><br><span class="line">                //i标签里输出二级菜单的icon的class咯</span><br><span class="line">                <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa &lt;%= theme.menus[menu].submenus[submenu].fa %&gt;"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                //这里输出二级菜单名咯</span><br><span class="line">                <span class="tag">&lt;<span class="name">%=</span> <span class="attr">submenu</span> %&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>可以看出我是用行内对象来实现的，后来想想用数组实现会比较简单，当是那样会用下标0、1、2等代替具体的值，而不是像现在有具体的含义的属性path,fa等，数组实现没有这种方式易懂。就没有改成数组了。</p>
 <p>到此hexo二级导航栏功能实现，完。</p>
-<h2 id="阮一峰老师的博客的完整内容"><a href="#阮一峰老师的博客的完整内容" class="headerlink" title="阮一峰老师的博客的完整内容"></a>阮一峰老师的博客的完整内容</h2><h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>YAML 语言（发音 /ˈjæməl/ ）的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。</p>
-<p>它的基本语法规则如下。</p>
-<ul>
-<li>大小写敏感</li>
-<li>使用缩进表示层级关系</li>
-<li>缩进时不允许使用Tab键，只允许使用空格。</li>
-<li>缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</li>
-</ul>
-<p><code>#</code> 表示注释，从这个字符一直到行尾，都会被解析器忽略。<br>YAML 支持的数据结构有三种。</p>
-<ul>
-<li>对象：键值对的集合，又称为映射（mapping）/ 哈希（hashes） / 字典（dictionary）</li>
-<li>数组：一组按次序排列的值，又称为序列（sequence） / 列表（list）</li>
-<li>纯量（scalars）：单个的、不可再分的值</li>
-</ul>
-<p>以下分别介绍这三种数据结构。</p>
-<h3 id="对象-1"><a href="#对象-1" class="headerlink" title="对象"></a>对象</h3><p>对象的一组键值对，使用冒号结构表示。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">animal:</span> <span class="string">pets</span></span><br></pre></td></tr></table></figure>
-<p>转为 JavaScript 如下。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">animal:</span> <span class="string">'pets'</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>Yaml 也允许另一种写法，将所有键值对写成一个行内对象。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hash:</span> <span class="string">&#123;</span> <span class="attr">name:</span> <span class="string">Steve,</span> <span class="attr">foo:</span> <span class="string">bar</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>转为 JavaScript 如下。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">hash:</span> <span class="string">&#123;</span> <span class="attr">name:</span> <span class="string">'Steve'</span><span class="string">,</span> <span class="attr">foo:</span> <span class="string">'bar'</span> <span class="string">&#125;</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="三、数组"><a href="#三、数组" class="headerlink" title="三、数组"></a>三、数组</h3><p>一组连词线开头的行，构成一个数组。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">Cat</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Dog</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">Goldfish</span></span><br></pre></td></tr></table></figure>
-<p>转为 JavaScript 如下。</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[</span> <span class="string">'Cat'</span><span class="string">,</span> <span class="string">'Dog'</span><span class="string">,</span> <span class="string">'Goldfish'</span> <span class="string">]</span></span><br></pre></td></tr></table></figure>
-<p>数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-</span><br><span class="line"> - Cat</span><br><span class="line"> - Dog</span><br><span class="line"> - Goldfish</span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[</span> <span class="string">[</span> <span class="string">'Cat'</span><span class="string">,</span> <span class="string">'Dog'</span><span class="string">,</span> <span class="string">'Goldfish'</span> <span class="string">]</span> <span class="string">]</span></span><br></pre></td></tr></table></figure></p>
-<p>数组也可以采用行内表示法。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">animal:</span> <span class="string">[Cat,</span> <span class="string">Dog]</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">animal:</span> <span class="string">[</span> <span class="string">'Cat'</span><span class="string">,</span> <span class="string">'Dog'</span> <span class="string">]</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="四、复合结构-1"><a href="#四、复合结构-1" class="headerlink" title="四、复合结构"></a>四、复合结构</h3><p>对象和数组可以结合使用，形成复合结构。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">languages:</span></span><br><span class="line"><span class="bullet"> -</span> <span class="string">Ruby</span></span><br><span class="line"><span class="bullet"> -</span> <span class="string">Perl</span></span><br><span class="line"><span class="bullet"> -</span> <span class="string">Python</span> </span><br><span class="line"><span class="attr">websites:</span></span><br><span class="line"><span class="attr"> YAML:</span> <span class="string">yaml.org</span> </span><br><span class="line"><span class="attr"> Ruby:</span> <span class="string">ruby-lang.org</span> </span><br><span class="line"><span class="attr"> Python:</span> <span class="string">python.org</span> </span><br><span class="line"><span class="attr"> Perl:</span> <span class="string">use.perl.org</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">languages:</span> <span class="string">[</span> <span class="string">'Ruby'</span><span class="string">,</span> <span class="string">'Perl'</span><span class="string">,</span> <span class="string">'Python'</span> <span class="string">],</span></span><br><span class="line"><span class="attr">  websites:</span> </span><br><span class="line">   <span class="string">&#123;</span> <span class="attr">YAML:</span> <span class="string">'yaml.org'</span><span class="string">,</span></span><br><span class="line"><span class="attr">     Ruby:</span> <span class="string">'ruby-lang.org'</span><span class="string">,</span></span><br><span class="line"><span class="attr">     Python:</span> <span class="string">'python.org'</span><span class="string">,</span></span><br><span class="line"><span class="attr">     Perl:</span> <span class="string">'use.perl.org'</span> <span class="string">&#125;</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="五、纯量"><a href="#五、纯量" class="headerlink" title="五、纯量"></a>五、纯量</h3><p>纯量是最基本的、不可再分的值。以下数据类型都属于 JavaScript 的纯量。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">字符串</span></span><br><span class="line"><span class="string">布尔值</span></span><br><span class="line"><span class="string">整数</span></span><br><span class="line"><span class="string">浮点数</span></span><br><span class="line"><span class="literal">Null</span></span><br><span class="line"><span class="string">时间</span></span><br><span class="line"><span class="string">日期</span></span><br></pre></td></tr></table></figure></p>
-<p>数值直接以字面量的形式表示。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">number:</span> <span class="number">12.30</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">number:</span> <span class="number">12.30</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>布尔值用true和false表示。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">isSet:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">isSet:</span> <span class="literal">true</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>null用~表示。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">parent:</span> <span class="string">~</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">parent:</span> <span class="literal">null</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>时间采用 ISO8601 格式。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">iso8601:</span> <span class="number">2001</span><span class="bullet">-12</span><span class="bullet">-14</span><span class="attr">t21:59:43.10-05:00</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">iso8601:</span> <span class="string">new</span> <span class="string">Date('2001-12-14t21:59:43.10-05:00')</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>日期采用复合 iso8601 格式的年、月、日表示。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">date:</span> <span class="number">1976</span><span class="bullet">-07</span><span class="bullet">-31</span></span><br></pre></td></tr></table></figure></p>
-<p>转为 JavaScript 如下。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#123;</span> <span class="attr">date:</span> <span class="string">new</span> <span class="string">Date('1976-07-31')</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>YAML 允许使用两个感叹号，强制转换数据类型。</p>
-<p>e: !!str 123<br>f: !!str true<br>转为 JavaScript 如下。</p>
-<p>{ e: ‘123’, f: ‘true’ }<br>六、字符串<br>字符串是最常见，也是最复杂的一种数据类型。</p>
-<p>字符串默认不使用引号表示。</p>
-<p>str: 这是一行字符串<br>转为 JavaScript 如下。</p>
-<p>{ str: ‘这是一行字符串’ }<br>如果字符串之中包含空格或特殊字符，需要放在引号之中。</p>
-<p>str: ‘内容： 字符串’<br>转为 JavaScript 如下。</p>
-<p>{ str: ‘内容: 字符串’ }<br>单引号和双引号都可以使用，双引号不会对特殊字符转义。</p>
-<p>s1: ‘内容\n字符串’<br>s2: “内容\n字符串”<br>转为 JavaScript 如下。</p>
-<p>{ s1: ‘内容\n字符串’, s2: ‘内容\n字符串’ }<br>单引号之中如果还有单引号，必须连续使用两个单引号转义。</p>
-<p>str: ‘labor’’s day’<br>转为 JavaScript 如下。</p>
-<p>{ str: ‘labor\’s day’ }<br>字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。</p>
-<p>str: 这是一段<br>  多行<br>  字符串<br>转为 JavaScript 如下。</p>
-<p>{ str: ‘这是一段 多行 字符串’ }<br>多行字符串可以使用|保留换行符，也可以使用&gt;折叠换行。</p>
-<p>this: |<br>  Foo<br>  Bar<br>that: &gt;<br>  Foo<br>  Bar<br>转为 JavaScript 代码如下。</p>
-<p>{ this: ‘Foo\nBar\n’, that: ‘Foo Bar\n’ }<br>+表示保留文字块末尾的换行，-表示删除字符串末尾的换行。</p>
-<p>s1: |<br>  Foo</p>
-<p>s2: |+<br>  Foo</p>
-<p>s3: |-<br>  Foo<br>转为 JavaScript 代码如下。</p>
-<p>{ s1: ‘Foo\n’, s2: ‘Foo\n\n\n’, s3: ‘Foo’ }<br>字符串之中可以插入 HTML 标记。</p>
-<p>message: |</p>
-<p>  <p style="color: red"><br>    段落<br>  </p><br>转为 JavaScript 如下。</p>
-<p>{ message: ‘\n<p style="color: red">\n  段落\n</p>\n’ }<br>七、引用<br>锚点&amp;和别名*，可以用来引用。</p>
-<p>defaults: &amp;defaults<br>  adapter:  postgres<br>  host:     localhost</p>
-<p>development:<br>  database: myapp_development<br>  &lt;&lt;: *defaults</p>
-<p>test:<br>  database: myapp_test<br>  &lt;&lt;: *defaults<br>等同于下面的代码。</p>
-<p>defaults:<br>  adapter:  postgres<br>  host:     localhost</p>
-<p>development:<br>  database: myapp_development<br>  adapter:  postgres<br>  host:     localhost</p>
-<p>test:<br>  database: myapp_test<br>  adapter:  postgres<br>  host:     localhost<br>&amp;用来建立锚点（defaults），&lt;&lt;表示合并到当前数据，*用来引用锚点。</p>
-<p>下面是另一个例子。</p>
-<ul>
-<li>&amp;showell Steve </li>
-<li>Clark </li>
-<li>Brian </li>
-<li>Oren </li>
-<li>*showell<br>转为 JavaScript 代码如下。</li>
-</ul>
-<p>[ ‘Steve’, ‘Clark’, ‘Brian’, ‘Oren’, ‘Steve’ ]<br>八、函数和正则表达式的转换<br>这是 JS-YAML 库特有的功能，可以把函数和正则表达式转为字符串。</p>
-<h1 id="example-yml"><a href="#example-yml" class="headerlink" title="example.yml"></a>example.yml</h1><p>fn: function () { return 1 }<br>reg: /test/<br>解析上面的 yml 文件的代码如下。</p>
-<p>var yaml = require(‘js-yaml’);<br>var fs   = require(‘fs’);</p>
-<p>try {<br>  var doc = yaml.load(<br>    fs.readFileSync(‘./example.yml’, ‘utf8’)<br>  );<br>  console.log(doc);<br>} catch (e) {<br>  console.log(e);<br>}<br>从 JavaScript 对象还原到 yaml 文件的代码如下。</p>
-<p>var yaml = require(‘js-yaml’);<br>var fs   = require(‘fs’);</p>
-<p>var obj = {<br>  fn: function () { return 1 },<br>  reg: /test/<br>};</p>
-<p>try {<br>  fs.writeFileSync(<br>    ‘./example.yml’,<br>    yaml.dump(obj),<br>    ‘utf8’<br>  );<br>} catch (e) {<br>  console.log(e);<br>}</p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -682,6 +594,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -689,9 +607,9 @@
             
             <a href="/tags/hexo/">hexo</a>
             
-            <a href="/tags/yaml/">yaml</a>
-            
             <a href="/tags/sakura/">sakura</a>
+            
+            <a href="/tags/yaml/">yaml</a>
             
         </div>
         
@@ -713,7 +631,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#以下内容摘至阮一峰老师的博客"><span class="toc-text">以下内容摘至阮一峰老师的博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象"><span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、复合结构"><span class="toc-text">四、复合结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#阮一峰老师的博客的完整内容"><span class="toc-text">阮一峰老师的博客的完整内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、简介"><span class="toc-text">一、简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象-1"><span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、数组"><span class="toc-text">三、数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、复合结构-1"><span class="toc-text">四、复合结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、纯量"><span class="toc-text">五、纯量</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#example-yml"><span class="toc-text">example.yml</span></a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#以下内容摘至阮一峰老师的博客"><span class="toc-text">以下内容摘至阮一峰老师的博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象"><span class="toc-text">对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、复合结构"><span class="toc-text">四、复合结构</span></a></li></ol></li></ol>
     </div>
 </aside>
 
@@ -820,15 +738,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>

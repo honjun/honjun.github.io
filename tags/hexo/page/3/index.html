@@ -58,7 +58,7 @@
         "@id": "https://www.hojun.com/tags/hexo/page/3/index.html",
         "appid": "1594654793276567","title": "hojun-好少年光芒万丈",
         "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],
-        "pubDate": "2019-01-28T12:32:28"
+        "pubDate": "2019-02-11T12:28:52"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -190,6 +190,73 @@
     
 <article class="post">
     
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a class="lozad" href="/2018/01/25/Hexo博客备份—妈妈再也不用担心你使用hexo写博客/" target="_self" title="Hexo博客备份—妈妈再也不用担心你使用hexo写博客" data-background-image="https://wx2.sinaimg.cn/mw690/006bYVyvgy1fo604rrdgmj30dw0b7mxf.jpg"></a>
+    </div>
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="/about/hojun.html" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2018-01-25
+        </div>
+        <a class="post-title" href="/2018/01/25/Hexo博客备份—妈妈再也不用担心你使用hexo写博客/" target="_self" title="Hexo博客备份—妈妈再也不用担心你使用hexo写博客">Hexo博客备份—妈妈再也不用担心你使用hexo写博客</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/hexo/" target="_self">hexo</a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        Hexo博客备份—妈妈再也不用担心你使用hexo写博客
+    </div>
+</article>
+
+
+
+    
+    
+<article class="post">
+    
+    <!-- 有配图默认渲染第一张 -->
+    <div class="post-cover">
+        <a class="lozad" href="/2017/11/15/Lozad-js学习使用/" target="_self" title="Lozad.js学习使用" data-background-image="https://wx2.sinaimg.cn/mw690/006bYVyvgy1fljswcaig9j31700gewh3.jpg"></a>
+    </div>
+    
+    <div class="post-header">
+        <div class="post-meta">
+            <a href="/about/hojun.html" target="_self">
+                <strong>hojun</strong>
+            </a>
+            <em>·</em>2017-11-15
+        </div>
+        <a class="post-title" href="/2017/11/15/Lozad-js学习使用/" target="_self" title="Lozad.js学习使用">Lozad.js学习使用</a>
+        <div class="post-meta">
+            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+            
+                <em>·</em>
+                <a href="/tags/hexo/" target="_self">hexo</a>
+            
+                <em>·</em>
+                <a href="/tags/js/" target="_self">js</a>
+            
+        </div>
+    </div>
+    <div class="post-desc">
+        Lozad懒加载
+    </div>
+</article>
+
+
+
+    
+    
+<article class="post">
+    
     <div class="post-header">
         <div class="post-meta">
             <a href="/about/hojun.html" target="_self">
@@ -294,15 +361,10 @@ var _hmt = _hmt || [];
   $tags.each(function() {
     arr.push($(this).html())
   })
-  if (arr.indexOf("图集") !== -1) {
-    $('.hj_img').each(function() {
-      $(this).wrap('<a class="fancybox" data-fancybox="gallery" href="' + $(this).prop("src") + '"></a>'); 
-    })
-    $('.fancybox').fancybox({
-      padding: 0,
-      loop: false
-    });
-  }
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
 })();
 </script>
 <script>
