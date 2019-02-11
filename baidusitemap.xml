@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2019/02/05/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90%EF%BC%8C%E7%8C%AA%E5%B9%B4%E5%A4%A7%E5%90%89%EF%BC%81/</loc>
+    <lastmod>2019-02-11T11:15:48.749Z</lastmod>
+    <data>
+        <display>
+        <title>新年快乐，猪年大吉！</title>
+        <pubTime>2019-02-05T02:59:08.000Z</pubTime>
+        
+        <tag>图集</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2019/01/08/yaml%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0Hexo%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2019-02-10T16:19:33.247Z</lastmod>
+    <lastmod>2019-02-11T11:15:37.466Z</lastmod>
     <data>
         <display>
         <title>yaml基本语法及实现Hexo二级导航栏功能</title>
@@ -75,26 +95,6 @@
         <display>
         <title>2018相册-每一张图片都是一个故事</title>
         <pubTime>2019-02-03T12:51:31.000Z</pubTime>
-        
-        <tag>图集</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/02/05/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90%EF%BC%8C%E7%8C%AA%E5%B9%B4%E5%A4%A7%E5%90%89%EF%BC%81/</loc>
-    <lastmod>2019-02-05T11:50:20.474Z</lastmod>
-    <data>
-        <display>
-        <title>新年快乐，猪年大吉！</title>
-        <pubTime>2019-02-05T02:59:08.000Z</pubTime>
         
         <tag>图集</tag>
          
