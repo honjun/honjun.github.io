@@ -3,49 +3,6 @@
 
 
     
-  <url>
-    <loc>https://www.hojun.cn/2019/02/05/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90%EF%BC%8C%E7%8C%AA%E5%B9%B4%E5%A4%A7%E5%90%89%EF%BC%81/</loc>
-    <lastmod>2019-02-11T11:15:48.749Z</lastmod>
-    <data>
-        <display>
-        <title>新年快乐，猪年大吉！</title>
-        <pubTime>2019-02-05T02:59:08.000Z</pubTime>
-        
-        <tag>图集</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/01/08/yaml%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%8A%E5%AE%9E%E7%8E%B0Hexo%E4%BA%8C%E7%BA%A7%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2019-02-11T11:15:37.466Z</lastmod>
-    <data>
-        <display>
-        <title>yaml基本语法及实现Hexo二级导航栏功能</title>
-        <pubTime>2019-01-08T15:55:01.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>sakura</tag>
-         
-        <tag>yaml</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://www.hojun.cn/2019/02/07/npm%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8F%92%E4%BB%B6/</loc>
@@ -89,46 +46,6 @@
     
     
   <url>
-    <loc>https://www.hojun.cn/2019/02/03/2018%E7%9B%B8%E5%86%8C-%E6%AF%8F%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E9%83%BD%E6%98%AF%E4%B8%80%E4%B8%AA%E6%95%85%E4%BA%8B/</loc>
-    <lastmod>2019-02-05T11:50:40.863Z</lastmod>
-    <data>
-        <display>
-        <title>2018相册-每一张图片都是一个故事</title>
-        <pubTime>2019-02-03T12:51:31.000Z</pubTime>
-        
-        <tag>图集</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/11/25/%E7%A7%8B%EF%BC%8C%E5%93%A6%E4%B8%8D%EF%BC%8C%E5%86%AC%E3%80%82/</loc>
-    <lastmod>2019-02-05T11:34:39.405Z</lastmod>
-    <data>
-        <display>
-        <title>秋，哦不，冬。</title>
-        <pubTime>2018-11-25T13:01:38.000Z</pubTime>
-        
-        <tag>图集</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.hojun.cn/2018/04/24/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E5%B1%95%E7%A4%BA/</loc>
     <lastmod>2019-02-05T11:34:11.052Z</lastmod>
     <data>
@@ -136,9 +53,9 @@
         <title>给博客添加图集展示</title>
         <pubTime>2018-04-24T15:04:40.000Z</pubTime>
         
-        <tag>图集</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>图集</tag>
          
         <tag>lab</tag>
          
@@ -173,26 +90,6 @@
 
     
   <url>
-    <loc>https://www.hojun.cn/2018/05/05/%E5%8D%83%E7%A7%8B%E4%BB%A4/</loc>
-    <lastmod>2019-02-05T11:24:27.312Z</lastmod>
-    <data>
-        <display>
-        <title>千秋令</title>
-        <pubTime>2018-05-05T14:47:13.000Z</pubTime>
-        
-        <tag>图集</tag>
-         
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.hojun.cn/2019/02/01/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8A%A0%E5%85%A5Bili%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%A7%86%E9%A2%91/</loc>
     <lastmod>2019-02-02T14:34:50.024Z</lastmod>
     <data>
@@ -201,26 +98,6 @@
         <pubTime>2019-02-01T14:07:18.000Z</pubTime>
         
         <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/11/25/live2d%E6%8F%90%E5%8F%96%E7%B3%BB%E5%88%97233333/</loc>
-    <lastmod>2019-02-02T13:58:45.547Z</lastmod>
-    <data>
-        <display>
-        <title>live2d提取系列233333</title>
-        <pubTime>2018-11-25T13:03:40.000Z</pubTime>
-        
-        <tag>live2d</tag>
          
          
            
@@ -356,7 +233,6 @@
     </url>
 
     
-    
   <url>
     <loc>https://www.hojun.cn/2018/11/25/Hexo%E7%BB%99materialX%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0pjax%E6%94%AF%E6%8C%81/</loc>
     <lastmod>2018-11-26T15:29:16.621Z</lastmod>
@@ -366,26 +242,6 @@
         <pubTime>2018-11-25T12:41:13.000Z</pubTime>
         
         <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/11/08/%E7%94%B5%E8%84%91%E6%98%AF%E6%80%8E%E4%B9%88%E7%9F%A5%E9%81%93%E5%A4%9A%E9%95%BF%E6%97%B6%E9%97%B4%E6%98%AF%E4%B8%80%E7%A7%92%E7%9A%84/</loc>
-    <lastmod>2018-11-08T14:41:59.782Z</lastmod>
-    <data>
-        <display>
-        <title>电脑是怎么知道多长时间是一秒的?</title>
-        <pubTime>2018-11-08T14:38:37.000Z</pubTime>
-        
-        <tag>你知道吗？</tag>
          
          
            
@@ -2143,9 +1999,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>js</tag>
-         
         <tag>前端</tag>
+         
+        <tag>js</tag>
          
          
            
