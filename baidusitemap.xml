@@ -3,6 +3,45 @@
 
 
     
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/02/21/%E8%A7%A3%E5%86%B3%E5%8A%A8%E6%80%81ajax-pjax%E5%8A%A0%E8%BD%BDmathjax%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2019-02-21T15:55:20.020Z</lastmod>
+    <data>
+        <display>
+        <title>解决动态ajax/pjax加载mathjax不生效问题</title>
+        <pubTime>2019-02-21T14:30:52.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/</loc>
+    <lastmod>2019-02-20T16:31:00.946Z</lastmod>
+    <data>
+        <display>
+        <title>jsDeliver+github使用教程，免费好用的cdn</title>
+        <pubTime>2019-01-18T15:38:41.000Z</pubTime>
+        
+        <tag>cdn</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://www.hojun.cn/2019/02/20/hexo-sakura%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2019-02-20T12:38:02.506Z</lastmod>
@@ -22,7 +61,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.hojun.cn/2019/02/07/npm%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E6%8F%92%E4%BB%B6/</loc>
@@ -123,26 +161,6 @@
            
              
               <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/01/18/jsDeliver-github%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%8C%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84cdn/</loc>
-    <lastmod>2019-02-02T13:56:04.213Z</lastmod>
-    <data>
-        <display>
-        <title>jsDeliver+github使用教程，免费好用的cdn</title>
-        <pubTime>2019-01-18T15:38:41.000Z</pubTime>
-        
-        <tag>cdn</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
           
         </display>
     </data>
@@ -1347,9 +1365,9 @@
         <title>给Hexo博客添加Mathjax数学公式支持</title>
         <pubTime>2018-06-18T14:04:14.000Z</pubTime>
         
-        <tag>搞事</tag>
-         
         <tag>hexo</tag>
+         
+        <tag>搞事</tag>
          
          
            

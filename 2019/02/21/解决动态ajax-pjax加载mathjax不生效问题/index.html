@@ -21,7 +21,7 @@
 </script>
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/tags/博客/index.html"/>
+<link rel="canonical" href="https://www.hojun.com/2019/02/21/解决动态ajax-pjax加载mathjax不生效问题/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -45,20 +45,21 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>标签 - 博客 - hojun</title>
+<title>解决动态ajax/pjax加载mathjax不生效问题 - hojun</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="mathjax">
 
-<meta name="description " content="好少年光芒万丈">
+<meta name="description " content="解决动态ajax/pjax加载mathjax不生效问题">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/tags/博客/index.html",
-        "appid": "1594654793276567","title": "hojun-好少年光芒万丈",
-        "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],
-        "pubDate": "2019-02-22T12:13:13"
+        "@id": "https://www.hojun.com/2019/02/21/解决动态ajax-pjax加载mathjax不生效问题/",
+        "appid": "1594654793276567",
+        "title": "解决动态ajax/pjax加载mathjax不生效问题",
+        "images": ["https://wx1.sinaimg.cn/small/006bYVyvly1g0effcj83fj311j0lcgnu.jpg"],
+        "pubDate": "2019-02-21T10:30:52"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -132,9 +133,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -185,151 +184,104 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/06/09/手把手教你搭建HEXO博客-四/" target="_self" title="手把手教你搭建HEXO博客(四)" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2019-02-21">2019-02-21</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">解决动态ajax/pjax加载mathjax不生效问题</h2>
+            <div class="post-meta">
+                本文总共2227个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="Mathjax"><a href="#Mathjax" class="headerlink" title="Mathjax"></a>Mathjax</h2><p><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1g0effcj83fj311j0lcgnu.jpg" alt=""><br>如图所见，适用于网页上的显示数学公式的JavaScript库。对浏览器的支持比较全面，据说支持到IE6（这个就比较厉害哦）</p>
+<h2 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h2><p><a href="https://github.com/mathjax/mathjax">github仓库地址</a><br>官方demo<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>MathJax TeX Test Page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  MathJax.Hub.Config(&#123;<span class="attr">tex2jax</span>: &#123;<span class="attr">inlineMath</span>: [[<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">'\\('</span>,<span class="string">'\\)'</span>]]&#125;&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">async</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>只要引入mathjax的js地址，配置config，就能自动识别文章中的数学公式写法。显示效果如下：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1g0egfau5juj30i9036gln.jpg" alt=""></p>
+<h2 id="发现问题"><a href="#发现问题" class="headerlink" title="发现问题"></a>发现问题</h2><p>正常情况下使用，是可以实现显示数学公式的，但是如果你的页面使用了动态加载，即ajax或pjax的情况下，mathjax就不能顺利的渲染出数学公式了。</p>
+<p>咳咳，解决动态适配的事情也不是一次两次了，添加事件可以用jquery的on方法委托。在动态调用后执行可以在$.ajax的success方法后执行相关业务逻辑。 pjax则在complete或end后执行相关业务逻辑代码。这里我拿pjax做演示，代码类似下面：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).pjax(<span class="string">'a[target!=_top]'</span>, <span class="string">'#page'</span>, &#123;</span><br><span class="line">    fragment: <span class="string">'#page'</span>,</span><br><span class="line">    timeout: <span class="number">8000</span>,</span><br><span class="line">&#125;).on(<span class="string">'pjax:send'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">do</span> something</span><br><span class="line">&#125;).on(<span class="string">'pjax:complete'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.getScript(<span class="string">"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        MathJax.Hub.Config(&#123;<span class="attr">tex2jax</span>: &#123;<span class="attr">inlineMath</span>: [[<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">'\\('</span>,<span class="string">'\\)'</span>]]&#125;&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>想法是在pjax加载complete之后加载mathjax的js依赖，在配置config,因为之前正常使用也是这样的。但是很遗憾，还是没有正常显示。</p>
+<h2 id="在官方文档中找到解决方案"><a href="#在官方文档中找到解决方案" class="headerlink" title="在官方文档中找到解决方案"></a>在官方文档中找到解决方案</h2><p>遇到问题，最好的方法就是去了解官方的文档，权威有效。（经验表明网上教程没官方靠谱，官方找不到再去互联网上寻求帮助，这对你以后解决问题的能力也是一种锻炼，毕竟不是遇到的所有问题都能在互联网上找到解决方案的）</p>
+<p>其中有项动态加载Mathjax,然而很遗憾，测试后发现不行（毕竟我上一步的修改的效果应该和文档这动态加载一致）<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1g0egyhkwv4j30xj0ik42g.jpg" alt=""><br>后来锲而不舍的找到了MathJax.Hub.Typeset()这个方法，结合Queue方法就能实现（不要问我为啥是中文文档，谷歌翻译了解下）<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1g0eh6qwhlzj30v40lbwji.jpg" alt=""><br>我的实现代码如下，仅供参考：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">....</span><br><span class="line">.on(<span class="string">'pjax:complete'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $.getScript(<span class="string">"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        MathJax.Hub.Config(&#123;<span class="attr">tex2jax</span>: &#123;<span class="attr">inlineMath</span>: [[<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">'\\('</span>,<span class="string">'\\)'</span>]]&#125;&#125;);</span><br><span class="line">        <span class="comment">// entry-content是文章页的内容div的class</span></span><br><span class="line">        <span class="keyword">var</span> math = <span class="built_in">document</span>.getElementsByClassName(<span class="string">"entry-content"</span>)[<span class="number">0</span>];</span><br><span class="line">        MathJax.Hub.Queue([<span class="string">"Typeset"</span>,MathJax.Hub,math]);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>好了，到此动态ajax/pjax加载mathjax不生效问题就解决了~</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2018-06-09
         </div>
-        <a class="post-title" href="/2018/06/09/手把手教你搭建HEXO博客-四/" target="_self" title="手把手教你搭建HEXO博客(四)">手把手教你搭建HEXO博客(四)</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-                <em>·</em>
-                <a href="/tags/博客/" target="_self">博客</a>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
+        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
             
         </div>
-    </div>
-    <div class="post-desc">
-        为什么推荐hexo+github？最重要两点：简单、免费。
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/06/08/手把手教你搭建HEXO博客-三/" target="_self" title="手把手教你搭建HEXO博客(三)" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-06-08
+        
+    </article>
+    <div class="post-nav">
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2019/02/20/hexo-sakura主题使用教程/" >hexo-sakura主题使用教程<i class="fa fa-chevron-right"></i></a>
         </div>
-        <a class="post-title" href="/2018/06/08/手把手教你搭建HEXO博客-三/" target="_self" title="手把手教你搭建HEXO博客(三)">手把手教你搭建HEXO博客(三)</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-                <em>·</em>
-                <a href="/tags/博客/" target="_self">博客</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        为什么推荐hexo+github？最重要两点：简单、免费。
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/06/07/手把手教你搭建HEXO博客-二/" target="_self" title="手把手教你搭建HEXO博客(二)" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg"></a>
+        
     </div>
     
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-06-07
-        </div>
-        <a class="post-title" href="/2018/06/07/手把手教你搭建HEXO博客-二/" target="_self" title="手把手教你搭建HEXO博客(二)">手把手教你搭建HEXO博客(二)</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-                <em>·</em>
-                <a href="/tags/博客/" target="_self">博客</a>
-            
-        </div>
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mathjax"><span class="toc-text">Mathjax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用教程"><span class="toc-text">使用教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发现问题"><span class="toc-text">发现问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在官方文档中找到解决方案"><span class="toc-text">在官方文档中找到解决方案</span></a></li></ol>
     </div>
-    <div class="post-desc">
-        为什么推荐hexo+github？最重要两点：简单、免费。
-    </div>
-</article>
+</aside>
+
+     
 
 
 
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2018/06/06/手把手教你搭建HEXO博客-一/" target="_self" title="手把手教你搭建HEXO博客(一)" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvgy1fs1s79hhsvj30m80b4q8m.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2018-06-06
-        </div>
-        <a class="post-title" href="/2018/06/06/手把手教你搭建HEXO博客-一/" target="_self" title="手把手教你搭建HEXO博客(一)">手把手教你搭建HEXO博客(一)</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-                <em>·</em>
-                <a href="/tags/博客/" target="_self">博客</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        为什么推荐hexo+github？最重要两点：简单、免费。
-    </div>
-</article>
 
 
 
-    
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2019/02/21/解决动态ajax-pjax加载mathjax不生效问题/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
 </div>
-<!-- 分页开始 -->
-
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         </div><!-- end #main-->
     </div><!-- end #body -->
