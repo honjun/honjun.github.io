@@ -4373,3 +4373,23 @@ blockquote:before {
 {
     margin-left:1em;margin-right:1em;padding:.25em 1em;color:#666;
 }
+.adsense_post_left,.adsense_post_right {
+    width: 160px;
+    height: 600px;
+    position: absolute;
+    top: 90px;
+    overflow: hidden
+}
+
+.adsense_post_left {
+    margin-left: -190px
+}
+
+.adsense_post_right {
+    right: 5%
+}
+@media (max-width: 896px) {
+    .adsense_post_left,.adsense_post_right {
+        display:none
+    }
+}
