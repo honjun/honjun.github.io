@@ -21,7 +21,7 @@
 </script>
 <meta charset="utf-8">
 
-<link rel="canonical" href="https://www.hojun.com/index.html"/>
+<link rel="canonical" href="https://www.hojun.com/2019/03/18/hexo-fexo主题推荐/"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -38,11 +38,11 @@
 <link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
-<title>hojun - 好少年光芒万丈</title>
+<title>hexo-fexo主题推荐 - hojun</title>
 
-<meta name="keywords" content="undefined">
+<meta name="keywords" content="hexo主题">
 
-<meta name="description " content="好少年光芒万丈">
+<meta name="description " content="今天录制hexo视频的时候，发现了fexo主题。觉得不错，给大家安利一波~">
 <meta name="baidu-site-verification" content="0hxFvBRyRY" />
 
     
@@ -59,10 +59,11 @@
     <script type="application/ld+json">
     {
         "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-        "@id": "https://www.hojun.com/index.html",
-        "appid": "1594654793276567","title": "hojun-好少年光芒万丈",
-        "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],
-        "pubDate": "2019-03-18T07:51:57"
+        "@id": "https://www.hojun.com/2019/03/18/hexo-fexo主题推荐/",
+        "appid": "1594654793276567",
+        "title": "hexo-fexo主题推荐",
+        "images": ["https://wx4.sinaimg.cn/small/006bYVyvly1g174utur7oj30io0cq0tj.jpg"],
+        "pubDate": "2019-03-18T05:38:00"
     }
     </script>
     <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
@@ -136,9 +137,7 @@
 </div>
             <div class="page-title">
     <ul>
-        <li class="active">
-            <a href="/" data-name="Home">首页</a>
-        </li>
+        <li><a href="/">首页</a></li>
         
         <li class="">
             <a href="/categories/tech" data-name="技术">技术</a>
@@ -189,324 +188,147 @@
     </ul>
 </div>
 <div class="main-inner">
-    
-    <!-- 首页默认取最最新文章集 -->
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/03/18/hexo-fexo主题推荐/" target="_self" title="hexo-fexo主题推荐" data-background-image="https://wx4.sinaimg.cn/small/006bYVyvly1g174utur7oj30io0cq0tj.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2019-03-18">2019-03-18</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">hexo-fexo主题推荐</h2>
+            <div class="post-meta">
+                本文总共298个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>今天录制hexo视频的时候，发现了fexo主题。觉得不错，给大家安利一波~</p>
+<h2 id="资料卡"><a href="#资料卡" class="headerlink" title="资料卡"></a>资料卡</h2><p><a href="https://github.com/forsigner/fexo">主题传送门</a><br><a href="http://forsigner.com/2016/03/10/fexo-doc-zh-cn/">主题文档</a><br><a href="http://forsigner.com/">主题预览</a></p>
+<p>其中RSS页面借助<a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a>插件实现，第一步安装插件<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></p>
+<p>然后在最外层的_config里面配置<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">atom.xml</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">20</span></span><br><span class="line"><span class="attr">  order_by:</span> <span class="bullet">-date</span></span><br></pre></td></tr></table></figure></p>
+<p>这样下次hexo g的时候就能生成atom.xml了。</p>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=46655382&page=" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
+<h2 id="主题秀"><a href="#主题秀" class="headerlink" title="主题秀"></a>主题秀</h2><h3 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h3><p><strong>首页</strong><br><a href="https://wx1.sinaimg.cn/large/006bYVyvly1g174utur7oj30io0cq0tj.jpg" data-fancybox="images" data-caption="PC端-首页"><img src="https://wx1.sinaimg.cn/large/006bYVyvly1g174utur7oj30io0cq0tj.jpg" /></a><br><strong>归档</strong><br><a href="https://ws4.sinaimg.cn/large/006bYVyvly1g174x550qpj310r0lctaa.jpg" data-fancybox="images" data-caption="PC端-归档"><img src="https://ws4.sinaimg.cn/large/006bYVyvly1g174x550qpj310r0lctaa.jpg" /></a><br><strong>分类/标签</strong><br><a href="https://wx2.sinaimg.cn/large/006bYVyvly1g174xr5jykj30x00lcwg5.jpg" data-fancybox="images" data-caption="PC端-分类/标签"><img src="https://wx2.sinaimg.cn/large/006bYVyvly1g174xr5jykj30x00lcwg5.jpg" /></a><br><strong>友链</strong><br><a href="https://wx3.sinaimg.cn/large/006bYVyvly1g174ys3jsej30xa0lcmzi.jpg" data-fancybox="images" data-caption="PC端-友链"><img src="https://wx3.sinaimg.cn/large/006bYVyvly1g174ys3jsej30xa0lcmzi.jpg" /></a><br><strong>关于</strong><br><a href="https://ws4.sinaimg.cn/large/006bYVyvly1g174z8dcq7j30wc0lcjt4.jpg" data-fancybox="images" data-caption="PC端-关于"><img src="https://ws4.sinaimg.cn/large/006bYVyvly1g174z8dcq7j30wc0lcjt4.jpg" /></a><br><strong>搜索</strong><br><a href="https://ws4.sinaimg.cn/large/006bYVyvly1g1750ewniaj30wk0lcacb.jpg" data-fancybox="images" data-caption="PC端-搜索"><img src="https://ws4.sinaimg.cn/large/006bYVyvly1g1750ewniaj30wk0lcacb.jpg" /></a><br><strong>项目</strong><br><a href="https://ws1.sinaimg.cn/large/006bYVyvly1g1751a4jm3j30v60lcace.jpg" data-fancybox="images" data-caption="PC端-项目"><img src="https://ws1.sinaimg.cn/large/006bYVyvly1g1751a4jm3j30v60lcace.jpg" /></a></p>
+<h3 id="手机端"><a href="#手机端" class="headerlink" title="手机端"></a>手机端</h3><p><strong>首页</strong><br><a href="https://ws4.sinaimg.cn/large/006bYVyvly1g1754v7qv4j30jh0i40tg.jpg" data-fancybox="images" data-caption="手机端-首页"><img src="https://ws4.sinaimg.cn/large/006bYVyvly1g1754v7qv4j30jh0i40tg.jpg" /></a><br><strong>归档</strong><br><a href="https://ws4.sinaimg.cn/large/006bYVyvly1g1755ad9pdj30jx0i1q3u.jpg" data-fancybox="images" data-caption="手机端-归档"><img src="https://ws4.sinaimg.cn/large/006bYVyvly1g1755ad9pdj30jx0i1q3u.jpg" /></a><br><strong>分类/标签</strong><br><a href="https://wx1.sinaimg.cn/large/006bYVyvly1g1755rhof2j30ik0i6jse.jpg" data-fancybox="images" data-caption="手机端-分类/标签"><img src="https://wx1.sinaimg.cn/large/006bYVyvly1g1755rhof2j30ik0i6jse.jpg" /></a><br><strong>友链</strong><br><a href="https://ws1.sinaimg.cn/large/006bYVyvly1g17566kcnej30in0hxwg0.jpg" data-fancybox="images" data-caption="手机端-友链"><img src="https://ws1.sinaimg.cn/large/006bYVyvly1g17566kcnej30in0hxwg0.jpg" /></a><br><strong>关于</strong><br><a href="https://ws3.sinaimg.cn/large/006bYVyvly1g1756ny618j30hr0i10to.jpg" data-fancybox="images" data-caption="手机端-关于"><img src="https://ws3.sinaimg.cn/large/006bYVyvly1g1756ny618j30hr0i10to.jpg" /></a><br><strong>搜索</strong><br><a href="https://wx4.sinaimg.cn/large/006bYVyvly1g1757j0tfnj30ia0i13zj.jpg" data-fancybox="images" data-caption="手机端-搜索"><img src="https://wx4.sinaimg.cn/large/006bYVyvly1g1757j0tfnj30ia0i13zj.jpg" /></a><br><strong>项目</strong><br><a href="https://wx2.sinaimg.cn/large/006bYVyvly1g17585sdorj30i10i1ab3.jpg" data-fancybox="images" data-caption="手机端-项目"><img src="https://wx2.sinaimg.cn/large/006bYVyvly1g17585sdorj30i10i1ab3.jpg" /></a></p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
             </a>
-            <em>·</em>2019-03-18
         </div>
-        <a class="post-title" href="/2019/03/18/hexo-fexo主题推荐/" target="_self" title="hexo-fexo主题推荐">hexo-fexo主题推荐</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        今天录制hexo视频的时候，发现了fexo主题。觉得不错，给大家安利一波~
-    </div>
-</article>
 
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/03/15/live2d同步麦克风说话功能-直播录屏必备/" target="_self" title="live2d同步麦克风说话功能--直播录屏必备" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvly1g13vlgbrzwj30q00jkn5y.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-03-15
-        </div>
-        <a class="post-title" href="/2019/03/15/live2d同步麦克风说话功能-直播录屏必备/" target="_self" title="live2d同步麦克风说话功能--直播录屏必备">live2d同步麦克风说话功能--直播录屏必备</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
+        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
             
-                <em>·</em>
-                <a href="/tags/live2d/" target="_self">live2d</a>
+            <a href="/tags/hexo/">hexo</a>
             
         </div>
-    </div>
-    <div class="post-desc">
-        在傅老师的b站教程上了解到这个live2d viewer的功能，觉得很有意思，分享给大家。
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/03/04/好玩的H5小游戏·圈小猫/" target="_self" title="好玩的H5小游戏·圈小猫~" data-background-image="https://ws3.sinaimg.cn/small/006bYVyvly1g0r5u6igl3j30gv0dwq3i.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-03-04
+        
+    </article>
+    <div class="post-nav">
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2019/03/15/live2d同步麦克风说话功能-直播录屏必备/" >live2d同步麦克风说话功能--直播录屏必备<i class="fa fa-chevron-right"></i></a>
         </div>
-        <a class="post-title" href="/2019/03/04/好玩的H5小游戏·圈小猫/" target="_self" title="好玩的H5小游戏·圈小猫~">好玩的H5小游戏·圈小猫~</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        
+    </div>
+    
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#资料卡"><span class="toc-text">资料卡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视频教程"><span class="toc-text">视频教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题秀"><span class="toc-text">主题秀</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PC端"><span class="toc-text">PC端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手机端"><span class="toc-text">手机端</span></a></li></ol></li></ol>
+    </div>
+</aside>
+
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2019/03/18/hexo-fexo主题推荐/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
             
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
         </div>
-    </div>
-    <div class="post-desc">
-        好玩的H5小游戏·圈小猫~
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/03/01/推荐几个超棒的配色网站/" target="_self" title="推荐几个超棒的配色网站" data-background-image="https://ws3.sinaimg.cn/small/006bYVyvly1g0noupqhcbj311e0lck3r.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-03-01
-        </div>
-        <a class="post-title" href="/2019/03/01/推荐几个超棒的配色网站/" target="_self" title="推荐几个超棒的配色网站">推荐几个超棒的配色网站</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
+        <div class="adsense_post_right">
             
-                <em>·</em>
-                <a href="/tags/资源/" target="_self">资源</a>
-            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
         </div>
-    </div>
-    <div class="post-desc">
-        推荐几个超棒的配色网站
-    </div>
-</article>
+        
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="8296902977"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
 
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/02/25/EasyAppointments使用采坑记/" target="_self" title="EasyAppointments使用采坑记" data-background-image="https://wx2.sinaimg.cn/small/006bYVyvly1g0izaf8exdj30z30ig0uq.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-02-25
-        </div>
-        <a class="post-title" href="/2019/02/25/EasyAppointments使用采坑记/" target="_self" title="EasyAppointments使用采坑记">EasyAppointments使用采坑记</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/搞事/" target="_self">搞事</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        EasyAppointments使用采坑记
-    </div>
-</article>
-
-
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
     
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/02/21/解决动态ajax-pjax加载mathjax不生效问题/" target="_self" title="解决动态ajax/pjax加载mathjax不生效问题" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvly1g0effcj83fj311j0lcgnu.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-02-21
-        </div>
-        <a class="post-title" href="/2019/02/21/解决动态ajax-pjax加载mathjax不生效问题/" target="_self" title="解决动态ajax/pjax加载mathjax不生效问题">解决动态ajax/pjax加载mathjax不生效问题</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        解决动态ajax/pjax加载mathjax不生效问题
-    </div>
-</article>
 
 
-
-    
-    
-<article class="post">
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-02-21
-        </div>
-        <a class="post-title" href="/2019/02/21/前端自动化构建工具gulp使用/" target="_self" title="前端自动化构建工具gulp使用">前端自动化构建工具gulp使用</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        前端自动化构建工具gulp使用
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/02/20/hexo-sakura主题使用教程/" target="_self" title="hexo-sakura主题使用教程" data-background-image="https://wx3.sinaimg.cn/small/006bYVyvly1g069tuf42oj312w0m8ndq.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-02-20
-        </div>
-        <a class="post-title" href="/2019/02/20/hexo-sakura主题使用教程/" target="_self" title="hexo-sakura主题使用教程">hexo-sakura主题使用教程</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        hexo-sakura主题使用教程
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/02/07/npm发布自己的插件/" target="_self" title="npm发布自己的插件" data-background-image="https://ws1.sinaimg.cn/small/006bYVyvly1g005a1hrhbj308c03pq2p.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-02-07
-        </div>
-        <a class="post-title" href="/2019/02/07/npm发布自己的插件/" target="_self" title="npm发布自己的插件">npm发布自己的插件</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/npm/" target="_self">npm</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        npm发布自己的插件
-    </div>
-</article>
-
-
-
-    
-    
-<article class="post">
-    
-    <!-- 有配图默认渲染第一张 -->
-    <div class="post-cover">
-        <a class="lozad" href="/2019/02/01/Hexo博客中加入Bili标签插件添加视频/" target="_self" title="Hexo博客中加入Bili标签插件添加视频" data-background-image="https://wx1.sinaimg.cn/small/006bYVyvly1fzmnxxs8wwj30dq0bvabr.jpg"></a>
-    </div>
-    
-    <div class="post-header">
-        <div class="post-meta">
-            <a href="/about/hojun.html" target="_self">
-                <strong>hojun</strong>
-            </a>
-            <em>·</em>2019-02-01
-        </div>
-        <a class="post-title" href="/2019/02/01/Hexo博客中加入Bili标签插件添加视频/" target="_self" title="Hexo博客中加入Bili标签插件添加视频">Hexo博客中加入Bili标签插件添加视频</a>
-        <div class="post-meta">
-            <a href="/tags" target="_self"><i class="fa fa-tags"></i></a>
-            
-                <em>·</em>
-                <a href="/tags/hexo/" target="_self">hexo</a>
-            
-        </div>
-    </div>
-    <div class="post-desc">
-        这篇文章是上篇文章《Hexo博客中加入B站视频播放器》的第二种实现过程，使用新增hexo标签的形式来添加B站视频。使用起来更方便~
-    </div>
-</article>
-
-
-
-    
-    
 </div>
-<!-- 分页开始 -->
-
-<div id="btn-pager">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
-</div>
-
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
         </div><!-- end #main-->
     </div><!-- end #body -->

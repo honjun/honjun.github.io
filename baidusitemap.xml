@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.hojun.cn/2019/03/18/hexo-fexo%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2019-03-18T11:14:50.803Z</lastmod>
+    <data>
+        <display>
+        <title>hexo-fexo主题推荐</title>
+        <pubTime>2019-03-18T09:38:00.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.hojun.cn/2019/03/15/live2d%E5%90%8C%E6%AD%A5%E9%BA%A6%E5%85%8B%E9%A3%8E%E8%AF%B4%E8%AF%9D%E5%8A%9F%E8%83%BD-%E7%9B%B4%E6%92%AD%E5%BD%95%E5%B1%8F%E5%BF%85%E5%A4%87/</loc>
     <lastmod>2019-03-15T15:29:16.910Z</lastmod>
     <data>
@@ -1050,9 +1070,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>js</tag>
+         
+        <tag>前端</tag>
          
          
            
