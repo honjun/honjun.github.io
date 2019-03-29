@@ -10,16 +10,15 @@ description: 喜欢的视频
 photos:
 ---
 ## 燃·Unbroken
-{% raw %}
-<iframe src="//player.bilibili.com/player.html?aid=1861309&cid=2868158&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="100%" height="350px" allowfullscreen="true"> </iframe>
-{% endraw %}
+
+{% bili 1861309 1 %}
 
 ## 原创
+
  > 手把手教你搭建属于自己的hexo+github博客
 
-{% raw %}
-<iframe src="//player.bilibili.com/player.html?aid=24897960&cid=42007944&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" width="100%" height="350px" allowfullscreen="true"> </iframe>
-{% endraw %}
+{% bili 24897960 %}
+
 ### [整套视频地址https://www.bilibili.com/video/av24897960](https://www.bilibili.com/video/av24897960)
  
 ### [更多推荐视频](/tags/视频/)

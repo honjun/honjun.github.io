@@ -29,6 +29,15 @@ menu:
    生活: live
    # 资源: resource
 
+adsense:
+  enable: true
+  auto: true
+  client_id: ca-pub-5634033670687375
+  archive_id: 2605592596
+  tags_id: 4259006495
+  post_left_id: 9797686907
+  post_right_id: 7335051380
+  post_bottom_id: 8296902977
 
 # cover info config
 coverTitle: hello ，stranger

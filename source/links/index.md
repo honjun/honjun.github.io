@@ -49,6 +49,36 @@ comments: false
 </style>
 <ul class="link-contentqt clearfix">
   <li>
+    <a href="https://w3c.ink" title="专注于web开发的工具链硬件猿" target="_blank">
+      <img src="https://wx3.sinaimg.cn/small/006bYVyvly1g1ilvucakcj303k03kjr8.jpg" width="50" height="50">
+      <span class="sitename">W3C王三尺Blog</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.nykee.cn" title="前端打杂狮~" target="_blank">
+      <img src="https://wx1.sinaimg.cn/small/006bYVyvly1g11jnydsa2j30dw05kglf.jpg" width="50" height="50">
+      <span class="sitename">nykee blog</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://love109.cn/" title="记录爱情❤️记录生活" target="_blank">
+      <img src="https://ws1.sinaimg.cn/small/006bYVyvly1g0ehr4butdj318g188wzr.jpg" width="50" height="50">
+      <span class="sitename">纪实小屋</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://wuyongzhi.top" title="心念所囚即为监牢，心念所驻即为坚城" target="_blank">
+      <img src="https://wx1.sinaimg.cn/small/006bYVyvly1g03wq6r4hsj305k05k0uf.jpg" width="50" height="50">
+      <span class="sitename">Mr.W’Blog</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://2heng.xin" title="樱花庄的白猫" target="_blank">
+      <img src="https://wx4.sinaimg.cn/small/006bYVyvly1fyej5hsj2aj30dw0dwte6.jpg" width="50" height="50">
+      <span class="sitename">Mashiro</span>
+    </a>
+  </li>
+  <li>
     <a href="http://fankekeke.club/" title="风在呼唤我的名字" target="_blank">
       <img src="https://wx3.sinaimg.cn/small/006bYVyvly1fxo4l2rdanj30go0go771.jpg" width="50" height="50">
       <span class="sitename">悲伤的橘子树</span>
@@ -127,7 +157,7 @@ comments: false
     </a>
   </li>
   <li>
-    <a href="http://trhx.top" title="Live and Learn！" target="_blank">
+    <a href="https://itrhx.com" title="Live and Learn！" target="_blank">
       <img src="https://wx3.sinaimg.cn/small/006bYVyvgy1funfb0du3dj305a05a0ue.jpg" width="50" height="50">
       <span class="sitename">TRHX</span>
     </a>

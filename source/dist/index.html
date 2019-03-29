@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catch The Cat</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        body {
+            background-color: #eeeeee;
+        }
+
+        #catch-the-cat {
+            width: 100%;
+            margin-top: 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script src="phaser.min.js"></script>
+    <script src="catch-the-cat.js"></script>
+    <div id="catch-the-cat"></div>
+    <script>
+      window.game = new CatchTheCatGame({
+        w: 11,
+        h: 11,
+        r: 20,
+        backgroundColor: 0xffffff,
+        parent: 'catch-the-cat',
+        statusBarAlign: 'center',
+        credit: ' '
+      });
+    </script>
+</body>
+</html>
