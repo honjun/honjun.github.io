@@ -220,7 +220,7 @@
 <li>image|url          雪花图片</li>
 </ul>
 <p>使用demo<br>//css部分</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.snowfall-flakes&#123;animation:sakura 1s linear 0s infinite;&#125;</span></span><br><span class="line"><span class="undefined">@keyframes sakura&#123;</span></span><br><span class="line"><span class="undefined">0% &#123;transform:rotate3d(0, 0, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">25%&#123;transform:rotate3d(1, 1, 0, 60deg);&#125;</span></span><br><span class="line"><span class="undefined">50%&#123;transform:rotate3d(1, 1, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">75%&#123;transform:rotate3d(1, 0, 0, 60deg);&#125;</span></span><br><span class="line"><span class="undefined">100% &#123;transform:rotate3d(1, 0, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.snowfall-flakes</span>&#123;<span class="attribute">animation</span>:sakura <span class="number">1s</span> linear <span class="number">0s</span> infinite;&#125;</span></span><br><span class="line"><span class="css">@<span class="keyword">keyframes</span> sakura&#123;</span></span><br><span class="line"><span class="css">0% &#123;<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(0, 0, 0, 0deg);&#125;</span></span><br><span class="line"><span class="css">25%&#123;<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(1, 1, 0, 60deg);&#125;</span></span><br><span class="line"><span class="css">50%&#123;<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(1, 1, 0, 0deg);&#125;</span></span><br><span class="line"><span class="css">75%&#123;<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(1, 0, 0, 60deg);&#125;</span></span><br><span class="line"><span class="css">100% &#123;<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(1, 0, 0, 0deg);&#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>//js部分</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(<span class="string">'clear'</span>);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"1.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"2.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"3.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">$(<span class="built_in">document</span>).snowfall(&#123;<span class="attr">image</span>:<span class="string">"4.png"</span>, <span class="attr">flakeCount</span>:<span class="number">10</span>, <span class="attr">minSpeed</span>:<span class="number">1</span>, <span class="attr">minSize</span>:<span class="number">8</span>, <span class="attr">maxSize</span>:<span class="number">15</span>,&#125;);</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure>
 <p>飘落的时候添加了css的3D翻转效果，使之更加逼真<br>图片是用ps一个一个扣下来的。扣好发现jpg格式不能带透明度，然后又心酸的重新扣png格式的。。。<br>
@@ -260,7 +260,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">HEXO群和公众号
-        <p style="text-align: center;"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftnjefqf9dj308e08e3yf.jpg"><img src="https://wx2.sinaimg.cn/small/006bYVyvgy1ful7hdd8lxj30zk0zktcg.jpg"></p>
+        <p style="text-align: center;"><img src="https://wx1.sinaimg.cn/small/006bYVyvly1g1kt3e4rfvj306m06yq2w.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         <div class="post-series">hexo折腾-系列文章：
             
@@ -678,6 +678,10 @@
             
                 
             
+                
+            
+                
+            
         </div>
         
         
@@ -700,7 +704,23 @@
         </div>
         
     </div>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","scrollSmoothOffset":-45,"headingsOffset":45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
 <aside id="article-toc" role="navigation" class="fixed">
     <div id="article-toc-inner">
         <strong class="sidebar-title">
@@ -708,7 +728,7 @@
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-text"></span></a></li></ol>
     </div>
 </aside>
-
+ -->
      
 
 
