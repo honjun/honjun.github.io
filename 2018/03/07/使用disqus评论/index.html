@@ -201,7 +201,7 @@
             </div>
             <h2 class="post-title">使用disqus评论</h2>
             <div class="post-meta">
-                本文总共1194个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1197个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -220,8 +220,11 @@
 <p><img class="lozad" data-action="zoom" data-src="http://wx2.sinaimg.cn/large/006bYVyvgy1fp5u0uxtidj30mq0h8gmt.jpg" alt=""></p>
 <hr>
 <p><img class="lozad" data-action="zoom" data-src="http://wx1.sinaimg.cn/large/006bYVyvgy1fp5u1a42d6j30ia0ho74y.jpg" alt=""></p>
-<p>以下是我的配置和comment部分代码：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus_shortname:</span> <span class="string">hojun</span></span><br></pre></td></tr></table></figure></p>
+<p>以下是我的配置和comment部分代码：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">disqus_shortname:</span> <span class="string">hojun</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">config.disqus_shortname</span> &amp;&amp; <span class="attr">page.comments</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    /**</span></span><br><span class="line"><span class="undefined">     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.</span></span><br><span class="line"><span class="javascript">     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https:<span class="comment">//disqus.com/admin/universalcode/#configuration-variables</span></span></span><br><span class="line"><span class="undefined">     */</span></span><br><span class="line"><span class="javascript">     <span class="keyword">var</span> disqus_config = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">     <span class="keyword">this</span>.page.url = <span class="string">'&lt;%- post.permalink %&gt;'</span>;</span></span><br><span class="line"><span class="javascript">     <span class="keyword">this</span>.page.identifier = <span class="string">'&lt;%- post.path %&gt;'</span>;</span></span><br><span class="line"><span class="undefined">     &#125;;</span></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="comment">// DON'T EDIT BELOW THIS LINE</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> d = <span class="built_in">document</span>, disqus_shortname = <span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>,s = d.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript">        s.src = <span class="string">'https://'</span>+disqus_shortname+<span class="string">'.disqus.com/embed.js'</span>;</span></span><br><span class="line"><span class="javascript">        s.setAttribute(<span class="string">'data-timestamp'</span>, +<span class="keyword">new</span> <span class="built_in">Date</span>());</span></span><br><span class="line"><span class="undefined">        (d.head || d.body).appendChild(s);</span></span><br><span class="line"><span class="undefined">    &#125;)();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>参考<a href="https://www.jianshu.com/p/d68de067ea74?open_source=weibo_search">https://www.jianshu.com/p/d68de067ea74?open_source=weibo_search</a></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -662,6 +665,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -893,7 +902,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

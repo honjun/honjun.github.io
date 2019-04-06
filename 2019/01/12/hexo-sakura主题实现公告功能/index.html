@@ -202,11 +202,13 @@
             </div>
             <h2 class="post-title">hexo-sakura主题实现公告功能</h2>
             <div class="post-meta">
-                本文总共322个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共324个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>这篇教程来实现hexo-sakura主题的公告功能。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fz43v29e58j30y70im1kx.jpg" alt=""><br>首先定位到我们主题的公告位置，位置在index.ejs。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fz43y95ywmj30r80h6any.jpg" alt=""><br>接下来用ejs模板变量替换公告，替换前先在主题配置文件或hexo配置文件中增加变量。(这里看不懂的可以看我这一系列文章《yaml基本语法及实现Hexo二级导航栏功能》看下yaml语法就明白了)<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">notice:</span> <span class="string">hexo-Sakura主题已经开源，目前正在开发中...</span></span><br></pre></td></tr></table></figure></p>
+            <p>这篇教程来实现hexo-sakura主题的公告功能。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fz43v29e58j30y70im1kx.jpg" alt=""><br>首先定位到我们主题的公告位置，位置在index.ejs。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fz43y95ywmj30r80h6any.jpg" alt=""><br>接下来用ejs模板变量替换公告，替换前先在主题配置文件或hexo配置文件中增加变量。(这里看不懂的可以看我这一系列文章《yaml基本语法及实现Hexo二级导航栏功能》看下yaml语法就明白了)</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">notice:</span> <span class="string">hexo-Sakura主题已经开源，目前正在开发中...</span></span><br></pre></td></tr></table></figure>
+
 <p><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fz4405nnldj30or0fkgux.jpg" alt=""><br>接着再在index.ejs中使用模板语言<code>&lt;%= theme.notice%&gt;</code>输出主题配置文件中notice变量的内容。（因为是写在主题配置文件中，所以使用theme变量，要是写在hexo配置文件中，则要使用config.notice）<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fz441ww0szj30ot09o47p.jpg" alt=""></p>
 <p>修改完成后的效果：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fz442nqk6oj30yp0in4mr.jpg" alt=""></p>
 
@@ -596,6 +598,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -831,7 +839,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

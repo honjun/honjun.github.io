@@ -53,8 +53,8 @@
         当你开始制作自己的展示时，把它删了，从头开始吧，这是件有趣的事情。
         
     -->
-    <link href="css/impress-demo.css" rel="stylesheet" />
-    <link href="css/light-style.css" rel="stylesheet" />
+    <link href="/css/impress-demo.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
@@ -79,10 +79,7 @@
 <!--
     比如，我们加一个回调消息，仅在有`impress-not-supported`类名的body下显示。
 -->
-<div class="fallback-message">
-    <p>尊驾的浏览器太老土啦！<b>无法满足impress.js的要求</b>，现在你只能看到一些最朴素的演示画面。</p>
-    <p>为了欣赏漂亮的演示画面，请使用先进、优雅、快速、美丽、免费的现代浏览器，比如 <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> 。</p>
-</div>
+
 
 <!--
     
@@ -132,7 +129,8 @@
         
     -->
     <div class="step" data-x="-2000" data-y="-1500" >
-        <p class="light-blue" style="font-size: 3em;">Hello,stranger!</p>
+        <p class="light-blue" style="font-size: 2.8em;">Hello,stranger!</p>
+        <p class="light-yellow" style="font-size: 0.5em; float: right;">-- 好少年光芒万丈</p>
     </div>
     <div class="step" data-x="0" data-y="-1500" >
         <p class="light-purple" style="font-size: 2.5em;">这是一个好奇的人的自述</p>
@@ -153,18 +151,12 @@
     <div class="step" data-x="-0" data-y="-2500" data-z="-3000" data-rotate="90">
         <p class="light-purple" style="font-size: 1.5em;">好好观察你的周围,你会发现许多由好奇心给我们带来的乐趣</p>
     </div>
-    <div class="step" data-x="4000" data-y="-6000" data-z="-3000" data-rotate="180">
-        <p class="light-blue" style="font-size: 1em;">喜欢乱翻东西的小屁孩</p><img src="./images/baby.jpg">
-        <p class="light-blue" style="font-size: 1em;">路边不明真相的围观群众</p><img src="./images/people.jpg">
-        <p class="light-blue" style="font-size: 1em;">拿着不咋会用的手机扫小黄车的老大爷</p>
-        <p class="light-purple" style="font-size: 0.5em; float: right;">keep your curiosity</p>
-    </div>
     <div class="step" data-x="6000" data-y="-8000" data-z="-1500" data-rotate="360">
         <p class="light-orange" style="font-size: 2em;">写不下去了 呜呜呜呜。。。。</p>
     </div>
     <div class="step" data-x="200" data-y="-6000" data-z="-4000" data-rotate="270">
-        <p class="light-yellow" style="font-size: 2em;">愿你好奇心如猫，永远对这个世界充满好奇!</p>
-        <p class="light-blue" style="font-size: 0.5em; float: right;">try everything 我们头上都有包</p>
+        <p class="light-yellow" style="font-size: 2em;">愿你好奇如猫 喵~</p>
+        <p class="light-blue" style="font-size: 0.5em; float: right;">try everything</p>
     </div>
 
     <!--
@@ -295,7 +287,7 @@
         https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="-1000" data-y="-1500" data-scale="3">
     </div>
 
 </div>
@@ -345,7 +337,7 @@ if ("ontouchstart" in document.documentElement) {
     当然你可以使用“DOM ready”事件，但是我比较懒;)
     
 -->
-<script src="js/impress.js"></script>
+<script src="/js/impress.js"></script>
 <script>impress().init();</script>
 
 <!--

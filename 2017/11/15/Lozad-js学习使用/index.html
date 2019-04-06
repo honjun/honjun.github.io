@@ -202,137 +202,143 @@
             </div>
             <h2 class="post-title">Lozad.js学习使用</h2>
             <div class="post-meta">
-                本文总共1840个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1855个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <p><img class="lozad" data-action="zoom" data-src="http://upload-images.jianshu.io/upload_images/2597553-d44d71ea6b1672b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"><br>github地址<a href="https://github.com/ApoorvSaxena/lozad.js">lozad.js</a><br>前几天在公众号上看到github上一些受欢迎的项目，其中就有lozad.js,据说碾压jquery.lazyload.js。而自己也一直想给自己博客添加惰性加载以提高页面打开速度（没办法，git略卡，aplayer音乐播放器和cnzz统计都被舍弃了）</p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h2><p>使用请参照github上的README.md中的Usage，英文实在看不懂可以参照sf的这篇文章<a href="https://segmentfault.com/a/1190000011527281">《lozad.js：懒加载神器》</a>，以及<a href="http://www.ruanyifeng.com/blog/2016/11/intersectionobserver_api.html?utm_source=tuicool&amp;utm_medium=referral">阮老师的文章</a></p>
-<h2 id="实战-给主题添加"><a href="#实战-给主题添加" class="headerlink" title="实战-给主题添加"></a><strong>实战-给主题添加</strong></h2><p>首先给列表页面（category-items.ejs）加上了对应的class和data-src，然后在layout.ejs里面加上了<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> observer = lozad();</span><br><span class="line">    observer.observe();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="实战-给主题添加"><a href="#实战-给主题添加" class="headerlink" title="实战-给主题添加"></a><strong>实战-给主题添加</strong></h2><p>首先给列表页面（category-items.ejs）加上了对应的class和data-src，然后在layout.ejs里面加上了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> observer = lozad();</span><br><span class="line">    observer.observe();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>测试通过。</p>
 <h2 id="实战-修改代码使hexo生成的img加上class和data-src"><a href="#实战-修改代码使hexo生成的img加上class和data-src" class="headerlink" title="实战-修改代码使hexo生成的img加上class和data-src"></a><strong>实战-修改代码使hexo生成的img加上class和data-src</strong></h2><p>列表页是在模板（themes）来编写的，自然能找到对应的img元素代码，给其加上class和data-src并不是难事。接下来遇到了个问题，要给文章中的图片也加上对应的class和data-src就不容易了。<br>因为文章的内容是在hexo的<a href="https://hexo.io/zh-cn/docs/variables.html">变量</a>中,</p>
 <h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a><strong>全局变量</strong></h3><table>
 <thead>
 <tr>
-<th style="text-align:center">变量</th>
-<th style="text-align:left">描述</th>
+<th align="center">变量</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">site</td>
-<td style="text-align:left">网站变量</td>
+<tbody><tr>
+<td align="center">site</td>
+<td align="left">网站变量</td>
 </tr>
 <tr>
-<td style="text-align:center">page</td>
-<td style="text-align:left">针对该页面的内容以及 front-matter 所设定的变量。</td>
+<td align="center">page</td>
+<td align="left">针对该页面的内容以及 front-matter 所设定的变量。</td>
 </tr>
 <tr>
-<td style="text-align:center">config</td>
-<td style="text-align:left">网站配置</td>
+<td align="center">config</td>
+<td align="left">网站配置</td>
 </tr>
 <tr>
-<td style="text-align:center">theme</td>
-<td style="text-align:left">主题配置。继承自网站配置。</td>
+<td align="center">theme</td>
+<td align="left">主题配置。继承自网站配置。</td>
 </tr>
 <tr>
-<td style="text-align:center">_ (单下划线)</td>
-<td style="text-align:left">Lodash 函数库</td>
+<td align="center">_ (单下划线)</td>
+<td align="left">Lodash 函数库</td>
 </tr>
 <tr>
-<td style="text-align:center">path</td>
-<td style="text-align:left">当前页面的路径（不含根路径）</td>
+<td align="center">path</td>
+<td align="left">当前页面的路径（不含根路径）</td>
 </tr>
 <tr>
-<td style="text-align:center">url</td>
-<td style="text-align:left">当前页面的完整网址</td>
+<td align="center">url</td>
+<td align="left">当前页面的完整网址</td>
 </tr>
 <tr>
-<td style="text-align:center">env</td>
-<td style="text-align:left">环境变量</td>
-</tr>
-</tbody>
-</table>
-<h3 id="页面变量"><a href="#页面变量" class="headerlink" title="页面变量"></a><strong>页面变量</strong></h3><table>
-<thead>
-<tr>
-<th style="text-align:center">变量</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">page.title</td>
-<td style="text-align:left">页面标题</td>
+<td align="center">env</td>
+<td align="left">环境变量</td>
 </tr>
 <tr>
-<td style="text-align:center">page.date</td>
-<td style="text-align:left">页面建立日期（Moment.js 对象）</td>
+<td align="center">### <strong>页面变量</strong></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:center">page.updated</td>
-<td style="text-align:left">页面更新日期（Moment.js 对象）</td>
+<td align="center">变量</td>
+<td align="left">描述</td>
 </tr>
 <tr>
-<td style="text-align:center">page.comments</td>
-<td style="text-align:left">留言是否开启</td>
+<td align="center">:–:</td>
+<td align="left">:–</td>
 </tr>
 <tr>
-<td style="text-align:center">page.layout</td>
-<td style="text-align:left">布局名称</td>
+<td align="center">page.title</td>
+<td align="left">页面标题</td>
 </tr>
 <tr>
-<td style="text-align:center">page.content</td>
-<td style="text-align:left">页面的完整内容</td>
+<td align="center">page.date</td>
+<td align="left">页面建立日期（Moment.js 对象）</td>
 </tr>
 <tr>
-<td style="text-align:center">page.excerpt</td>
-<td style="text-align:left">页面摘要</td>
+<td align="center">page.updated</td>
+<td align="left">页面更新日期（Moment.js 对象）</td>
 </tr>
 <tr>
-<td style="text-align:center">page.more</td>
-<td style="text-align:left">除了页面摘要的其余内容</td>
+<td align="center">page.comments</td>
+<td align="left">留言是否开启</td>
 </tr>
 <tr>
-<td style="text-align:center">page.source</td>
-<td style="text-align:left">页面原始路径</td>
+<td align="center">page.layout</td>
+<td align="left">布局名称</td>
 </tr>
 <tr>
-<td style="text-align:center">page.full_source</td>
-<td style="text-align:left">页面的完整原始路径</td>
+<td align="center">page.content</td>
+<td align="left">页面的完整内容</td>
 </tr>
 <tr>
-<td style="text-align:center">page.path</td>
-<td style="text-align:left">页面网址（不含根路径）。我们通常在主题中使用 url_for(page.path)。</td>
+<td align="center">page.excerpt</td>
+<td align="left">页面摘要</td>
 </tr>
 <tr>
-<td style="text-align:center">page.permalink</td>
-<td style="text-align:left">页面的完整网址</td>
+<td align="center">page.more</td>
+<td align="left">除了页面摘要的其余内容</td>
 </tr>
 <tr>
-<td style="text-align:center">page.prev</td>
-<td style="text-align:left">上一个页面。如果此为第一个页面则为 null。</td>
+<td align="center">page.source</td>
+<td align="left">页面原始路径</td>
 </tr>
 <tr>
-<td style="text-align:center">page.next</td>
-<td style="text-align:left">下一个页面。如果此为最后一个页面则为 null。</td>
+<td align="center">page.full_source</td>
+<td align="left">页面的完整原始路径</td>
 </tr>
 <tr>
-<td style="text-align:center">page.raw</td>
-<td style="text-align:left">文章的原始内容</td>
+<td align="center">page.path</td>
+<td align="left">页面网址（不含根路径）。我们通常在主题中使用 url_for(page.path)。</td>
 </tr>
 <tr>
-<td style="text-align:center">page.photos</td>
-<td style="text-align:left">文章的照片（用于相簿）</td>
+<td align="center">page.permalink</td>
+<td align="left">页面的完整网址</td>
 </tr>
 <tr>
-<td style="text-align:center">page.link</td>
-<td style="text-align:left">文章的外部链接（用于链接文章）</td>
+<td align="center">page.prev</td>
+<td align="left">上一个页面。如果此为第一个页面则为 null。</td>
 </tr>
-</tbody>
-</table>
-<p>其中page.content就是文章的内容了，接下来就是找到hexo是在哪里把markdown解释成html了。推荐一篇<a href="http://coderunthings.com/2017/08/20/howhexoworks/">《hexo是怎么工作的》</a>，可惜没有讲到对应的源代码，不过受他启发，去找对应的源代码。一开始觉得大概率是在生成的时候解析的，于是在<img class="lozad" data-action="zoom" data-src="http://upload-images.jianshu.io/upload_images/2597553-cde21adbc3b1c570.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个generator的文件夹中找？怎么找，sublime中右键[图片上传失败…(image-67a3c5-1510805619540)]选择Find in Folder就行，我选择查找的关键字是<code>&lt;img src=</code>,可惜没有找到对应的源码。<br>接着在渲染的<img class="lozad" data-action="zoom" data-src="http://upload-images.jianshu.io/upload_images/2597553-35f409a9739b7c9a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个renderer文件夹中找,其实看文件夹名就能看出端倪，hexo-renderer-ejs对应ejs,hexo-renderer-stylus对应syl,hexo-renderer-marked对应markdown咯。<br>打开对应的README.md就看见你这么一句<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add support for [Markdown]. This plugin uses [marked] as render engine.</span><br></pre></td></tr></table></figure></p>
-<p>看来是找到了。查找发现真正的位置在<img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fljpj5cg8ej308f00p741.jpg" alt="image">这里，<code>\node_modules\_marked@0.3.6@marked\lib\marked.js</code>在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<tr>
+<td align="center">page.next</td>
+<td align="left">下一个页面。如果此为最后一个页面则为 null。</td>
+</tr>
+<tr>
+<td align="center">page.raw</td>
+<td align="left">文章的原始内容</td>
+</tr>
+<tr>
+<td align="center">page.photos</td>
+<td align="left">文章的照片（用于相簿）</td>
+</tr>
+<tr>
+<td align="center">page.link</td>
+<td align="left">文章的外部链接（用于链接文章）</td>
+</tr>
+</tbody></table>
+<p>其中page.content就是文章的内容了，接下来就是找到hexo是在哪里把markdown解释成html了。推荐一篇<a href="http://coderunthings.com/2017/08/20/howhexoworks/">《hexo是怎么工作的》</a>，可惜没有讲到对应的源代码，不过受他启发，去找对应的源代码。一开始觉得大概率是在生成的时候解析的，于是在<img class="lozad" data-action="zoom" data-src="http://upload-images.jianshu.io/upload_images/2597553-cde21adbc3b1c570.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个generator的文件夹中找？怎么找，sublime中右键[图片上传失败…(image-67a3c5-1510805619540)]选择Find in Folder就行，我选择查找的关键字是<code>&lt;img src=</code>,可惜没有找到对应的源码。<br>接着在渲染的<img class="lozad" data-action="zoom" data-src="http://upload-images.jianshu.io/upload_images/2597553-35f409a9739b7c9a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image">这几个renderer文件夹中找,其实看文件夹名就能看出端倪，hexo-renderer-ejs对应ejs,hexo-renderer-stylus对应syl,hexo-renderer-marked对应markdown咯。<br>打开对应的README.md就看见你这么一句</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add support for [Markdown]. This plugin uses [marked] as render engine.</span><br></pre></td></tr></table></figure>
+
+<p>看来是找到了。查找发现真正的位置在<img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fljpj5cg8ej308f00p741.jpg" alt="image">这里，<code>\node_modules\_marked@0.3.6@marked\lib\marked.js</code>在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
 <p>清空重新生成一下。<br>ok,文章图片也实现了惰性加载</p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -773,6 +779,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -818,7 +830,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战-给主题添加"><span class="toc-text">实战-给主题添加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战-修改代码使hexo生成的img加上class和data-src"><span class="toc-text">实战-修改代码使hexo生成的img加上class和data-src</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#全局变量"><span class="toc-text">全局变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面变量"><span class="toc-text">页面变量</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#介绍"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战-给主题添加"><span class="toc-text">实战-给主题添加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实战-修改代码使hexo生成的img加上class和data-src"><span class="toc-text">实战-修改代码使hexo生成的img加上class和data-src</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#全局变量"><span class="toc-text">全局变量</span></a></li></ol></li></ol>
     </div>
 </aside>
  -->
@@ -1006,7 +1018,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

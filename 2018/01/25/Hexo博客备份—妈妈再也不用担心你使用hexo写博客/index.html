@@ -202,25 +202,44 @@
             </div>
             <h2 class="post-title">Hexo博客备份—妈妈再也不用担心你使用hexo写博客</h2>
             <div class="post-meta">
-                本文总共1286个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1305个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <p>今天搜了下hexo博客备份，发现好多都是用git命令备份的，于是推荐款好用的hexo备份插件：<br><a href="https://github.com/coneycode/hexo-git-backup">hexo-git-backup</a></p>
-<h2 id="git-backup使用说明-翻译至README-："><a href="#git-backup使用说明-翻译至README-：" class="headerlink" title="git-backup使用说明(翻译至README)："></a><strong>git-backup使用说明(翻译至README)：</strong></h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>如果您的hexo版本是2.xx，则应安装如下：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup@<span class="number">0</span>.<span class="number">0</span>.<span class="number">91</span> --save</span><br></pre></td></tr></table></figure></p>
-<p>如果版本是3.xx，你应该安装如下：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></p>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a><strong>更新</strong></h3><p>(windows不需要$符)<br>如果使用–save进行安装，则在更新时必须先删除。<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm remove hexo-git-backup</span><br><span class="line">$ npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h3><p>你应该配置这个文件_config.yml如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">backup:</span><br><span class="line">    type: git</span><br><span class="line">    repository:</span><br><span class="line">       github: git@github.com:xxx/xxx.git,branchName</span><br><span class="line">       gitcafe: git@github.com:xxx/xxx.git,branchName</span><br></pre></td></tr></table></figure></p>
-<p>比如博主就新建了个backup分支用于备份<br>博主的配置如下<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">backup:</span></span><br><span class="line"><span class="function">  <span class="title">type</span>: <span class="title">git</span></span></span><br><span class="line"><span class="function">  <span class="title">message</span>: <span class="title">backup</span> <span class="title">my</span> <span class="title">blog</span> <span class="title">of</span> <span class="title">https</span>://<span class="title">honjun.github.io</span>/</span></span><br><span class="line"><span class="function">  <span class="title">repository</span>:</span></span><br><span class="line"><span class="function">    <span class="title">github</span>: <span class="title">https</span>://<span class="title">github.com</span>/<span class="title">honjun</span>/<span class="title">honjun.github.io.git</span>,<span class="title">backup</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="git-backup使用说明-翻译至README-："><a href="#git-backup使用说明-翻译至README-：" class="headerlink" title="git-backup使用说明(翻译至README)："></a><strong>git-backup使用说明(翻译至README)：</strong></h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>如果您的hexo版本是2.xx，则应安装如下：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup@<span class="number">0</span>.<span class="number">0</span>.<span class="number">91</span> --save</span><br></pre></td></tr></table></figure>
+
+<p>如果版本是3.xx，你应该安装如下：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a><strong>更新</strong></h3><p>(windows不需要$符)<br>如果使用–save进行安装，则在更新时必须先删除。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm remove hexo-git-backup</span><br><span class="line">$ npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><strong>配置</strong></h3><p>你应该配置这个文件_config.yml如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">backup:</span><br><span class="line">    type: git</span><br><span class="line">    repository:</span><br><span class="line">       github: git@github.com:xxx/xxx.git,branchName</span><br><span class="line">       gitcafe: git@github.com:xxx/xxx.git,branchName</span><br></pre></td></tr></table></figure>
+
+<p>比如博主就新建了个backup分支用于备份<br>博主的配置如下</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">backup:</span></span><br><span class="line"><span class="function">  <span class="title">type</span>: <span class="title">git</span></span></span><br><span class="line"><span class="function">  <span class="title">message</span>: <span class="title">backup</span> <span class="title">my</span> <span class="title">blog</span> <span class="title">of</span> <span class="title">https</span>://<span class="title">honjun.github.io</span>/</span></span><br><span class="line"><span class="function">  <span class="title">repository</span>:</span></span><br><span class="line"><span class="function">    <span class="title">github</span>: <span class="title">https</span>://<span class="title">github.com</span>/<span class="title">honjun</span>/<span class="title">honjun.github.io.git</span>,<span class="title">backup</span></span></span><br></pre></td></tr></table></figure>
+
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo backup</span><br></pre></td></tr></table></figure>
-<p>or<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo b</span><br></pre></td></tr></table></figure></p>
+
+<p>or</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo b</span><br></pre></td></tr></table></figure>
+
 <p>Options</p>
-<p>如果你要备份你的主题，只需添加theme: your theme name,your theme name在_config.yml。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">backup:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    theme:</span> <span class="string">coney,landscape,xxx</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">       github:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br><span class="line"><span class="attr">       gitcafe:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br></pre></td></tr></table></figure></p>
+<p>如果你要备份你的主题，只需添加theme: your theme name,your theme name在_config.yml。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">backup:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    theme:</span> <span class="string">coney,landscape,xxx</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">       github:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br><span class="line"><span class="attr">       gitcafe:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br></pre></td></tr></table></figure>
+
 <p><strong>注意：如果您按照上述方式操作，themes/coney/.git则会删除目录</strong></p>
-<p>如果你想DIY提交消息，只需添加“消息：更新xxx”。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">backup:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    message:</span> <span class="string">update</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">       github:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br><span class="line"><span class="attr">       gitcafe:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br></pre></td></tr></table></figure></p>
+<p>如果你想DIY提交消息，只需添加“消息：更新xxx”。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">backup:</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">    message:</span> <span class="string">update</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">    repository:</span></span><br><span class="line"><span class="attr">       github:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br><span class="line"><span class="attr">       gitcafe:</span> <span class="string">git@github.com:xxx/xxx.git,branchName</span></span><br></pre></td></tr></table></figure>
+
 <p>现在你可以备份所有的博客！</p>
 <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a><strong>问题</strong></h3><p>您的计算机许可可能会造成一些麻烦。</p>
-<p><strong>错误：EISDIR，打开是由权限引起的。只要做’sudo hexo b’</strong><br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo b</span><br></pre></td></tr></table></figure></p>
+<p><strong>错误：EISDIR，打开是由权限引起的。只要做’sudo hexo b’</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo b</span><br></pre></td></tr></table></figure>
+
 <p>参考<a href="https://www.v2ex.com/t/143022">hexo 的备份插件</a></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -661,6 +680,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -892,7 +917,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

@@ -202,20 +202,28 @@
             </div>
             <h2 class="post-title">Hexo博客中加入B站视频播放器</h2>
             <div class="post-meta">
-                本文总共1000个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1008个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <p><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fzmnz4ts4uj30o20btdjb.jpg" alt=""><br>写博文的时候经常有在文章段落中加视频的需求。由于hexo博客搭建在github上，githubpage的限制，以及其他一些动态博客网站服务器带宽的限制，往往添加的都是其他视频网站的外链播放器。大部分视频网站的外链播放器在视频开头都会加上30秒——2分钟的恶心广告，于是选择B站（无广告！）。</p>
 <h2 id="第一步：去B站获取视频外链"><a href="#第一步：去B站获取视频外链" class="headerlink" title="第一步：去B站获取视频外链"></a>第一步：去B站获取视频外链</h2><p><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fzmnjkshe8j30x50j2dnc.jpg" alt=""></p>
-<h2 id="第二步：在文章中插入视频外链"><a href="#第二步：在文章中插入视频外链" class="headerlink" title="第二步：在文章中插入视频外链"></a>第二步：在文章中插入视频外链</h2><p>我们知道在md中可以直接插入html代码，但是为了防止一些其他因素的干扰，hexo给我们特意准备了一个raw标签来插入html代码。这里我们就使用raw来插入视频外链。代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=24897960&amp;cid=42007693&amp;page=3"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>真实效果如下：<br>
+<h2 id="第二步：在文章中插入视频外链"><a href="#第二步：在文章中插入视频外链" class="headerlink" title="第二步：在文章中插入视频外链"></a>第二步：在文章中插入视频外链</h2><p>我们知道在md中可以直接插入html代码，但是为了防止一些其他因素的干扰，hexo给我们特意准备了一个raw标签来插入html代码。这里我们就使用raw来插入视频外链。代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=24897960&amp;cid=42007693&amp;page=3"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>真实效果如下：</p>
+
 <iframe src="//player.bilibili.com/player.html?aid=24897960&cid=42007693&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<br>我们可以看到效果令人很不满意。</p>
-<h2 id="第三步：修改代码，美化播放器样式。"><a href="#第三步：修改代码，美化播放器样式。" class="headerlink" title="第三步：修改代码，美化播放器样式。"></a>第三步：修改代码，美化播放器样式。</h2><p>代码如下：（不解释）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=24897960&amp;cid=42007693&amp;page=3"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span> <span class="attr">style</span>=<span class="string">"position: absolute; width: 100%; height: 100%; left: 0; top: 0;"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
-<p>真实效果如下：<br>
+
+<p>我们可以看到效果令人很不满意。</p>
+<h2 id="第三步：修改代码，美化播放器样式。"><a href="#第三步：修改代码，美化播放器样式。" class="headerlink" title="第三步：修改代码，美化播放器样式。"></a>第三步：修改代码，美化播放器样式。</h2><p>代码如下：（不解释）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=24897960&amp;cid=42007693&amp;page=3"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span> <span class="attr">style</span>=<span class="string">"position: absolute; width: 100%; height: 100%; left: 0; top: 0;"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>真实效果如下：</p>
+
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=24897960&cid=42007693&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
-<br>好了，这篇博文到此结束~ 提前祝大家 新年快乐！恭喜发财！</p>
+
+<p>好了，这篇博文到此结束~ 提前祝大家 新年快乐！恭喜发财！</p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -462,7 +470,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

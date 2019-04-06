@@ -201,12 +201,14 @@
             </div>
             <h2 class="post-title">一台电脑上配置两个Git账号？可能你并不需要</h2>
             <div class="post-meta">
-                本文总共435个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共437个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Q:为啥要两个？<br>A:因为整了个小号哈<br>之前脑子一直陷入了死胡同里，一直觉得小号也要配置。然后网络搜索一台电脑配置两个Git账号，解决思路一般如下：(图片来自网络，侵权联系删除)<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fupj741d8kj30iq0fodgb.jpg" alt=""><br>后来想通了，我就一个人一台电脑，小号在网页上建好仓库把大号拉进去，剩下的大号来不就好了。git的初衷就是为了更好的合作，居然忘了233333。</p>
-<h2 id="食用方式"><a href="#食用方式" class="headerlink" title="食用方式"></a>食用方式</h2><p>小号在仓库&gt;设置&gt;成员管理中添加大号为管理员<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fupj74i0v7j30vs0b3glv.jpg" alt=""><br>小号的任务就完成了，接下来在自己电脑上随便建个目录(命令行cmd)。<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">E:\<span class="title">blog</span>&gt;<span class="title">mkdir</span> <span class="title">hojunClub</span></span></span><br><span class="line"><span class="function"><span class="title">E</span>:\<span class="title">blog</span>&gt;<span class="title">cd</span> <span class="title">hojunClog</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="食用方式"><a href="#食用方式" class="headerlink" title="食用方式"></a>食用方式</h2><p>小号在仓库&gt;设置&gt;成员管理中添加大号为管理员<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fupj74i0v7j30vs0b3glv.jpg" alt=""><br>小号的任务就完成了，接下来在自己电脑上随便建个目录(命令行cmd)。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">E:\<span class="title">blog</span>&gt;<span class="title">mkdir</span> <span class="title">hojunClub</span></span></span><br><span class="line"><span class="function"><span class="title">E</span>:\<span class="title">blog</span>&gt;<span class="title">cd</span> <span class="title">hojunClog</span></span></span><br></pre></td></tr></table></figure>
+
 <p>进入目录后使用git clone命令克隆仓库代码到本地电脑<br>语法：git clone 仓库地址<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fupj74zjw8j30jo04qwee.jpg" alt=""><br>进入本地仓库中，一顿瞎操作<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fupj75d1koj30hj04swed.jpg" alt=""><br>我们这里在仓库中删除了一些东西，然后依次执行如下git命令：<br>git status<br>git add .<br>git commit -m ‘delete’<br>git push origin<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fupj75s4u5j30fc046a9x.jpg" alt=""><br>提交成功23333~</p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -454,7 +456,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

@@ -202,7 +202,7 @@
             </div>
             <h2 class="post-title">百度站长网站改版踩坑记</h2>
             <div class="post-meta">
-                本文总共646个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共648个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -213,7 +213,9 @@
 <li>github最近是不是提交不去（怀疑被墙）</li>
 </ul>
 <h2 id="改版前提条件"><a href="#改版前提条件" class="headerlink" title="改版前提条件"></a>改版前提条件</h2><p>首先有个百度账号，下边有两个认证过的域名。（博主之前有认证过，这篇文章就不介绍认证步骤）</p>
-<h2 id="网站改版"><a href="#网站改版" class="headerlink" title="网站改版"></a>网站改版</h2><p>点击：百度搜索资源平台》网站支持》提交链接<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftumph1bc7j31020iijyh.jpg" alt=""><br>滚动到底部，找到网站改版<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftumphjw5bj30yj0hv0tj.jpg" alt=""><br>第一次随便填了下两个域名（coding和www的）<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftumpfopumj30te087glq.jpg" alt=""><br>失败如下：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftumpew351j30r607lq30.jpg" alt=""><br>于是看了下改版说明：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftumpfclipj30uj063mxp.jpg" alt=""><br>因为是githubpages搭建的，并无服务器，于是弄了份js跳转的，注意这种跳转的http状态码还是200（死马当活马医）。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language=javascript&gt; </span><br><span class="line"> <span class="keyword">if</span> (<span class="built_in">document</span>.domain ==<span class="string">'coding.hojun.cn'</span>)  </span><br><span class="line">     <span class="keyword">this</span>.location = <span class="string">"https://www.hojun.cn"</span> + <span class="keyword">this</span>.location.pathname + <span class="keyword">this</span>.location.search; </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="网站改版"><a href="#网站改版" class="headerlink" title="网站改版"></a>网站改版</h2><p>点击：百度搜索资源平台》网站支持》提交链接<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftumph1bc7j31020iijyh.jpg" alt=""><br>滚动到底部，找到网站改版<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftumphjw5bj30yj0hv0tj.jpg" alt=""><br>第一次随便填了下两个域名（coding和www的）<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftumpfopumj30te087glq.jpg" alt=""><br>失败如下：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftumpew351j30r607lq30.jpg" alt=""><br>于是看了下改版说明：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftumpfclipj30uj063mxp.jpg" alt=""><br>因为是githubpages搭建的，并无服务器，于是弄了份js跳转的，注意这种跳转的http状态码还是200（死马当活马医）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script language=javascript&gt; </span><br><span class="line"> <span class="keyword">if</span> (<span class="built_in">document</span>.domain ==<span class="string">'coding.hojun.cn'</span>)  </span><br><span class="line">     <span class="keyword">this</span>.location = <span class="string">"https://www.hojun.cn"</span> + <span class="keyword">this</span>.location.pathname + <span class="keyword">this</span>.location.search; </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>失败如下+1<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftumpew351j30r607lq30.jpg" alt=""><br>错误原因：<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftumpegpv7j30ml0idaba.jpg" alt=""></p>
 <h2 id="使用cloudflare添加301重定向"><a href="#使用cloudflare添加301重定向" class="headerlink" title="使用cloudflare添加301重定向"></a>使用cloudflare添加301重定向</h2><p>怎么使用Cloudflare可以参照博主的另一篇文章<a href=""></a><br>这里我们使用它提供的Page Rules<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftumpi1sfgj30vs0g8wfm.jpg" alt=""><br>点击添加：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftumpig9idj30mj0ekaas.jpg" alt=""><br>注意一个是/*，而另一个是/$1<br>然后试着访问coding的域名，可以看出已经是301的方式跳转了<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1ftumpistmsj30il08h0tu.jpg" alt=""><br>再次提交改版（注意要先删掉失败的）<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1ftumpfopumj30te087glq.jpg" alt=""><br>恭喜成功^_^<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftumpj67kjj30rt05lmx6.jpg" alt=""></p>
 
@@ -462,7 +464,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

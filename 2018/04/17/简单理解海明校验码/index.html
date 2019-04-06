@@ -201,147 +201,114 @@
             </div>
             <h2 class="post-title">简单理解海明校验码</h2>
             <div class="post-meta">
-                本文总共1434个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1447个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <p>二进制数据经过传送、存取等环节，会发生误码(1变成0或0变成1)，这就有如何发现及纠正误码的问题。所有解决此类问题的方法就是在原始数据(数码位)基础上增加几位校验位。我们常使用的检验码有三种. 分别是奇偶校验码、海明校验码和循环冗余校验码(CRC)。</p>
 <p>海明校验码是由RichardHamming于1950年提出、目前还被广泛采用的一种很有效的校验方法。它的实现原理，是在k个数据位之外加上r个校验位，从而形成一个k+r位的新的码字，使新的码字的码距比较均匀地拉大。把数据的每一个二进制位分配在几个不同的偶校验位的组合中，当某一位出错后，就会引起相关的几个校验位的值发生变化，这不但可以发现出错，还能指出是哪一位出错，为进一步自动纠错提供了依据。但是因为这种海明校验的方法只能检测和纠正一位出错的情况。所以如果有多个错误，就不能查出了。</p>
 <p>什么是码距？<br>两个码组对应位上数字的不同位的个数称为码组的距离，简称码距，又称海明（Hamming）距离。例如00110和00100码距为1，12345和13344码距为2，Caus和Daun码距为2。</p>
-<p>海明校验码公式（假设为k个数据位设置r个校验位）<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2^r-1 ≥ k + r</span><br></pre></td></tr></table></figure></p>
+<p>海明校验码公式（假设为k个数据位设置r个校验位）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2^r-1 ≥ k + r</span><br></pre></td></tr></table></figure>
+
 <p>公式怎么得出来的呢？<br>假设有r个校验位，一个位子有0或1两种情况，r个位子就有2^r种排列情况，能表示2^r种状态。其中一个状态用来表示正确（没有错误发生）的这种情况。其余的2^r-1种状态来表示错误发生在哪一位。总共有k+r位，所以2^r-1一定要&gt;=总位子k+r。<br>按照该不等可以得出k与r的对应关系</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">k值</th>
-<th style="text-align:center">r值</th>
+<th align="center">k值</th>
+<th align="center">r值</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">2</td>
 </tr>
 <tr>
-<td style="text-align:center">2～4</td>
-<td style="text-align:center">3</td>
+<td align="center">2～4</td>
+<td align="center">3</td>
 </tr>
 <tr>
-<td style="text-align:center">5～11</td>
-<td style="text-align:center">4</td>
+<td align="center">5～11</td>
+<td align="center">4</td>
 </tr>
 <tr>
-<td style="text-align:center">12～26</td>
-<td style="text-align:center">5</td>
+<td align="center">12～26</td>
+<td align="center">5</td>
 </tr>
 <tr>
-<td style="text-align:center">27～57</td>
-<td style="text-align:center">6</td>
+<td align="center">27～57</td>
+<td align="center">6</td>
 </tr>
 <tr>
-<td style="text-align:center">58～120</td>
-<td style="text-align:center">7</td>
+<td align="center">58～120</td>
+<td align="center">7</td>
 </tr>
 <tr>
-<td style="text-align:center">…</td>
-<td style="text-align:center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>注意：海明校验码是放在2的幂次位上的，即“1,2,4,8,16,32······”</p>
 <p>实战求1011的海明码<br>第一步：求r的值（即校验位数）<br>直接根据公式代入得：<br>2^r-1 ≥ 4 + r<br>2^r-r ≥ 5<br>得到r最小为3<br>所以海明码的位数是4+3=7位<br>第二步：校验位和信息位对号入座<br><strong>注意： 信息位的位置分配是从高位到低位依次存放</strong><br><strong>注意： 海明校验码是放在2的幂次位上的</strong></p>
+<p>位数|1|2|3|4|5|6|7<br>:-:|:-:|:-:|:-:|:-:|:-:|:-:<br>信息位|||1||1|0|1<br>校验位|r1|r2||r3|||<br>第三步：确定校验位的值<br>校验原则：被校验的海明位的下标等于所有参与校验该为的校验位的下标之和</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">位数</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th>7</th>
+<th align="center">海明码</th>
+<th align="center">海明码下标</th>
+<th align="center">校验位组</th>
+<th align="center">信息位</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">信息位</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0</td>
-<td>1</td>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">r1</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td style="text-align:center">校验位</td>
-<td style="text-align:center">r1</td>
-<td style="text-align:center">r2</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">r3</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>第三步：确定校验位的值<br>校验原则：被校验的海明位的下标等于所有参与校验该为的校验位的下标之和</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">海明码</th>
-<th style="text-align:center">海明码下标</th>
-<th style="text-align:center">校验位组</th>
-<th style="text-align:center">信息位</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">r1</td>
-<td style="text-align:center"></td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">r2</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">r2</td>
-<td style="text-align:center"></td>
+<td align="center">3</td>
+<td align="center">3=2+1</td>
+<td align="center">r1,r2</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3=2+1</td>
-<td style="text-align:center">r1,r2</td>
-<td style="text-align:center">1</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">r3</td>
+<td align="center"></td>
 </tr>
 <tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">r3</td>
-<td style="text-align:center"></td>
+<td align="center">5</td>
+<td align="center">5=4+1</td>
+<td align="center">r3,r1</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">5=4+1</td>
-<td style="text-align:center">r3,r1</td>
-<td style="text-align:center">1</td>
+<td align="center">6</td>
+<td align="center">6=4+2</td>
+<td align="center">r3,r2</td>
+<td align="center">0</td>
 </tr>
 <tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">6=4+2</td>
-<td style="text-align:center">r3,r2</td>
-<td style="text-align:center">0</td>
+<td align="center">7</td>
+<td align="center">7=4+3</td>
+<td align="center">r3,r2,r1</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">7</td>
-<td style="text-align:center">7=4+3</td>
-<td style="text-align:center">r3,r2,r1</td>
-<td style="text-align:center">1</td>
+<td align="center">然后将校验码校验的信息位的位置记录下来：</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
-</tbody>
-</table>
-<p>然后将校验码校验的信息位的位置记录下来：</p>
+</tbody></table>
 <ul>
 <li>r1: 3, 5, 7</li>
 <li>r2: 3, 6, 7</li>
@@ -357,39 +324,37 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">位数</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
+<th align="center">位数</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">信息位</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center">1</td>
+<tbody><tr>
+<td align="center">信息位</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
 </tr>
 <tr>
-<td style="text-align:center">校验位</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">0</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">0</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td align="center">校验位</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center"></td>
+<td align="center">0</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>注意：按照从低位到高位的排列顺序得到海明码：1010101</strong></p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -637,7 +602,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

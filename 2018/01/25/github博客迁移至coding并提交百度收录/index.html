@@ -202,7 +202,7 @@
             </div>
             <h2 class="post-title">github博客迁移至coding并提交百度收录</h2>
             <div class="post-meta">
-                本文总共892个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共896个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -213,9 +213,13 @@
 <li>项目名要和用户名一致</li>
 <li>要选择公开</li>
 </ol>
-<h2 id="第三步：配置"><a href="#第三步：配置" class="headerlink" title="第三步：配置"></a><strong>第三步：配置</strong></h2><p>创建好项目后在个人设置里面添加SSH公钥，可以参照帮助文档<a href="https://coding.net/help/doc/account/ssh-key.html">配置 SSH 公钥访问代码仓库</a><br>然后复制项目的https或git到hexo的配置文件_config.yml(注意，冒号后面要有个空格)<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fnu80lum8jj30b703fglj.jpg" alt=""><br>如：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line"><span class="attr">    github:</span> <span class="attr">https://github.com/honjun/honjun.github.io.git</span></span><br><span class="line"><span class="attr">    coding:</span> <span class="attr">https://git.coding.net/hojun/hojun.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="第三步：配置"><a href="#第三步：配置" class="headerlink" title="第三步：配置"></a><strong>第三步：配置</strong></h2><p>创建好项目后在个人设置里面添加SSH公钥，可以参照帮助文档<a href="https://coding.net/help/doc/account/ssh-key.html">配置 SSH 公钥访问代码仓库</a><br>然后复制项目的https或git到hexo的配置文件_config.yml(注意，冒号后面要有个空格)<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fnu80lum8jj30b703fglj.jpg" alt=""><br>如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> </span><br><span class="line"><span class="attr">    github:</span> <span class="attr">https://github.com/honjun/honjun.github.io.git</span></span><br><span class="line"><span class="attr">    coding:</span> <span class="attr">https://git.coding.net/hojun/hojun.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="第四步：开启Pages服务"><a href="#第四步：开启Pages服务" class="headerlink" title="第四步：开启Pages服务"></a><strong>第四步：开启Pages服务</strong></h2><p>cmd运行hexo g,hexo d<br>在Coding的项目中打开Pages服务-&gt;静态Pages,部署来源-master分支<br>就可以在coding.yourname.me看到你部署好的博客了<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fnu80sdijmj30ok0btjs5.jpg" alt=""></p>
-<h2 id="第五步：绑定自定义域名"><a href="#第五步：绑定自定义域名" class="headerlink" title="第五步：绑定自定义域名"></a><strong>第五步：绑定自定义域名</strong></h2><p>在域名解析添加一条CNAME记录即可，如绑定二级域名xxx.你的域名.xx<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fnu80ytrqhj30kg01sdfp.jpg" alt=""><br>等待生效，一般12小时左右<br>回到项目代码下，新建CNAME文件，内容为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.你的域名.xx</span><br></pre></td></tr></table></figure></p>
+<h2 id="第五步：绑定自定义域名"><a href="#第五步：绑定自定义域名" class="headerlink" title="第五步：绑定自定义域名"></a><strong>第五步：绑定自定义域名</strong></h2><p>在域名解析添加一条CNAME记录即可，如绑定二级域名xxx.你的域名.xx<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fnu80ytrqhj30kg01sdfp.jpg" alt=""><br>等待生效，一般12小时左右<br>回到项目代码下，新建CNAME文件，内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xxx.你的域名.xx</span><br></pre></td></tr></table></figure>
+
 <p>再在Coding Pages服务里面绑定自定义域名<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fnu814vtvvj30xj07h3yt.jpg" alt=""><br>接下来在hexo模板的footer下放置「Hosted by Coding Pages」<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fnu81lo09qj30x209x3z5.jpg" alt=""><br>迁移完毕……</p>
 <h2 id="第六步：提交百度收录"><a href="#第六步：提交百度收录" class="headerlink" title="第六步：提交百度收录"></a><strong>第六步：提交百度收录</strong></h2><p>登录百度搜索资源平台-&gt;网站支持-&gt;数据引入-&gt;链接提交。即可，没有绑定过的需要先新增站点并验证。注意https和http有区别，需要自己选择，选错了会验证不了<br>推荐使用sitemap方式提交，推荐一个hexo的sitemap生成插件：<a href="https://github.com/coneycode/hexo-generator-baidu-sitemap">hexo-generator-baidu-sitemap</a></p>
 
@@ -657,6 +661,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -886,7 +896,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

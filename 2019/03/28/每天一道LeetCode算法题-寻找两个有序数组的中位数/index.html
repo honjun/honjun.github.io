@@ -202,7 +202,7 @@
             </div>
             <h2 class="post-title">每天一道LeetCode算法题-寻找两个有序数组的中位数</h2>
             <div class="post-meta">
-                本文总共1197个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1207个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -210,16 +210,26 @@
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
 <p>给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。<br>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。<br>你可以假设 nums1 和 nums2 不会同时为空。</p>
 </blockquote>
-<p><strong>示例</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [<span class="number">1</span>, <span class="number">3</span>]</span><br><span class="line">nums2 = [<span class="number">2</span>]</span><br><span class="line">则中位数是 <span class="number">2.0</span></span><br><span class="line"></span><br><span class="line">nums1 = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">nums2 = [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">则中位数是 (<span class="number">2</span> + <span class="number">3</span>)/<span class="number">2</span> = <span class="number">2.5</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>示例</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [<span class="number">1</span>, <span class="number">3</span>]</span><br><span class="line">nums2 = [<span class="number">2</span>]</span><br><span class="line">则中位数是 <span class="number">2.0</span></span><br><span class="line"></span><br><span class="line">nums1 = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">nums2 = [<span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">则中位数是 (<span class="number">2</span> + <span class="number">3</span>)/<span class="number">2</span> = <span class="number">2.5</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>要求算法的时间复杂度为 O(log(m + n))？？？，我终于知道为啥这题标的是困难了。我等咸鱼选择放弃，还是直接学习官方题解好了2333333~</p>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>方法：递归法。<br>为了解决这个问题，我们需要理解“中位数的作用是什么”。在统计中，中位数被用来：</p>
 <blockquote>
 <p>将一个集合划分为两个长度相等的子集，其中一个子集中的元素总是大于另一个子集中的元素。</p>
 </blockquote>
-<p>首先，让我们在任一位置 i 将 A 划分成两个部分：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">      left_A             |        right_A</span><br><span class="line">A[<span class="number">0</span>], A[<span class="number">1</span>], ..., A[i<span class="number">-1</span>]  |  A[i], A[i+<span class="number">1</span>], ..., A[m<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></p>
-<p>由于 A 中有 m 个元素， 所以我们有 m+1 种划分的方法（i = 0 ∼ m）。<br>采用同样的方式，我们在任一位置 j 将 B 划分成两个部分：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">      left_B             |        right_B</span><br><span class="line">B[<span class="number">0</span>], B[<span class="number">1</span>], ..., B[j<span class="number">-1</span>]  |  B[j], B[j+<span class="number">1</span>], ..., B[n<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></p>
-<p>将 left_A 和 left_B 放入一个集合，并将 right_A 和 right_B 放入另一个集合。 再把这两个新的集合分别命名为 left_part 和 right_part：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">      left_part          |        right_part</span><br><span class="line">A[<span class="number">0</span>], A[<span class="number">1</span>], ..., A[i<span class="number">-1</span>]  |  A[i], A[i+<span class="number">1</span>], ..., A[m<span class="number">-1</span>]</span><br><span class="line">B[<span class="number">0</span>], B[<span class="number">1</span>], ..., B[j<span class="number">-1</span>]  |  B[j], B[j+<span class="number">1</span>], ..., B[n<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></p>
-<p>如果我们可以确认：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">len(left_part) = len(right_part)</span><br><span class="line">max(left_part) ≤ min(right_part)</span><br></pre></td></tr></table></figure></p>
+<p>首先，让我们在任一位置 i 将 A 划分成两个部分：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">      left_A             |        right_A</span><br><span class="line">A[<span class="number">0</span>], A[<span class="number">1</span>], ..., A[i<span class="number">-1</span>]  |  A[i], A[i+<span class="number">1</span>], ..., A[m<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>由于 A 中有 m 个元素， 所以我们有 m+1 种划分的方法（i = 0 ∼ m）。<br>采用同样的方式，我们在任一位置 j 将 B 划分成两个部分：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">      left_B             |        right_B</span><br><span class="line">B[<span class="number">0</span>], B[<span class="number">1</span>], ..., B[j<span class="number">-1</span>]  |  B[j], B[j+<span class="number">1</span>], ..., B[n<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>将 left_A 和 left_B 放入一个集合，并将 right_A 和 right_B 放入另一个集合。 再把这两个新的集合分别命名为 left_part 和 right_part：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">      left_part          |        right_part</span><br><span class="line">A[<span class="number">0</span>], A[<span class="number">1</span>], ..., A[i<span class="number">-1</span>]  |  A[i], A[i+<span class="number">1</span>], ..., A[m<span class="number">-1</span>]</span><br><span class="line">B[<span class="number">0</span>], B[<span class="number">1</span>], ..., B[j<span class="number">-1</span>]  |  B[j], B[j+<span class="number">1</span>], ..., B[n<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>如果我们可以确认：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">len(left_part) = len(right_part)</span><br><span class="line">max(left_part) ≤ min(right_part)</span><br></pre></td></tr></table></figure>
+
 <p>那么，我们已经将 {\text{A}, \text{B}}{A,B} 中的所有元素划分为相同长度的两个部分，且其中一部分中的元素总是大于另一部分中的元素。那么：<br>median = (max(left_part) + min(right_part)) / 2<br>要确保这两个条件，我们只需要保证：<br>​ </p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -469,7 +479,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

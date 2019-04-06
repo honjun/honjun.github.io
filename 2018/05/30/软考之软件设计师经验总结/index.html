@@ -202,19 +202,19 @@
             </div>
             <h2 class="post-title">软考之软件设计师经验总结</h2>
             <div class="post-meta">
-                本文总共2468个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2470个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
             <p><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1frt89itvewj30dw0dwn2l.jpg" alt=""></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>26日急急忙忙考完软考之后总算解决掉一件事情，今后的日子也不用慌慌张张的备考了。嘤嘤嘤~<br>这篇文章主要来总结下这次软考备考过程。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>26日急急忙忙考完软考之后总算解决掉一件事情，今后的日子也不用慌慌张张的备考了。嘤嘤嘤~
+这篇文章主要来总结下这次软考备考过程。</p>
 <p>咳咳，首先是备考。恩……大概是从考前20天，5月6日前后开始的。（笔记为证）报考的是软件设计师中级。觉得有实力的可以选择直接报考高级的。下图是报考类别：</p>
 <p><strong>全国计算机技术与软件专业技术资格（水平）考试考试级别</strong><br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1frt3uwjrnvj30fb0ajabs.jpg" alt=""></p>
 <p>选择软件设计师主要是因为大学时期有去考过一次，记得上午卷是过了，下午没过。所以难点还是下午卷。上午75道选择题只要刷下历年试卷，弄懂一些重点的考点。考过基本没问题。（上下午都是75分卷，45分及格）。</p>
 <p>回顾下这20几天备考，反省下自己大部分的时间都在都在都在都在……不知道干嘛了。大致考前一星期才觉得快来不及了去努力啃考试教材。可惜其他事情忙忙~耽误耽误，到最后也才看了半本书TOT。（注：大学是也没好好备考，就算备过得也忘得差不多了）。</p>
 <p>废话不多说，直接来点干货。本次考试还是按规矩来的，重点考点都有，下午试卷的考题也是中规中矩（本人觉得这次题目较为简单）。</p>
-<h2 id="上午试题"><a href="#上午试题" class="headerlink" title="上午试题"></a><strong>上午试题</strong></h2><font color="#f00">以下内容全凭作者小脑袋记住，内容不全敬请谅解，个人见解仅供参考</font>
-
+<h2 id="上午试题"><a href="#上午试题" class="headerlink" title="上午试题"></a><strong>上午试题</strong></h2><p><font color="#f00">以下内容全凭作者小脑袋记住，内容不全敬请谅解，个人见解仅供参考</font></p>
 <h3 id="海明校验码-考到了"><a href="#海明校验码-考到了" class="headerlink" title="海明校验码 考到了"></a><strong>海明校验码 考到了</strong></h3><p>而且这次考得比较细，要求你理解掌握海明校验码的实现原理了。不只是简单的考察2^r-1 ≥ k + r这个公式了。详细理解可以看我之前的文章《简单理解海明校验码》</p>
 <h3 id="Gantt和PERT图-考到了"><a href="#Gantt和PERT图-考到了" class="headerlink" title="Gantt和PERT图 考到了"></a><strong>Gantt和PERT图 考到了</strong></h3><p>考得还是常见套路：<br>考得的种图的特点</p>
 <ul>
@@ -227,7 +227,9 @@
 <p>易错点：ab* 不是 0~n个ab, 而是a + 若干个b(包括0个)。完整的写法应该是 a.b*。 (ab)* 才是若干个ab。</p>
 <h3 id="后缀式-考到了"><a href="#后缀式-考到了" class="headerlink" title="后缀式 考到了"></a><strong>后缀式 考到了</strong></h3><p>考得就是后缀式的转换。</p>
 <p>后缀表达式，指的是不包含括号，运算符放在两个运算对象的后面，所有的计算按运算符出现的顺序，严格从左向右进行（不再考虑运算符的优先规则）。</p>
-<p>举个简单的好理解干货例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a+b*(c+d/e)</span><br><span class="line">(a+(b*(c+(d/e)))) 按计算顺序加上括号</span><br><span class="line">(a(b(c(de)/)+)*)+ 把运算符放到括号外面</span><br><span class="line">abcde/+*+   去掉括号</span><br><span class="line"></span><br><span class="line">a&amp;b|c&amp;(b|x&gt;<span class="number">0</span>)</span><br><span class="line">(a&amp;b)|(c&amp;(b|(x&gt;<span class="number">0</span>)))</span><br><span class="line">((a&amp;b)|(c&amp;(b|(x&gt;<span class="number">0</span>)))) 把运算符放到括号外面</span><br><span class="line">注意(a&amp;b)先运算,得：</span><br><span class="line">((ab)&amp;(c(b(x0)&gt;)|)&amp;)| 去掉括号得：</span><br><span class="line">ab&amp;cbx0&gt;|&amp;|</span><br></pre></td></tr></table></figure></p>
+<p>举个简单的好理解干货例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a+b*(c+d/e)</span><br><span class="line">(a+(b*(c+(d/e)))) 按计算顺序加上括号</span><br><span class="line">(a(b(c(de)/)+)*)+ 把运算符放到括号外面</span><br><span class="line">abcde/+*+   去掉括号</span><br><span class="line"></span><br><span class="line">a&amp;b|c&amp;(b|x&gt;<span class="number">0</span>)</span><br><span class="line">(a&amp;b)|(c&amp;(b|(x&gt;<span class="number">0</span>)))</span><br><span class="line">((a&amp;b)|(c&amp;(b|(x&gt;<span class="number">0</span>)))) 把运算符放到括号外面</span><br><span class="line">注意(a&amp;b)先运算,得：</span><br><span class="line">((ab)&amp;(c(b(x0)&gt;)|)&amp;)| 去掉括号得：</span><br><span class="line">ab&amp;cbx0&gt;|&amp;|</span><br></pre></td></tr></table></figure>
+
 <h3 id="McCabe度量法-考到了"><a href="#McCabe度量法-考到了" class="headerlink" title="McCabe度量法 考到了"></a><strong>McCabe度量法 考到了</strong></h3><p>MaCabe度量法是通过定义环路复杂度，建立程序复杂性的度量，它基于一个程序模块的程序图中的环路的个数。计算有向图G的环路复杂性的公式为V(G) = m - n + 2，其中V(G)是有向图G中的环路个数，m是G中的有向弧数，n是G中的节点数。</p>
 <h3 id="前趋图PV操作-考到了"><a href="#前趋图PV操作-考到了" class="headerlink" title="前趋图PV操作 考到了"></a><strong>前趋图PV操作 考到了</strong></h3><p>详情查看《软考备考之前趋图PV操作》这篇文章</p>
 <h3 id="考到的还有-不说你也猜到"><a href="#考到的还有-不说你也猜到" class="headerlink" title="考到的还有 不说你也猜到"></a><strong>考到的还有 不说你也猜到</strong></h3><p>UML图、二叉树、设计模式、算法时间复杂度、面向对象设计（多态）、几种经典的算法策略（分治、动态规划、贪心、回溯）、图表、网络协议和对应层的设备、软件著作权、CPU等等。</p>
@@ -638,6 +640,12 @@
             
                 
             
+                
+            
+                
+            
+                
+            
         </div>
         
         
@@ -869,7 +877,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

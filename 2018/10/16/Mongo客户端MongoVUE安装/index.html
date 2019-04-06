@@ -201,11 +201,13 @@
             </div>
             <h2 class="post-title">Mongo客户端MongoVUE安装</h2>
             <div class="post-meta">
-                本文总共650个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共652个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p>咳咳，假设已经有了安装包，我这安装包是1.6.9版本。点击next开始安装。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fwacijfvf0j30dz0bf74l.jpg" alt=""><br>这里博主选择安装在E盘，你们可以任意，自己找的到就好。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fwacl8ragtj30dz0bfaae.jpg" alt=""><br>安装好后如下，拖入安装目录，替换exe文件。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fwada00mvij30tt0hsdit.jpg" alt=""><br>接着在cmd进入到Mongo目录下，运行上篇文章的命令。<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config E:\MongoDB\Data\etc\mongo.cfg</span><br></pre></td></tr></table></figure></p>
+            <p>咳咳，假设已经有了安装包，我这安装包是1.6.9版本。点击next开始安装。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fwacijfvf0j30dz0bf74l.jpg" alt=""><br>这里博主选择安装在E盘，你们可以任意，自己找的到就好。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fwacl8ragtj30dz0bfaae.jpg" alt=""><br>安装好后如下，拖入安装目录，替换exe文件。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fwada00mvij30tt0hsdit.jpg" alt=""><br>接着在cmd进入到Mongo目录下，运行上篇文章的命令。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config E:\MongoDB\Data\etc\mongo.cfg</span><br></pre></td></tr></table></figure>
+
 <p>替换后双击打开如下图，点击加号新建数据库<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fwadd81c1yj30g90aw3z7.jpg" alt=""><br>name随便输，server本地填127.0.0.1（服务器填IP），点击test测试成功后点击save即可。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fwadt3dpb7j30g80axab1.jpg" alt=""><br>点击connect连接数据库<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fwaeim5s9jj30bs08y74h.jpg" alt=""><br>再打开个cmd，使用mongo启动，使用use hojun新建名为hojun的数据库。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fwaeldbsevj30j70a8jrx.jpg" alt=""><br>使用db.test.insert({name:”hojun”, age:”18”})。新建数据表并添加数据（不添加数据表是不会存在的）<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fwaeqtxt1bj30g608udg6.jpg" alt=""><br>在MongoVUE下可以看到数据库内容。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fwafmjzfd9j30n50ifdhh.jpg" alt=""></p>
 <p>这样操作确实有些不太方便，决定给Mongo配置环境变量和安装服务。先给其生成服务，如下命令（需要用管理员模式运行cmd）：<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fwag7357owj30pe02n745.jpg" alt=""><br>在控制面板&gt;系统和安全&gt;管理工具下找到服务。或者直接在控制面板页搜索服务即可。<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fwag89cpqsj30gb0ba0ue.jpg" alt=""><br>找到MongoDB服务，并启动它（若找不到应该是上一步命令没在管理员cmd运行模式下执行）<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fwagamw5m1j30ow0hkwhp.jpg" alt=""><br>接下来配置环境变量，复制MongoDB的bin地址。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fwafzg3bc7j30hd0cdaba.jpg" alt=""><br>在控制面板&gt;系统和安全&gt;系统&gt;高级系统设置下点击环境变量。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fwag0y2kuej30ix0g675m.jpg" alt=""><br>找到Path变量。点击新增，输入目录点击确定即可。<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fwag2j0ylrj30i40gd406.jpg" alt=""><br>然后就可以在任意目录下使用mongo命令开启数据库了。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fwag5epn1kj30is09q3yx.jpg" alt=""></p>
 
@@ -454,7 +456,7 @@ var _hmt = _hmt || [];
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
             // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
             customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();
