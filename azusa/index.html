@@ -40,7 +40,7 @@ body{margin:0;background:#000}
     const container = document.getElementById('bg')
     container && (container.style.backgroundImage = "url('https://ws4.sinaimg.cn/large/006bYVyvly1g1tbar03aaj31hc0u0hdv.jpg')")
     azusa.audio.load({
-      src: './media/s.mp3',
+      src: 'https://cdn.jsdelivr.net/gh/honjun/honjun.github.io/azusa/media/s.mp3',
       onPrgress: (xhr) => {
         if(xhr.loaded == 11005954) {
           console.log('加载完成');
