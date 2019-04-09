@@ -201,7 +201,7 @@
             </div>
             <h2 class="post-title">Hexo博客中添加表情插件emojis</h2>
             <div class="post-meta">
-                本文总共922个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共1095个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
@@ -214,8 +214,9 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-tag-emojis-byhj --save</span><br></pre></td></tr></table></figure>
 
 <p>就是这里，本来是高高兴兴的写插件教程，结果发现了个深坑。一旦使用了代码块语法后就不能识别出代码块之前到第一个表情标签之后的标题！！！什么鬼bug!
-经过调试hexo的tag-&gt;post-&gt;highlight-&gt;Render-&gt;markdown，最终定位的到marked.js的Lexer.prototype.token的heading判断代码块。看了下版本”marked@^0.3.9”，去官方看了下0.6.2，<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/downcast-face-with-sweat.png"><br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1g1s5neqie7j30nc0dgmxw.jpg" alt=""><br>而且连heading的正则都不一样的，果断更新到最新代码，解决了这个bug。</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用之前先要引入css:(建议在文章模板页引入，因为你只在写文章的时候使用表情，按需加载)</p>
+经过调试hexo的tag-&gt;post-&gt;highlight-&gt;Render-&gt;markdown，最终定位的到marked.js的Lexer.prototype.token的heading判断代码块。看了下版本”marked@^0.3.9”，去官方看了下0.6.2，<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/downcast-face-with-sweat.png"><br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1g1s5neqie7j30nc0dgmxw.jpg" alt=""><br>而且连heading的正则都不一样的，果断更新到最新代码，解决了这个bug。<br>我将issue提交至hexo后，官方也通过更新了marked的代码版本，之后安装hexo的小伙伴可以放心使用本插件了~
+<img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1g1ugsfdceoj30nm0dxgmp.jpg" alt=""></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用之前先要引入css:(建议在文章模板页引入，因为你只在写文章的时候使用表情，按需加载)。当然也可以不引人css，自己写一个css样式，以下的css只是.emoji-hj的表情图片的样式，主要就是控制大小、行内块元素以及hover能跳动的css动画。有更好的css样式可以自由发挥。而且欢迎pr到github仓库。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/css/emoji.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>接着就可以直接在md中使用emoji标签了，语法如下：</p>
