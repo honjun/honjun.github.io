@@ -1,0 +1,97 @@
+html,body{  
+    height: 100%;  
+}
+.container{
+	height: 100%;
+	background: #fff;
+	background-size: cover;
+}
+.box{
+	width: 100%;
+	height: 100%;
+	padding: 50px 20px;
+	box-sizing: border-box;
+}
+.question{
+	line-height: 30px;
+	word-spacing: 8px;
+	font-size: 20px;
+	font-weight: 700;
+}
+.option {
+	margin-left: 20px;
+}
+.option li{
+	display: inline-block;
+	width: 40%;
+	min-width: 200px;
+	max-width: 250px;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.answer{
+	margin-top: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+}
+.step{
+	margin-top: 10px;
+	padding: 5px;
+	text-align: left;
+	border: 1px solid #f00;
+	display: none;
+}
+.step p{
+	font-size: 20px;
+	line-height: 30px;
+}
+.show{
+	display: block !important;
+}
+.action-mid{
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	bottom: 0%;
+	z-index: 1000;
+}
+.button-bar{
+	display: none;
+	position: fixed;
+	top:50%;
+	width: 100%;
+	height: 50px;
+	z-index: 1001;
+}
+.button-bar button{
+	background: #000;
+	opacity: 0.8;
+	border: 0px;
+	color: #fff;
+	font-size: 20px;
+	height: 100%;
+	z-index: 1001;
+}
+.button-bar button:nth-child(2){
+	float: right;
+}
+.circle-figure{
+	width: 100%;
+	height: 70px;
+	display: inline-block;
+}
+.triangle-figure{
+	width: 100%;
+	height: 70px;
+	display: inline-block;
+}
+.qno{
+	display: inline-block;
+	float: left;
+	font-size: 20px;
+	font-weight: 700;
+}
+.hide{
+	display: none;
+}
