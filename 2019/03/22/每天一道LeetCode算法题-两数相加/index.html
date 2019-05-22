@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>每天一道leetcode算法题-两数相加 - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2019/03/22/每天一道LeetCode算法题-两数相加/",
         "appid": "1594654793276567",
         "title": "每天一道LeetCode算法题-两数相加",
-        "images": ["https://ws3.sinaimg.cn/small/006bYVyvly1g1ai8cmtaej305e05adfu.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai8cmtaej305e05adfu.jpg"],
         "pubDate": "2019-03-22T09:14:41"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -206,7 +206,7 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1g1ai70salhj30gy076gm8.jpg" alt=""><br>DuangDuangDuang，每日刷LeetCode！</p>
+            <p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai70salhj30gy076gm8.jpg" alt=""><br>DuangDuangDuang，每日刷LeetCode！</p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
 <p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
 </blockquote>
@@ -222,8 +222,8 @@
 <p>再附带一个把链表打印显示的方法：(也是用了递归)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> showListNode = <span class="function"><span class="keyword">function</span> (<span class="params">listNode</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (listNode.next !== <span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> listNode.val + <span class="string">"-&gt;"</span> + showListNode(listNode.next);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> listNode.val;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>提交后发现：<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/mw690/006bYVyvly1g1bwkcqaqwj30fy06ajr9.jpg" alt="image"><br>提交一阵亡，好吧，debug之后是等于10的时候没判断到，while (sum &gt; 10) 要改成 while (sum &gt;= 10) </p>
-<p>继续提交：<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/mw690/006bYVyvly1g1bwnd9mzsj30li070dfw.jpg" alt="image"><br>提交二阵亡，好吧，大数溢出了。看样子这个解题思路行不通2333333~</p>
+<p>提交后发现：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1bwkcqaqwj30fy06ajr9.jpg" alt="image"><br>提交一阵亡，好吧，debug之后是等于10的时候没判断到，while (sum &gt; 10) 要改成 while (sum &gt;= 10) </p>
+<p>继续提交：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1bwnd9mzsj30li070dfw.jpg" alt="image"><br>提交二阵亡，好吧，大数溢出了。看样子这个解题思路行不通2333333~</p>
 <h2 id="官方题解"><a href="#官方题解" class="headerlink" title="官方题解"></a>官方题解</h2><p>不会就要去先学习嘛，看了官方题解：</p>
 <p>就像你在纸上计算两个数字的和那样，我们首先从最低有效位也就是列表 l1l1 和 l2l2 的表头开始相加。由于每位数字都应当处于 0 \ldots 90…9 的范围内，我们计算两个数字的和时可能会出现“溢出”。例如，5 + 7 = 125+7=12。在这种情况下，我们会将当前位的数值设置为 22，并将进位 carry = 1carry=1 带入下一次迭代。进位 carrycarry 必定是 00 或 11，这是因为两个数字相加（考虑到进位）可能出现的最大和为 9 + 9 + 1 = 199+9+1=19。</p>
 <p>伪代码如下：</p>
@@ -269,7 +269,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -426,12 +426,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -500,8 +500,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

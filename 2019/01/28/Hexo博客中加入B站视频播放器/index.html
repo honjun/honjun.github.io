@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>hexo博客中加入b站视频播放器 - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2019/01/28/Hexo博客中加入B站视频播放器/",
         "appid": "1594654793276567",
         "title": "Hexo博客中加入B站视频播放器",
-        "images": ["https://wx1.sinaimg.cn/small/006bYVyvly1fzmnxxs8wwj30dq0bvabr.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzmnxxs8wwj30dq0bvabr.jpg"],
         "pubDate": "2019-01-28T09:43:12"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -206,8 +206,8 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fzmnz4ts4uj30o20btdjb.jpg" alt=""><br>写博文的时候经常有在文章段落中加视频的需求。由于hexo博客搭建在github上，githubpage的限制，以及其他一些动态博客网站服务器带宽的限制，往往添加的都是其他视频网站的外链播放器。大部分视频网站的外链播放器在视频开头都会加上30秒——2分钟的恶心广告，于是选择B站（无广告！）。</p>
-<h2 id="第一步：去B站获取视频外链"><a href="#第一步：去B站获取视频外链" class="headerlink" title="第一步：去B站获取视频外链"></a>第一步：去B站获取视频外链</h2><p><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fzmnjkshe8j30x50j2dnc.jpg" alt=""></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzmnz4ts4uj30o20btdjb.jpg" alt=""><br>写博文的时候经常有在文章段落中加视频的需求。由于hexo博客搭建在github上，githubpage的限制，以及其他一些动态博客网站服务器带宽的限制，往往添加的都是其他视频网站的外链播放器。大部分视频网站的外链播放器在视频开头都会加上30秒——2分钟的恶心广告，于是选择B站（无广告！）。</p>
+<h2 id="第一步：去B站获取视频外链"><a href="#第一步：去B站获取视频外链" class="headerlink" title="第一步：去B站获取视频外链"></a>第一步：去B站获取视频外链</h2><p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzmnjkshe8j30x50j2dnc.jpg" alt=""></p>
 <h2 id="第二步：在文章中插入视频外链"><a href="#第二步：在文章中插入视频外链" class="headerlink" title="第二步：在文章中插入视频外链"></a>第二步：在文章中插入视频外链</h2><p>我们知道在md中可以直接插入html代码，但是为了防止一些其他因素的干扰，hexo给我们特意准备了一个raw标签来插入html代码。这里我们就使用raw来插入视频外链。代码如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=24897960&amp;cid=42007693&amp;page=3"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
 
@@ -239,7 +239,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -394,12 +394,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -468,8 +468,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

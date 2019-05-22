@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>给hexo博客添加mathjax数学公式支持 - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2018/06/18/给Hexo博客添加Mathjax数学公式支持/",
         "appid": "1594654793276567",
         "title": "给Hexo博客添加Mathjax数学公式支持",
-        "images": ["https://wx3.sinaimg.cn/small/006bYVyvgy1fsfpde5obej30zg0ho405.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpde5obej30zg0ho405.jpg"],
         "pubDate": "2018-06-18T10:04:14"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -209,13 +209,13 @@
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>小白文，大神请略过……</p>
 <p>最近群里经常有人询问Hexo博客的Mathjax的扩展使用，由于网上教程不靠谱，忽悠人一大圈还没啥卵用<img class="owoemoji" src="/OwO/img/无奈.png">。于是花点时间折腾了下Mathjax.js，出了这篇教程。（表示没用数学公式，mathjax也是第一次接触）</p>
 <p>唠叨一下修改代码的建议：可以在其上扩展，最好不要修改。修改会出现: 改好一个bug，出来N多个bug的这种情况，因为你不知道其他地方是否还用到你修改的这部分代码，后果很严重<img class="owoemoji" src="/OwO/img/内伤.png">。</p>
-<h2 id="开始搞"><a href="#开始搞" class="headerlink" title="开始搞"></a>开始搞</h2><p>百度搜索mathjax<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg" alt=""><br>点击第一个进入其官网<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpde5obej30zg0ho405.jpg" alt=""><br>找到Getting Started，点击Learn more<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg" alt=""><br>拉到最下边，Jump to our docs<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg" alt=""><br>找到其demo代码<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdggngij30us0gx41m.jpg" alt=""><br><font color='red'><img class="owoemoji" src="/OwO/img/不出所料.png">注意其代码有个坑，js的src应改为<code>https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML</code></font><br>接下来就是实验代码了，新建文章输入以下代码：</p>
+<h2 id="开始搞"><a href="#开始搞" class="headerlink" title="开始搞"></a>开始搞</h2><p>百度搜索mathjax<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg" alt=""><br>点击第一个进入其官网<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpde5obej30zg0ho405.jpg" alt=""><br>找到Getting Started，点击Learn more<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg" alt=""><br>拉到最下边，Jump to our docs<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg" alt=""><br>找到其demo代码<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdggngij30us0gx41m.jpg" alt=""><br><font color='red'><img class="owoemoji" src="/OwO/img/不出所料.png">注意其代码有个坑，js的src应改为<code>https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML</code></font><br>接下来就是实验代码了，新建文章输入以下代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are</span><br><span class="line">$$x = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;.$$</span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/x-mathjax-config"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  MathJax.Hub.Config(&#123;<span class="attr">tex2jax</span>: &#123;<span class="attr">inlineMath</span>: [[<span class="string">'$'</span>,<span class="string">'$'</span>], [<span class="string">'\\('</span>,<span class="string">'\\)'</span>]]&#125;&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>这里发现了个bug,即代码快里面放入raw标签会把代码直接当成html，会被解析了。所以上面的代码缺少了raw标签,还需用raw标签包起来。关于raw标签的介绍请参考<a href="https://hexo.io/zh-cn/docs/tag-plugins.html">hexo标签插件</a></p>
 <p>正确的代码如下图<img class="owoemoji" src="/OwO/img/得意.png">：
-<img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg" alt=""></p>
-<p>接下来再页面上预览一下<br>图片：<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg" alt=""><br>真实效果</p>
+<img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg" alt=""></p>
+<p>接下来再页面上预览一下<br>图片：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg" alt=""><br>真实效果</p>
 
 <p>
 When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
@@ -243,7 +243,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         <div class="post-series">hexo折腾-系列文章：
             
@@ -838,12 +838,12 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -912,8 +912,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

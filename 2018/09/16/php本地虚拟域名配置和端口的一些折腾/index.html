@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>php本地虚拟域名配置和端口的一些折腾 - hojun</title>
@@ -109,14 +109,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -191,7 +191,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -220,7 +220,7 @@
 <h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>找到hosts文件，位置在这里C:\Windows\System32\drivers\etc\hosts。<br>可以用记事本或其他文本编辑器打开。但是不能直接在这个目录下修改。建议将其拷贝到桌面修改后在复制回去。或者可以尝试用管理员打开文本编辑器。<br>推荐用拷到桌面的那种方法。在hosts文件中加入虚拟域名的配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1       hojun.test.com</span><br></pre></td></tr></table></figure>
 
-<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>重启apache或wamp环境，打开浏览器输入hojun.test.com，得到如下页面，表示虚拟域名配置成功！<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg" alt="image"></p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>重启apache或wamp环境，打开浏览器输入hojun.test.com，得到如下页面，表示虚拟域名配置成功！<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg" alt="image"></p>
 <h2 id="非80端口情况"><a href="#非80端口情况" class="headerlink" title="非80端口情况"></a>非80端口情况</h2><p>上面几步是在80端口下的得情况，假设我们在的apache在8080端口，那么第一步的httpd.conf下的端口监听应该是这样的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#Listen 12.34.56.78:80</span><br><span class="line">Listen 0.0.0.0:8080</span><br><span class="line">Listen [::0]:8080</span><br></pre></td></tr></table></figure>
 
@@ -230,13 +230,13 @@
 <p>然后hosts中按道理应该这么写：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:8080       hojun.test.com</span><br></pre></td></tr></table></figure>
 
-<p>结果虚拟域名不能访问。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fvbu8gwapfj30r00g2q3l.jpg" alt="image"><br>抱着好奇心又去弄了一个虚拟域名，一样的index.php，里头phpinfo。</p>
+<p>结果虚拟域名不能访问。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbu8gwapfj30r00g2q3l.jpg" alt="image"><br>抱着好奇心又去弄了一个虚拟域名，一样的index.php，里头phpinfo。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:8080&gt;</span><br><span class="line">  ServerName hojun.at.com</span><br><span class="line">  DocumentRoot D:/wamp64/www/at/</span><br><span class="line">  &lt;Directory  &quot;D:/wamp64/www/at/&quot;&gt;</span><br><span class="line">    Options +Indexes +FollowSymLinks +MultiViews</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Require local</span><br><span class="line">  &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
 
 <p>然后hosts这么配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:8080       hojun.test.com</span><br><span class="line">127.0.0.1       hojun.at.com</span><br></pre></td></tr></table></figure>
 
-<p>结果hojun.test.com和hojun.at.com都无法访问。<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvgy1fvbu9bm699j30p50f50tc.jpg" alt="image"><br>尝试在浏览器上输入hojun.test.com:8080，无法访问。<br>尝试在浏览器上输入hojun.at.com:8080，成功访问到了phpinfo。<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg" alt="image"><br>好了，虽然还是有些地方感觉疑惑但是没去深究。不知道有没有不用加端口的形式就能访问的配置方法，知道的大佬可以留言指导下~</p>
+<p>结果hojun.test.com和hojun.at.com都无法访问。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbu9bm699j30p50f50tc.jpg" alt="image"><br>尝试在浏览器上输入hojun.test.com:8080，无法访问。<br>尝试在浏览器上输入hojun.at.com:8080，成功访问到了phpinfo。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg" alt="image"><br>好了，虽然还是有些地方感觉疑惑但是没去深究。不知道有没有不用加端口的形式就能访问的配置方法，知道的大佬可以留言指导下~</p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
@@ -252,7 +252,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -407,12 +407,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -481,8 +481,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

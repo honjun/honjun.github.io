@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>hexo博客中添加表情插件emojis - hojun</title>
@@ -109,14 +109,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -191,7 +191,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -208,14 +208,14 @@
             <h2 id="各位看官大姥爷"><a href="#各位看官大姥爷" class="headerlink" title="各位看官大姥爷"></a>各位看官大姥爷</h2><img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/clapping-hands.png">今天我们来介绍hexo的emoji表情插件。
 
 <h2 id="hexo-tag-emojis-byhj"><a href="#hexo-tag-emojis-byhj" class="headerlink" title="hexo-tag-emojis-byhj"></a>hexo-tag-emojis-byhj</h2><p>该插件开发发布于今天(2019.4.5)，由昨天晚上开始规划。<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/thinking-face.png">嗯，计划详细准备充分技术人员一个顶俩。</p>
-<p>先说说昨天，找到joypixels这个表情符号网站，提供了一份免费使用的表情。之前一直想做这插件，怕表情侵权耽搁了。<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1g1s6s9zsd6j311y0lcq9y.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1g1s6uskvlhj311l0lc75z.jpg" alt=""></p>
+<p>先说说昨天，找到joypixels这个表情符号网站，提供了一份免费使用的表情。之前一直想做这插件，怕表情侵权耽搁了。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1s6s9zsd6j311y0lcq9y.jpg" alt=""><br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1s6uskvlhj311l0lc75z.jpg" alt=""></p>
 <p>感谢小爱莉童鞋<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/backhand-index-pointing-right.png"><a href="https://kurumi.ink">SimonKing</a>帮忙下的表情包 以及 joypixels 提供的免费个人使用的表情包</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用npm安装，命令如下<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/backhand-index-pointing-down.png"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-tag-emojis-byhj --save</span><br></pre></td></tr></table></figure>
 
 <p>就是这里，本来是高高兴兴的写插件教程，结果发现了个深坑。一旦使用了代码块语法后就不能识别出代码块之前到第一个表情标签之后的标题！！！什么鬼bug!
-经过调试hexo的tag-&gt;post-&gt;highlight-&gt;Render-&gt;markdown，最终定位的到marked.js的Lexer.prototype.token的heading判断代码块。看了下版本”marked@^0.3.9”，去官方看了下0.6.2，<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/downcast-face-with-sweat.png"><br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1g1s5neqie7j30nc0dgmxw.jpg" alt=""><br>而且连heading的正则都不一样的，果断更新到最新代码，解决了这个bug。<br>我将issue提交至hexo后，官方也通过更新了marked的代码版本，之后安装hexo的小伙伴可以放心使用本插件了~
-<img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1g1ugsfdceoj30nm0dxgmp.jpg" alt=""></p>
+经过调试hexo的tag-&gt;post-&gt;highlight-&gt;Render-&gt;markdown，最终定位的到marked.js的Lexer.prototype.token的heading判断代码块。看了下版本”marked@^0.3.9”，去官方看了下0.6.2，<img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/people/downcast-face-with-sweat.png"><br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1s5neqie7j30nc0dgmxw.jpg" alt=""><br>而且连heading的正则都不一样的，果断更新到最新代码，解决了这个bug。<br>我将issue提交至hexo后，官方也通过更新了marked的代码版本，之后安装hexo的小伙伴可以放心使用本插件了~
+<img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ugsfdceoj30nm0dxgmp.jpg" alt=""></p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用之前先要引入css:(建议在文章模板页引入，因为你只在写文章的时候使用表情，按需加载)。当然也可以不引人css，自己写一个css样式，以下的css只是.emoji-hj的表情图片的样式，主要就是控制大小、行内块元素以及hover能跳动的css动画。有更好的css样式可以自由发挥。而且欢迎pr到github仓库。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/css/emoji.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -242,7 +242,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -397,12 +397,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -471,8 +471,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

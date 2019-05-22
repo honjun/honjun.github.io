@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>thinkphp3.2.3发现sql注入漏洞！ - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2018/04/16/Thinkphp3-2-3发现SQL注入漏洞！/",
         "appid": "1594654793276567",
         "title": "Thinkphp3.2.3发现SQL注入漏洞！",
-        "images": ["https://wx2.sinaimg.cn/large/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg"],
         "pubDate": "2018-04-16T07:40:40"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -206,13 +206,13 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg" alt=""><br>安全客文章报道发现Thinkphp3.2.3最新版SQL注入漏洞！还使用Thinkphp3.2.3版本的小伙伴赶紧去github上更新补丁！</p>
+            <p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg" alt=""><br>安全客文章报道发现Thinkphp3.2.3最新版SQL注入漏洞！还使用Thinkphp3.2.3版本的小伙伴赶紧去github上更新补丁！</p>
 <hr>
 <h2 id="漏洞详情"><a href="#漏洞详情" class="headerlink" title="漏洞详情"></a><strong>漏洞详情</strong></h2><p>由于框架实现安全数据库过程中在update更新数据的过程中存在SQL语句的拼接，并且当传入数组未过滤时导致出现了SQL注入。</p>
 <p>thinkphp系列框架过滤表达式注入多半采用I函数去调用think_filter</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">think_filter</span><span class="params">(&amp;$value)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(preg_match(<span class="string">'/^(EXP|NEQ|GT|EGT|LT|ELT|OR|XOR|LIKE|NOTLIKE|NOT BETWEEN|NOTBETWEEN|BETWEEN|NOTIN|NOT IN|IN)$/i'</span>,$value))</span><br></pre></td></tr></table></figure>
 
-<p>有没有相关tips来达到I函数绕过呢？是可以的。<br>一般按照官方的写法，thinkphp提供了数据库链式操作，其中包含连贯操作和curd操作，在进行数据库CURD操作去更新数据的时候：<br>举例update数据操作。<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqbe8b70j30jm0c4mz4.jpg" alt=""><br>直接看框架的where子单元函数，之前网上公开的exp表达式注入就是从这里分析出来的结论:<br>Thinkphp/Library/Think/Db/Driver.class.php<br>其中除了exp能利用外还有一处bind，而bind可以完美避开了think_filter：</p>
+<p>有没有相关tips来达到I函数绕过呢？是可以的。<br>一般按照官方的写法，thinkphp提供了数据库链式操作，其中包含连贯操作和curd操作，在进行数据库CURD操作去更新数据的时候：<br>举例update数据操作。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqbe8b70j30jm0c4mz4.jpg" alt=""><br>直接看框架的where子单元函数，之前网上公开的exp表达式注入就是从这里分析出来的结论:<br>Thinkphp/Library/Think/Db/Driver.class.php<br>其中除了exp能利用外还有一处bind，而bind可以完美避开了think_filter：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">elseif</span>(<span class="string">'bind'</span> == $exp )&#123; <span class="comment">// 使用表达式</span></span><br><span class="line">    $whereStr .= $key.<span class="string">' = :'</span>.$val[<span class="number">1</span>];</span><br><span class="line">&#125;<span class="keyword">elseif</span>(<span class="string">'exp'</span> == $exp )&#123; <span class="comment">// 使用表达式</span></span><br><span class="line">    $whereStr .= $key.<span class="string">' '</span>.$val[<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
 
 <p>这里由于拼接了<code>$val</code>参数的形式造成了注入，但是这里的bind表达式会引入:符号参数绑定的形式去拼接数据，通过白盒对几处CURD操作函数进行分析定位到update函数，insert函数会造成sql注入，于是回到上面的updateh函数。<br>Thinkphp/Library/Think/Db/Driver.class.php<br>接着跟进execute函数，这里有处对$this-&gt;queryStr进行字符替换的操作：</p>
@@ -224,7 +224,7 @@
 <p>根据进来的id更新用户的名字和钱，构造一个简单一个poc<br>id[]=bind&amp;id[]=1’&amp;money[]=1123&amp;user=liao<br>当走到execute函数时sql语句为：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="string">`member`</span> <span class="keyword">SET</span> <span class="string">`user`</span>=:<span class="number">0</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = :<span class="number">1</span><span class="string">'</span></span><br></pre></td></tr></table></figure>
 
-<p>然后<code>$that = $this</code><br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqb93u9aj30f203cmxk.jpg" alt=""><br>然后下面的替换操作是将”:0”替换为外部传进来的字符串，这里就可控了。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqb43ayyj30hs016mx5.jpg" alt=""><br>替换后：<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqbjj36jj30ea03bwew.jpg" alt=""><br>明显发现之前的user参数为:0然后被替换为了liao，这样就把:替换掉了。<br>后面的:1明显是替换不掉的：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqims50kj30xk07nmyj.jpg" alt=""><br>那么我们将id[1]数组的参数变为0呢？<br>id[]=bind&amp;id[]=0%27&amp;money[]=1123&amp;user=liao<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqirsj4qj312y08bwgd.jpg" alt=""><br>果然造成了注入：<br>POC:<br>money[]=1123&amp;user=liao&amp;id[0]=bind&amp;id[1]=0%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqj21mpsj311h06kq4e.jpg" alt=""></p>
+<p>然后<code>$that = $this</code><br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqb93u9aj30f203cmxk.jpg" alt=""><br>然后下面的替换操作是将”:0”替换为外部传进来的字符串，这里就可控了。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqb43ayyj30hs016mx5.jpg" alt=""><br>替换后：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqbjj36jj30ea03bwew.jpg" alt=""><br>明显发现之前的user参数为:0然后被替换为了liao，这样就把:替换掉了。<br>后面的:1明显是替换不掉的：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqims50kj30xk07nmyj.jpg" alt=""><br>那么我们将id[1]数组的参数变为0呢？<br>id[]=bind&amp;id[]=0%27&amp;money[]=1123&amp;user=liao<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqirsj4qj312y08bwgd.jpg" alt=""><br>果然造成了注入：<br>POC:<br>money[]=1123&amp;user=liao&amp;id[0]=bind&amp;id[1]=0%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqj21mpsj311h06kq4e.jpg" alt=""></p>
 <hr>
 <h2 id="修复方式"><a href="#修复方式" class="headerlink" title="修复方式"></a><strong>修复方式</strong></h2><p>更新最新补丁<br><a href="https://github.com/top-think/thinkphp/">https://github.com/top-think/thinkphp/</a><br><a href="https://www.anquanke.com/post/id/104847">原文地址</a><a href="http://www.anquanke.com/post/id/104847">www.anquanke.com/post/id/104847</a></p>
 
@@ -242,7 +242,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -399,12 +399,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -473,8 +473,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

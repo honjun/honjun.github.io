@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>tesseract-ocr字库练习 - hojun</title>
@@ -109,14 +109,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -191,7 +191,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -227,7 +227,7 @@
 10 =将图像视为单个字符。</code></pre><p>基本的命令行用法：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]</span><br></pre></td></tr></table></figure>
 
-<h2 id="第三步：jTessBoxEditor训练字库"><a href="#第三步：jTessBoxEditor训练字库" class="headerlink" title="第三步：jTessBoxEditor训练字库"></a><strong>第三步：jTessBoxEditor训练字库</strong></h2><p>之前玩冲顶大会的时候用过tesseract-OCR识别中文，可惜准确率很不理想，如下图：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvgy1fnrqt1ubg2j312w06et8j.jpg" alt=""><br>使用tesseract-OCR识别会得到</p>
+<h2 id="第三步：jTessBoxEditor训练字库"><a href="#第三步：jTessBoxEditor训练字库" class="headerlink" title="第三步：jTessBoxEditor训练字库"></a><strong>第三步：jTessBoxEditor训练字库</strong></h2><p>之前玩冲顶大会的时候用过tesseract-OCR识别中文，可惜准确率很不理想，如下图：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fnrqt1ubg2j312w06et8j.jpg" alt=""><br>使用tesseract-OCR识别会得到</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract question.jpg result -l chi_sim --psm <span class="number">6</span></span><br></pre></td></tr></table></figure>
 
 <p>result.txt</p>
@@ -241,17 +241,17 @@
 <p>把question.jpg用自带的画图另存为hojun.normal.exp0.jpg和hojun.normal.exp0.tif(注意，重命名改后缀不行)，放在E:\TessBox\下<br>接着打开cmd进入到该文件下，输入以下命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">E:\<span class="title">TessBox</span>&gt;<span class="title">tesseract</span> <span class="title">hojun.normal.exp0.tif</span> <span class="title">hojun.normal.exp0</span> -<span class="title">l</span> <span class="title">chi_sim</span> --<span class="title">psm</span> 6 <span class="title">batch.nochop</span> <span class="title">makebox</span></span></span><br><span class="line"><span class="function"><span class="title">Tesseract</span> <span class="title">Open</span> <span class="title">Source</span> <span class="title">OCR</span> <span class="title">Engine</span> <span class="title">v3</span>.05.01 <span class="title">with</span> <span class="title">Leptonica</span></span></span><br><span class="line"><span class="function"><span class="title">Page</span> 1</span></span><br></pre></td></tr></table></figure>
 
-<p>会得到hojun.normal.exp0.box文件，右键使用记事本打开效果如下图<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fns08l26xuj30b40b0q30.jpg" alt=""></p>
-<p>打开jTessBoxEditor目录，双击train.bat打开(可能要等待5-6秒，耐心等待程序响应)<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns0dowm5ej30hf098q3l.jpg" alt=""><br>打开软件后点击Box Editor-&gt;Open-&gt;选择对应的tif文件打开<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns0mmqis3j30kt0e33z5.jpg" alt=""><br>得到如下效果<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg" alt=""><br>如果右边字体没有框框，左边没有内容是因为java8没安装好，或者安装了两个java版本，使用的是其他java版本<br>可以在控制台输入</p>
+<p>会得到hojun.normal.exp0.box文件，右键使用记事本打开效果如下图<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns08l26xuj30b40b0q30.jpg" alt=""></p>
+<p>打开jTessBoxEditor目录，双击train.bat打开(可能要等待5-6秒，耐心等待程序响应)<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns0dowm5ej30hf098q3l.jpg" alt=""><br>打开软件后点击Box Editor-&gt;Open-&gt;选择对应的tif文件打开<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns0mmqis3j30kt0e33z5.jpg" alt=""><br>得到如下效果<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg" alt=""><br>如果右边字体没有框框，左边没有内容是因为java8没安装好，或者安装了两个java版本，使用的是其他java版本<br>可以在控制台输入</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">E:&gt;<span class="title">java</span> -<span class="title">version</span></span></span><br><span class="line"><span class="function"><span class="title">java</span> <span class="title">version</span> "1.8.0_101"</span></span><br><span class="line"><span class="function"><span class="title">Java</span>(<span class="title">TM</span>) <span class="title">SE</span> <span class="title">Runtime</span> <span class="title">Environment</span> (<span class="title">build</span> 1.8.0_101-<span class="title">b13</span>)</span></span><br><span class="line"><span class="function"><span class="title">Java</span> <span class="title">HotSpot</span>(<span class="title">TM</span>) 64-<span class="title">Bit</span> <span class="title">Server</span> <span class="title">VM</span> (<span class="title">build</span> 25.101-<span class="title">b13</span>, <span class="title">mixed</span> <span class="title">mode</span>)</span></span><br></pre></td></tr></table></figure>
 
-<p>来查看java版本。如果使用其他版本的，一般在环境变量Path里面把java8的路径写在最前面就行。<br>接下来就是调整了。删删改改如下：<br><img class="lozad" data-action="zoom" data-src="https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg" alt=""><br>然后点击save保存即可。<br>接着在E:\TessBox\下新建一个font_properties文件，注意没有后缀<br>里面内容写入normal 0 0 0 0 0 表示默认普通字体<br>再接着新建一个txt文件，里面内容写入</p>
+<p>来查看java版本。如果使用其他版本的，一般在环境变量Path里面把java8的路径写在最前面就行。<br>接下来就是调整了。删删改改如下：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg" alt=""><br>然后点击save保存即可。<br>接着在E:\TessBox\下新建一个font_properties文件，注意没有后缀<br>里面内容写入normal 0 0 0 0 0 表示默认普通字体<br>再接着新建一个txt文件，里面内容写入</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> Run Tesseract <span class="keyword">for</span> Training.. </span><br><span class="line">tesseract.exe hojun.normal.exp0.tif hojun.normal.exp0 nobatch box.train </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> Compute the Character <span class="built_in">Set</span>.. </span><br><span class="line">unicharset_extractor.exe hojun.normal.exp0.box</span><br><span class="line">shapeclustering -F font_properties -U unicharset hojun.normal.exp0.tr</span><br><span class="line">mftraining -F font_properties -U unicharset -O unicharset hojun.normal.exp0.tr </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> Clustering.. </span><br><span class="line">cntraining.exe hojun.normal.exp0.tr </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="built_in">Rename</span> Files.. </span><br><span class="line"><span class="built_in">rename</span> normproto hojun.normproto </span><br><span class="line"><span class="built_in">rename</span> inttemp hojun.inttemp </span><br><span class="line"><span class="built_in">rename</span> pffmtable hojun.pffmtable </span><br><span class="line"><span class="built_in">rename</span> shapetable hojun.shapetable  </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> Create Tessdata.. </span><br><span class="line">combine_tessdata.exe hojun. </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>. &amp; <span class="built_in">pause</span></span><br></pre></td></tr></table></figure>
 
-<p>保存，修改文件名为Train.bat。(为了偷懒，你也可以在命令里一句一句命令的敲)<br>双击批处理文件生成！<br>成功结果如下<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns1yedn1sj30e108udfy.jpg" alt=""><br>把hojun.traineddata复制到C:\Program Files (x86)\Tesseract-OCR\tessdata下<br>试着识别</p>
+<p>保存，修改文件名为Train.bat。(为了偷懒，你也可以在命令里一句一句命令的敲)<br>双击批处理文件生成！<br>成功结果如下<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns1yedn1sj30e108udfy.jpg" alt=""><br>把hojun.traineddata复制到C:\Program Files (x86)\Tesseract-OCR\tessdata下<br>试着识别</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tesseract hojun.normal.exp0.jpg result -l hojun --psm <span class="number">6</span></span><br></pre></td></tr></table></figure>
 
-<p>得到正确的结果<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fns2xz091pj30iu030q2t.jpg" alt=""></p>
+<p>得到正确的结果<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns2xz091pj30iu030q2t.jpg" alt=""></p>
 <hr>
 <p>参考:<br><a href="https://github.com/tesseract-ocr/tesseract/wiki/Training-Tesseract">https://github.com/tesseract-ocr/tesseract/wiki/Training-Tesseract</a><br><a href="https://github.com/tesseract-ocr/tesseract/wiki/Training-Tesseract#the-font_properties-file">训练Tesseract</a><br><a href="http://www.cnblogs.com/cnlian/p/5765871.html">Tesseract-OCR的简单使用与训练</a><br><a href="https://www.cnblogs.com/wzben/p/5930538.html#undefined">Tesseract-OCR识别中文与训练字库实例</a><br><a href="http://yunzhu.iteye.com/blog/1551433">JAVA_HOME无效，java版本保持不变的问题解决</a></p>
 
@@ -269,7 +269,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -422,12 +422,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -496,8 +496,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

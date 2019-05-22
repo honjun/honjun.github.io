@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>yaml基本语法及实现hexo二级导航栏功能 - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2019/01/08/yaml基本语法及实现Hexo二级导航栏功能/",
         "appid": "1594654793276567",
         "title": "yaml基本语法及实现Hexo二级导航栏功能",
-        "images": ["https://ws3.sinaimg.cn/small/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg"],
         "pubDate": "2019-01-08T11:55:01"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -256,7 +256,7 @@
 <p>首先我们看下一般的目录配置</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure>
 
-<p>类似这种，前面的是目录名，后边的是path(路径)和图标的class名(中间用||隔开)<br>我们可以看下现在要实现的这种菜单导航栏的需求<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg" alt=""><br>前面横着部分可以和上面配置一样实现，下边竖着的部分又要怎么实现呢。</p>
+<p>类似这种，前面的是目录名，后边的是path(路径)和图标的class名(中间用||隔开)<br>我们可以看下现在要实现的这种菜单导航栏的需求<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg" alt=""><br>前面横着部分可以和上面配置一样实现，下边竖着的部分又要怎么实现呢。</p>
 <p>稍微改了下_config的菜单配置如下：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menus:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/,</span> <span class="attr">fa:</span> <span class="string">fa-fort-awesome</span> <span class="string">faa-shake</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/archives,</span> <span class="attr">fa:</span> <span class="string">fa-archive</span> <span class="string">faa-shake,</span> <span class="attr">submenus:</span> <span class="string">&#123;</span> </span><br><span class="line">    <span class="string">技术:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/categories/技术/,</span> <span class="attr">fa:</span> <span class="string">fa-code</span> <span class="string">&#125;,</span> </span><br><span class="line">    <span class="string">生活:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/categories/生活/,</span> <span class="attr">fa:</span> <span class="string">fa-file-text-o</span> <span class="string">&#125;,</span> </span><br><span class="line">    <span class="string">资源:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/categories/资源/,</span> <span class="attr">fa:</span> <span class="string">fa-cloud-download</span> <span class="string">&#125;,</span> </span><br><span class="line">    <span class="string">随想:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/categories/随想/,</span> <span class="attr">fa:</span> <span class="string">fa-commenting-o</span> <span class="string">&#125;,</span></span><br><span class="line">    <span class="string">转载:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/categories/转载/,</span> <span class="attr">fa:</span> <span class="string">fa-book</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">&#125;</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">清单:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="attr">javascript:;,</span> <span class="attr">fa:</span> <span class="string">fa-list-ul</span> <span class="string">faa-vertical,</span> <span class="attr">submenus:</span> <span class="string">&#123;</span> </span><br><span class="line">    <span class="string">书单:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/tags/悦读/,</span> <span class="attr">fa:</span> <span class="string">fa-th-list</span> <span class="string">faa-bounce</span> <span class="string">&#125;,</span> </span><br><span class="line">    <span class="string">番组:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/video,</span> <span class="attr">fa:</span> <span class="string">fa-film</span> <span class="string">faa-vertical</span> <span class="string">&#125;,</span> </span><br><span class="line">    <span class="string">歌单:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/music,</span> <span class="attr">fa:</span> <span class="string">fa-headphones</span> <span class="string">&#125;,</span></span><br><span class="line">    <span class="string">图集:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/tags/图集/,</span> <span class="attr">fa:</span> <span class="string">fa-photo</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">&#125;</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">留言板:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/comment,</span> <span class="attr">fa:</span> <span class="string">fa-pencil-square-o</span> <span class="string">faa-tada</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">友人帐:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/links,</span> <span class="attr">fa:</span> <span class="string">fa-link</span> <span class="string">faa-shake</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">赞赏:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/donate,</span> <span class="attr">fa:</span> <span class="string">fa-heart</span> <span class="string">faa-pulse</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/,</span> <span class="attr">fa:</span> <span class="string">fa-leaf</span> <span class="string">faa-wrench</span> <span class="string">,</span> <span class="attr">submenus:</span> <span class="string">&#123;</span> </span><br><span class="line">    <span class="string">我？:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/about,</span> <span class="attr">fa:</span> <span class="string">fa-meetup&#125;,</span> </span><br><span class="line">    <span class="string">主题:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/theme-sakura,</span> <span class="attr">fa:</span> <span class="string">iconfont</span> <span class="string">icon-sakura</span> <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">    Lab:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/lab,</span> <span class="attr">fa:</span> <span class="string">fa-cogs</span> <span class="string">&#125;,</span></span><br><span class="line">  <span class="string">&#125;</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="string">客户端:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/client,</span> <span class="attr">fa:</span> <span class="string">fa-android</span> <span class="string">faa-vertical</span> <span class="string">&#125;</span></span><br><span class="line"><span class="attr">  RSS:</span> <span class="string">&#123;</span> <span class="attr">path:</span> <span class="string">/atom.xml,</span> <span class="attr">fa:</span> <span class="string">fa-rss</span> <span class="string">faa-pulse</span> <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -280,7 +280,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         <div class="post-series">hexo-sakura主题-系列文章：
             
@@ -825,12 +825,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -899,8 +899,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

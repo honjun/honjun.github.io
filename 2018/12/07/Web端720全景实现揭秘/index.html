@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>web端720全景实现揭秘 - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2018/12/07/Web端720全景实现揭秘/",
         "appid": "1594654793276567",
         "title": "Web端720全景实现揭秘",
-        "images": ["https://ws3.sinaimg.cn/small/006bYVyvly1fxxewq3plij30yn0jjkjl.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxewq3plij30yn0jjkjl.jpg"],
         "pubDate": "2018-12-07T12:01:57"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -206,10 +206,10 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fxxewq3plij30yn0jjkjl.jpg" alt=""><br>最近又一次接触到了web端全景，是在720yun上，发现有好多用户上传的全景照片。再也按捺不住那颗好奇的心，去探究了下720云是怎么实现web端全景展示的。</p>
-<h2 id="分析加载的资源"><a href="#分析加载的资源" class="headerlink" title="分析加载的资源"></a>分析加载的资源</h2><p><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fxxfmcxo7qj30y50idquk.jpg" alt=""><br>我们使用f12开发者工具，查看分析找到了krp-player这个关键的js文件，并在js文件首部找到了它的原名”krpano”（稍微提一下：可能你还听说有其他插件或方式实现web全景:比如three.js，但那些都不是很成熟，存在大大小小的bug，而krpano比较成熟也是大部分全景网站所使用的，所以是收费的。）。于是搜索到了它的官网，并进行下载它的安装包（下载速度太慢可以搜索其百度网盘资源去下载）<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fxxfs6y2p3j30ya0jkdvo.jpg" alt=""></p>
-<h2 id="安装krpano"><a href="#安装krpano" class="headerlink" title="安装krpano"></a>安装krpano</h2><p>下载好后，双击安装到目录（自定义）。<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fxxfxam5wnj30je0ai415.jpg" alt=""><br>安装好后如下图<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fxxg9jj5qhj30jh0cejzv.jpg" alt=""></p>
-<h2 id="使用krpano"><a href="#使用krpano" class="headerlink" title="使用krpano"></a>使用krpano</h2><p>使用教程可以参考krpano360的。<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fxxgaq43fxj30yg0jle2c.jpg" alt=""><br>准备一张或多张全景图：<br><img class="lozad" data-action="zoom" data-src="https://ws4.sinaimg.cn/large/006bYVyvly1fxxgchpzo7j30ku0g8wqa.jpg" alt=""><br>注意：要求的全景图长宽比为2:1<br>直接将全景拖到需要生成类型的bat上（我这里是MAKE VTOUR (VR-OPT) droplet，也是教程所推荐的）<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fxxgh02tsuj30ow0czape.jpg" alt=""><br>然后krpano就好自动处理图片，并生成html网页文件。生成的文件和图片在同一目录，如我的图片在桌面，生成的文件也在桌面。<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fxxgho6jw9j30pr0dgq6r.jpg" alt=""><br>这样子直接打开html文件还不能浏览全景图片，需要在服务器环境下访问才行（其他服务器环境也行）<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fxxglnscr9j30jx0arwgk.jpg" alt=""><br>这里我们用krpano自带的server工具。双击它：<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fxxgmkzy46j30jx0dvn5o.jpg" alt=""><br>可以看到服务开启的目录在krpano的安装目录下，我们可以把生成的文件复制过来访问：（这里我在安装目录下新建了一个文件夹）<br><img class="lozad" data-action="zoom" data-src="https://ws3.sinaimg.cn/large/006bYVyvly1fxxgp6lkh2j30iu08at9k.jpg" alt=""><br>再打开之前server工具给的那个地址，进入到目录下，点击tour.html即可预览全景<br><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fxxgqim1lvj30na0h042s.jpg" alt=""><br>预览如下：发现它的水印是不是多的恐怖2333333，需要购买才能去除。或者……<br><img class="lozad" data-action="zoom" data-src="https://ws2.sinaimg.cn/large/006bYVyvly1fxxgstd1gyj30ye0jhb29.jpg" alt=""></p>
+            <p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxewq3plij30yn0jjkjl.jpg" alt=""><br>最近又一次接触到了web端全景，是在720yun上，发现有好多用户上传的全景照片。再也按捺不住那颗好奇的心，去探究了下720云是怎么实现web端全景展示的。</p>
+<h2 id="分析加载的资源"><a href="#分析加载的资源" class="headerlink" title="分析加载的资源"></a>分析加载的资源</h2><p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxfmcxo7qj30y50idquk.jpg" alt=""><br>我们使用f12开发者工具，查看分析找到了krp-player这个关键的js文件，并在js文件首部找到了它的原名”krpano”（稍微提一下：可能你还听说有其他插件或方式实现web全景:比如three.js，但那些都不是很成熟，存在大大小小的bug，而krpano比较成熟也是大部分全景网站所使用的，所以是收费的。）。于是搜索到了它的官网，并进行下载它的安装包（下载速度太慢可以搜索其百度网盘资源去下载）<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxfs6y2p3j30ya0jkdvo.jpg" alt=""></p>
+<h2 id="安装krpano"><a href="#安装krpano" class="headerlink" title="安装krpano"></a>安装krpano</h2><p>下载好后，双击安装到目录（自定义）。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxfxam5wnj30je0ai415.jpg" alt=""><br>安装好后如下图<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxg9jj5qhj30jh0cejzv.jpg" alt=""></p>
+<h2 id="使用krpano"><a href="#使用krpano" class="headerlink" title="使用krpano"></a>使用krpano</h2><p>使用教程可以参考krpano360的。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgaq43fxj30yg0jle2c.jpg" alt=""><br>准备一张或多张全景图：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgchpzo7j30ku0g8wqa.jpg" alt=""><br>注意：要求的全景图长宽比为2:1<br>直接将全景拖到需要生成类型的bat上（我这里是MAKE VTOUR (VR-OPT) droplet，也是教程所推荐的）<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgh02tsuj30ow0czape.jpg" alt=""><br>然后krpano就好自动处理图片，并生成html网页文件。生成的文件和图片在同一目录，如我的图片在桌面，生成的文件也在桌面。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgho6jw9j30pr0dgq6r.jpg" alt=""><br>这样子直接打开html文件还不能浏览全景图片，需要在服务器环境下访问才行（其他服务器环境也行）<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxglnscr9j30jx0arwgk.jpg" alt=""><br>这里我们用krpano自带的server工具。双击它：<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgmkzy46j30jx0dvn5o.jpg" alt=""><br>可以看到服务开启的目录在krpano的安装目录下，我们可以把生成的文件复制过来访问：（这里我在安装目录下新建了一个文件夹）<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgp6lkh2j30iu08at9k.jpg" alt=""><br>再打开之前server工具给的那个地址，进入到目录下，点击tour.html即可预览全景<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgqim1lvj30na0h042s.jpg" alt=""><br>预览如下：发现它的水印是不是多的恐怖2333333，需要购买才能去除。或者……<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxxgstd1gyj30ye0jhb29.jpg" alt=""></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>其实可以退一步，就用一些全景平台就行了，比如720yun。这篇文章仅是为了探究下全景实现，到此为止了大致了解了，完。</p>
 
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
@@ -226,7 +226,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -381,12 +381,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -455,8 +455,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();

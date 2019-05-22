@@ -35,7 +35,7 @@
 <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 <link rel="stylesheet" href="/css/iconfont/iconfont.css">
 
-<link rel="shortcut icon" href="https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
 
 
 <title>hexo给materialx主题添加pjax支持 - hojun</title>
@@ -62,7 +62,7 @@
         "@id": "https://www.hojun.com/2018/11/25/Hexo给materialX主题添加pjax支持/",
         "appid": "1594654793276567",
         "title": "Hexo给materialX主题添加pjax支持",
-        "images": ["https://wx4.sinaimg.cn/small/006bYVyvly1fxkk60ttz0j31020imjyl.jpg"],
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxkk60ttz0j31020imjyl.jpg"],
         "pubDate": "2018-11-25T08:41:13"
     }
     </script>
@@ -110,14 +110,14 @@
             <div id="cover">
     <div class="cover-img"></div>
     <div class="cover-info">
-        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
         <h1>hojun</h1>
         <h3>hello ，stranger</h3>
         <p>一个好奇的博客</p>
         <div class="cover-sns">
             <div class="btn btn-weixin">
                 <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
-                <div class="qrcode"><img src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
                 <div class="qrcode-arrow"></div>
             </div>
             <div class="btn btn-weibo">
@@ -192,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -207,15 +207,15 @@
         </div>
         <div class="post-content markdown-body">
             <h2 id="pjax"><a href="#pjax" class="headerlink" title="pjax"></a>pjax</h2><p><strong>pjax = pushState + ajax</strong><br>博主使用的是jquery-pjax是一个jQuery插件，它使用ajax和pushState通过真正的永久链接，页面标题和工作后退按钮提供快速浏览体验。<br>pjax的工作原理是通过ajax从服务器获取html，并用ajax请求得到 html替换页面上容器的内容。然后，它使用pushState更新浏览器的当前URL，而无需重新加载页面的布局或任何资源（JS，CSS），从而提供快速，完整页面加载的外观。但实际上它只是ajax和pushState。</p>
-<h2 id="主题materialX"><a href="#主题materialX" class="headerlink" title="主题materialX"></a>主题materialX</h2><p><img class="lozad" data-action="zoom" data-src="https://wx4.sinaimg.cn/large/006bYVyvly1fxkk60ttz0j31020imjyl.jpg" alt=""><br> 咳咳，主题好不好，主要看自己喜欢。我这里就只是简单的介绍下：</p>
+<h2 id="主题materialX"><a href="#主题materialX" class="headerlink" title="主题materialX"></a>主题materialX</h2><p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxkk60ttz0j31020imjyl.jpg" alt=""><br> 咳咳，主题好不好，主要看自己喜欢。我这里就只是简单的介绍下：</p>
 <blockquote>
 <p>一个简约卡片式的Hexo博客主题 <a href="https://xaoxuu.com/wiki/material-x/">MaterialX</a>oxuu.com/wiki/material-x/ 是博主<a href="https://xaoxuu.com/">xaoxuu</a>基于Material Flow（已停止维护）改编的一个Hexo主题。</p>
 </blockquote>
 <p>我选择这个主题作为教程嘛也是有原因的，它的页面框架比较适合进行pjax修改（next的有款主题也挺适合，自行琢磨）</p>
 <p>主题的一些下载安装使用啊这就不做介绍了。主要说下添加pjax支持的过程：<br>完整的修改代码在<a href="https://github.com/honjun/hexo-theme-material-x/tree/pjax">github</a>（照自己喜好多改了些其他东西），以下是几个关键的几个修改内容列一下：</p>
-<h3 id="第一步：添加id"><a href="#第一步：添加id" class="headerlink" title="第一步：添加id"></a>第一步：添加id</h3><p>位置materialX\layout\layout.ejs<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fxkkv5dbg1j30g00b8dh0.jpg" alt=""></p>
-<h3 id="第二步：引入js"><a href="#第二步：引入js" class="headerlink" title="第二步：引入js"></a>第二步：引入js</h3><p>先把js文件放在\materialX\source\js\jquery.pjax.min.js<br><img class="lozad" data-action="zoom" data-src="https://ws1.sinaimg.cn/large/006bYVyvly1fxkkwchpxnj306o04hwed.jpg" alt=""><br>再在\materialX\layout_partial\scripts.ejs引入js（注意需要jquery支持）<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fxluzcdx8qj30m60c1taj.jpg" alt=""><br>在\materialX\source\js\app.js该js文件开头加入pjax代码：(这是一些页面特效等js控制的会失效，需要在pjax后在再处理一些，异步通病)<br><img class="lozad" data-action="zoom" data-src="https://wx3.sinaimg.cn/large/006bYVyvly1fxlv33ylppj30md0biabb.jpg" alt=""></p>
-<h3 id="第三步：修改样式"><a href="#第三步：修改样式" class="headerlink" title="第三步：修改样式"></a>第三步：修改样式</h3><p>在\materialX\source\less_base.less这个文件中有个visibility: hidden;会把首页隐藏掉，给他注释了，没有深究。想弄明白可以询问原作者xaoxuxu<br><img class="lozad" data-action="zoom" data-src="https://wx2.sinaimg.cn/large/006bYVyvly1fxkkysok8ij30cq0c1gm8.jpg" alt=""></p>
+<h3 id="第一步：添加id"><a href="#第一步：添加id" class="headerlink" title="第一步：添加id"></a>第一步：添加id</h3><p>位置materialX\layout\layout.ejs<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxkkv5dbg1j30g00b8dh0.jpg" alt=""></p>
+<h3 id="第二步：引入js"><a href="#第二步：引入js" class="headerlink" title="第二步：引入js"></a>第二步：引入js</h3><p>先把js文件放在\materialX\source\js\jquery.pjax.min.js<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxkkwchpxnj306o04hwed.jpg" alt=""><br>再在\materialX\layout_partial\scripts.ejs引入js（注意需要jquery支持）<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxluzcdx8qj30m60c1taj.jpg" alt=""><br>在\materialX\source\js\app.js该js文件开头加入pjax代码：(这是一些页面特效等js控制的会失效，需要在pjax后在再处理一些，异步通病)<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxlv33ylppj30md0biabb.jpg" alt=""></p>
+<h3 id="第三步：修改样式"><a href="#第三步：修改样式" class="headerlink" title="第三步：修改样式"></a>第三步：修改样式</h3><p>在\materialX\source\less_base.less这个文件中有个visibility: hidden;会把首页隐藏掉，给他注释了，没有深究。想弄明白可以询问原作者xaoxuxu<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fxkkysok8ij30cq0c1gm8.jpg" alt=""></p>
 <h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>咳咳！只能说脸好的情况下pjax功能是实现了的，毕竟这是个看脸的时代。</p>
 <h3 id="优化完善"><a href="#优化完善" class="headerlink" title="优化完善"></a>优化完善</h3><p>交给广大materialX主题使用者们啦~~</p>
 <p>推荐一个hexo主题博客<a href="https://blog.flysay.com/">flysay</a>,可能是hexo第一个支持pjax的主题<img class="owoemoji" src="/OwO/img/献黄瓜.png">，而我改的这个吗，不知道第几~<img class="owoemoji" src="/OwO/img/调皮.png"><br><a href="https://www.bilibili.com/video/av36754659/">B站视频展示</a></p>
@@ -236,7 +236,7 @@
         </div>
 
         <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
-        <p style="text-align: center;"><img height="200px" src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://ws4.sinaimg.cn/small/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
         
         
         <div class="post-tags">标签：
@@ -391,12 +391,12 @@
         </p>
         <p>从这里可以访问到我</p>
         <p>
-          <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://ws2.sinaimg.cn/small/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a>
-          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
-          <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx3.sinaimg.cn/small/006bYVyvgy1ftpx8gh4ufj3076076jru.jpg" alt=""></a>
-          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx4.sinaimg.cn/small/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
-          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx2.sinaimg.cn/small/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
-          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://wx1.sinaimg.cn/small/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
         </p>
         <p id="cnzz"></p>
     </div>
@@ -465,8 +465,7 @@ var _hmt = _hmt || [];
         SimpleCore.init({
             buildingTime: '04/24/2017',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
             tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
