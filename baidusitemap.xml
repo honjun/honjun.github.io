@@ -3,6 +3,23 @@
 
 
     
+  <url>
+    <loc>https://www.hojun.cn/2019/05/27/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB%E8%87%B3github%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-05-27T15:42:13.952Z</lastmod>
+    <data>
+        <display>
+        <title>新浪图床迁移至github教程</title>
+        <pubTime>2019-05-27T15:42:13.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
     
     
@@ -10,6 +27,31 @@
     
     
     
+    
+    
+  <url>
+    <loc>https://www.hojun.cn/2018/04/24/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E5%B1%95%E7%A4%BA/</loc>
+    <lastmod>2019-05-21T15:38:17.404Z</lastmod>
+    <data>
+        <display>
+        <title>给博客添加图集展示</title>
+        <pubTime>2018-04-24T15:04:40.000Z</pubTime>
+        
+        <tag>图集</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>lab</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://www.hojun.cn/2019/04/01/hexo-helper-tocbot%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
@@ -1610,30 +1652,6 @@
         <pubTime>2017-07-01T13:45:49.000Z</pubTime>
         
         <tag>blog</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2018/04/24/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9B%BE%E9%9B%86%E5%B1%95%E7%A4%BA/</loc>
-    <lastmod>2019-05-21T12:06:02.849Z</lastmod>
-    <data>
-        <display>
-        <title>给博客添加图集展示</title>
-        <pubTime>2018-04-24T15:04:40.000Z</pubTime>
-        
-        <tag>图集</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>lab</tag>
          
          
            
