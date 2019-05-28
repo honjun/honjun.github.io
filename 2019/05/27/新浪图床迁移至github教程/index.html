@@ -62,6 +62,7 @@
         "@id": "https://www.hojun.com/2019/05/27/新浪图床迁移至github教程/",
         "appid": "1594654793276567",
         "title": "新浪图床迁移至github教程",
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/picgo/20190528000025.png"],
         "pubDate": "2019-05-27T11:42:13"
     }
     </script>
@@ -191,7 +192,7 @@
         <div class="post-header">
             <div class="post-author clearfix">
                 <a class="avatar fleft" href="/about/hojun.html" target="_blank">
-                    <img width="48" src="https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
                 </a>
                 <p><span class="label">作者</span>
                     <span>hojun</span>
@@ -201,11 +202,42 @@
             </div>
             <h2 class="post-title">新浪图床迁移至github教程</h2>
             <div class="post-meta">
-                本文总共0个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                本文总共2128个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
             </div>
         </div>
         <div class="post-content markdown-body">
-            
+            <p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/picgo/20190528000025.png" alt=""></p>
+<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>本博客站的所有图片已经从新浪图床迁移至github了。因为从前几天起，新浪微博的图床开始断断续续的防盗链，时好时坏，严重影响体验。</p>
+<p>这篇教程就是就是为了帮助同样用了新浪图床的道友，快速把图片迁移到其他图床~</p>
+<p>因为之前有过用其他小平台图床，然后炸图的经历，加强了我对图床的忧患意识。于是在换到新浪图床的时候，在github上找到了一个python备份markdown图片的仓库。具体可以参考<a href="https://www.hojun.cn/2018/03/29/python%E5%A4%87%E4%BB%BDhexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/">python备份hexo博客图片</a>这篇文章。</p>
+<p>在迁移图片的时候也是对那份代码有所改进，代码已推送至仓库的debug分支<a href="https://github.com/honjun/markdown-img-backup/tree/debug">markdown-img-backup</a>。接下来就是使用这份代码着手迁移图片：</p>
+<h2 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h2><p>因为是python代码，所以需要安装python环境。(推荐安装python3版本，因为这份代码只改了python3版本的，当然若已安装python2可以参考着修改使用就行)。<br>安装步骤：百度python -&gt; 下载 -&gt; 安装 就行。</p>
+<p>题外话：若安装了python2和python3，可以在安装目录里修改python.exe文件为python2.exe和python3.exe来区分python版本，使用的时候命令为 python2 xxx.py 表示用python2命令运行xxx.py。python3的用法相同。<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/picgo/20190528214259.png" alt=""></p>
+<h2 id="下载代码"><a href="#下载代码" class="headerlink" title="下载代码"></a>下载代码</h2><p><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/picgo/20190528212126.png" alt=""><br>来到github仓库页面，首先点击右上角star为下载加速(buff加成)，接着点击下载clone or download。若已经安装git环境可以使用git clone下载仓库。若无git环境可以直接点击Download ZIP下载压缩文件。</p>
+<h2 id="使用代码"><a href="#使用代码" class="headerlink" title="使用代码"></a>使用代码</h2><p>因为博主仅使用了py3版本的代码，这里就讲解下py3版本的代码吧。</p>
+<h3 id="第一步-配置目录"><a href="#第一步-配置目录" class="headerlink" title="第一步 配置目录"></a>第一步 配置目录</h3><p>需要在以下代码里配置下载备份图片md的目录：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backup</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 备份指定文件的img 这里一般是你的_posts文件夹 + 需要备份的md名称</span></span><br><span class="line">        download(str(<span class="string">'你的markdown文件路径'</span> + sys.argv[<span class="number">1</span>]))</span><br><span class="line">    <span class="keyword">except</span> IndexError:</span><br><span class="line">        <span class="comment"># 备份文件夹下的所有img (上一步若没给参数，会遍历目录下的所有md)</span></span><br><span class="line">        search(<span class="string">'你的markdown文件路径'</span>, <span class="string">'.md'</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步-选择匹配规则"><a href="#第二步-选择匹配规则" class="headerlink" title="第二步 选择匹配规则"></a>第二步 选择匹配规则</h3><p>因为md的图片除了标准的md格式外还有其他格式，我这里就给出了其他的一些正则规则。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 匹配markdown图片格式 ![img](imgurl)</span></span><br><span class="line">img_reg = <span class="string">r'\!&#123;1&#125;\[(.*?)\]\((.*?)\)'</span></span><br><span class="line"><span class="comment"># 匹配以下形式的封面图，若不photos则替换就行</span></span><br><span class="line"><span class="comment">#photos: </span></span><br><span class="line"><span class="comment"># - imgurl</span></span><br><span class="line">result = re.findall(<span class="string">'photos\:\n \- (.*?)\n'</span>, text)</span><br><span class="line"><span class="comment"># 匹配以下形式的封面图 photos: imgurl</span></span><br><span class="line">result = re.findall(<span class="string">'photos\: (.*?)\n'</span>, text)</span><br><span class="line"><span class="comment"># 匹配fancybox插件语法 &#123;% fb_img imgurl desc %&#125; 也可以修改用来匹配其他img插件的语法</span></span><br><span class="line">result = re.findall(<span class="string">'\&#123;\% fb_img (.*?) '</span>, text)</span><br><span class="line"><span class="comment"># 匹配html &lt;img src="imgurl"&gt;</span></span><br><span class="line">result = re.findall(<span class="string">'src\=\"(.*?)\"'</span>, text)</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步-选择下载目录"><a href="#第三步-选择下载目录" class="headerlink" title="第三步 选择下载目录"></a>第三步 选择下载目录</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f_img = open(<span class="string">'img/'</span> + img_name, <span class="string">'wb'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这段代码的意思就是打开img目录，你可以在python目录痛级新建个img文件夹就可以把图片下载到里头了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">urlname = img_url.split(<span class="string">u"/"</span>)</span><br><span class="line">img_name = filename + <span class="string">'_'</span> + \</span><br><span class="line">str(i) + <span class="string">'_md_'</span> + img_quote + str(urlname[len(urlname) - <span class="number">1</span>])</span><br><span class="line">img_name = img_quote + str(urlname[len(urlname) - <span class="number">1</span>])</span><br><span class="line"><span class="comment"># img_name = str(urlname[len(urlname) - 1])</span></span><br><span class="line"><span class="keyword">print</span> (img_name + <span class="string">'~~~'</span> + img_url)</span><br></pre></td></tr></table></figure>
+
+<p>这段代码这是获取图片名的代码，可以根据需求修改文件名称样式。</p>
+<h3 id="第四步-备份图片"><a href="#第四步-备份图片" class="headerlink" title="第四步 备份图片"></a>第四步 备份图片</h3><p>cd到python目录，运行命令<code>python3 markdown-img-backup</code>即可开始下载。</p>
+<h3 id="第五步-上传至github"><a href="#第五步-上传至github" class="headerlink" title="第五步 上传至github"></a>第五步 上传至github</h3><ul>
+<li>github上新建仓库</li>
+<li>使用git clone克隆仓库到本地</li>
+<li>复制图片到本地仓库目录</li>
+<li>git add .</li>
+<li>git commit -m “提交图片”</li>
+<li>git push</li>
+</ul>
+<p>接下来后续就可以使用picgo+github+jsdeliver搭建图床了。可参考我的下一篇教程，To be continued。</p>
+
             <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
             <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
         </div>
@@ -229,6 +261,10 @@
         
     </article>
     <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2019/05/28/vscode小白手册-快速上分/" >vscode小白手册-快速上分<i class="fa fa-chevron-left"></i></a>
+        </div>
         
         
         <div class="post-nav-next post-nav-item">
@@ -257,7 +293,7 @@
     <div id="article-toc-inner">
         <strong class="sidebar-title">
         目录</strong>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#碎碎念"><span class="toc-text">碎碎念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装python"><span class="toc-text">安装python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载代码"><span class="toc-text">下载代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用代码"><span class="toc-text">使用代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步-配置目录"><span class="toc-text">第一步 配置目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步-选择匹配规则"><span class="toc-text">第二步 选择匹配规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步-选择下载目录"><span class="toc-text">第三步 选择下载目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四步-备份图片"><span class="toc-text">第四步 备份图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五步-上传至github"><span class="toc-text">第五步 上传至github</span></a></li></ol></li></ol>
     </div>
 </aside>
  -->

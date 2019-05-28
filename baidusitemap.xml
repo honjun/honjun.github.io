@@ -5,12 +5,50 @@
     
   <url>
     <loc>https://www.hojun.cn/2019/05/27/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A%E8%BF%81%E7%A7%BB%E8%87%B3github%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-05-27T15:42:13.952Z</lastmod>
+    <lastmod>2019-05-28T14:57:14.484Z</lastmod>
     <data>
         <display>
         <title>新浪图床迁移至github教程</title>
         <pubTime>2019-05-27T15:42:13.000Z</pubTime>
         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/05/28/vscode%E5%B0%8F%E7%99%BD%E6%89%8B%E5%86%8C-%E5%BF%AB%E9%80%9F%E4%B8%8A%E5%88%86/</loc>
+    <lastmod>2019-05-28T10:27:11.321Z</lastmod>
+    <data>
+        <display>
+        <title>vscode小白手册-快速上分</title>
+        <pubTime>2019-05-28T04:37:14.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/04/01/hexo-helper-tocbot%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-05-28T05:05:19.596Z</lastmod>
+    <data>
+        <display>
+        <title>hexo-helper-tocbot插件使用教程</title>
+        <pubTime>2019-04-01T10:25:11.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
          
            
              
@@ -42,26 +80,6 @@
         <tag>hexo</tag>
          
         <tag>lab</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/04/01/hexo-helper-tocbot%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-05-21T12:12:53.736Z</lastmod>
-    <data>
-        <display>
-        <title>hexo-helper-tocbot插件使用教程</title>
-        <pubTime>2019-04-01T10:25:11.000Z</pubTime>
-        
-        <tag>hexo</tag>
          
          
            
