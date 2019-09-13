@@ -3,14 +3,17 @@
 
 
     
+    
   <url>
-    <loc>https://www.hojun.cn/2019/08/10/Uni-App%E5%B0%8F%E7%99%BD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/</loc>
-    <lastmod>2019-08-10T13:54:35.859Z</lastmod>
+    <loc>https://www.hojun.cn/2019/09/13/Uni-App%E5%B0%8F%E7%99%BD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%89/</loc>
+    <lastmod>2019-09-13T15:00:25.749Z</lastmod>
     <data>
         <display>
-        <title>Uni App小白学习笔记(二)</title>
-        <pubTime>2019-08-10T13:53:45.000Z</pubTime>
+        <title>Uni App小白学习笔记(三)</title>
+        <pubTime>2019-09-13T08:50:26.000Z</pubTime>
         
+        <tag>uniapp</tag>
+         
          
            
              
@@ -23,12 +26,34 @@
     
   <url>
     <loc>https://www.hojun.cn/2019/08/10/Uni-App%E5%B0%8F%E7%99%BD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80/</loc>
-    <lastmod>2019-08-10T13:54:20.019Z</lastmod>
+    <lastmod>2019-09-13T08:52:17.891Z</lastmod>
     <data>
         <display>
         <title>Uni App小白学习笔记(一)</title>
         <pubTime>2019-08-10T13:53:35.000Z</pubTime>
         
+        <tag>uniapp</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/08/10/Uni-App%E5%B0%8F%E7%99%BD%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/</loc>
+    <lastmod>2019-09-13T08:52:14.348Z</lastmod>
+    <data>
+        <display>
+        <title>Uni App小白学习笔记(二)</title>
+        <pubTime>2019-08-10T13:53:45.000Z</pubTime>
+        
+        <tag>uniapp</tag>
+         
          
            
              
@@ -96,7 +121,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://www.hojun.cn/2019/05/28/vscode%E5%B0%8F%E7%99%BD%E6%89%8B%E5%86%8C-%E5%BF%AB%E9%80%9F%E4%B8%8A%E5%88%86/</loc>
