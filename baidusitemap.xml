@@ -3,15 +3,16 @@
 
 
     
-    
   <url>
-    <loc>https://www.hojun.cn/2019/09/28/%E7%95%AA%E5%89%A7%E6%8E%A8%E8%8D%90%C2%B7Dr%EF%BC%8ESTONE%E7%9F%B3%E7%BA%AA%E5%85%83/</loc>
-    <lastmod>2019-09-30T12:22:02.436Z</lastmod>
+    <loc>https://www.hojun.cn/2019/07/12/Hugo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2019-10-05T10:23:40.369Z</lastmod>
     <data>
         <display>
-        <title>番剧推荐·Ｄｒ．ＳＴＯＮＥ石纪元</title>
-        <pubTime>2019-09-28T11:18:04.000Z</pubTime>
+        <title>Hugo博客添加搜索功能</title>
+        <pubTime>2019-07-12T15:19:13.000Z</pubTime>
         
+        <tag>hugo</tag>
+         
          
            
              
@@ -21,6 +22,45 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/09/15/2019%C2%B7%E4%B8%AD%C2%B7%E7%A7%8B/</loc>
+    <lastmod>2019-10-05T10:05:59.981Z</lastmod>
+    <data>
+        <display>
+        <title>2019·中·秋</title>
+        <pubTime>2019-09-15T15:51:10.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.hojun.cn/2019/09/28/%E7%95%AA%E5%89%A7%E6%8E%A8%E8%8D%90%C2%B7Dr%EF%BC%8ESTONE%E7%9F%B3%E7%BA%AA%E5%85%83/</loc>
+    <lastmod>2019-10-05T10:05:33.543Z</lastmod>
+    <data>
+        <display>
+        <title>番剧推荐·Ｄｒ．ＳＴＯＮＥ石纪元</title>
+        <pubTime>2019-09-28T11:18:04.000Z</pubTime>
+        
+        <tag>番剧</tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://www.hojun.cn/2019/09/26/QSV%E6%A0%BC%E5%BC%8F%E8%A7%86%E9%A2%91%E8%BD%ACMP4%E6%A0%BC%E5%BC%8F%E5%B7%A5%E5%85%B7/</loc>
@@ -36,24 +76,6 @@
            
              
               <breadCrumb title="资源" url="https://www.hojun.cn/categories/%E8%B5%84%E6%BA%90/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/09/15/2019%C2%B7%E4%B8%AD%C2%B7%E7%A7%8B/</loc>
-    <lastmod>2019-09-23T15:59:47.288Z</lastmod>
-    <data>
-        <display>
-        <title>2019·中·秋</title>
-        <pubTime>2019-09-15T15:51:10.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="生活" url="https://www.hojun.cn/categories/live/"/>
           
         </display>
     </data>
@@ -150,24 +172,6 @@
         
         <tag>uniapp</tag>
          
-         
-           
-             
-              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.hojun.cn/2019/07/12/Hugo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2019-07-12T15:20:10.981Z</lastmod>
-    <data>
-        <display>
-        <title>Hugo博客添加搜索功能</title>
-        <pubTime>2019-07-12T15:19:13.000Z</pubTime>
-        
          
            
              
