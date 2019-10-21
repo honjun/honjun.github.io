@@ -3,6 +3,24 @@
 
 
     
+  <url>
+    <loc>https://www.hojun.cn/2019/10/21/2019%E5%A4%A9%E7%8C%AB%E5%8F%8C%E5%8D%81%E4%B8%80%E6%B4%BB%E5%8A%A8%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2019-10-21T11:46:15.568Z</lastmod>
+    <data>
+        <display>
+        <title>2019天猫双十一活动大全</title>
+        <pubTime>2019-10-21T11:06:23.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="技术" url="https://www.hojun.cn/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://www.hojun.cn/2019/10/13/%E4%BD%BF%E7%94%A8Jemdoc%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5%E7%AE%80%E5%8E%86-%E4%B8%AD%E7%BA%A7%E7%AF%87/</loc>
@@ -2929,9 +2947,9 @@
         <title>anime.js实现logo动画</title>
         <pubTime>2018-03-14T12:34:51.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>js</tag>
+         
+        <tag>前端</tag>
          
          
            
@@ -3783,11 +3801,11 @@
         <title>Jcrop截取头像上传</title>
         <pubTime>2017-06-03T01:09:59.000Z</pubTime>
         
+        <tag>前端</tag>
+         
         <tag>jquery</tag>
          
         <tag>jcrop</tag>
-         
-        <tag>前端</tag>
          
          
            
