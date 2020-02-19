@@ -1,6 +1,6 @@
 title: anime.js实现logo动画
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -12,7 +12,7 @@ tags:
  - js
 keywords: anime.js
 description: 实现自己的logo动画~
-photos: https://wx4.sinaimg.cn/large/006bYVyvgy1fpct2gy98rj30ez09ojrf.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct2gy98rj30ez09ojrf.jpg
 ---
 {% raw %}
 <link rel="stylesheet" href="/css/hojunlogo.css" />
@@ -77,7 +77,7 @@ xmlns="http://www.w3.org/2000/svg">
 
 ## **第二个难点 贝赛尔曲线**
 在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg)
 接着把png转svg格式图片，[在线转换工具](http://www.pngtosvg.com/)
 最后把SVG的path数据插入代码。Σ(っ °Д °;)っ发现并不是自己想要的效果。
 通过阅读官方文档和特效代码发现anime.js的动画是根据路径来呈现的，所以我应该提供的SVG的`<path>`只是一条线段就够了。
@@ -88,9 +88,9 @@ xmlns="http://www.w3.org/2000/svg">
 第一个h，好办的，只要把n的左边那条直线的Y坐标改长点就行。
 第二个o,没有现成的o，只能在a上面动手脚，可是`<path>`的C命令就是三次贝塞尔曲线。表示不太会画，肿么办(*/ω＼*)?
 上网找资料呗~ 找到张鑫旭大牛的一片文章[深度掌握SVG路径path的贝塞尔曲线指令](http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/)还有dayu提供的[任意二次、三次贝塞尔曲线呈现工具](http://dayu.pw/svgcontrol/)
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg)
 已知a的三条弧线
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fpct26viiaj305r05udft.jpg)即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章[使用贝塞尔曲线拟合圆](http://www.cnblogs.com/ArthurQQ/articles/1730214.html)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct26viiaj305r05udft.jpg)即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章[使用贝塞尔曲线拟合圆](http://www.cnblogs.com/ArthurQQ/articles/1730214.html)
 不需要的童鞋可以发挥一下自带的我看看看看看出来，上图已经很明显了，o即圆形是上下左右对称的，通过对称的特性就可以得到那两个点的坐标。
 第三个j,自由发挥了o(*￣︶￣*)o
 第四个u,参考n把它给倒过来(⌒▽⌒)

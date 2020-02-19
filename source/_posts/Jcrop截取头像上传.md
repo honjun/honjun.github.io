@@ -1,6 +1,6 @@
 title: Jcrop截取头像上传
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-03 09:09:59
@@ -13,13 +13,13 @@ tags:
 keywords: 截取头像图片上传
 description: 截取头像图片上传
 photos: 
-  - https://wx3.sinaimg.cn/large/006bYVyvgy1fljtemuc42g30uy0ekgs6.gif
+  - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtemuc42g30uy0ekgs6.gif
 ---
 之前用Jcrop实现头像上传的功能的时候。有个缺点，是先把原始图片上传，再在页面上显示出来，供用户截取。这么以来不管用户是否保存修改头像的操作，都会执行一个上传操作并保存图片。
 改进：把上传的图片转成base64格式的图片显示在页面上，仅当用户截取头像点击保存的时候再执行上传操作。
 
 效果：
-![1.gif](https://wx3.sinaimg.cn/large/006bYVyvgy1fljtemuc42g30uy0ekgs6.gif)
+![1.gif](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtemuc42g30uy0ekgs6.gif)
 直接上代码
 index.html
 ```html

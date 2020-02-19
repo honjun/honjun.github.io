@@ -1,6 +1,6 @@
 title: 给Hexo博客添加Mathjax数学公式支持
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -13,7 +13,7 @@ tags:
  - 搞事
 keywords: mathjax
 description: 由于网上教程不靠谱，忽悠人一大圈还没啥卵用。花点时间折腾了下Mathjax.js，出了这篇教程。
-photos: https://wx3.sinaimg.cn/small/006bYVyvgy1fsfpde5obej30zg0ho405.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpde5obej30zg0ho405.jpg
 ---
 ## 前言
 
@@ -26,15 +26,15 @@ photos: https://wx3.sinaimg.cn/small/006bYVyvgy1fsfpde5obej30zg0ho405.jpg
 ## 开始搞
 
 百度搜索mathjax
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdd8fnij30lw0dwabk.jpg)
 点击第一个进入其官网
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpde5obej30zg0ho405.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpde5obej30zg0ho405.jpg)
 找到Getting Started，点击Learn more
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdf7tkpj30za0hvgnf.jpg)
 拉到最下边，Jump to our docs
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdfq8a3j30yq0gs3zt.jpg)
 找到其demo代码
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdggngij30us0gx41m.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdggngij30us0gx41m.jpg)
 <font color='red'>*@(不出所料)*注意其代码有个坑，js的src应改为`https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML`</font>
 接下来就是实验代码了，新建文章输入以下代码：
 ```html
@@ -50,11 +50,11 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 这里发现了个bug,即代码快里面放入raw标签会把代码直接当成html，会被解析了。所以上面的代码缺少了raw标签,还需用raw标签包起来。关于raw标签的介绍请参考[hexo标签插件](https://hexo.io/zh-cn/docs/tag-plugins.html)
 
 正确的代码如下图*@(得意)*：
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdgxzpxj30lq05z3yt.jpg)
 
 接下来再页面上预览一下
 图片：
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fsfpdhdn9aj30js02tdfr.jpg)
 真实效果
 {% raw %}
 <p>

@@ -1,6 +1,6 @@
 title: 自动上传博客图片至新浪微博相册之Headless版
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-04-14 19:37:44
@@ -11,9 +11,9 @@ tags:
 keywords: headless
 description: 之前实现了一波Python+selenium自动上传博客图片至新浪微博相册，每次都会自动打开浏览器，再巴拉巴拉一波操作。后来在爬取网页动态页面的时候发现可以使用浏览器自带的headless(无头)
 photos:
- - https://wx2.sinaimg.cn/large/006bYVyvgy1fqcg6c6d2bj30dw0b4t8z.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqcg6c6d2bj30dw0b4t8z.jpg
 ---
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fqcg6c6d2bj30dw0b4t8z.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqcg6c6d2bj30dw0b4t8z.jpg)
 之前实现了一波Python+selenium自动上传博客图片至新浪微博相册，每次都会自动打开浏览器，再巴拉巴拉一波操作。
 后来在爬取网页动态页面的时候发现可以使用浏览器自带的headless(无头)模式，可以实现浏览器在后台巴拉巴拉一波操作，桌面上不显示。使用起来更加方便。
 直接使用chrome自带的headless的时候，一样的代码却老出问题，估计是chrome的bug，于是弃坑使用的Firefox浏览器。
@@ -73,7 +73,7 @@ class Connect():
           imgsUrl = self.driver.execute_script('return document.getElementsByClassName("m_photoItem m_photoItem_a")[' + str(j) + '].getElementsByTagName("img")[0].src')
           time.sleep(4)
           imgsUrl = imgsUrl.replace("small", "large")
-          imgsUrl = '![](' + imgsUrl + ')'
+
           fw.write(imgsUrl + '\n')
           fw.flush()
         fw.close()

@@ -1,6 +1,6 @@
 title: ES6之Promise
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-03-26 20:39:36
@@ -11,9 +11,9 @@ tags:
 keywords: Promise
 description: Promise详解
 photos:
- - https://wx2.sinaimg.cn/large/006bYVyvgy1fpqj2739epj30m80go3yt.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpqj2739epj30m80go3yt.jpg
 ---
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fpqj2739epj30m80go3yt.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpqj2739epj30m80go3yt.jpg)
 **Promise 对象用于表示一个异步操作的最终状态（完成或失败），以及其返回的值。**
 
 ----------
@@ -47,7 +47,7 @@ pending 状态的 Promise 对象可能触发fulfilled 状态并传递一个值�
 
 因为 Promise.prototype.then 和  Promise.prototype.catch 方法返回promise 对象， 所以它们可以被链式调用。
 
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fpqj0k8jedj30m9089q38.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpqj0k8jedj30m9089q38.jpg)
 
 ----------
 

@@ -1,6 +1,6 @@
 title: mysql报字符集错误
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-07-18 20:14:09
@@ -18,10 +18,10 @@ Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8_general_ci,IMPLIC
 ```
 看报错信息好像是字符集不一致
 查看了下表
-![006bYVyvgy1fhoaywi4qaj307g037q2r.jpg](https://wx1.sinaimg.cn/large/006bYVyvgy1fhoaywi4qaj307g037q2r.jpg)
+![006bYVyvgy1fhoaywi4qaj307g037q2r.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fhoaywi4qaj307g037q2r.jpg)
 
 SHOW TABLE STATUS FROM 数据库名 LIKE '表名'; 
-![006bYVyvgy1fhoaytokqnj308o02g3yd.jpg](https://wx3.sinaimg.cn/large/006bYVyvgy1fhoaytokqnj308o02g3yd.jpg)
+![006bYVyvgy1fhoaytokqnj308o02g3yd.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fhoaytokqnj308o02g3yd.jpg)
 没问题，可能是字段字符不一样
 show full columns from 表名; 或者 show create table 表名; 
 ```sql

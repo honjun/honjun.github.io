@@ -7,8 +7,8 @@ shortName: HJ
 fullHttps: false
 
 # favicon and site master avatar
-favicon: https://wx2.sinaimg.cn/large/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+favicon: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 
 # Home page sort type: -1: newer first，1: older first.
 homePageSortType: -1
@@ -38,6 +38,13 @@ adsense:
   post_left_id: 9797686907
   post_right_id: 7335051380
   post_bottom_id: 8296902977
+
+tocbot:
+  contentSelector: .post-content
+  scrollSmooth: true
+  headingSelector: h1, h2, h3, h4, h5
+  headingsOffset: 45
+  scrollSmoothOffset: -45
 
 # cover info config
 coverTitle: hello ，stranger

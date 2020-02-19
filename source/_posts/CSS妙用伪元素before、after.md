@@ -1,6 +1,6 @@
 title: CSS妙用伪元素before、after
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-04-19 21:22:48
@@ -11,7 +11,7 @@ tags:
 keywords:
 description:
 photos:
- - https://wx3.sinaimg.cn/small/006bYVyvgy1fqi9ns1lmqg30j20j8hdv.gif
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqi9ns1lmqg30j20j8hdv.gif
 ---
 css——层叠样式表,简单理解就是用来装饰网页的样子，比如颜色，大小，位置等等。总之，你现在能看到美轮美奂的网页就是css的功劳。
 今天介绍一下css中伪元素before、after的妙用小技巧。
@@ -20,7 +20,7 @@ css——层叠样式表,简单理解就是用来装饰网页的样子，比如�
  - 伪元素则使用两个冒号表示 ::before
 
 ## **小例子一 导航鼠标悬停特效**
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fqi9vl8krtg30ec03mwfv.gif)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqi9vl8krtg30ec03mwfv.gif)
 ```html
 <html>
   <style>
@@ -69,7 +69,7 @@ css——层叠样式表,简单理解就是用来装饰网页的样子，比如�
 </html>
 ```
 ## **小例子二：手机滑盖效果**
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fqi9ns1lmqg30j20j8hdv.gif)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqi9ns1lmqg30j20j8hdv.gif)
 ```html
 <style type="text/css">
   div#phone li:before{
@@ -106,7 +106,7 @@ css——层叠样式表,简单理解就是用来装饰网页的样子，比如�
 </div>
 ```
 ## **小例子三 翻转效果**
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fqi9vp78f9g30kb0kmnhn.gif)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqi9vp78f9g30kb0kmnhn.gif)
 ```html
 <html>
   <style>

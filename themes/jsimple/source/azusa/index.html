@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="UTF-8"/><title>Azusa</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body>
+<div id="bg">
+  <div class="player">
+    <i class="play fa fa-play" aria-hidden="true"></i>
+  </div>
+</div><canvas id="app"></canvas>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/5.8.1/css/all.min.css"><style>
+body{margin:0;background:#000}
+#app{position:absolute;top:0;left:0}
+#bg{position:absolute;width:100%;height:100%;left:0;top:0;z-index:1;mix-blend-mode:screen;background-repeat:no-repeat;background-position:50% 50%;background-size:cover;background-origin:padding-box;background-attachment:scroll;box-shadow:0 0 1000px #000 inset}
+.play {
+    font-size: 100px;
+    color: #fff;
+    z-index:2;
+    opacity: 0;
+}
+.play:hover {
+    opacity: 1;
+}
+.player {
+  position:absolute;
+  left:50%;top:50%;transform:translate(-50%,-50%); 
+}
+</style>
+
+<script src="./js/three.js"></script>
+<script src="./js/azusa.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+  window.onload = function() {
+    const azusa = new Azusa({
+      view: document.getElementById('app'),
+      subdivisionSize: 1024,
+      cutEnd: 256
+    });
+    const container = document.getElementById('bg')
+    container && (container.style.backgroundImage = "url('https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1tbar03aaj31hc0u0hdv.jpg')")
+    azusa.audio.load({
+      src: 'https://cdn.jsdelivr.net/gh/honjun/honjun.github.io/azusa/media/s.mp3',
+      onPrgress: (xhr) => {
+        if(xhr.loaded == 11005954) {
+          console.log('加载完成');
+        };
+      }
+    });
+    azusa.audio.setVolume(0.5);
+
+    window.addEventListener('resize', () => {
+      azusa.resize(window.innerWidth, window.innerHeight);
+    })
+    $('.play').click(function(){
+      if ($(this).hasClass('fa-play')) {
+        azusa.audio.play();
+        console.log('zzbf')
+        $(this).addClass('fa-pause');
+        $(this).removeClass('fa-play');
+      } else {
+        azusa.audio.stop();
+        $(this).addClass('fa-play');
+        $(this).removeClass('fa-pause');
+      }
+    });
+  }
+</script>

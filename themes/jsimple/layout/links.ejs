@@ -1,0 +1,100 @@
+<style>
+  .link-contentqt {
+    padding: 0px !important;
+    width: 100%;
+  }
+  .link-contentqt li {
+    text-align: center;
+    font-size: 12px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    list-style-type: none;
+    float: left;
+  }
+  .link-contentqt li img {
+      height: auto;
+      max-width: 100%;
+      border-radius: 100%;
+      margin-bottom: 5px;
+      transition: .5s;
+      -webkit-transition: .5s;
+      width: 50px;
+      height: 50px;
+  }
+  .link-contentqt li a:hover img {
+      transform: scale(1.2);
+  }
+  .link-contentqt li span {
+      display: block;
+      height: 32px;
+  }
+  .link-contentqt li a:hover span {
+      color: #ffac00;
+  }
+</style>
+<div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        <% for (var i in theme.menu){ %>
+        <li class="<%= (page.category == i) ? 'active' : '' %>">
+            <a href="/categories/<%= theme.menu[i] %>" data-name="<%= i %>"><%= i %></a>
+        </li>
+        <% } %>
+        <li class="<%= page.title == '友链' ? 'active' : '' %>">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <%- partial('_widget/search-bar') %>
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="<%= page.authorLink %>" target="_blank">
+                    <img width="48" src="<%= page.avatar %>" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span><%= page.author %></span>
+                    <span title="最后编辑于<%= date(page.date) %>"><%= date(page.date) %></span>
+                </p>
+                <p><%= page.authorDesc %></p>
+            </div>
+            <h2 class="post-title"><%- page.title %></h2>
+            <div class="post-meta">
+                本文总共<%- strip_html(page.content).length %>个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <% if (page.links) { %>
+            <ul class="link-contentqt clearfix">
+              <% (page.links||[]).forEach(function (link, index) { %>
+              <li>
+                <a href="<%- link.url %>" title="<%- link.desc %>" target="_blank">
+                  <img src="<%- link.img %>" width="50" height="50">
+                  <span class="sitename"><%- link.name %></span>
+                </a>
+              </li>
+              <% }) %>
+            </ul>
+            <% } %>
+            <hr>
+            <%- page.content %>
+            <%- partial('_partial/comments', {post: page}) %>
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+    </article>
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

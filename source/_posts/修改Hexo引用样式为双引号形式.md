@@ -1,6 +1,6 @@
 title: 修改Hexo引用样式为双引号形式
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -22,13 +22,13 @@ photos:
 >2.生活所迫*@(装大款)*
 ```
 博主的JSimple主题默认显示的引用样式如下：
-![](https://wx1.sinaimg.cn/large/006bYVyvly1fwiinunietj30g403qwey.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwiinunietj30g403qwey.jpg)
 想把它改成这种样子的
-![](https://ws3.sinaimg.cn/large/006bYVyvly1fwiisocut1j30kc04aaa1.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwiisocut1j30kc04aaa1.jpg)
 
 因为这里双引号正好在引用块的前后，可以使用css的before\after伪元素实现。
 首先使用F12开发工具找到引用块的元素
-![](https://wx3.sinaimg.cn/large/006bYVyvly1fwij4uxoxwj30su0dzgti.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwij4uxoxwj30su0dzgti.jpg)
 然后给这个元素添加css代码。
 这里直接给出代码如下：
 ```css
@@ -59,5 +59,5 @@ blockquote:before {
 
 其中`.markdown-body blockquote`去掉了左边的边框。
 然后content中的字符是根据字体文件的内容：
-![](https://ws3.sinaimg.cn/large/006bYVyvly1fwij0tt9f8j30xr0d7tlv.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwij0tt9f8j30xr0d7tlv.jpg)
 就这样，不想多说。太懂的可以参考[B站视频教程](https://www.bilibili.com/video/av34413878/)

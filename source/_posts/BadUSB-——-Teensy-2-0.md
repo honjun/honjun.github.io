@@ -1,6 +1,6 @@
 title: BadUSB —— Teensy++2.0
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-07 11:18:31
@@ -13,11 +13,11 @@ tags:
 keywords: BadUSB —— Teensy++2.0
 description: BadUSB —— Teensy++2.0
 photos:
- - https://wx1.sinaimg.cn/large/006bYVyvgy1fljtj7mwiaj30dw0dwdmi.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtj7mwiaj30dw0dwdmi.jpg
 ---
 参考http://bbs.pediy.com/showthread.php?t=213719
 前几天发现了BadUSB这个好玩的东西，橡皮鸭和烧鹅都买不起就在某宝上买了个Teensy++2.0
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fljtj7mwiaj30dw0dwdmi.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtj7mwiaj30dw0dwdmi.jpg)
 
 ## **1.下载Teensyduino**
 
@@ -29,14 +29,14 @@ https://pan.baidu.com/s/1b4jPX8#list/path=%2F&parentPath=%2FArduino
 
 ## **3.安装Teensyduino**
 
-![](https://wx4.sinaimg.cn/mw690/006bYVyvgy1fljtj72nghj30e20atju0.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtj72nghj30e20atju0.jpg)
 注意红色框起来的是支持的Arduino版本。
 
 4.可以插入Teensy++2.0开始搞事了
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fljtj6jkxnj30dw0gogmj.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtj6jkxnj30dw0gogmj.jpg)
 
 注意：
-1.汉化 file->preferences 选择language为简体中文 2.工具里面要选![](https://wx3.sinaimg.cn/large/006bYVyvgy1fljtj5zbdrj30i2051dg0.jpg)
+1.汉化 file->preferences 选择language为简体中文 2.工具里面要选![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljtj5zbdrj30i2051dg0.jpg)
 送份代码：
 
 代码：

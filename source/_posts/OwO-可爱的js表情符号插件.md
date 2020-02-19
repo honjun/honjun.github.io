@@ -1,6 +1,6 @@
 title: OwO-可爱的js表情符号插件
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -12,9 +12,9 @@ tags:
 keywords: 表情
 description: 然而这并不是真正的目的，真正目的是为了在文章里添加表情*@(得意)@(得意)@(得意)*~~~
 photos:
- - https://wx4.sinaimg.cn/large/006bYVyvgy1fqdqbfhns2j30b40b074f.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqdqbfhns2j30b40b074f.jpg
 ---
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fqdqbfhns2j30b40b074f.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqdqbfhns2j30b40b074f.jpg)
 表情图片给我们带来了很多欢乐，我们使用着各种表情表述自己的心情，拉动聊天气氛~（虽然常常聊着聊着就成了斗图大赛）。但是啊，系不系开心就好*@(哈哈)*~
 
 今天给各位博主带来了一个js表情插件,效果如下*@(高兴)*：
@@ -82,7 +82,7 @@ var OwO_demo = new OwO({
 ### **第二步解析markdown**
 博主使用的是hexo搭建的博客，在node_modules中找到解析markdown的js文件(可以看我的另一篇关于lozad.js文章有介绍)
 `\node_modules\_marked@0.3.6@marked\lib\marked.js`
-![image](https://wx2.sinaimg.cn/large/006bYVyvgy1fljpj5cg8ej308f00p741.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljpj5cg8ej308f00p741.jpg)
 这里偷了一个小懒(其实是新建的搞不定*@(无奈)*)，直接使用em即斜体的语法，在内部加了个正则匹配，来识别我们的表情语法。具体代码如下：
 marked.js
 ```js

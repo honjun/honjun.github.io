@@ -1,6 +1,6 @@
 title: Hexo博客备份—妈妈再也不用担心你使用hexo写博客
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -12,7 +12,7 @@ tags:
 keywords:
 description:
 photos:
- - https://wx2.sinaimg.cn/mw690/006bYVyvgy1fo604rrdgmj30dw0b7mxf.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fo604rrdgmj30dw0b7mxf.jpg
 ---
 今天搜了下hexo博客备份，发现好多都是用git命令备份的，于是推荐款好用的hexo备份插件：
 [hexo-git-backup](https://github.com/coneycode/hexo-git-backup)

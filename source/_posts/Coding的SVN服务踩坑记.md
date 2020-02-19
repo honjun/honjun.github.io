@@ -1,6 +1,6 @@
 title: Coding的SVN服务踩坑记
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -13,7 +13,7 @@ tags:
 keywords: Coding的SVN服务
 description: 咳咳，为啥会用到Coding的SVN?
 photos:
- - https://wx1.sinaimg.cn/large/006bYVyvly1fnu8apz5tsj30870870su.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fnu8apz5tsj30870870su.jpg
 ---
 ## 前言
 Q:咳咳，为啥会用到Coding的SVN?
@@ -22,26 +22,26 @@ A:博主电脑上已经配好一个coding的账号，且是全局的。网上搜
 ## 食用方式
 
 在项目的仓库设置>开启SVN服务，蓝后去下载小乌龟TortoiseSVN。不要点击下面这个，这个是服务器端的。一开始不清楚，踩一个坑
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fupi115shlj30su0drwfo.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi115shlj30su0drwfo.jpg)
 不要下载这个！！
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fupi11vfbuj30s70fk0v6.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi11vfbuj30s70fk0v6.jpg)
 去下载小乌龟tortoisesvn.net/downloads.html
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fupi147utrj30r40hsgp5.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi147utrj30r40hsgp5.jpg)
 安装
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fupi14mmltj30dv0atmyp.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi14mmltj30dv0atmyp.jpg)
 打开这个，SVN输入地址(Coding上有)
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fupi12dxrgj30er0b1aam.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi12dxrgj30er0b1aam.jpg)
 输入Coding账号
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fupi150tbyj309m06s0so.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi150tbyj309m06s0so.jpg)
 登录后就可以看到仓库内容了。
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fupi12ujgrj30hb0dj757.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi12ujgrj30hb0dj757.jpg)
 蓝后直接把需要部署的代码移进去
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fupi13px7nj30mz0ecjtp.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi13px7nj30mz0ecjtp.jpg)
 
 ## 后续
 
 想覆盖文件，报错。
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fupi15jtcxj30hb0dfwft.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi15jtcxj30hb0dfwft.jpg)
 想删除文件，报错。
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fupi15zd2gj30hf0dlmyi.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fupi15zd2gj30hf0dlmyi.jpg)
 由于SVN不是很会用，这两个坑踩的我一脸懵逼。让后脑子终于开窍，想到了更好的解决小号coding代码推送的方法。于是弃用SVN了233333~

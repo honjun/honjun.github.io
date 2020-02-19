@@ -1,6 +1,6 @@
 title: 虚拟机安装ubuntu16.04.2
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-04 20:07:31
@@ -17,7 +17,7 @@ tags:
 keywords: 虚拟机安装ubuntu16.04.2
 description: 虚拟机安装ubuntu16.04.2
 photos:
-    - https://wx4.sinaimg.cn/mw690/006bYVyvgy1fhaiekora3j30ez07v74c.jpg
+    - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fhaiekora3j30ez07v74c.jpg
 ---
 ## **ubuntu镜像下载地址**
 
@@ -27,7 +27,7 @@ http://www.cnblogs.com/phpzhou/p/6288762.html
 
 http://www.cnblogs.com/phpzhou/p/6288762.html
 注意 win10虚拟机最好使用VMware12.5.5最新版的
-![006bYVyvgy1fhaiekora3j30ez07v74c.jpg](https://wx4.sinaimg.cn/mw690/006bYVyvgy1fhaiekora3j30ez07v74c.jpg)
+![006bYVyvgy1fhaiekora3j30ez07v74c.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fhaiekora3j30ez07v74c.jpg)
 
 ## **安装LNMP环境**
 

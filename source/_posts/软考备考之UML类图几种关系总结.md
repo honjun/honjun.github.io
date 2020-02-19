@@ -1,6 +1,6 @@
 title: 软考备考之UML类图几种关系总结
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-05-07 21:13:02
@@ -13,7 +13,7 @@ tags:
 keywords: UML
 description: 在UML类图中，常见的有以下几种关系：泛化（Generalization）, 实现（Realization），关联（Association)，聚合（Aggregation），组合(Composition)，依赖(Dependency)
 photos:
- - https://wx4.sinaimg.cn/small/006bYVyvgy1fqmf3kyn0gj305m08rwed.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf3kyn0gj305m08rwed.jpg
 ---
 在UML类图中，常见的有以下几种关系: 泛化（Generalization）, 实现（Realization），关联（Association)，聚合（Aggregation），组合(Composition)，依赖(Dependency)
 ## **1. 泛化（Generalization）**
@@ -21,7 +21,7 @@ photos:
 【泛化关系】：是一种继承关系，表示一般与特殊的关系，它指定了子类如何特化父类的所有特征和行为。例如：老虎是动物的一种，即有老虎的特性也有动物的共性。
 
 【箭头指向】：带三角箭头的实线，箭头指向父类
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fqmf3kyn0gj305m08rwed.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf3kyn0gj305m08rwed.jpg)
 
 
 ## **2. 实现（Realization）**
@@ -29,7 +29,7 @@ photos:
 【实现关系】：是一种类与接口的关系，表示类是接口所有特征和行为的实现.
 
 【箭头指向】：带三角箭头的虚线，箭头指向接口
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fqmf3nhgohj305o07w0sm.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf3nhgohj305o07w0sm.jpg)
 
 
 ## **3. 关联（Association)**
@@ -39,13 +39,13 @@ photos:
 【代码体现】：成员变量
 
 【箭头及指向】：带普通箭头的实心线，指向被拥有者
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqmf3m3p1vj30fi04f3yq.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf3m3p1vj30fi04f3yq.jpg)
 
 
 上图中，老师与学生是双向关联，老师有多名学生，学生也可能有多名老师。但学生与某课程间的关系为单向关联，一名学生可能要上多门课程，课程是个抽象的东西他不拥有学生。
 
 下图为自身关联：
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqmf3mjtq5j306h050mx0.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf3mjtq5j306h050mx0.jpg)
 
 
 ## **4. 聚合（Aggregation）**
@@ -58,7 +58,7 @@ photos:
 
 【箭头及指向】：带空心菱形的实心线，菱形指向整体
 
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqmf3myga2j30at08vjrb.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf3myga2j30at08vjrb.jpg)
 
 ## **5. 组合(Composition)**
 
@@ -69,7 +69,7 @@ photos:
 【代码体现】：成员变量
 
 【箭头及指向】：带实心菱形的实线，菱形指向整体
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fqmf7qwzf4j306208bdfq.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf7qwzf4j306208bdfq.jpg)
 
 
 ## **6. 依赖(Dependency)**
@@ -79,7 +79,7 @@ photos:
 【代码表现】：局部变量、方法的参数或者对静态方法的调用
 
 【箭头及指向】：带箭头的虚线，指向被使用者
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqmf7q9fz1j305g07d3ye.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf7q9fz1j305g07d3ye.jpg)
 
 
 各种关系的强弱顺序：
@@ -88,4 +88,4 @@ photos:
 
 下面这张UML图，比较形象地展示了各种类图关系：
 
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fqmf7pih9yj30m20hx74m.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqmf7pih9yj30m20hx74m.jpg)

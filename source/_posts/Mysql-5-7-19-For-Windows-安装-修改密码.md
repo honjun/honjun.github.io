@@ -1,6 +1,6 @@
 title: Mysql 5.7.19 For Windows 安装+修改密码
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-08-09 23:50:45
@@ -13,12 +13,12 @@ description: Mysql 5.7
 photos:
 ---
 新版Mysql5.7会为root@localhost用户创建一个随机密码，这个随机密码在不同系统上需要使用不同方式查找，否则无法登录mysql并修改初始密码。（我想吐槽这么坑人的功能是程序员还是产品经理的锅）
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fq3e2vw01kj30dv08oq30.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq3e2vw01kj30dv08oq30.jpg)
 今天安装了个mysql5.7版本，然后我居然不知道初始的登录密码？？？我都怀疑是不是自己亲手安装的。（5.7很皮...）
 接下来修改初始密码又踩了好多坑(我从未见过对用户如此不友好之数据库)，网上搜了好多教程，试了各种方法。最后总结出一份简洁的方法。特此记录：
 安装包是mysql-5.7.19-win32.msi
 ## **第一步 》安装**
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fq3e3189k0j30zk0qogmq.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq3e3189k0j30zk0qogmq.jpg)
 自定义安装到D:\Program Files (x86)\Mysql5.7\MysqlServer5.7
 ## **第二步 》添加my.ini文件**
 安装成功后在安装目录下(D:\Program Files (x86)\Mysql5.7\MysqlServer5.7)添加my.ini文件
@@ -69,7 +69,7 @@ mysql> exit
 Bye
 ```
 <font color="red">注：如果服务起不来，检查下有开启其他的mysql服务，导致端口被占用，比如mysql5.6</font>
-![](http://wx4.sinaimg.cn/large/006bYVyvgy1fpkrw2fwptj30ox0e9dik.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpkrw2fwptj30ox0e9dik.jpg)
 ## **第四步 》重启服务，配置和修改生效**
 修改my.ini文件
 ```ini

@@ -1,6 +1,6 @@
 title: 距离玩BeatSaber还差...
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 生活
 comments: true
@@ -14,7 +14,7 @@ tags:
 keywords:
 description:
 photos:
- - https://wx1.sinaimg.cn/small/006bYVyvgy1ftnojwzxbxj31110jhdnm.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftnojwzxbxj31110jhdnm.jpg
 ---
 以前一直有一种想法，开发出一种玩出实际价值的游戏......
 BeatSaber的出现感觉那奇葩想法好像能实现，据说这游戏的锻炼效果比打网球还好~
@@ -84,7 +84,7 @@ BeatSaber的出现感觉那奇葩想法好像能实现，据说这游戏的锻�
   }
 }
 </style>
-<video width="100%" poster="https://wx1.sinaimg.cn/large/006bYVyvgy1ftnojwzxbxj31110jhdnm.jpg" preload="auto" controls>
+<video width="100%" poster="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftnojwzxbxj31110jhdnm.jpg" preload="auto" controls>
   <source src="https://steamcdn-a.akamaihd.net/steam/apps/256708187/movie_max.webm?utm_source=cowlevel" type="video/webm">
   您的浏览器不支持 video 属性。
 </video>

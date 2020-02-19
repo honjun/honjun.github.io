@@ -1,6 +1,6 @@
 title: yaml基本语法及实现Hexo二级导航栏功能
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -14,7 +14,7 @@ tags:
  - yaml
 keywords: Hexo二级导航栏
 description: 咳咳，在实现hexo二级导航栏功能之前，我们先学习下yaml语法。（yaml就是hexo中_config.yml文件使用的语言
-photos: https://ws3.sinaimg.cn/small/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg
 ---
 咳咳，在实现hexo二级导航栏功能之前，我们先学习下yaml语法。（yaml就是hexo中_config.yml文件使用的语言)
 ## 以下内容摘至阮一峰老师的博客
@@ -113,7 +113,7 @@ menu:
 ```
 类似这种，前面的是目录名，后边的是path(路径)和图标的class名(中间用||隔开)
 我们可以看下现在要实现的这种菜单导航栏的需求
-![](https://ws3.sinaimg.cn/large/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fyzlm1pnvqj30zo0iie81.jpg)
 前面横着部分可以和上面配置一样实现，下边竖着的部分又要怎么实现呢。
 
 稍微改了下_config的菜单配置如下：

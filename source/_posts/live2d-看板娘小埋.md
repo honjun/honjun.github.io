@@ -1,6 +1,6 @@
 title: live2d-看板娘小埋
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -12,10 +12,10 @@ tags:
 keywords: live2d
 description: 最近群里有人在耍live2d看板娘，于是默默地跑去get到了一个小埋~
 photos:
- - https://wx1.sinaimg.cn/large/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg
 ---
 最近群里有人在耍live2d看板娘，于是默默地跑去get到了一个小埋~
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fon3hhn3ccj30eg0egwjq.jpg)
 ## **第一步 准备代码和工具**
 (注意：代码要在服务器环境下跑)
 [代码百度云公众号回复demo002获取]
@@ -27,14 +27,14 @@ photos:
 寻找资源，安利贴吧大佬的提供的资源[乖离性ma吧](https://tieba.baidu.com/p/4941885290?_blank)
 或者嘿嘿嘿，使用某电或某神模拟器去得到live2d萌宠里面的资源(root过的手机也行)。这里用某电模拟器示范：
 安装live2d萌宠->商店->下载稀饭的萌宠->打开文件管理器->找到对应的model(在Android/data下面)->移动到模拟器和电脑的共享文件夹中
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fon2xpswjaj30bi0jo455.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fon2xpswjaj30bi0jo455.jpg)
 接着把json文件拖动到Live2dViewer中,得到如下图：
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fon2xm1ceij30zz0kjn2y.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fon2xm1ceij30zz0kjn2y.jpg)
 ## **第三步 修改代码**
 这一步假设你已经跑的起来第一步那份代码了...
 把得到的model资源放到model文件夹下
 打开demo.html修改上你自己的路径
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fon2xthv0bj30os0cwt9z.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fon2xthv0bj30os0cwt9z.jpg)
 接下来就是放入博客页面，调调大小，挪挪位置。duangduangduang~
 [效果预览](https://www.hojun.cn//2018/02/19/live2d-看板娘小埋/)
 

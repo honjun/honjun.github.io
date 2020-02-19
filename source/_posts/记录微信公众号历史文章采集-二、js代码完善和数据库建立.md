@@ -1,6 +1,6 @@
 title: 记录微信公众号历史文章采集(二、js代码完善和数据库建立)
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -16,7 +16,7 @@ tags:
 keywords: 微信公众号历史文章采集
 description: 微信公众号历史文章采集，参考自知乎专题[微信公众号内容的批量采集与应用]
 photos:
- - https://wx1.sinaimg.cn/small/006bYVyvgy1fvf92rp8otj30e80e8dfz.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvf92rp8otj30e80e8dfz.jpg
 ---
 参考自知乎专题微信公众号内容的批量采集与应用，作者：飯口組組長 
 原作者（飯口組組長）有一句话：我的方法来源于许多同行的分享精神，所以我也会延续这个精神，将我的成果分享出来。 
@@ -101,9 +101,9 @@ CREATE TABLE `tmplist` (
 ) ;
 ```
 登录phpMyAdmin后台，语言可以设置为中文。
-![image](https://ws3.sinaimg.cn/large/006bYVyvgy1fvgc0kjo4cj30ss0immy6.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvgc0kjo4cj30ss0immy6.jpg)
 注意设置排序规则为utf8_general_ci。
-![image](https://ws4.sinaimg.cn/large/006bYVyvgy1fvgc8aik7vj30jv07vgma.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvgc8aik7vj30jv07vgma.jpg)
 接着一个一个执行sql生成数据表就行。
-![image](https://wx1.sinaimg.cn/large/006bYVyvgy1fvgccmx3z1j30sz0g6abq.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvgccmx3z1j30sz0g6abq.jpg)
 未完待续......To be Continued......

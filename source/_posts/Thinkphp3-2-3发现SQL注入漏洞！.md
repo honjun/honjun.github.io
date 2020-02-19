@@ -1,6 +1,6 @@
 title: Thinkphp3.2.3发现SQL注入漏洞！
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-04-16 19:40:40
@@ -12,9 +12,9 @@ tags:
 keywords: SQL注入漏洞
 description: 安全客文章报道发现Thinkphp3.2.3最新版SQL注入漏洞！还使用Thinkphp3.2.3版本的小伙伴赶紧去github上更新补丁
 photos:
- - https://wx2.sinaimg.cn/large/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg
 ---
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqiwzno1j30au0643yf.jpg)
 安全客文章报道发现Thinkphp3.2.3最新版SQL注入漏洞！还使用Thinkphp3.2.3版本的小伙伴赶紧去github上更新补丁！
 
 ----------
@@ -31,7 +31,7 @@ function think_filter(&$value){
 有没有相关tips来达到I函数绕过呢？是可以的。
 一般按照官方的写法，thinkphp提供了数据库链式操作，其中包含连贯操作和curd操作，在进行数据库CURD操作去更新数据的时候：
 举例update数据操作。
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqbe8b70j30jm0c4mz4.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqbe8b70j30jm0c4mz4.jpg)
 直接看框架的where子单元函数，之前网上公开的exp表达式注入就是从这里分析出来的结论:
 Thinkphp/Library/Think/Db/Driver.class.php
 其中除了exp能利用外还有一处bind，而bind可以完美避开了think_filter：
@@ -76,21 +76,21 @@ id[]=bind&id[]=1’&money[]=1123&user=liao
 UPDATE `member` SET `user`=:0 WHERE `id` = :1'
 ```
 然后`$that = $this`
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqb93u9aj30f203cmxk.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqb93u9aj30f203cmxk.jpg)
 然后下面的替换操作是将”:0”替换为外部传进来的字符串，这里就可控了。
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqb43ayyj30hs016mx5.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqb43ayyj30hs016mx5.jpg)
 替换后：
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fqeqbjj36jj30ea03bwew.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqbjj36jj30ea03bwew.jpg)
 明显发现之前的user参数为:0然后被替换为了liao，这样就把:替换掉了。
 后面的:1明显是替换不掉的：
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqims50kj30xk07nmyj.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqims50kj30xk07nmyj.jpg)
 那么我们将id[1]数组的参数变为0呢？
 id[]=bind&id[]=0%27&money[]=1123&user=liao
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqirsj4qj312y08bwgd.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqirsj4qj312y08bwgd.jpg)
 果然造成了注入：
 POC:
 money[]=1123&user=liao&id[0]=bind&id[1]=0%20and%20(updatexml(1,concat(0x7e,(select%20user()),0x7e),1))
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fqeqj21mpsj311h06kq4e.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqeqj21mpsj311h06kq4e.jpg)
 
 ----------
 

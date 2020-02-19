@@ -1,6 +1,6 @@
 title: python玩转跳一跳
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-01-08 22:24:34
@@ -11,7 +11,7 @@ tags:
 keywords:
 description:
 photos:
- - https://wx2.sinaimg.cn/large/006bYVyvgy1fnby03e12fg30al0al1gt.gif
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fnby03e12fg30al0al1gt.gif
 ---
 2018年刚来就发生了很多事，咳咳。微信的跳一跳上线到python辅助工具出现到今天github上的star数量就达到了11万！(估计大部分都是为了玩游戏来的)。元旦时候就想使用这个工具顺带接触下python,有事一直拖到现在。
 [github传送门](https://github.com/wangshub/wechat_jump_game)
@@ -23,19 +23,19 @@ photos:
 博主采用的是方法一：
 ## **第一步，下载代码**
 pc上装有git的可以使用git clone代码到本地
-![png](https://wx2.sinaimg.cn/large/006bYVyvgy1fncp8ul4snj30sz0dyq4o.jpg)
+![png](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fncp8ul4snj30sz0dyq4o.jpg)
 
 ----------
 
 或者点击DownloadZIP
-![png](https://wx3.sinaimg.cn/large/006bYVyvgy1fncp8gyztqj30d506lt8y.jpg)下载压缩包到本地(解压到哪看自己喜欢)
+![png](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fncp8gyztqj30d506lt8y.jpg)下载压缩包到本地(解压到哪看自己喜欢)
 ## **第二步，配置环境**
 安装python，推荐安装python3，会带有pip。python2可能会没有pip,需要自己安装(至于怎么安装请自行百度)。[python3百度云](https://pan.baidu.com/s/1eSZYGT0)
 接着安装adb - [adb百度云](https://pan.baidu.com/s/1nwsHrtf)
 配置path变量，在我的电脑(此电脑)上右键属性或控制面板\系统和安全\系统
-![png](https://wx1.sinaimg.cn/large/006bYVyvgy1fncp8mi1x4j30i808a0ta.jpg)
+![png](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fncp8mi1x4j30i808a0ta.jpg)
 点击高级系统设置->环境变量->系统变量里找到path->编辑->添加
-分别加入这三个(对应的是软件安装的位置，装在哪填的就是那里，可能和博主的会有出入)，其中第二个是pip的地址![png](https://wx2.sinaimg.cn/large/006bYVyvgy1fncpbd2bo6j30ag01xweb.jpg)
+分别加入这三个(对应的是软件安装的位置，装在哪填的就是那里，可能和博主的会有出入)，其中第二个是pip的地址![png](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fncpbd2bo6j30ag01xweb.jpg)
 
 可以在cmd(怎么打开cmd请自行百度)里输出如下命令测试是否安装成功
 ```cmd

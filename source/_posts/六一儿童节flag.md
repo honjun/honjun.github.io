@@ -1,6 +1,6 @@
 title: 六一儿童节flag
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 生活
 date: 2018-06-01 23:47:11
@@ -11,9 +11,9 @@ tags:
 keywords: 六一
 description: 六一儿童节立下的flag
 photos:
- - https://wx3.sinaimg.cn/large/006bYVyvgy1frwq8ubsg9g30m80gnwfh.gif
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1frwq8ubsg9g30m80gnwfh.gif
 ---
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1frwq8ubsg9g30m80gnwfh.gif)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1frwq8ubsg9g30m80gnwfh.gif)
 
 ## 多做
 

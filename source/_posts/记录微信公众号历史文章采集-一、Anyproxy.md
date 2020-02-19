@@ -1,6 +1,6 @@
 title: 记录微信公众号历史文章采集(一、Anyproxy)
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -16,7 +16,7 @@ tags:
 keywords: 微信公众号历史文章采集
 description: 微信公众号历史文章采集，参考自知乎专题[微信公众号内容的批量采集与应用]
 photos:
- - https://wx1.sinaimg.cn/small/006bYVyvgy1fvf92rp8otj30e80e8dfz.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvf92rp8otj30e80e8dfz.jpg
 ---
 参考自知乎专题[微信公众号内容的批量采集与应用](https://zhuanlan.zhihu.com/c_65943221)，作者：飯口組組長
 原作者（飯口組組長）有一句话：我的方法来源于许多同行的分享精神，所以我也会延续这个精神，将我的成果分享出来。
@@ -26,10 +26,10 @@ photos:
 
 ## 安装Anyproxy
 
-![image](https://wx2.sinaimg.cn/large/006bYVyvgy1fve4icgz5sj30uv0hadi2.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fve4icgz5sj30uv0hadi2.jpg)
 AnyProxy是一个基于NodeJS的，可供插件配置的HTTP/HTTPS代理服务器。（阿里的）
 使用npm安装命令npm install -g，这也是安装Anyproxy第一个坑。 anyproxy安装Anyproxy的时候安装的是最新版，你会发现接下来的anyproxy --root命令不能使用，以及rule_default.js找不到知乎中所说的方法。在Anyproxy的github仓库中找到了原因。
-![image](https://wx3.sinaimg.cn/large/006bYVyvgy1fve4k58ityj30tw0ecmy5.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fve4k58ityj30tw0ecmy5.jpg)
 今年二月份更新了版本，代码改了很多。所以不一样了，而組長的教程是17年的，所以用的是第二个版本。为了保持一致，我们在安装Anyproxy的时候要指定版本号。
 ```cmd
 npm install -g anyproxy@3.10.3
@@ -47,8 +47,8 @@ Anyproxy安装好后使用anyproxy --root命令就能生成证书。
 ## 抓包
 
 安装好证书并设置代理后（注意Anyproxy设置代理默认端口是8001），就可以进行手机抓包了。浏览器打开localhost:8002进入Anyproxy后台，可以看到抓到包的内容。
-![image](https://wx3.sinaimg.cn/large/006bYVyvgy1fvf8br4xy7j30yf0g743a.jpg)
-![image](https://wx1.sinaimg.cn/large/006bYVyvgy1fvf8c4qop8j30x50g978b.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvf8br4xy7j30yf0g743a.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvf8c4qop8j30x50g978b.jpg)
 
 ## 找到安装目录修改代码
 

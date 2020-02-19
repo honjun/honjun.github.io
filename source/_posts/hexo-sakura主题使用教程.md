@@ -1,6 +1,6 @@
 title: hexo-sakura主题使用教程
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -12,7 +12,7 @@ tags:
  - hexo
 keywords: hexo,sakura
 description: hexo-sakura主题使用教程
-photos: https://wx3.sinaimg.cn/small/006bYVyvly1g069tuf42oj312w0m8ndq.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g069tuf42oj312w0m8ndq.jpg
 ---
 hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-sakura/blob/master/README.md)
 
@@ -22,7 +22,7 @@ hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-
 
 正在开发中......
 
-![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g069tuf42oj312w0m8ndq.jpg)
 
 ## 交流群
 若你是使用者，加群QQ: 801511924
@@ -225,9 +225,9 @@ v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 ## 分类页和标签页配置
 
 ### 分类页
-![](https://ws3.sinaimg.cn/large/006bYVyvly1g07b0gucy9j31060jih76.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g07b0gucy9j31060jih76.jpg)
 ### 标签页
-![](https://wx2.sinaimg.cn/large/006bYVyvly1g07azb2399j31040jgazs.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g07azb2399j31040jgazs.jpg)
 
 配置项在\themes\Sakura\languages\zh-cn.yml里。新增一个分类或标签最好加下哦，当然嫌麻烦可以直接使用一张默认图片（可以改主题或者直接把404图片替换下，征求下意见要不要给这个在配置文件中加个开关，可以issue或群里提出来），现在是没设置的话会使用那种倒立小狗404哦。
 ```yml
@@ -254,7 +254,7 @@ v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 
 ## 单页面封面配置
 
-![](https://ws3.sinaimg.cn/large/006bYVyvly1g07b1pi619j31080jge4u.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g07b1pi619j31080jge4u.jpg)
 如留言板页面页面，位于source下的comment下，打开index.md如下：
 ```md
 ---
@@ -272,7 +272,7 @@ photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg
 ## 单页面配置
 
 ### 番组计划页 （请直接在下载后的文件中改，下面的添加了注释可能会有些影响）
-![](https://wx2.sinaimg.cn/large/006bYVyvly1g07b2gyx60j31090jjahj.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g07b2gyx60j31090jjahj.jpg)
 
 ```yml
 ---
@@ -308,7 +308,7 @@ bangumis:
 ```
 
 ### 友链页 （请直接在下载后的文件中改，下面的添加了注释可能会有些影响）
-![](https://ws3.sinaimg.cn/large/006bYVyvly1g07b39tleej31080jhjv1.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g07b39tleej31080jhjv1.jpg)
 
 ```yml
 ---

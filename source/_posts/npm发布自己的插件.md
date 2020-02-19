@@ -1,6 +1,6 @@
 title: npm发布自己的插件
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -11,21 +11,21 @@ series:
 tags: npm
 keywords:
 description:
-photos: https://ws1.sinaimg.cn/small/006bYVyvly1g005a1hrhbj308c03pq2p.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g005a1hrhbj308c03pq2p.jpg
 ---
 这里拿之前写的hexo-tag-bili插件为例。（后来发现之前已经有[Z4Tech](https://github.com/Z4Tech/hexo-tag-bilibili)大大发布过类似的插件了，纯当学习于是继续完成了这个插件）
 
 ## 准备npm账号
 
 若是没有npm账号，在cmd中输入如下npm addUser命令注册账号
-![](https://ws1.sinaimg.cn/large/006bYVyvly1fzy1qf2or8j30ia04tt8q.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzy1qf2or8j30ia04tt8q.jpg)
 若是已有npm账号，在cmd中输入如下npm login命令登录账号
-![](https://ws4.sinaimg.cn/large/006bYVyvly1fzy8hrpd4dj30i6051glo.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzy8hrpd4dj30i6051glo.jpg)
 
 ## 新建插件
 选择一个目录新建我们的插件文件夹（这里为hexo-tag-bili）。
 cd到目录下，运行npm init初始化
-![](https://wx3.sinaimg.cn/large/006bYVyvly1fzy3bdxo55j30h70acdg4.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzy3bdxo55j30h70acdg4.jpg)
 这里解释下上图参数的意思：（直接打回车即空白的部分，表示默认用前面括号中的内容）
 
  - name 项目名称
@@ -38,7 +38,7 @@ cd到目录下，运行npm init初始化
  - author 作者
  - license 项目要发行的时候需要的证书，平时玩玩忽略它
 
-![](https://wx1.sinaimg.cn/large/006bYVyvly1fzy3buus2ij30fw0d8dg3.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzy3buus2ij30fw0d8dg3.jpg)
 
 ## 编写插件
 

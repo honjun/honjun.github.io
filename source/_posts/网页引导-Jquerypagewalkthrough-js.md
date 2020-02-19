@@ -1,6 +1,6 @@
 title: 网页引导-Jquerypagewalkthrough.js
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-09-06 23:23:16
@@ -12,7 +12,7 @@ keywords: jquerypagewalkthrough
 description: hojunBlog
 photos:
 ---
-效果预览![](https://wx2.sinaimg.cn/large/006bYVyvgy1fjei07ocr1g30z40j0wtk.gif)
+效果预览![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fjei07ocr1g30z40j0wtk.gif)
 碰见网页引导功能的需求，于是收到了Jquerypagewalkthrough.js这个插件，在[github](https://github.com/jwarby/jquery-pagewalkthrough)上下载到源码，英文渣很尴尬，找啊找啊找。终于找到篇中文的[博客教程：来源helloweba.com 作者：月光光](https://www.helloweba.com/view-blog-286.html)
 ## **第一步 在需要引导的页面head部分加入css和js**
 ```html

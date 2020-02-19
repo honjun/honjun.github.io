@@ -1,6 +1,6 @@
 title: Hexo博客中加入Bili标签插件添加视频
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -11,7 +11,7 @@ series:
 tags: hexo
 keywords:
 description: 这篇文章是上篇文章《Hexo博客中加入B站视频播放器》的第二种实现过程，使用新增hexo标签的形式来添加B站视频。使用起来更方便~
-photos: https://wx1.sinaimg.cn/small/006bYVyvly1fzmnxxs8wwj30dq0bvabr.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzmnxxs8wwj30dq0bvabr.jpg
 ---
 这篇文章是上篇文章《Hexo博客中加入B站视频播放器》的第二种实现过程，使用新增hexo标签的形式来添加B站视频。使用起来更方便~
 
@@ -61,7 +61,7 @@ hexo.extend.tag.register('youtube', function(args){
 
 位置在`博客目录\node_modules\hexo\lib\plugins\tag\`下。
 先看下index.js内容如下:
-![](https://wx4.sinaimg.cn/large/006bYVyvly1fzsfvpxiplj30ji0gujtc.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fzsfvpxiplj30ji0gujtc.jpg)
 我们学着youtube在后面加个bilibili
 ```js
 tag.register('bili', require('./bili'));

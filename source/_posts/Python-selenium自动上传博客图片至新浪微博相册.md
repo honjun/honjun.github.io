@@ -1,6 +1,6 @@
 title: Python+selenium自动上传博客图片至新浪微博相册
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-02-12 20:57:04
@@ -14,7 +14,7 @@ photos:
 ---
 ## **Why?**
 写博客的时候每次使用图片都得先上传到新浪微博，然后在得到链接插入到markdown中。这样操作多来几次就受不了，于是就使用python+selenium自动上传博客图片。
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fodyhqpzlwg311y0lce81.gif)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fodyhqpzlwg311y0lce81.gif)
 ## **第一步 安装环境**
 Python3
 [python3百度云](https://pan.baidu.com/s/1eSZYGT0)
@@ -64,13 +64,13 @@ pip install selenium
 ## **第二步 获取XPath**
 首先打开登录页面，得到需要的账号、密码、登录的XPath(按F12打开开发者工具)
 得到账号的XPath如下图(其他同理,注意是input标签哦)：
-![](http://wx3.sinaimg.cn/large/006bYVyvgy1fojdfv7wkpj30zg0i947b.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fojdfv7wkpj30zg0i947b.jpg)
 得到上传照片按钮的XPath
-![](http://wx2.sinaimg.cn/large/006bYVyvgy1fojdfrctosj30zk0fvtbf.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fojdfrctosj30zk0fvtbf.jpg)
 得到普通上传的XPath
-![](http://wx3.sinaimg.cn/large/006bYVyvgy1fojdfniefuj30z00g3aby.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fojdfniefuj30z00g3aby.jpg)
 得到选择图片的Xpath
-![](http://wx4.sinaimg.cn/large/006bYVyvgy1fojdfjtq1yj30z00gpwgu.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fojdfjtq1yj30z00gpwgu.jpg)
 以下省略1000字......
 
 ## **第三步 撸代码调试**

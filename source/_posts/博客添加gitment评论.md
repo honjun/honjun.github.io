@@ -1,6 +1,6 @@
 title: 博客添加gitment评论
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -14,14 +14,14 @@ description:
 photos:
 ---
 说起gitment全是泪啊~~~多说6月1号说拜拜，刚7月三号的时候换了网易云跟帖，今天早上就收到个坏消息：
-![006bYVyvgy1fhf69hzfxej30ip09lmxs.jpg](https://wx4.sinaimg.cn/large/006bYVyvgy1fhf69hzfxej30ip09lmxs.jpg)
+![006bYVyvgy1fhf69hzfxej30ip09lmxs.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fhf69hzfxej30ip09lmxs.jpg)
 好吧，我再换
 参考[gitment](https://github.com/imsun/gitment)作者博客说明：https://imsun.net/posts/gitment-introduction/
 
 ## **概括下使用说明 就两步就行 超简单**
 ### **1. 注册github OAuth Application**
 在头像->setting下面
-![006bYVyvgy1fhf7a6r8ykj30jy0lcac0.jpg](https://wx3.sinaimg.cn/large/006bYVyvgy1fhf7a6r8ykj30jy0lcac0.jpg)
+![006bYVyvgy1fhf7a6r8ykj30jy0lcac0.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fhf7a6r8ykj30jy0lcac0.jpg)
 得到owner、client_id、client_secret
 <font color="red">注意填写：</font>若是绑定个人域名就不能使用yourname.github.io作为Homepage URL和Authorization callback URL。gitment会报Error: Comments Not Initialized错误
 ### **2. 引入 Gitment**

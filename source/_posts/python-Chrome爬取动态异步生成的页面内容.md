@@ -1,6 +1,6 @@
 title: python+Chrome爬取动态异步生成的页面内容
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-04-04 19:41:20
@@ -11,7 +11,7 @@ tags:
 keywords: 爬取动态异步生成的页面内容
 description: 
 photos:
- - https://wx3.sinaimg.cn/large/006bYVyvgy1fpzqclxph8j30cs0770sv.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpzqclxph8j30cs0770sv.jpg
 ---
 背景需求，发送一个中文，返回拼音+声调。
 
@@ -22,11 +22,11 @@ photos:
 百度一下“python汉字转拼音+声调”，找到一篇“Python: 汉字转拼音（带声调）”的文章。哈哈，按照功能实现需求了。咳咳，有些跑题。为了贴近标题，提供解决之道二。
 ## **解决之道二**
 百度一下某个汉字，比如“我”，打开百度汉字，如图：
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fq0v93g70oj30n00eut9g.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq0v93g70oj30n00eut9g.jpg)
 发现会有很多资源，拼音、部首、笔画、五行、基本释义等等。
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fpzqclxph8j30cs0770sv.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpzqclxph8j30cs0770sv.jpg)
 准备用python爬。直接用urllib.request爬取，发现得到的刚好没有这些资源，怎么回事？
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg)
 在浏览器下发现有这么一串js
 ```js
  <script>window.basicInfo = {"name":"\u6211","type":"wo、rd","radical":null,"strokes":"7","definition":"w\u01d2#wo3#\u81ea\u79f0\uff0c\u81ea\u5df1\uff0c\u4ea6\u6307\u81ea\u5df1\u4e00\u65b9\uff1a\uff5e\u4eec\u3002\uff5e\u89c1\uff08\u6211\u81ea\u5df1\u7684\u770b\u6cd5\uff09\u3002\uff5e\u8f88\u3002\uff5e\u4faa\uff08\u6211\u4eec\uff09\u3002\u81ea\uff5e\u3002\uff5e\u76c8\u5f7c\u7aed\u3002"};</script>
@@ -37,7 +37,7 @@ photos:
  ```
  说明对应的这些内容是由js动态生成的。
  我们需要能爬到动态的内容，可以使用selenium+chrome得到。
- ![](https://wx3.sinaimg.cn/large/006bYVyvgy1fq0uvkbjosj30fb08caa0.jpg)
+ ![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq0uvkbjosj30fb08caa0.jpg)
  为什么不用PhantomJS？
 
  - 一、PhantomJS暂停开发

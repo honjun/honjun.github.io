@@ -1,6 +1,6 @@
 title: python操作word
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-04-18 23:45:53
@@ -11,7 +11,7 @@ tags:
 keywords: python操作word
 description: python操作word
 photos:
- - https://wx3.sinaimg.cn/large/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg
 ---
 python操作word我们需要用到python-docx这个库。
 
@@ -66,7 +66,7 @@ document.add_page_break()
 document.save('demo.docx')
 ```
 效果如下：
-![](http://wx4.sinaimg.cn/large/006bYVyvgy1fqh8nol6fmj30af0fnmyz.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fqh8nol6fmj30af0fnmyz.jpg)
 
 看了上面的官方demo就能直接上手使用了。
 不过我建议自己可以按需封装一下方法

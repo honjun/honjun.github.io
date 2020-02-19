@@ -1,6 +1,6 @@
 title: 每天一道LeetCode算法题-无重复字符的最长子串
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -13,9 +13,9 @@ tags:
  - LeetCode
 keywords: 算法
 description: LeetCode算法题-无重复字符的最长子串
-photos: https://ws3.sinaimg.cn/small/006bYVyvly1g1ai8cmtaej305e05adfu.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai8cmtaej305e05adfu.jpg
 ---
-![](https://ws4.sinaimg.cn/large/006bYVyvly1g1ai70salhj30gy076gm8.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai70salhj30gy076gm8.jpg)
 DuangDuangDuang，每日一道LeetCode，今天是第三天，可惜博客没时间写了。明天再补上。
 
 ## 今日份题目
@@ -70,7 +70,7 @@ var lengthOfLongestSubstring = function(s) {
 };
 ```
 经验告诉我们第一次提交大概率是通不过的：
-![image](https://ws3.sinaimg.cn/mw690/006bYVyvly1g1gfu4byrzj30af058t8j.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1gfu4byrzj30af058t8j.jpg)
 提交一阵亡
 
 好吧，要判断下输入参数的长度，在第三行加了句代码如下：
@@ -78,7 +78,7 @@ var lengthOfLongestSubstring = function(s) {
 if (len <= 1) return len;
 ```
 等于0或1都直接返回长度就行。
-![image](https://ws2.sinaimg.cn/mw690/006bYVyvly1g1gfytbw3uj30c905xjr8.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1gfytbw3uj30c905xjr8.jpg)
 提交二阵亡，很奇怪，为啥au会返回0？因为maxChildStr[i].indexOf(s.charAt(j)) == -1这个判断一直成立，所以max没有赋值到。于是debug代码如下
 ```js
 var lengthOfLongestSubstring = function(s) {

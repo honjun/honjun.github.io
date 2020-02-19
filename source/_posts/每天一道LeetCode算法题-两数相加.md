@@ -1,6 +1,6 @@
 title: 每天一道LeetCode算法题-两数相加
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -13,9 +13,9 @@ tags:
  - LeetCode
 keywords: 算法
 description: LeetCode算法题-两数相加
-photos: https://ws3.sinaimg.cn/small/006bYVyvly1g1ai8cmtaej305e05adfu.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai8cmtaej305e05adfu.jpg
 ---
-![](https://ws4.sinaimg.cn/large/006bYVyvly1g1ai70salhj30gy076gm8.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai70salhj30gy076gm8.jpg)
 DuangDuangDuang，每日刷LeetCode！
 
 ## 题目描述
@@ -93,11 +93,11 @@ var showListNode = function (listNode) {
 }
 ```
 提交后发现：
-![image](https://wx2.sinaimg.cn/mw690/006bYVyvly1g1bwkcqaqwj30fy06ajr9.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1bwkcqaqwj30fy06ajr9.jpg)
 提交一阵亡，好吧，debug之后是等于10的时候没判断到，while (sum > 10) 要改成 while (sum >= 10) 
 
 继续提交：
-![image](https://wx4.sinaimg.cn/mw690/006bYVyvly1g1bwnd9mzsj30li070dfw.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1bwnd9mzsj30li070dfw.jpg)
 提交二阵亡，好吧，大数溢出了。看样子这个解题思路行不通2333333~
 
 ## 官方题解

@@ -1,6 +1,6 @@
 title: snowfall.jquery.js实现樱花飘落效果
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -13,9 +13,9 @@ keywords:
  - 樱花
 description:
 photos:
- - https://wx2.sinaimg.cn/large/006bYVyvgy1fnbxdi3kr7g30dw07o7ou.gif
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fnbxdi3kr7g30dw07o7ou.gif
 ---
-<img src="https://wx3.sinaimg.cn/large/006bYVyvgy1fne9cxz06lj30ez0rsq3q.jpg">
+<img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fne9cxz06lj30ez0rsq3q.jpg">
 ----------
 前几天圣诞节玩了把雪花飘落的jquery插件
 结果一不小心又想搞个樱花飘落效果。。。不幸晚睡————猝

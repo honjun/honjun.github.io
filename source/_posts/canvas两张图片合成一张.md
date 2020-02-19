@@ -1,6 +1,6 @@
 title: canvas两张图片合成一张
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-07 10:48:51
@@ -13,10 +13,10 @@ tags:
 keywords: 两张图片合成一张
 description: 两张图片合成一张
 photos:
- - https://wx4.sinaimg.cn/small/006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg
 ---
 碰见一个需求，把一张图片和用户的二维码图片合成一张
-![006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg](https://wx3.sinaimg.cn/large/006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg)
+![006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fh9c8kz38cj30dz09owl9.jpg)
 参考[w3cshool](http://www.w3school.com.cn/tags/canvas_drawimage.asp)和一些资料实现需求
 demo.html
 ```js

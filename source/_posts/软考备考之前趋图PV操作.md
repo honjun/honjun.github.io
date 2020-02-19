@@ -1,6 +1,6 @@
 title: 软考备考之前趋图PV操作
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-05-30 12:55:31
@@ -25,7 +25,7 @@ V（S）：①将信号量S的值加1，即S=S+1；
 
 例：看一道我们在软考中经常遇到的题，每次都束手无策的那道。
 
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fre3kkgn7cj30kb0b6acl.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fre3kkgn7cj30kb0b6acl.jpg)
 
 P操作，我们可以看作是获得或者请求、消耗一个信号量。
 

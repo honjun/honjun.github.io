@@ -1,6 +1,6 @@
 title: tesseract-OCR字库练习
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-01-24 16:18:47
@@ -51,7 +51,7 @@ tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmod
 
 ## **第三步：jTessBoxEditor训练字库**
 之前玩冲顶大会的时候用过tesseract-OCR识别中文，可惜准确率很不理想，如下图：
-![](https://wx1.sinaimg.cn/large/006bYVyvgy1fnrqt1ubg2j312w06et8j.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fnrqt1ubg2j312w06et8j.jpg)
 使用tesseract-OCR识别会得到
 ```cmd
 tesseract question.jpg result -l chi_sim --psm 6
@@ -80,14 +80,14 @@ Tesseract Open Source OCR Engine v3.05.01 with Leptonica
 Page 1
 ```
 会得到hojun.normal.exp0.box文件，右键使用记事本打开效果如下图
-![](https://wx3.sinaimg.cn/large/006bYVyvly1fns08l26xuj30b40b0q30.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns08l26xuj30b40b0q30.jpg)
 
 打开jTessBoxEditor目录，双击train.bat打开(可能要等待5-6秒，耐心等待程序响应)
-![](https://wx4.sinaimg.cn/large/006bYVyvly1fns0dowm5ej30hf098q3l.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns0dowm5ej30hf098q3l.jpg)
 打开软件后点击Box Editor->Open->选择对应的tif文件打开
-![](https://wx4.sinaimg.cn/large/006bYVyvly1fns0mmqis3j30kt0e33z5.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns0mmqis3j30kt0e33z5.jpg)
 得到如下效果
-![](https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg)
 如果右边字体没有框框，左边没有内容是因为java8没安装好，或者安装了两个java版本，使用的是其他java版本
 可以在控制台输入
 ```cmd
@@ -98,7 +98,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 ```
 来查看java版本。如果使用其他版本的，一般在环境变量Path里面把java8的路径写在最前面就行。
 接下来就是调整了。删删改改如下：
-![](https://wx1.sinaimg.cn/large/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns2t4h9hcj30zr0btdh0.jpg)
 然后点击save保存即可。
 接着在E:\TessBox\下新建一个font_properties文件，注意没有后缀
 里面内容写入normal 0 0 0 0 0 表示默认普通字体
@@ -129,14 +129,14 @@ echo. & pause
 保存，修改文件名为Train.bat。(为了偷懒，你也可以在命令里一句一句命令的敲)
 双击批处理文件生成！
 成功结果如下
-![](https://wx4.sinaimg.cn/large/006bYVyvly1fns1yedn1sj30e108udfy.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns1yedn1sj30e108udfy.jpg)
 把hojun.traineddata复制到C:\Program Files (x86)\Tesseract-OCR\tessdata下
 试着识别
 ```cmd
 tesseract hojun.normal.exp0.jpg result -l hojun --psm 6
 ```
 得到正确的结果
-![](https://wx4.sinaimg.cn/large/006bYVyvly1fns2xz091pj30iu030q2t.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fns2xz091pj30iu030q2t.jpg)
 
 ----------
 

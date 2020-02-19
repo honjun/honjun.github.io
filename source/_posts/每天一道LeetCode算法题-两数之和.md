@@ -1,6 +1,6 @@
 title: 每天一道LeetCode算法题-两数之和
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -13,9 +13,9 @@ tags:
  - LeetCode
 keywords: 算法
 description: LeetCode算法题-两数之和
-photos: https://ws3.sinaimg.cn/small/006bYVyvly1g1ai8cmtaej305e05adfu.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai8cmtaej305e05adfu.jpg
 ---
-![](https://ws4.sinaimg.cn/large/006bYVyvly1g1ai70salhj30gy076gm8.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ai70salhj30gy076gm8.jpg)
 ## 前言
 这是博主在LeetCode上刷的第一道题。说来惭愧，算法书看了不止一本，但是看书的时候书里的练习都没有怎么思考，直接看的参考答案，导致了对算法的研究仅仅停留在了解这种程度，缺乏实战所以在平时coding中也不会将算法知识代入使用。于是开始了LeetCode刷题之旅~
 
@@ -101,7 +101,7 @@ var twoSum = function(nums, target) {
 这里我们构建的map把数组的下标和值换个位置，这样我们可以直接用map.has(key)方法来快速查找是否有需要的值。所以第一个循环的时候使用的语句是numsMap.set(nums[i], i)。
 
 接着注意第二个循环，自己思考的时候，第二个循环直接拿来循环map，然后提交给报错了，尴尬。
-![](https://wx1.sinaimg.cn/large/006bYVyvly1g1agixgr19j309r05u745.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1agixgr19j309r05u745.jpg)
 提交一阵亡！
 我们代入这个例子可以看出，我们这里不应该用value\*2，而应该使用key\*2。修改后提交：
 ```js
@@ -111,7 +111,7 @@ for (var [key, value] of numMap) {
   }
 }
 ```
-![](https://ws3.sinaimg.cn/large/006bYVyvly1g1agn5jdpej3092065745.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1agn5jdpej3092065745.jpg)
 提交二阵亡！
 咳咳，不是说好不能重复，好吧，是解题重复使用，输入随便重复几次。因为map的key如果重复设置的话是会覆盖掉的，只保留最后一次的值，也不会记录之前的值。于是偷瞄下答案。哦~第二个循环还是循环的nums，这样子我们就能比较nums的下标i和map的值value是否相等来判断是不是同一个下标使用了两次，如果不相等说明是对的解。判断的代码就是这句numsMap.get(complement) != i
 ```js

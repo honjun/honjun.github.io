@@ -1,0 +1,510 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Microsoft YaHei';
+      }
+      .root{
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+      }    
+      .header {
+        width: 100%;
+        flex: 1;
+        /*background-color: #39c;*/
+      }
+      .container {
+        width: 100%;
+        flex: 60;
+        box-sizing: border-box;
+      }
+      .pinyin {
+        position: relative;
+        margin: 0 auto;
+        width: 1000px;
+        height: 300px;
+        text-align: center;
+        font-size: 200px;
+        letter-spacing:100px;
+        -webkit-animation-name: fadeIn;
+        -webkit-animation-duration: .3s;
+        -webkit-animation-delay: 0s;
+      }
+      .footer {
+        position: fixed;
+        width: 100%;
+        height: 200px;
+        bottom: 0;
+        /*background-color: #f00;*/
+      }
+      .lowerChar, .upperChar{
+        display: inline-block;
+        letter-spacing:5px;
+      }
+      .lowerChar + .upperChar{
+        margin-left: 50px;
+      }
+      .menu {
+        display: inline-block;
+        float: left;
+        width: 90px;
+        height: 90px;
+        margin-left: 10px;
+        font-size: 60px;
+        font-weight: 700;
+        color: #bcc2c6;
+        line-height: 90px;
+        text-align: center;
+        vertical-align: middle;
+        border: 5px solid #bcc2c6;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      .active {
+        color: #03A9F4;
+        border: 5px solid #03A9F4;
+      }
+      .button_play {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        background-image: url('./play.jpg');
+        background-size: 100%;
+      }
+      .button_pause {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        background-image: url('./pause.jpg');
+        background-size: 100%;
+      }
+      .sound {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        margin-right: 10px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        background-image: url('./on_sound.jpg');
+        background-size: 100% 100%;
+      }
+      .fayin {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-image: url('./speaker.jpg');
+        background-size: 100% 100%;
+      }
+      .off {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray;
+      }
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0; /*初始状态 透明度为0*/
+        }
+        50% {
+          opacity: 0.5; /*中间状态 透明度为0*/
+        }
+        100% {
+          opacity: 1; /*结尾状态 透明度为1*/
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sound"></div>
+    <div class="root">
+      <div class="header"><textarea name="" id="text" cols="30" rows="10"></textarea></div>
+      <div class="container">
+        <div class="pinyin">
+          
+        </div>
+      </div>
+      <div class="footer">
+        <div id="player" class="button_pause"></div>
+        <div class="menu con all">全</div>
+        <div class="menu con single">单</div>
+        <div class="menu con multiple">多</div>
+        <div class="menu con typing">字</div>
+        <div class="menu mode sequen">顺</div>
+        <div class="menu mode random">乱</div>
+        <div class="menu mode freedom">自</div>
+        <div class="menu help">辅</div>
+      </div>
+    </div>
+    <div class="sounds"></div>
+  </body>
+  <script src="./jquery.min.js"></script>
+  <script>
+    var Util = (function() {
+      var prefix = 'study_config_';
+      var StorageGetter = function(key){
+        return localStorage.getItem(prefix + key);
+      }
+      var StorageSetter = function(key, value){
+        return localStorage.setItem(prefix + key, value)
+      }
+      return {
+        StorageGetter:StorageGetter,
+        StorageSetter:StorageSetter
+      }
+    })();
+    const ON = 1;
+    const OFF = 0;
+    let lastNum = 0;
+    let random = 0;
+    let sequen = 0;
+    let index = 0; //打字进度
+    let mode = 1; //0随机 1顺序
+    let sound = ON; //OFF关闭 ON开启
+    let freedom = OFF;
+    let help = OFF;
+    let timer = null;
+    let audio = null;
+    let $player = $('#player');
+    let $all = $('.all');
+    let $single = $('.single');
+    let $multiple = $('.multiple');
+    let $sequen = $('.sequen');
+    let $typing = $('.typing');
+    let $random = $('.random');
+    let $freedom = $('.freedom');
+    let $sound = $('.sound');
+    let sounds = $('.sounds');
+    let $con = $('.con');
+    let $mode = $('.mode');
+    let $help = $('.help');
+    let single = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; //26
+    let multiple = ["ai", "an", "ang", "ao", "ci", "chi", "ei", "en", "eng", "er", "ian", "ie", "in", "ing", "iu", "ong", "ou", "si", "shi", "ue", "ui", "un", "vn", "wu", "yan", "ye", "yi", "yin", "ying", "yu", "yuan", "yue", "yun", "zi", "zhi"]  //35
+    let assist = ["艾", "安", "肮", "奥", "次", "吃", "诶", "恩", "恩", "二", "淹", "叶", "因", "英", "优", "ong", "欧", "四", "事", "约", "微", "温", "晕", "屋", "烟", "叶", "衣", "因", "英", "雨", "渊", "", "晕", "自", "只"]
+    let all = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','ai','an','ang','ao','ci','chi','ei','en','eng','er','ian','ie','in','ing','iu','ong','ou','si','shi','ue','ui','un','vn','wu','yan','ye','yi','yin','ying','yu','yuan','yue','yun','zi','zhi'];
+    let useArr = all;
+    let typing = [];
+    function init() {
+      $.ajax({
+        type: "GET",
+        url: "commonPinyin.json",
+        dataType: "json",
+        async: false,
+　　　　success: function(data){
+            typing = data.data;
+        }
+      });
+      sounds = $('.sounds');
+      let length = all.length;
+      for (let i = 0; i < length; i++) {
+        sounds.append('<audio src="./sounds/' + all[i] + '.mp3" id="' + all[i] + '" preload="auto" style="display:none;"></audio>')
+      }
+      if (Util.StorageGetter('mode') === '0') {
+        mode = 0;
+        $mode.removeClass('active');
+        $random.addClass('active');
+      }
+      if (Util.StorageGetter('mode') === '1') {
+        mode = 1;
+        $mode.removeClass('active');
+        $sequen.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'all') {
+        useArr = all;
+        $con.removeClass('active');
+        $all.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'single') {
+        useArr = single;
+        $con.removeClass('active');
+        $single.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'multiple') {
+        useArr = multiple;
+        $con.removeClass('active');
+        $multiple.addClass('active');
+      }
+      if (Util.StorageGetter('useArr') === 'typing') {
+        useArr = typing;
+        $con.removeClass('active');
+        $typing.addClass('active');
+      }
+      if (Util.StorageGetter('freedom') === 'on') {
+        freedom = ON;
+        $freedom.addClass('active');
+        $con.removeClass('active');
+        $mode.removeClass('active');
+      }
+      if (Util.StorageGetter('help') === 'on') {
+        help = ON;
+        $help.addClass('active');
+      }
+      if (Util.StorageGetter('sound') === 'off') {
+        sound = OFF;
+        $sound.addClass('off');
+      }
+    }
+    init();
+  </script>
+  <script>
+    $(function() {
+      let $pinyin = $('.pinyin');
+      create();
+      function getRandom(n) {
+        return Math.floor(Math.random()*n)
+      }
+      $('#player').click(function() {
+        $(this).toggleClass('button_play')
+        $(this).toggleClass('button_pause')
+        if ($(this).hasClass('button_play')) {
+          timer = window.setInterval(create, 5000);
+          timer;
+        } else {
+          window.clearInterval(timer);
+        }
+      });
+      $sound.click(function() {
+        $(this).toggleClass('off');
+        if ($(this).hasClass('off')) {
+          sound = OFF;
+          Util.StorageSetter('sound', 'off');
+        } else {
+          sound = ON;
+          Util.StorageSetter('sound', 'on');
+          if (Util.StorageGetter('useArr') === 'typing') {
+            let temp = useArr[random].split("|");
+            let src = 'https://appcdn.fanyi.baidu.com/zhdict/mp3/' + temp[1] + temp[2] + '.mp3';
+            let id = 'typing' + random;
+            if (!document.getElementById(id)) {
+              sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            }
+            audio = document.getElementById(id);
+            audio.play();
+          } else {
+            audio = document.getElementById(useArr[random]);
+            audio.play();
+          }
+        }
+      })
+      $('body').on('click', '.fayin', function(){
+        if (Util.StorageGetter('useArr') === 'typing') {
+          let id = 'typing' + random;
+          audio = document.getElementById(id);
+          audio.play();
+        } else {
+          audio = document.getElementById(useArr[random]);
+          audio.play();
+        }
+      })
+      function create() {
+        let useArrLength = useArr.length;
+        $pinyin.html('');
+        let lowerChar = '';
+        let upperChar = '';
+        let useArrName = Util.StorageGetter('useArr');
+        let tone = 0;
+        let useLength = 0
+        let tempTyping = [];
+        if (mode === 0) {
+          random = getRandom(useArrLength);
+          while (random === lastNum) {
+            random = getRandom(useArrLength);
+          }
+          lastNum = random;
+        } else {
+          sequen = sequen % useArrLength + 1;
+          random = sequen - 1;
+        }
+
+        if (useArrName === 'typing') {
+          tempTyping = useArr[random].split("|");
+          useLength = tempTyping[1].length;
+          tone = tempTyping[2];
+          for (let i = 0; i < useLength; i++) {
+            lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + tempTyping[1].charAt(i) + '</div>';
+            upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + tempTyping[1].charAt(i).toUpperCase() + '</div>';
+          }
+          upperChar += '<div class="zh">' + tempTyping[0] + '</div><div class="fayin"><div>';
+          $pinyin.css('font-size', '100px');
+        } else {
+          useLength = useArr[random].length;
+          for (let i = 0; i < useLength; i++) {
+            lowerChar += '<div class="lowerChar" id="lowerChar' + i + '">' + useArr[random].charAt(i) + '</div>';
+            upperChar += '<div class="UpperChar" id="upperChar' + i + '">' + useArr[random].charAt(i).toUpperCase() + '</div>';
+          }
+          $pinyin.css('font-size', '200px');
+        }
+        let str = lowerChar + upperChar;
+        if (useArrName === 'multiple' && help === ON) {
+          str += '<br>' + assist[random];
+        }
+        $pinyin.append(str);
+        if (sound === ON) {
+          if (useArrName === 'typing') {
+            let src = 'https://appcdn.fanyi.baidu.com/zhdict/mp3/' + tempTyping[1] + tempTyping[2] + '.mp3';
+            let id = 'typing' + random;
+            if (!document.getElementById(id)) {
+              sounds.append('<audio src="' + src + '" id="' + id + '" preload="auto" style="display:none;"></audio>')
+            }
+            audio = document.getElementById(id);
+            audio.play();
+          } else {
+            audio = document.getElementById(useArr[random]);
+            audio.play();
+          }
+        }
+      }
+      $(document).keyup(function(event) {
+        let str = $('#text').val();
+        let lastChar = str.charAt(str.length - 1);
+        let zh = $('.zh').html();
+        if(zh === lastChar) create();
+        // if (event.keyCode < 65 || event.keyCode > 91) return;
+        let code = single[event.keyCode - 65];
+        if (freedom === ON) {
+          $pinyin.html('');
+          let lowerChar = '';
+          let upperChar = '';
+          lowerChar += '<div class="lowerChar" id="lowerChar0">' + code + '</div>';
+          upperChar += '<div class="UpperChar" id="upperChar0">' + code.toUpperCase() + '</div>';
+          let str = lowerChar + upperChar;
+          $pinyin.append(str);
+          if (sound === ON) {
+            audio = document.getElementById(code);
+            audio.play();
+          }
+        } else {
+          let useLength = 0;
+          let pinyin = useArr[random];
+          if (Util.StorageGetter('useArr') === 'typing') {
+            let temp = useArr[random].split("|");
+            pinyin = temp[1];
+            useLength = pinyin.length;
+          } else {
+            useLength = pinyin.length;
+          }
+          if (useLength > 1) {
+            if (code === pinyin.charAt(index)) {
+              $('#lowerChar' + index).css('color','#69a621');
+              $('#upperChar' + index).css('color','#69a621');
+              if (++index === useLength) {
+                index = 0;
+                create();
+              }
+            } else {
+              $('#lowerChar' + index).css('color','#ff0000');
+              $('#upperChar' + index).css('color','#ff0000');
+            }
+          } else if (code === pinyin) {
+            create();
+          } else {
+            $('#lowerChar' + index).css('color','#ff0000');
+            $('#upperChar' + index).css('color','#ff0000');
+          }
+        }
+      });
+      function restart() {
+        lastNum = 0;
+        random = 0;
+        sequen = 0;
+        index = 0;
+        if (Util.StorageGetter('useArr') === 'all') {
+          $con.removeClass('active');
+          $all.addClass('active');
+        }
+        if (Util.StorageGetter('useArr') === 'single') {
+          $con.removeClass('active');
+          $single.addClass('active');
+        }
+        if (Util.StorageGetter('useArr') === 'multiple') {
+          $con.removeClass('active');
+          $multiple.addClass('active');
+        }
+        if (Util.StorageGetter('useArr') === 'typing') {
+          $con.removeClass('active');
+          $typing.addClass('active');
+        }
+        if (mode === 1) {
+          $mode.removeClass('active');
+          $sequen.addClass('active');
+        } else {
+          $mode.removeClass('active');
+          $random.addClass('active');
+        }
+        freedom = OFF;
+        $freedom.removeClass('active');
+        Util.StorageSetter('freedom','off');
+        $player.addClass('button_pause');
+        $player.removeClass('button_play');
+        window.clearInterval(timer);
+        create()
+      }
+      $all.click(function() {
+        useArr = all;
+        Util.StorageSetter('useArr','all');
+        restart();
+      });
+      $single.click(function() {
+        useArr = single;
+        Util.StorageSetter('useArr','single');
+        restart();
+      });
+      $multiple.click(function() {
+        useArr = multiple;
+        Util.StorageSetter('useArr','multiple');
+        restart();
+      });
+      $typing.click(function() {
+        useArr = typing;
+        Util.StorageSetter('useArr','typing');
+        restart();
+      });
+      $help.click(function() {
+        if (help === ON) {
+          Util.StorageSetter('help','off');
+          help = OFF;
+          $help.removeClass('active')
+        } else {
+          Util.StorageSetter('help','on');
+          help = ON;
+          $help.addClass('active')
+        }
+      })
+      $sequen.click(function() {
+        mode = 1;
+        Util.StorageSetter('mode','1');
+        restart();
+      });
+      $random.click(function() {
+        mode = 0;
+        Util.StorageSetter('mode','0');
+        restart();
+      });
+      $freedom.click(function() {
+        freedom = ON;
+        Util.StorageSetter('freedom','on');
+        $con.removeClass('active');
+        $mode.removeClass('active');
+        $freedom.addClass('active');
+        $player.addClass('button_pause');
+        $player.removeClass('button_play');
+        window.clearInterval(timer);
+      })
+    })
+  </script>
+</html>

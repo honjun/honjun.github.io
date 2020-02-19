@@ -1,6 +1,6 @@
 title: Github
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-03-24 21:00:24
@@ -11,7 +11,7 @@ tags:
 keywords: github
 description: github日常使用
 photos:
- - https://wx3.sinaimg.cn/large/006bYVyvgy1fpqj9by1tsj308w08wgln.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpqj9by1tsj308w08wgln.jpg
 ---
 ## 本地仓库推送至github
 git init

@@ -1,6 +1,6 @@
 title: 解决动态ajax/pjax加载mathjax不生效问题
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -11,10 +11,10 @@ series:
 tags:
 keywords: mathjax
 description: 解决动态ajax/pjax加载mathjax不生效问题
-photos: https://wx1.sinaimg.cn/small/006bYVyvly1g0effcj83fj311j0lcgnu.jpg
+photos: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g0effcj83fj311j0lcgnu.jpg
 ---
 ## Mathjax
-![](https://wx1.sinaimg.cn/large/006bYVyvly1g0effcj83fj311j0lcgnu.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g0effcj83fj311j0lcgnu.jpg)
 如图所见，适用于网页上的显示数学公式的JavaScript库。对浏览器的支持比较全面，据说支持到IE6（这个就比较厉害哦）
 
 ## 使用教程
@@ -39,7 +39,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 </html>
 ```
 只要引入mathjax的js地址，配置config，就能自动识别文章中的数学公式写法。显示效果如下：
-![](https://wx4.sinaimg.cn/large/006bYVyvly1g0egfau5juj30i9036gln.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g0egfau5juj30i9036gln.jpg)
 
 ## 发现问题
 
@@ -65,9 +65,9 @@ $(document).pjax('a[target!=_top]', '#page', {
 遇到问题，最好的方法就是去了解官方的文档，权威有效。（经验表明网上教程没官方靠谱，官方找不到再去互联网上寻求帮助，这对你以后解决问题的能力也是一种锻炼，毕竟不是遇到的所有问题都能在互联网上找到解决方案的）
 
 其中有项动态加载Mathjax,然而很遗憾，测试后发现不行（毕竟我上一步的修改的效果应该和文档这动态加载一致）
-![](https://wx1.sinaimg.cn/large/006bYVyvly1g0egyhkwv4j30xj0ik42g.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g0egyhkwv4j30xj0ik42g.jpg)
 后来锲而不舍的找到了MathJax.Hub.Typeset()这个方法，结合Queue方法就能实现（不要问我为啥是中文文档，谷歌翻译了解下）
-![](https://wx2.sinaimg.cn/large/006bYVyvly1g0eh6qwhlzj30v40lbwji.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g0eh6qwhlzj30v40lbwji.jpg)
 我的实现代码如下，仅供参考：
 ```js
 ....

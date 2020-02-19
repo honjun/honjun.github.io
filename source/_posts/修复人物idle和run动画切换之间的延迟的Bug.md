@@ -1,6 +1,6 @@
 title: 修复人物idle和run动画切换之间的延迟的Bug
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2017-06-16 23:47:38
@@ -12,9 +12,9 @@ tags:
 keywords: Unity修复人物idle和run动画切换之间的延迟的Bug
 description: Unity修复人物idle和run动画切换之间的延迟的Bug
 photos:
- - https://wx1.sinaimg.cn/mw690/006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg
 ---
-![006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg](https://wx1.sinaimg.cn/large/006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg)
+![006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fh9c7gerq0j30fe0753yk.jpg)
 **Bug描述：**在动画切换的时候，idle动画不能灵敏的反应按键切换成run动画。导致快速 **按下->释放** 按键时，人物表现为idle动画平移效果。
 
 ----------

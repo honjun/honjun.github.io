@@ -1,6 +1,6 @@
 title: 推荐一个js+canvas的烟花特效，快快分享朋友一起学起来~
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -14,7 +14,7 @@ description:
 photos:
 ---
 废话不多说，先看下效果：
-![image](https://ws4.sinaimg.cn/large/006bYVyvgy1fv08rz6fj6g30id0clu09.gif)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fv08rz6fj6g30id0clu09.gif)
 直接上代码：
 ```html
 <style type="text/css">

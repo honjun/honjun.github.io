@@ -10,7 +10,7 @@
         "@id": "https://www.hojun.com<%=url_for(page.path) %>",
         "appid": "1594654793276567",<% if (page.title){ %>
         "title": "<%= page.title %>",<% } else {%>"title": "hojun-好少年光芒万丈",
-        "images": ['https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],<% } %><% if (page.photos && page.photos.length){ %>
+        "images": ['https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'],<% } %><% if (page.photos && page.photos.length){ %>
         "images": ["<%= page.photos[0] %>"],<% } %>
         "pubDate": "<%= date(page.date, 'YYYY-MM-DDThh:mm:ss') %>"
     }
@@ -45,9 +45,8 @@
         SimpleCore.init({
             buildingTime: '<%= theme.siteBuildingTime %>',
             current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            // customImg: 'https://wx4.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
-            customImg: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-            tipImg: 'https://wx3.sinaimg.cn/large/006bYVyvgy1ftan8bwlp3j30by0byq3o.jpg',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
         });
         const observer = lozad();
         observer.observe();

@@ -1,6 +1,6 @@
 title: php本地虚拟域名配置和端口的一些折腾
 author: hojun
-avatar: 'https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
+avatar: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg'
 authorLink: /about/hojun.html
 authorDesc: 一个好奇的人
 categories: 技术
@@ -70,7 +70,7 @@ phpinfo();
 
 ### 第四步
 重启apache或wamp环境，打开浏览器输入hojun.test.com，得到如下页面，表示虚拟域名配置成功！
-![image](https://ws2.sinaimg.cn/large/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg)
 
 ## 非80端口情况
 上面几步是在80端口下的得情况，假设我们在的apache在8080端口，那么第一步的httpd.conf下的端口监听应该是这样的
@@ -106,7 +106,7 @@ Listen [::0]:8080
 127.0.0.1:8080       hojun.test.com
 ```
 结果虚拟域名不能访问。
-![image](https://wx3.sinaimg.cn/large/006bYVyvgy1fvbu8gwapfj30r00g2q3l.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbu8gwapfj30r00g2q3l.jpg)
 抱着好奇心又去弄了一个虚拟域名，一样的index.php，里头phpinfo。
 ```conf
 <VirtualHost *:8080>
@@ -125,8 +125,8 @@ Listen [::0]:8080
 127.0.0.1       hojun.at.com
 ```
 结果hojun.test.com和hojun.at.com都无法访问。
-![image](https://ws4.sinaimg.cn/large/006bYVyvgy1fvbu9bm699j30p50f50tc.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbu9bm699j30p50f50tc.jpg)
 尝试在浏览器上输入hojun.test.com:8080，无法访问。
 尝试在浏览器上输入hojun.at.com:8080，成功访问到了phpinfo。
-![image](https://ws2.sinaimg.cn/large/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg)
+![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fvbtipw9l7j30uy0e8762.jpg)
 好了，虽然还是有些地方感觉疑惑但是没去深究。不知道有没有不用加端口的形式就能访问的配置方法，知道的大佬可以留言指导下~

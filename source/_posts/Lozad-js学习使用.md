@@ -1,6 +1,6 @@
 title: Lozad.js学习使用
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 series: hexo折腾
@@ -13,7 +13,7 @@ tags:
 keywords: Lozad.js
 description: Lozad懒加载
 photos:
- - https://wx2.sinaimg.cn/mw690/006bYVyvgy1fljswcaig9j31700gewh3.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljswcaig9j31700gewh3.jpg
 ---
 ![image](http://upload-images.jianshu.io/upload_images/2597553-d44d71ea6b1672b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 github地址[lozad.js](https://github.com/ApoorvSaxena/lozad.js)
@@ -70,7 +70,7 @@ page.link|文章的外部链接（用于链接文章）
 ```md
 Add support for [Markdown]. This plugin uses [marked] as render engine.
 ```
-看来是找到了。查找发现真正的位置在![image](https://wx2.sinaimg.cn/large/006bYVyvgy1fljpj5cg8ej308f00p741.jpg)这里，`\node_modules\_marked@0.3.6@marked\lib\marked.js`在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得
+看来是找到了。查找发现真正的位置在![image](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fljpj5cg8ej308f00p741.jpg)这里，`\node_modules\_marked@0.3.6@marked\lib\marked.js`在这个js中解析的markdown,接下来就好办了，把对应解析图片那段代码添加class和data-src即可。修改好记得
 ```cmd
 hexo clean
 hexo g

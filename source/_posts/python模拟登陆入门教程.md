@@ -1,6 +1,6 @@
 title: python模拟登陆入门教程
 author: hojun
-avatar: https://wx1.sinaimg.cn/large/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
+avatar: https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg
 authorDesc: 一个好奇的人
 categories: 技术
 date: 2018-04-12 01:25:19
@@ -12,17 +12,17 @@ tags:
 keywords: python模拟登陆
 description: 找了一个不带验证码登陆的简单网站（图床001网）做python的模拟登陆入门教程：
 photos:
- - https://wx3.sinaimg.cn/large/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg
+ - https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpu48ng5ooj30k00boq2w.jpg
 ---
 找了一个不带验证码登陆的简单网站（图床001网）做python的模拟登陆入门教程：
 ### **第一步**
 首先打开浏览器，按F12打开开发人员工具 ，切换到network,勾选Preserve log和Disable cache。切换Application，右键clear网站cookie。
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fq988tzsscj30le07r0tu.jpg)
-![](https://wx4.sinaimg.cn/large/006bYVyvgy1fq988ottarj30jh084mxn.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq988tzsscj30le07r0tu.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq988ottarj30jh084mxn.jpg)
 然后人工登录一遍
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fq988jotjxj30m307uta3.jpg)
-![](https://wx3.sinaimg.cn/large/006bYVyvgy1fq988en0zxj30mt0e27cw.jpg)
-![](https://wx2.sinaimg.cn/large/006bYVyvgy1fq9889k96hj30jz0jstd5.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq988jotjxj30m307uta3.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq988en0zxj30mt0e27cw.jpg)
+![](https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fq9889k96hj30jz0jstd5.jpg)
 ### **第二步**
 分析每个步骤,可以得出2点重要信息
 
