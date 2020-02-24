@@ -1,0 +1,1033 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://www.hojun.cn/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2018/03/14/ck70kpcur004kb0tu44gts2xl/"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://www.hojun.cn">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+
+
+<title>anime.js实现logo动画 - hojun</title>
+
+<meta name="keywords" content="anime.js">
+
+<meta name="description " content="实现自己的logo动画~">
+<meta name="baidu-site-verification" content="0hxFvBRyRY" />
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2018/03/14/ck70kpcur004kb0tu44gts2xl/",
+        "appid": "1594654793276567",
+        "title": "anime.js实现logo动画",
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct2gy98rj30ez09ojrf.jpg"],
+        "pubDate": "2018-03-14T08:34:51"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <a href="/2018/08/06/好少年光芒万丈/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a>
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-03-14">2018-03-14</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">anime.js实现logo动画</h2>
+            <div class="post-meta">
+                本文总共1767个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            
+<link rel="stylesheet" href="/css/hojunlogo.css" />
+<div id="logoAmine">
+  <canvas class="fireworks"></canvas>
+  <section id="lineDrawing">
+    <svg class="logo" width="25rem" height="25rem" viewBox="0 0 800 384">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="dot-js" fill="#000000" x="80" y="352" width="32" height="32" rx="16"></rect>
+        <g id="lines" transform="translate(128.000000, 256.000000)">
+          <path d="M16,-70 L16,128 L16,64 C16,37.490332 37.490332,16 68,16 C90.509668,16 112,37.490332 112,64 L112,128" stroke="#e72a0f" stroke-width="32"></path>
+          <path d="M192,112 C165.490332,112 144,90.509668 144,64 C144,37.490332 165.490332,16 192,16 C218.509668,16 240,37.490332 240,64 C240,90.509668 218.509668,112 192,112"  stroke="#feee00" stroke-width="32"></path>
+          <path d="M272,0 L272,228 C252,248 232,228 230,218" stroke="#0097dc" stroke-width="32"></path>
+          <path d="M304,0 L304,64 C304,90.509668 325.490332,112 352,112 C378.509668,112 400,90.509668 400,64 L400,0" stroke="#4cd137" stroke-width="32"></path>
+          <path d="M433,128 L433,64 C433,37.490332 454.490332,16 481,16 C507.509668,16 529,37.490332 529,64 L529,128" stroke="#9f559d" stroke-width="32" stroke-dasharray="150"d></path>
+        </g>
+      </g>
+    </svg>
+  </section>
+</div>
+<script type="text/javascript" src="/js/anime.min.js"></script>
+<script type="text/javascript" src="/js/hojunlogo.js"></script>
+
+<p>之前无聊浏览特效的时候，发现了anime.js的logo动画特效，于是也想整个自己的logo动画。<br>着手coding的时候，发现没那么简单(｡•ˇ‸ˇ•｡)</p>
+<h2 id="第一个难点-SVG"><a href="#第一个难点-SVG" class="headerlink" title="第一个难点 SVG"></a><strong>第一个难点 SVG</strong></h2><p>之前接触到的SVG一直都是“不失真的矢量图”这么一个概念，但是这次的特效需要用到svg的<code>&lt;path&gt;</code>标签</p>
+<p>w3c介绍：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;path&gt; 标签用来定义路径。</span><br><span class="line">下面的命令可用于路径数据：</span><br><span class="line">    M = moveto</span><br><span class="line">    L = lineto</span><br><span class="line">    H = horizontal lineto</span><br><span class="line">    V = vertical lineto</span><br><span class="line">    C = curveto</span><br><span class="line">    S = smooth curveto</span><br><span class="line">    Q = quadratic Belzier curve</span><br><span class="line">    T = smooth quadratic Belzier curveto</span><br><span class="line">    A = elliptical Arc</span><br><span class="line">    Z = closepath</span><br><span class="line">注释：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。</span><br><span class="line"></span><br><span class="line">请把下面的代码拷贝到记事本，然后把文件保存为 &quot;path1.svg&quot;。把此文件放入您的 web 目录：</span><br><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; </span><br><span class="line">&quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;svg width=&quot;100%&quot; height=&quot;100%&quot; version=&quot;1.1&quot;</span><br><span class="line">xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;path d=&quot;M250 150 L150 350 L350 350 Z&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;/svg&gt;</span><br><span class="line">上面的例子定义了一条路径，它开始于位置 250 150，到达位置 150 350，然后从那里开始到 350 350，最后在 250 150 关闭路径。</span><br></pre></td></tr></table></figure>
+
+<p>通过以上介绍能够稍微理解path作用，了解更多请浏览作者的另一篇文章<a href="http://www.hojun.cn/2018/03/15/SVG%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA">SVG深入浅出</a></p>
+<h2 id="第二个难点-贝赛尔曲线"><a href="#第二个难点-贝赛尔曲线" class="headerlink" title="第二个难点 贝赛尔曲线"></a><strong>第二个难点 贝赛尔曲线</strong></h2><p>在我了解了SVG的大致原理后，自以为已经接近成功的大门。于是用ps做了一幅png格式的logo图片<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct76iedsj30dw06wmx4.jpg" alt=""><br>接着把png转svg格式图片，<a href="http://www.pngtosvg.com/">在线转换工具</a><br>最后把SVG的path数据插入代码。Σ(っ °Д °;)っ发现并不是自己想要的效果。<br>通过阅读官方文档和特效代码发现anime.js的动画是根据路径来呈现的，所以我应该提供的SVG的<code>&lt;path&gt;</code>只是一条线段就够了。</p>
+<hr>
+<p>又回到起点，从新开始使用<code>&lt;path&gt;</code>提供的命令画logo。<br>第一个h，好办的，只要把n的左边那条直线的Y坐标改长点就行。<br>第二个o,没有现成的o，只能在a上面动手脚，可是<code>&lt;path&gt;</code>的C命令就是三次贝塞尔曲线。表示不太会画，肿么办(<em>/ω＼</em>)?<br>上网找资料呗~ 找到张鑫旭大牛的一片文章<a href="http://www.zhangxinxu.com/wordpress/2014/06/deep-understand-svg-path-bezier-curves-command/">深度掌握SVG路径path的贝塞尔曲线指令</a>还有dayu提供的<a href="http://dayu.pw/svgcontrol/">任意二次、三次贝塞尔曲线呈现工具</a><br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct2bximcj30jh0b5jrf.jpg" alt=""><br>已知a的三条弧线<br><img class="lozad" data-action="zoom" data-src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1fpct26viiaj305r05udft.jpg" alt="">即需要求红框里的两个点。需要求甚解的童鞋请参照这篇文章<a href="http://www.cnblogs.com/ArthurQQ/articles/1730214.html">使用贝塞尔曲线拟合圆</a><br>不需要的童鞋可以发挥一下自带的我看看看看看出来，上图已经很明显了，o即圆形是上下左右对称的，通过对称的特性就可以得到那两个点的坐标。<br>第三个j,自由发挥了o(<em>￣︶￣</em>)o<br>第四个u,参考n把它给倒过来(⌒▽⌒)<br>第五个n,现成的有，大功告成ヾ(^▽^*)))</p>
+<p><a href="http://www.hojun.cn/2018/03/14/anime-js%E5%AE%9E%E7%8E%B0logo%E5%8A%A8%E7%94%BB/">效果预览</a><br>感谢<a href="http://animejs.com">anime.js</a>以及<a href="http://www.5iweb.com.cn/resource/5iweb2017070301/index.html">51web</a>提供的特效代码</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        <div class="post-series">hexo折腾-系列文章：
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2017/07/01/ck70kpdak00gpb0tuqepsp24d/">给博客添加个人域名</a></li>
+                
+            
+                
+                    <li><a href="/2017/07/02/ck70kpd9z00g1b0tu09hp1k1k/">给hexo的jsimple主题添加代码高亮</a></li>
+                
+            
+                
+                    <li><a href="/2017/07/03/ck70kpda100g4b0tuhvoizuvh/">给博客添加网易云跟帖评论</a></li>
+                
+            
+                
+                    <li><a href="/2017/07/04/ck70kpd9u00fub0tu6rjq2ql9/">给博客添加https支持</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2017/07/09/ck70kpcza00adb0tub6i23hz9/">博客添加gitment评论</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2017/09/13/ck70kpd9r00fqb0tuhmsjn02q/">给博客添加APlayer音乐播放器^-^</a></li>
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2017/10/23/ck70kpcv3004zb0tuvck6pxwi/">hexo 使用说明</a></li>
+                
+            
+                
+                    <li><a href="/2017/11/15/ck70kpcsv0028b0tur8tu3scg/">Lozad.js学习使用</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/01/10/ck70kpcww007bb0tuyi9rf0m0/">snowfall.jquery.js实现樱花飘落效果</a></li>
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/01/25/ck70kpcsd001nb0tufld2ep9d/">Hexo博客备份—妈妈再也不用担心你使用hexo写博客</a></li>
+                
+            
+                
+                    <li><a href="/2018/01/25/ck70kpcva0057b0tud6ijv34s/">github博客迁移至coding并提交百度收录</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/02/05/ck70kpcz600a8b0tu2zp6hule/">博客小人</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/02/19/ck70kpcvj005lb0tulaxajwsf/">live2d-看板娘小埋</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/03/07/ck70kpcy70091b0tui05lffrd/">使用disqus评论</a></li>
+                
+            
+                
+                    <li><a href="/2018/03/14/ck70kpcur004kb0tu44gts2xl/">anime.js实现logo动画</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/04/22/ck70kpct5002nb0tuob8j653h/">OwO-可爱的js表情符号插件</a></li>
+                
+            
+                
+            
+                
+                    <li><a href="/2018/04/24/ck70kpdaa00gib0tul3y3iycn/">给博客添加图集展示</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/06/04/ck70kpdbj00hvb0tu4ol8kohc/">评论系统之来必力</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/06/17/ck70kpd8c00dzb0tuz46uf1tb/">添加系列文章功能</a></li>
+                
+            
+                
+                    <li><a href="/2018/06/18/ck70kpd9o00fnb0tuetbb0nde/">给Hexo博客添加Mathjax数学公式支持</a></li>
+                
+            
+                
+                    <li><a href="/2018/06/23/ck70kpda500gbb0tues49i1et/">给博客添加上一篇下一篇功能</a></li>
+                
+            
+                
+                    <li><a href="/2018/07/03/ck70kpda800gfb0tufvugclu8/">给博客添加文章目录</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/08/07/ck70kpcvd005ab0tu8njnmctf/">hexo评论系统之valine快速使用</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/08/13/ck70kpd6h00bub0tuob25yufm/">快速开发属于自己的APP-FusionApp</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/08/25/ck70kpcvz0069b0tu8cemui7i/">miccall主题及html5up站点推荐</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/08/28/ck70kpcru0010b0tuwhco9bdg/">CSS+SVG路径描边特效</a></li>
+                
+            
+                
+                    <li><a href="/2018/08/30/ck70kpdb400hab0tursupxx05/">网页看板娘-Live2d蕾姆</a></li>
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/09/04/ck70kpdcq00jeb0tukapo6lz8/">还没好图床的小伙伴看过来，微博是个好图床！</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/js/">js</a>
+            
+            <a href="/tags/前端/">前端</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/03/15/ck70kpctq003db0tu4kca84qx/" >SVG深入浅出<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/03/07/ck70kpcy70091b0tui05lffrd/" >使用disqus评论<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一个难点-SVG"><span class="toc-text">第一个难点 SVG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个难点-贝赛尔曲线"><span class="toc-text">第二个难点 贝赛尔曲线</span></a></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<div id="vcomments"></div>
+<!-- <span id="/2018/03/14/ck70kpcur004kb0tu44gts2xl/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5634033670687375"
+         data-ad-slot="8296902977"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/hojun.html"  title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于" >关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br/>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt=""></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt=""></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt=""></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt=""></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</div>
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-好少年光芒万丈！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
