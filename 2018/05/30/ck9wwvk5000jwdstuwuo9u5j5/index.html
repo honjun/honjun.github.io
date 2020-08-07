@@ -1,0 +1,995 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://www.hojun.cn/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2018/05/30/ck9wwvk5000jwdstuwuo9u5j5/">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://www.hojun.cn">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+
+
+<title>软考之软件设计师经验总结 - hojun</title>
+
+<meta name="keywords" content="软考">
+
+<meta name="description " content="26日急急忙忙考完软考之后总算解决掉一件事情，今后的日子也不用慌慌张张的备考了。">
+<meta name="baidu-site-verification" content="0hxFvBRyRY">
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2018/05/30/ck9wwvk5000jwdstuwuo9u5j5/",
+        "appid": "1594654793276567",
+        "title": "软考之软件设计师经验总结",
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1frt89itvewj30dw0dwn2l.jpg"],
+        "pubDate": "2018-05-30T12:53:30"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <a href="/2018/08/06/好少年光芒万丈/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a>
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-05-30">2018-05-30</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">软考之软件设计师经验总结</h2>
+            <div class="post-meta">
+                本文总共2468个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1frt89itvewj30dw0dwn2l.jpg" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>26日急急忙忙考完软考之后总算解决掉一件事情，今后的日子也不用慌慌张张的备考了。嘤嘤嘤~<br>这篇文章主要来总结下这次软考备考过程。</p>
+<p>咳咳，首先是备考。恩……大概是从考前20天，5月6日前后开始的。（笔记为证）报考的是软件设计师中级。觉得有实力的可以选择直接报考高级的。下图是报考类别：</p>
+<p><strong>全国计算机技术与软件专业技术资格（水平）考试考试级别</strong><br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1frt3uwjrnvj30fb0ajabs.jpg" alt=""></p>
+<p>选择软件设计师主要是因为大学时期有去考过一次，记得上午卷是过了，下午没过。所以难点还是下午卷。上午75道选择题只要刷下历年试卷，弄懂一些重点的考点。考过基本没问题。（上下午都是75分卷，45分及格）。</p>
+<p>回顾下这20几天备考，反省下自己大部分的时间都在都在都在都在……不知道干嘛了。大致考前一星期才觉得快来不及了去努力啃考试教材。可惜其他事情忙忙~耽误耽误，到最后也才看了半本书TOT。（注：大学是也没好好备考，就算备过得也忘得差不多了）。</p>
+<p>废话不多说，直接来点干货。本次考试还是按规矩来的，重点考点都有，下午试卷的考题也是中规中矩（本人觉得这次题目较为简单）。</p>
+<h2 id="上午试题"><a href="#上午试题" class="headerlink" title="上午试题"></a><strong>上午试题</strong></h2><font color="#f00">以下内容全凭作者小脑袋记住，内容不全敬请谅解，个人见解仅供参考</font>
+
+<h3 id="海明校验码-考到了"><a href="#海明校验码-考到了" class="headerlink" title="海明校验码 考到了"></a><strong>海明校验码 考到了</strong></h3><p>而且这次考得比较细，要求你理解掌握海明校验码的实现原理了。不只是简单的考察2^r-1 ≥ k + r这个公式了。详细理解可以看我之前的文章《简单理解海明校验码》</p>
+<h3 id="Gantt和PERT图-考到了"><a href="#Gantt和PERT图-考到了" class="headerlink" title="Gantt和PERT图 考到了"></a><strong>Gantt和PERT图 考到了</strong></h3><p>考得还是常见套路：<br>考得的种图的特点</p>
+<ul>
+<li>甘特图特点：能清晰的描述每个任务从何时开始，到何时结束，以及任务之间的并行关系。但是他不能清晰的反应出各任务的依赖关系。</li>
+<li>PERT图特点：不仅给出了每个任务的开始时间、结束时间和完成该任务所需的时间，还给出了任务之间的关系。在PERT图中，关键路径是图中最长的一条路径。而松弛时间则反映了完成某些任务时可以推迟其开始时间或延长其所需完成的事件。但是PERT图不能反应任务之间的并行关系。</li>
+</ul>
+<p>以及PERT图的关键路线（累计时间最长的的路线称为关键路径）和某小段线路的最迟开始时间。</p>
+<h3 id="正规式-考到了"><a href="#正规式-考到了" class="headerlink" title="正规式 考到了"></a><strong>正规式 考到了</strong></h3><p>考得就是正规式的转换。</p>
+<p>正规式是一种表示正规集的工具，正规式是描述程序语言单词的表达式，对于字母表∑。<br>运算符“|”、“·”、“*”分别称为“或”、“连接”和“闭包”。在正规式的书写中，连接运算符“·”可省略。运算符的优先级从高到低顺序排列为：“*”、“·”、“|”。<br>运算符“|”表示“或”、并集。“*”表示*之前括号里的内容出现0次或多次。<br>若两个正规式表示的正规集相同，则认为二者等价。两个等价的正规集U和V记作U=V。<br>b(ab)*=(ba)*b,(a|b)*=(a*b*)*<br>需要注意的是，编译原理里面的正规式叫做范式，和正则表达式不是一个概念，但是有相通之处：都是通过一定的语法规则来描述文法，也就是所谓的匹配。</p>
+<p>易错点：ab* 不是 0~n个ab, 而是a + 若干个b(包括0个)。完整的写法应该是 a.b*。 (ab)* 才是若干个ab。</p>
+<h3 id="后缀式-考到了"><a href="#后缀式-考到了" class="headerlink" title="后缀式 考到了"></a><strong>后缀式 考到了</strong></h3><p>考得就是后缀式的转换。</p>
+<p>后缀表达式，指的是不包含括号，运算符放在两个运算对象的后面，所有的计算按运算符出现的顺序，严格从左向右进行（不再考虑运算符的优先规则）。</p>
+<p>举个简单的好理解干货例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a+b*(c+d/e)</span><br><span class="line">(a+(b*(c+(d/e)))) 按计算顺序加上括号</span><br><span class="line">(a(b(c(de)/)+)*)+ 把运算符放到括号外面</span><br><span class="line">abcde/+*+   去掉括号</span><br><span class="line"></span><br><span class="line">a&amp;b|c&amp;(b|x&gt;<span class="number">0</span>)</span><br><span class="line">(a&amp;b)|(c&amp;(b|(x&gt;<span class="number">0</span>)))</span><br><span class="line">((a&amp;b)|(c&amp;(b|(x&gt;<span class="number">0</span>)))) 把运算符放到括号外面</span><br><span class="line">注意(a&amp;b)先运算,得：</span><br><span class="line">((ab)&amp;(c(b(x0)&gt;)|)&amp;)| 去掉括号得：</span><br><span class="line">ab&amp;cbx0&gt;|&amp;|</span><br></pre></td></tr></table></figure></p>
+<h3 id="McCabe度量法-考到了"><a href="#McCabe度量法-考到了" class="headerlink" title="McCabe度量法 考到了"></a><strong>McCabe度量法 考到了</strong></h3><p>MaCabe度量法是通过定义环路复杂度，建立程序复杂性的度量，它基于一个程序模块的程序图中的环路的个数。计算有向图G的环路复杂性的公式为V(G) = m - n + 2，其中V(G)是有向图G中的环路个数，m是G中的有向弧数，n是G中的节点数。</p>
+<h3 id="前趋图PV操作-考到了"><a href="#前趋图PV操作-考到了" class="headerlink" title="前趋图PV操作 考到了"></a><strong>前趋图PV操作 考到了</strong></h3><p>详情查看《软考备考之前趋图PV操作》这篇文章</p>
+<h3 id="考到的还有-不说你也猜到"><a href="#考到的还有-不说你也猜到" class="headerlink" title="考到的还有 不说你也猜到"></a><strong>考到的还有 不说你也猜到</strong></h3><p>UML图、二叉树、设计模式、算法时间复杂度、面向对象设计（多态）、几种经典的算法策略（分治、动态规划、贪心、回溯）、图表、网络协议和对应层的设备、软件著作权、CPU等等。</p>
+<p>哦，最后顺带提一下考过浮点数运算的的流程:小阶对大阶，同时将小阶码对应的浮点数的尾数右移相应位数。这也是今年的考点之一。（之前也有考过）</p>
+<h2 id="下午试题"><a href="#下午试题" class="headerlink" title="下午试题"></a><strong>下午试题</strong></h2><p>第一道:用例图+流程图 一样的套路</p>
+<p>第二题:数据库设计+实体联系图 一样的套路</p>
+<p>第三题:用例图+类图 一样的套路（今年的考题是那种全部都是空的题型，只要认真审题，容易拿多分）<br>前三题是拿分题，大家务必认真读题，写写画画，难度不大。<br>第四题:一样的C语言算法题，还是一样的味道。</p>
+<p>算法是求啥钢材长度价值的那种，怎样裁能得到最大价值。（之前好像考过，不知道是不是作者的错觉，觉得复习的时候见过，似曾相识）。</p>
+<p>顺带吐槽下这道题……为啥么变量定义的时候都用单个字母表示而不用有具体含义的英文表示，这样在读代码的时候经常看到一半又忘了这个变量代表的值。无形中加大了这道算法题的难度。解题的时候可以自己给变量取个有语义的名称，带入理解可能会比较清晰。</p>
+<p>代码的空填完就是考这题的算法设计采用啥策略以及算法的时间复杂度。</p>
+<p>第五题:作者选择相对熟悉的java代码。这题考得是设计模式，如果你掌握了对应的设计模式，解起题来会比较容易。</p>
+<p>安利一本设计模式的书《HeadFirst设计模式》，书上是用java代码做案例的，内容通俗易懂，推荐大家学习。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a><strong>最后</strong></h2><p>不管有没有考好，重要的是你在整个过程中有没有收获到新知识以及备考学习的乐趣。祝大家身体健康笑口常开233333~</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        <div class="post-series">软考-软件设计师-系列文章：
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/05/07/ck9wwvk5300k0dstuzj63wxe8/">软考备考之UML十种建模图</a></li>
+                
+            
+                
+                    <li><a href="/2018/05/07/ck9wwvk5700k3dstuq536hkpd/">软考备考之UML类图几种关系总结</a></li>
+                
+            
+                
+                    <li><a href="/2018/05/09/ck9wwvk5n00khdstu1ml3bxen/">软考备考之数据库数据模型</a></li>
+                
+            
+                
+                    <li><a href="/2018/05/11/ck9wwvk5f00kadstuekdxf31n/">软考备考之广义表理解</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/05/30/ck9wwvk5000jwdstuwuo9u5j5/">软考之软件设计师经验总结</a></li>
+                
+            
+                
+                    <li><a href="/2018/05/30/ck9wwvk4x00jtdstumlcvljmi/">软考备考之前趋图PV操作</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/2018/07/07/ck9wwvjm3000fdstudodfpwnv/">2018软考成绩查询！</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </div>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/软考/">软考</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/05/30/ck9wwvk4x00jtdstumlcvljmi/" >软考备考之前趋图PV操作<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/05/26/ck9wwvjz900cmdstuc0a5dyr6/" >峰谷电计算<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上午试题"><span class="toc-text">上午试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#海明校验码-考到了"><span class="toc-text">海明校验码 考到了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gantt和PERT图-考到了"><span class="toc-text">Gantt和PERT图 考到了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正规式-考到了"><span class="toc-text">正规式 考到了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后缀式-考到了"><span class="toc-text">后缀式 考到了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#McCabe度量法-考到了"><span class="toc-text">McCabe度量法 考到了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前趋图PV操作-考到了"><span class="toc-text">前趋图PV操作 考到了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#考到的还有-不说你也猜到"><span class="toc-text">考到的还有 不说你也猜到</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下午试题"><span class="toc-text">下午试题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-text">最后</span></a></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="vcomments"></div>
+<!-- <span id="/2018/05/30/ck9wwvk5000jwdstuwuo9u5j5/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5634033670687375" data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5634033670687375" data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5634033670687375" data-ad-slot="8296902977" data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        <!-- end #main-->
+    <!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/hojun.html" title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-好少年光芒万丈！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
