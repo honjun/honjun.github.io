@@ -1,0 +1,545 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://www.hojun.cn/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2017/07/17/ckfqmh9tl006u38tur2b0us49/">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://www.hojun.cn">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+
+
+<title>js点击复制功能实现 - hojun</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="好少年光芒万丈">
+<meta name="baidu-site-verification" content="0hxFvBRyRY">
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2017/07/17/ckfqmh9tl006u38tur2b0us49/",
+        "appid": "1594654793276567",
+        "title": "js点击复制功能实现",
+        "pubDate": "2017-07-17T10:06:13"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <a href="/2018/08/06/好少年光芒万丈/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a>
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2017-07-17">2017-07-17</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">js点击复制功能实现</h2>
+            <div class="post-meta">
+                本文总共7227个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>今天实现了了下js复制功能<br>参照<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand#命令">https://developer.mozilla.org/zh-CN/docs/Web/API/Document/execCommand#命令</a></p>
+<p>实现代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 记得导入jquery --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"</span>&gt;</span></span><br><span class="line"><span class="javascript">&lt;a <span class="class"><span class="keyword">class</span></span>=<span class="string">"copy_url_a"</span> style=<span class="string">"cursor: pointer;"</span>&gt;复制链接&lt;<span class="regexp">/a&gt;</span></span></span><br><span class="line"><span class="javascript">&lt;textarea style=<span class="string">"opacity: 0; z-index: -1; position: absolute; left: 0px;"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"copy_url_input"</span>&gt;http:<span class="comment">//www.baidu.co1m&lt;/textarea&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span> </span></span><br><span class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	    $(<span class="string">'.copy_url_a'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	        <span class="keyword">var</span> textarea_url = $(<span class="keyword">this</span>).siblings(<span class="string">'.copy_url_input'</span>).get(<span class="number">0</span>);</span></span><br><span class="line"><span class="javascript">	        <span class="built_in">console</span>.log(textarea_url);</span></span><br><span class="line"><span class="javascript">	        <span class="keyword">var</span> currentFocus = <span class="built_in">document</span>.activeElement;</span></span><br><span class="line">	        textarea_url.select();</span><br><span class="line"><span class="javascript">	        <span class="built_in">document</span>.execCommand(<span class="string">"copy"</span>)</span></span><br><span class="line">	        currentFocus.focus();</span><br><span class="line"><span class="javascript">	        alert(<span class="string">"已复制好，可贴粘。"</span>); </span></span><br><span class="line">	    &#125;)</span><br><span class="line">	&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"copy_url_a"</span> <span class="attr">style</span>=<span class="string">"cursor: pointer;"</span>&gt;</span>复制链接<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">style</span>=<span class="string">"opacity: 0; z-index: -1; position: absolute; left: 0px;"</span> <span class="attr">class</span>=<span class="string">"copy_url_input"</span> <span class="attr">value</span>=<span class="string">"http://www.baidu.co2m"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	    $(<span class="string">'.copy_url_a'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	        <span class="keyword">var</span> inputText = $(<span class="keyword">this</span>).siblings(<span class="string">'.copy_url_input'</span>).get(<span class="number">0</span>);</span></span><br><span class="line"><span class="javascript">	        <span class="keyword">var</span> currentFocus = <span class="built_in">document</span>.activeElement;</span></span><br><span class="line">	        inputText.focus();</span><br><span class="line">	        inputText.setSelectionRange(0, inputText.value.length);</span><br><span class="line"><span class="javascript">	        <span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>);</span></span><br><span class="line">	        currentFocus.focus();</span><br><span class="line">	    &#125;)</span><br><span class="line">	&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><font color="red">注意：Firefox不能document.execCommand(‘copy’, true);这样写</font></p>
+<h3 id="select方法-参考w3c"><a href="#select方法-参考w3c" class="headerlink" title="select方法 参考w3c"></a><strong>select方法 参考w3c</strong></h3><blockquote>
+<p>select()方法用于选取密码域中的文本。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">selText</span>(<span class="params"></span>)</span></span></span><br><span class="line">        &#123;</span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.getElementById(<span class="string">'password1'</span>).select()</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">id</span>=<span class="string">"password1"</span> <span class="attr">value</span>=<span class="string">"thgrt456"</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onclick</span>=<span class="string">"selText()"</span> <span class="attr">value</span>=<span class="string">"Select text"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>select() 方法用于选择该元素中的文本。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="keyword">function</span> <span class="title">selText</span>(<span class="params"></span>)</span></span></span><br><span class="line">      &#123;</span><br><span class="line"><span class="javascript">          <span class="built_in">document</span>.getElementById(<span class="string">"txt1"</span>).select()</span></span><br><span class="line">      &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"txt1"</span>&gt;</span>Hello world....<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Select text"</span> <span class="attr">onclick</span>=<span class="string">"selText()"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>select()方法用于选取文本域中的内容。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">selText</span>(<span class="params"></span>)</span></span></span><br><span class="line">        &#123;</span><br><span class="line"><span class="javascript">            <span class="built_in">document</span>.getElementById(<span class="string">"myText"</span>).select()</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">size</span>=<span class="string">"25"</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"myText"</span> <span class="attr">value</span>=<span class="string">"A cat played with a ball"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"Select text"</span> <span class="attr">onclick</span>=<span class="string">"selText()"</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="setSelectionRange方法"><a href="#setSelectionRange方法" class="headerlink" title="setSelectionRange方法"></a><strong>setSelectionRange方法</strong></h3><p>The HTMLInputElement.setSelectionRange()方法可以设置一个 input 元素中的文本选中内容的起始位置和结束位置。</p>
+<p>在较新的浏览器中，你可以通过一个可选的参数来指定文本被被选中过程中的方向。比如通过点击和拖动从结束位置往起始位置选中一个字符串。</p>
+<p>每次调用这个这个方法会更新HTMLInputElement.selectionStart, selectionEnd, 和 selectionDirection 这3条属性。</p>
+<h4 id="语法EDIT"><a href="#语法EDIT" class="headerlink" title="语法EDIT"></a><strong>语法EDIT</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inputElement.setSelectionRange(selectionStart, selectionEnd, [optional] selectionDirection);</span><br></pre></td></tr></table></figure>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a><strong>参数</strong></h4><ul>
+<li>selectionStart 被选中的第一个字符的位置。</li>
+<li>selectionEnd 被选中的最后一个字符的 下一个 位置。</li>
+<li>selectionDirection (可选) 一个指明选择方向的字符串，有”forward”,”backward”和”none”<br>3个可选值, 分别表示”从前往后”, “从后往前”和”选择方向未知或不重要”。</li>
+</ul>
+<h3 id="setSelectionRange方法-1"><a href="#setSelectionRange方法-1" class="headerlink" title="setSelectionRange方法"></a><strong>setSelectionRange方法</strong></h3><p>当一个HTML文档切换到设计模式(designMode)时，文档对象暴露execCommand方法，该方法允许运行命令来操纵可编辑区域的内容。大多数命令影响文档的选择（粗体，斜体等），而其他命令插入新元素（添加链接）或影响整行（缩进）。当使用 contentEditable时，调用 execCommand() 将影响当前活动的可编辑元素。</p>
+<h4 id="语法EDIT-1"><a href="#语法EDIT-1" class="headerlink" title="语法EDIT"></a><strong>语法EDIT</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)</span><br></pre></td></tr></table></figure>
+<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a><strong>返回值</strong></h4><p>一个 Boolean ，如果是 false 则表示操作不被支持或未被启用。</p>
+<h4 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a><strong>参数</strong></h4><ul>
+<li>aCommandName 一个 DOMString ，命令的名称。可用命令列表请参阅 命令 。</li>
+<li>aShowDefaultUI 一个 Boolean 是否展示用户界面，一般为 false。Mozilla 没有实现。</li>
+<li>aValueArgument 一些命令需要一些额外的参数值（如insertimage需要提供这个image的url）。默认为null。</li>
+</ul>
+<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a><strong>命令</strong></h4><ol>
+<li>backColor 修改文档的背景颜色。在styleWithCss模式下，则只影响容器元素的背景颜色。这需要一个<color><br>类型的字符串值作为参数传入。注意，IE浏览器用这个设置文字的背景颜色。</li>
+<li>bold 开启或关闭选中文字或插入点的粗体字效果。IE浏览器使用 <code>&lt;strong&gt;</code>标签，而不是<code>&lt;b&gt;</code>标签。</li>
+<li>contentReadOnly 通过传入一个布尔类型的参数来使能文档内容的可编辑性。(IE浏览器不支持)</li>
+<li>copy<br>拷贝当前选中内容到剪贴板。启用这个功能的条件因浏览器不同而不同，而且不同时期，其启用条件也不尽相同。使用之前请检查浏览器兼容表，以确定是否可用。</li>
+<li>createLink 将选中内容创建为一个锚链接。这个命令需要一个HREF<br>URI字符串作为参数值传入。URI必须包含至少一个字符，例如一个空格。（浏览器会创建一个空链接）</li>
+<li>cut<br>剪贴当前选中的文字并复制到剪贴板。启用这个功能的条件因浏览器不同而不同，而且不同时期，其启用条件也不尽相同。使用之前请检查浏览器兼容表，以确定是否可用。</li>
+<li>decreaseFontSize  给选中文字加上 small 标签，或在选中点插入该标签。(IE浏览器不支持)</li>
+<li>delete 删除选中部分.</li>
+<li>enableInlineTableEditing 启用或禁用表格行和列插入和删除控件。(IE浏览器不支持)</li>
+<li>enableObjectResizing 启用或禁用图像和其他对象的大小可调整大小手柄。(IE浏览器不支持)</li>
+<li>fontName 在插入点或者选中文字部分修改字体名称. 需要提供一个字体名称字符串 (例如：”Arial”)作为参数。</li>
+<li>fontSize 在插入点或者选中文字部分修改字体大小. 需要提供一个HTML字体尺寸 (1-7) 作为参数。</li>
+<li>foreColor 在插入点或者选中文字部分修改字体颜色. 需要提供一个颜色值字符串作为参数。</li>
+<li>formatBlock 添加一个HTML块式标签在包含当前选择的行, 如果已经存在了，更换包含该行的块元素 (在 Firefox中,<br>BLOCKQUOTE 是一个例外 -它将包含任何包含块元素). 需要提供一个标签名称字符串作为参数。几乎所有的块样式标签都可以使用(例如.<br>“H1”, “P”, “DL”, “BLOCKQUOTE”). (IE浏览器仅仅支持标题标签 H1 - H6, ADDRESS, 和<br>PRE,使用时还必须包含标签分隔符 &lt; &gt;, 例如 “<code>&lt;H1&gt;</code>“.)</li>
+<li>forwardDelete 删除光标所在位置的字符。 和按下删除键一样。</li>
+<li>heading 添加一个标题标签在光标处或者所选文字上。 需要提供标签名称字符串作为参数 (例如. “H1”, “H6”). (IE 和<br>Safari不支持)</li>
+<li>hiliteColor 更改选择或插入点的背景颜色。需要一个颜色值字符串作为值参数传递。 UseCSS<br>必须开启此功能。(IE浏览器不支持)</li>
+<li>increaseFontSize 在选择或插入点周围添加一个BIG标签。(IE浏览器不支持)</li>
+<li>indent 缩进选择或插入点所在的行， 在 Firefox 中, 如果选择多行，但是这些行存在不同级别的缩进, 只有缩进最少的行被缩进。</li>
+<li>insertBrOnReturn 控制当按下Enter键时，是插入 br 标签还是把当前块元素变成两个。(IE浏览器不支持)</li>
+<li>insertHorizontalRule 在插入点插入一个水平线（删除选中的部分）</li>
+<li>insertHTML 在插入点插入一个HTML字符串（删除选中的部分）。需要一个个HTML字符串作为参数。(IE浏览器不支持)</li>
+<li>insertImage 在插入点插入一张图片（删除选中的部分）。需要一个image SRC<br>URI作为参数。这个URI至少包含一个字符。空白字符也可以（IE会创建一个链接其值为null）</li>
+<li>insertOrderedList 在插入点或者选中文字上创建一个有序列表</li>
+<li>insertUnorderedList 在插入点或者选中文字上创建一个无序列表。</li>
+<li>insertParagraph 在选择或当前行周围插入一个段落。(IE会在插入点插入一个段落并删除选中的部分.)</li>
+<li>insertText 在光标插入位置插入文本内容或者覆盖所选的文本内容。</li>
+<li>italic 在光标插入点开启或关闭斜体字。 (Internet Explorer 使用 EM 标签，而不是 I )</li>
+<li>justifyCenter 对光标插入位置或者所选内容进行文字居中。</li>
+<li>justifyFull 对光标插入位置或者所选内容进行文本对齐。</li>
+<li>justifyLeft 对光标插入位置或者所选内容进行左对齐。</li>
+<li>justifyRight 对光标插入位置或者所选内容进行右对齐。</li>
+<li>outdent 对光标插入行或者所选行内容减少缩进量。</li>
+<li>paste 在光标位置粘贴剪贴板的内容，如果有被选中的内容，会被替换。剪贴板功能必须在 user.js 配置文件中启用。参阅 [1].</li>
+<li>redo 重做被撤销的操作。</li>
+<li>removeFormat 对所选内容去除所有格式</li>
+<li>selectAll 选中编辑区里的全部内容。</li>
+<li>strikeThrough 在光标插入点开启或关闭删除线。</li>
+<li>subscript 在光标插入点开启或关闭下角标。</li>
+<li>superscript 在光标插入点开启或关闭上角标。</li>
+<li>underline 在光标插入点开启或关闭下划线。</li>
+<li>undo 撤销最近执行的命令。</li>
+<li>unlink 去除所选的锚链接的<a>标签</li>
+<li>useCSS  切换使用 HTML tags 还是 CSS 来生成标记. 要求一个布尔值 true/false 作为参数。注:<br>这个属性是逻辑上的倒退 (例如. use false to use CSS, true to use<br>HTML).(IE不支持)该属性已经废弃，使用 styleWithCSS 代替。</li>
+<li>styleWithCSS 用这个取代 useCSS 命令。 参数如预期的那样工作, i.e. true<br>modifies/generates 风格的标记属性, false 生成格式化元素。</li>
+</ol>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a><strong>例子</strong></h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">An example of how to use it on CodePen.</span><br><span class="line">快速实现复制到剪贴板：</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>点击复制后在右边textarea CTRL+V看一下<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"inputText"</span> <span class="attr">value</span>=<span class="string">"测试文本"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span> <span class="attr">value</span>=<span class="string">"复制"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"4"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span></span><br><span class="line"><span class="javascript">    btn.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> inputText = <span class="built_in">document</span>.getElementById(<span class="string">'inputText'</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> currentFocus = <span class="built_in">document</span>.activeElement;</span></span><br><span class="line">        inputText.focus();</span><br><span class="line">        inputText.setSelectionRange(0, inputText.value.length);</span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>, <span class="literal">true</span>);</span></span><br><span class="line">        currentFocus.focus();</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2017/07/18/ckfqmh9u2007a38tuvv97bsy9/" >mysql报字符集错误<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2017/07/12/ckfqmha4w00jf38tu0yoet8e3/" >解决父级元素不能被撑开<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#select方法-参考w3c"><span class="toc-text">select方法 参考w3c</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setSelectionRange方法"><span class="toc-text">setSelectionRange方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法EDIT"><span class="toc-text">语法EDIT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setSelectionRange方法-1"><span class="toc-text">setSelectionRange方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法EDIT-1"><span class="toc-text">语法EDIT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#返回值"><span class="toc-text">返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参数-1"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#命令"><span class="toc-text">命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a></li></ol></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="vcomments"></div>
+<!-- <span id="/2017/07/17/ckfqmh9tl006u38tur2b0us49/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5634033670687375" data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5634033670687375" data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5634033670687375" data-ad-slot="8296902977" data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        <!-- end #main-->
+    <!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/hojun.html" title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-好少年光芒万丈！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>

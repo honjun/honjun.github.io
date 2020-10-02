@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://www.hojun.cn/warn.html">
+<![endif]-->
+<!-- <script language=javascript> 
+ if (document.domain =='coding.hojun.cn')  
+     this.location = "https://www.hojun.cn" + this.location.pathname + this.location.search; 
+</script> -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'lsb6vmc',
+      scriptTimeout: 3000000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.hojun.com/2018/08/05/ckfqmha2a00gg38tukzl69ejl/">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://www.hojun.cn">
+<meta name="author" content="hojun">
+<link rel="stylesheet" href="/css/SimpleStyle.css">
+<!-- <link rel="stylesheet" href="/css/loading.css"> -->
+<link rel="stylesheet" href="/css/xiaomai.css">
+<link rel="stylesheet" href="/css/share.min.css">
+<link rel="stylesheet" href="/css/zoom.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg">
+
+
+<title>电脑开机自动发送邮件通知 - hojun</title>
+
+<meta name="keywords" content="自动发送邮件">
+
+<meta name="description " content="来自一位爸爸的需求，由于女儿在家会偷偷玩电脑，就想让hojun帮忙做个电脑开机就马上短信通知他的小程序。短信要钱，邮件免费，当然是选择邮件咯~">
+<meta name="baidu-site-verification" content="0hxFvBRyRY">
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5634033670687375",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+        "@id": "https://www.hojun.com/2018/08/05/ckfqmha2a00gg38tukzl69ejl/",
+        "appid": "1594654793276567",
+        "title": "电脑开机自动发送邮件通知",
+        "images": ["https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxtnegsj30qj0h2403.jpg"],
+        "pubDate": "2018-08-05T06:35:53"
+    }
+    </script>
+    <script src="//msite.baidu.com/sdk/c.js?appid=1594654793276567"></script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_five"></div>
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="HJ">HJ</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives/" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags/" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- <a href="/rss" title="RSS Feed"><i class="fa fa-rss"></i><span>RSS Feed</span></a> -->
+        <a href="/tags/悦读/" title="悦读"><i class="fa fa-book"></i><span>悦读</span></a>
+        <a href="/tags/图集/" title="图集"><i class="fa fa-photo"></i><span>图集</span></a>
+        <a href="/music/" title="音乐"><i class="fa fa-music"></i><span>音乐</span></a>
+        <a href="/video/" title="视频"><i class="fa fa-video-camera"></i><span>视频</span></a>
+        <a href="/tags/资源/" title="资源"><i class="fa fa-cloud"></i><span>资源</span></a>
+        <a href="/links/" title="友链"><i class="fa fa-link"></i><span>友链</span></a>
+        <a href="/2018/08/06/好少年光芒万丈/" title="签到"><i class="fa fa-hand-peace-o"></i><span>签到</span></a>
+        <a href="/help/" title="关于"><i class="fa fa-question-circle"></i><span>关于</span></a>
+        <!-- <div id="player2" class="aplayer" style="position: absolute; bottom:0px; width:45px; height:45px; margin:0px;" class="aplayer"></div> -->
+    </nav>
+        <!--<div id="player5" class="aplayer" style="position: fixed; bottom:0px; width:100%; height:auto; margin:0px;" class="aplayer"></div>--!>
+</div>
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-weixin-mp" href="http://author.baidu.com/home/1594654793276567"><i class="fa fa-paw"></i></a>
+</div>
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        <a href="/about_hojun.html"><img title="好少年光芒万丈" class="avatar" width="72" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar" /></a>
+        <h1>hojun</h1>
+        <h3>hello ，stranger</h3>
+        <p>一个好奇的博客</p>
+        <div class="cover-sns">
+            <div class="btn btn-weixin">
+                <a class="" href="javascript:"><i class="fa fa-weixin"></i></a>
+                <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg" alt="weixinQrcode" /></div>
+                <div class="qrcode-arrow"></div>
+            </div>
+            <div class="btn btn-weibo">
+                <a href="https://weibo.com/5673857615/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank" rel="nofollow"><i class="fa fa-weibo"></i></a>
+            </div>
+            <div class="btn btn-qq">
+                <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes"  target="_blank" rel="nofollow"><i class="fa fa-qq"></i></a>
+            </div>
+            <div class="btn btn-github">
+                <a href="https://github.com/honjun"  target="_blank" rel="nofollow"><i class="fa fa-github"></i></a>
+            </div>
+            <div class="btn btn-bili">
+                <a href="https://space.bilibili.com/271849279/#/"  target="_blank" rel="nofollow"><i class="iconfont icon-bilibili"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="page-title">
+    <ul>
+        <li><a href="/">首页</a></li>
+        
+        <li class="">
+            <a href="/categories/tech" data-name="技术">技术</a>
+        </li>
+        
+        <li class="">
+            <a href="/categories/live" data-name="生活">生活</a>
+        </li>
+        
+        <li class="">
+            <a href="/links/" data-name="友情链接">友链</a>
+        </li>
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <label for="s" class="sr-only">请输入关键字</label>
+        <input class="search-field" type="text" name="s" class="text" placeholder="请输入关键字" />
+        <button type="submit" class="search-form-submit" title="搜索"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="/about/hojun.html" target="_blank">
+                    <img width="48" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg" alt="avatar"/>
+                </a>
+                <p><span class="label">作者</span>
+                    <span>hojun</span>
+                    <span title="最后编辑于2018-08-05">2018-08-05</span>
+                </p>
+                <p>一个好奇的人</p>
+            </div>
+            <h2 class="post-title">电脑开机自动发送邮件通知</h2>
+            <div class="post-meta">
+                本文总共5763个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>来自一位爸爸的需求，由于女儿在家会偷偷玩电脑，就想让hojun帮忙做个电脑开机就马上短信通知他的小程序。短信要钱，邮件免费，当然是选择邮件咯~</p>
+<p>当时就在网络上收索了一波，其中一种解决方案是使用一个小软件加windows的bat批处理命令实现开机自动发送邮件的功能。尝试下载这个软件结果直接被360检测成了病毒，直接给清理掉了。<br>还有一种实现是通过windows的服务来实现的，略微看了一下。由于windows服务还真没接触过，就决定，花一个晚上的时间动手实现一下这个功能。</p>
+<h2 id="第一步-开发环境介绍"><a href="#第一步-开发环境介绍" class="headerlink" title="第一步 开发环境介绍"></a>第一步 开发环境介绍</h2><p>windows电脑<br>VisualStudio（博主用的2015）<br>.Net framework4.0<br>可以在 C:\Windows\Microsoft.NET\Framework\ 目录看下如下图：(可以发现1-4都有)<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzy0kionj30fu0cxmye.jpg" alt=""></p>
+<h2 id="第二步-开发windows服务"><a href="#第二步-开发windows服务" class="headerlink" title="第二步 开发windows服务"></a>第二步 开发windows服务</h2><p>打开vs2015点击新建项目<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxt3gw1j310a0lamz9.jpg" alt=""><br>在Visual C#&gt;Windows&gt;经典桌面 下面，这里选择.NET Framework4(因为之前目录下有，我们这里选择有的)，再选择Windows服务。名称使用默认的，位置自己选择。点击确定-&gt;<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxtnegsj30qj0h2403.jpg" alt=""><br>新建后如下图，我们在这个页面 右键&gt;添加安装程序<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxomb9nj30l20fzq33.jpg" alt=""><br>会跳到这个页面，我们可以在控件上面 右键&gt;属性，也可以点击右侧解决方案资源管理器的属性栏更改其属性。<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxu1x8kj30zm0howey.jpg" alt=""><br>这个给它的Account改为LocalSystem<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxv371kj30z50gzq3e.jpg" alt=""><br>这里添加描述、名称，以及启动方式改为Auto开机自动<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxvinbtj30zr0hpdgl.jpg" alt=""><br>安装配置好后，回到之前页面，点击蓝色字体跳转到代码视图<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxvxkzxj30zg0ipjrp.jpg" alt=""><br>默认给我们三个方法，一个构造方法、开始以及停止<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxwh0npj30mz0hndh0.jpg" alt=""><br>开始coding前，我们还要设置下我们的邮箱</p>
+<h2 id="第三步-准备邮箱授权码"><a href="#第三步-准备邮箱授权码" class="headerlink" title="第三步 准备邮箱授权码"></a>第三步 准备邮箱授权码</h2><p>这里以QQ邮箱为例，点击设置&gt;账户&gt;<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxpanr7j30vr0i976n.jpg" alt=""><br>点击开启POP3/SMTP服务，会叫你发送短信验证<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxqc9xuj30fw0btaav.jpg" alt=""><br>验证完后得到授权码<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxsm963j30j50bzab7.jpg" alt=""></p>
+<h2 id="第四步-coding生成"><a href="#第四步-coding生成" class="headerlink" title="第四步 coding生成"></a>第四步 coding生成</h2><p>代码如下：<br><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.ComponentModel;</span><br><span class="line"><span class="keyword">using</span> System.Data;</span><br><span class="line"><span class="keyword">using</span> System.Diagnostics;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Net.Mail;</span><br><span class="line"><span class="keyword">using</span> System.Net.NetworkInformation;</span><br><span class="line"><span class="keyword">using</span> System.ServiceProcess;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">AutoSendEmail</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">partial</span> <span class="keyword">class</span> <span class="title">Service1</span> : <span class="title">ServiceBase</span></span><br><span class="line">    &#123;</span><br><span class="line">        System.Timers.Timer createOrderTimer;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Service1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnStart</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            createOrderTimer = <span class="keyword">new</span> System.Timers.Timer();</span><br><span class="line">            createOrderTimer.Elapsed += <span class="keyword">new</span> System.Timers.ElapsedEventHandler(Page_Load);</span><br><span class="line">            createOrderTimer.Interval = <span class="number">20000</span>;</span><br><span class="line">            createOrderTimer.Enabled = <span class="literal">true</span>;</span><br><span class="line">            createOrderTimer.AutoReset = <span class="literal">true</span>;</span><br><span class="line">            createOrderTimer.Start();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">OnStop</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">Page_Load</span>(<span class="params"><span class="keyword">object</span> sender, System.Timers.ElapsedEventArgs args</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            Ping ping = <span class="keyword">new</span> Ping();</span><br><span class="line">            PingReply pr = ping.Send(<span class="string">"baidu.com"</span>);</span><br><span class="line">            <span class="keyword">if</span> (pr.Status == IPStatus.Success)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//实例化一个发送邮件类。</span></span><br><span class="line">                MailMessage mailMessage = <span class="keyword">new</span> MailMessage();</span><br><span class="line">                <span class="comment">//发件人邮箱地址，方法重载不同，可以根据需求自行选择。</span></span><br><span class="line">                mailMessage.From = <span class="keyword">new</span> MailAddress(<span class="string">"1234567890@qq.com"</span>);</span><br><span class="line">                <span class="comment">//收件人邮箱地址。</span></span><br><span class="line">                mailMessage.To.Add(<span class="keyword">new</span> MailAddress(<span class="string">"0987654321@qq.com"</span>));</span><br><span class="line">                <span class="comment">//邮件标题。</span></span><br><span class="line">                mailMessage.Subject = <span class="string">"电脑状态"</span>;</span><br><span class="line">                <span class="comment">//邮件内容。</span></span><br><span class="line">                mailMessage.Body = <span class="string">"开机"</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//实例化一个SmtpClient类。</span></span><br><span class="line">                SmtpClient client = <span class="keyword">new</span> SmtpClient();</span><br><span class="line">                <span class="comment">//在这里我使用的是qq邮箱，所以是smtp.qq.com，如果你使用的是126邮箱，那么就是smtp.126.com。</span></span><br><span class="line">                client.Host = <span class="string">"smtp.qq.com"</span>;</span><br><span class="line">                <span class="comment">//使用安全加密连接。</span></span><br><span class="line">                client.EnableSsl = <span class="literal">true</span>;</span><br><span class="line">                <span class="comment">//不和请求一块发送。</span></span><br><span class="line">                client.UseDefaultCredentials = <span class="literal">false</span>;</span><br><span class="line">                <span class="comment">//验证发件人身份(发件人的邮箱，邮箱里的生成授权码);</span></span><br><span class="line">                client.Credentials = <span class="keyword">new</span> NetworkCredential(<span class="string">"1234567890@qq.com"</span>, <span class="string">"xxxxxxxxxxxx"</span>);</span><br><span class="line">                <span class="comment">//发送</span></span><br><span class="line">                client.Send(mailMessage);</span><br><span class="line">                <span class="comment">//Context.Response.Write("发送成功");</span></span><br><span class="line">                StopWindowsService(<span class="string">"AutoSendEmail"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 开启服务</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="windowsServiceName"&gt;</span>服务名称<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">StartWindowsService</span>(<span class="params"><span class="keyword">string</span> windowsServiceName</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">using</span> (System.ServiceProcess.ServiceController control = <span class="keyword">new</span> System.ServiceProcess.ServiceController(windowsServiceName))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (control.Status == System.ServiceProcess.ServiceControllerStatus.Stopped)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"服务启动......"</span>);</span><br><span class="line">                    control.Start();</span><br><span class="line">                    Console.WriteLine(<span class="string">"服务已经启动......"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (control.Status == System.ServiceProcess.ServiceControllerStatus.Running)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"服务已经启动......"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 停止服务</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="windowsServiceName"&gt;</span>服务名称<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">StopWindowsService</span>(<span class="params"><span class="keyword">string</span> windowsServiceName</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">using</span> (System.ServiceProcess.ServiceController control = <span class="keyword">new</span> System.ServiceProcess.ServiceController(windowsServiceName))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (control.Status == System.ServiceProcess.ServiceControllerStatus.Running)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"服务停止......"</span>);</span><br><span class="line">                    control.Stop();</span><br><span class="line">                    Console.WriteLine(<span class="string">"服务已经停止......"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (control.Status == System.ServiceProcess.ServiceControllerStatus.Stopped)</span><br><span class="line">                &#123;</span><br><span class="line">                    Console.WriteLine(<span class="string">"服务已经停止......"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>代码完成后 右键&gt;生成<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxwyi55j30s60gz0ur.jpg" alt=""><br>在输出窗口拷贝生成目录<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxxitmkj30vd0h1gmq.jpg" alt=""><br>在电脑中打开如下：<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzy1q33tj30f906ot8x.jpg" alt=""><br>在这个目录下新建两个txt文档，内容如下：<br>安装.txt<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Windows\Microsoft.<span class="built_in">NET</span>\Framework\v4.<span class="number">0</span>.<span class="number">30319</span>\</span><br><span class="line">InstallUtil.exe </span><br><span class="line">InstallUtil E:\C#Workspace\lab\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe</span><br><span class="line"><span class="built_in">pause</span></span><br></pre></td></tr></table></figure></p>
+<p>卸载.txt<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Windows\Microsoft.<span class="built_in">NET</span>\Framework\v4.<span class="number">0</span>.<span class="number">30319</span>\</span><br><span class="line">InstallUtil.exe</span><br><span class="line">InstallUtil.exe /u E:\C#Workspace\lab\WindowsService1\WindowsService1\bin\Debug\WindowsService1.exe</span><br><span class="line"><span class="built_in">pause</span></span><br></pre></td></tr></table></figure></p>
+<p>然后将其扩展名改为bat<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzy354e4j309t05w74b.jpg" alt=""><br>右键&gt;以管理员身份运行<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzy26201j30bk0cu3zl.jpg" alt=""><br>出现如下提示表示安装成功<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxxytz0j30rl0efq3n.jpg" alt=""><br>回到桌面，开始右键&gt;打开控制面板<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzy14kxoj307z0hn0tn.jpg" alt=""><br>搜索服务，并打开<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxyd8odj30jf0byjsc.jpg" alt=""><br>按名称排序，找到我们的AutoSendEmail服务<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxzi06mj30w00hxdil.jpg" alt=""><br>右键启动<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxyzwi7j30v00himzy.jpg" alt=""><br>手机上收到邮件如下<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzy3lho6j30u01hctao.jpg" alt=""><br>卸载的话也是右键&gt;以管理员身份运行<br><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftyzxzvoypj30rl0efq3h.jpg" alt=""></p>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p><a href="https://www.cnblogs.com/wuchaochao/p/4308112.html">杂记2：VS2013创建Windows服务实现自动发送邮件</a>,作者：wuxiaochao<br><a href="https://www.cnblogs.com/xiezunxu/articles/7421322.html">C#实现发送给QQ邮件</a>,作者：谢尊旭<br><a href="https://yq.aliyun.com/ziliao/45256">Windows服务实现自动发送邮件通知</a>,云栖社区，来源互联网</p>
+
+            <p style="text-align: center;">希望这篇文章能给你带来知识和乐趣，喜欢博主的文章可以加博主好友哦<img class="owoemoji" src="/OwO/img/脸红.png"></p>
+            <p style="text-align: center;">有好的文章也可以向博主投稿哦<img class="owoemoji" src="/OwO/img/期待.png"></p>
+        </div>
+        <div style="text-align:center" class="social-share" data-disabled="facebook, twitter, google"></div>
+        <p style="text-align: center;">您的喜欢是作者写作最大的动力<img class="owoemoji" src="/OwO/img/爱心.png"></p>
+        
+
+        <div class="post-tool">
+            <a class="btn-weixin-tip" href="javascript:void(0);">
+                <i class="fa fa-mobile" aria-hidden="true"></i> 打赏支持
+            </a>
+        </div>
+
+        <p style="text-align: center;"><img class="owoemoji" src="/OwO/img/太开心.png">QQ群和公众号
+        <p style="text-align: center;"><img height="200px" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"><img src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"></p>
+        
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/搞事/">搞事</a>
+            
+            <a href="/tags/lab/">lab</a>
+            
+        </div>
+        
+    </article>
+    <div class="post-nav">
+        
+        <div class="post-nav-prev post-nav-item">
+            <a href="/2018/08/06/ckfqmh9yi00ca38tuwstw8yxt/" >好少年光芒万丈<i class="fa fa-chevron-left"></i></a>
+        </div>
+        
+        
+        <div class="post-nav-next post-nav-item">
+            <a href="/2018/08/03/ckfqmh9w8009u38tuha9uati4/" >人大了，心小了<i class="fa fa-chevron-right"></i></a>
+        </div>
+        
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/css/tocbot.css"><style>
+    .js-toc {
+        width: 200px;
+        height: auto;
+        z-index: 98;
+        background-color: rgba(255,255,255,0);
+        transform: translateX(0);
+        right: calc((100% - 950px - 250px) / 2);
+        top: 60px;
+        position: fixed;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  </style><script src="https://cdn.jsdelivr.net/gh/honjun/hexo-helper-tocbot/js/tocbot.js"></script><div class="js-toc"></div><script type="text/javascript">
+    tocbot.init({"contentSelector":".post-content","scrollSmooth":true,"headingSelector":"h1, h2, h3, h4, h5","headingsOffset":45,"scrollSmoothOffset":-45,"tocSelector":".js-toc","ignoreSelector":".js-toc-ignore","linkClass":"toc-link","extraLinkClasses":"","activeLinkClass":"is-active-link","listClass":"toc-list","extraListClasses":"","isCollapsedClass":"is-collapsed","collapsibleClass":"is-collapsible","listItemClass":"toc-list-item","activeListItemClass":"is-active-li","collapseDepth":0,"scrollSmoothDuration":420,"throttleTimeout":50,"positionFixedSelector":null,"positionFixedClass":"is-position-fixed","fixedSidebarOffset":"auto","includeHtml":false,"onClick":false,"orderedList":true,"scrollContainer":null})
+  </script>
+    <!-- 
+<aside id="article-toc" role="navigation" class="fixed">
+    <div id="article-toc-inner">
+        <strong class="sidebar-title">
+        目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-开发环境介绍"><span class="toc-text">第一步 开发环境介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-开发windows服务"><span class="toc-text">第二步 开发windows服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-准备邮箱授权码"><span class="toc-text">第三步 准备邮箱授权码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四步-coding生成"><span class="toc-text">第四步 coding生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#致谢"><span class="toc-text">致谢</span></a></li></ol>
+    </div>
+</aside>
+ -->
+     
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="vcomments"></div>
+<!-- <span id="/2018/08/05/ckfqmha2a00gg38tukzl69ejl/" class="leancloud-visitors" data-flag-title="文章阅读量统计">
+    <span class="post-meta-item-text">阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+</span> -->
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+    appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+    // visitor: true
+  })
+</script>
+
+
+
+
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5634033670687375" data-ad-slot="9797686907"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-5634033670687375" data-ad-slot="7335051380"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5634033670687375" data-ad-slot="8296902977" data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+
+
+</div>
+<!-- 不蒜子 网页计数器 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+        <!-- end #main-->
+    <!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner">
+        <!-- <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=0e48d2d6785c4b110daa7e450102de5ebe028e86bde31a428399911eb53bd450"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="简书散人交流群" title="简书散人交流群"></a> -->
+        <p id="hitokoto">:D 获取中...</p>
+        <script>
+          var xhr = new XMLHttpRequest();
+          xhr.open('get', 'https://v1.hitokoto.cn');
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              var data = JSON.parse(xhr.responseText);
+              var hitokoto = document.getElementById('hitokoto');
+              hitokoto.innerText = data.hitokoto + '  ——' + data.from;
+            }
+          }
+          xhr.send();
+        </script>
+        <p>
+            <a href="/about/hojun.html" title="关于作者">关于作者</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/help" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/archives" title="归档">归档</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+
+            <!-- 自定义链接 -->
+            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+        </p>
+        <p>
+            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br>
+            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
+            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
+            ，Hosted by <a href="https://github.com/" target="_blank">Github Pages</a>，Hosted by <a href="https://pages.coding.me" target="_blank">Coding Pages</a>
+        </p>
+        <p>从这里可以访问到我</p>
+        <p>
+          <!-- <a href="https://shop206822225.taobao.com/index.htm"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1fwhbrhm111j30ia0iak0l.jpg" alt=""></a> -->
+          <!-- <a href="javascript:"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg" alt=""></a> -->
+          <a href="https://author.baidu.com/home/1594654793276567"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg" alt></a>
+          <a href="https://www.jianshu.com/u/e8537ffe74d6"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8a5u1lj308c08ctas.jpg" alt></a>
+          <a href="https://www.toutiao.com/c/user/71618825563/#mid=1595095174687757"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8aqarej308c08cadu.jpg" alt></a>
+          <a href="https://www.hojun.cn"><img style="margin:5px;width: 100px; height: 100px;" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw89p4kaj308c08c40a.jpg" alt></a>
+        </p>
+        <p id="cnzz"></p>
+    </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lozad.js"></script>
+<script src="/js/jquery.share.min.js"></script>
+<script src="/js/CodeLineHeight.js"></script>
+<script src="/js/activate-power-mode.js"></script>
+<script src="/js/xiaomai.js"></script>
+<script src="/js/zoom.min.js"></script>
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/InsightSearch.js"></script>
+<script src="/js/SimpleCore.js"></script>
+<!-- <script src="/js/loading.js"></script> -->
+<!-- <script src="/js/APlayer.js"></script> -->
+<!-- <script src="/js/aplayerdemo.js"></script> -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15e55c3816abfbc912d5cb0d9000a2d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+(function() {
+  var arr = new Array();
+  var $tags = $('.post-tags').children('a');
+  $tags.each(function() {
+    arr.push($(this).html())
+  })
+  $('.fancybox').fancybox({
+    padding: 0,
+    loop: false
+  });
+})();
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<div id="spig" class="spig">
+    <div id="message"></div>
+    <div id="xiaomai"></div>
+</div>
+<div class="fixed-xm">
+    <img src="/images/xiaomai/xm.png">
+    <audio src="/images/xiaomai/xm.mp3" id="xm_audio" preload="auto" style="display:none;"></audio>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '04/24/2017',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
+            tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+        });
+        const observer = lozad();
+        observer.observe();
+
+        
+        //打字特效
+        POWERMODE.colorful = true; // make power mode colorful
+        POWERMODE.shake = false; // turn off shake
+        document.body.addEventListener('input', POWERMODE);
+
+        //为超链接加上target='_blank'属性  
+        $('a[href^="http"]').each(function() {  
+            $(this).attr('target', '_blank');  
+        });
+
+        // window.onblur = function (){ 
+        //     document.title = '快回来学习~'; 
+        // };
+        // window.onfocus = function (){ 
+        //     document.title = 'hojun-好少年光芒万丈！'; 
+        // }; 
+    });
+</script>
+</body>
+</html>
